@@ -104,9 +104,6 @@ if executable('ag')
 endif
 
 
-" bind K to grep word under cursor
- nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
-
  " Syntastic
  set statusline+=%#warningmsg#
  set statusline+=%{SyntasticStatuslineFlag()}
@@ -142,3 +139,7 @@ nnoremap <leader>so :OpenSession
 nnoremap <leader>ss :SaveSession
 nnoremap <leader>sd :DeleteSession<CR>
 nnoremap <leader>sc :CloseSesssion<CR>
+
+"put away all .swp files into home dir instead of cluttering up in your projects
+set swapfile
+set dir=~/tmp
