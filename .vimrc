@@ -25,10 +25,14 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'xolox/vim-misc'
 Bundle 'xolox/vim-easytags'
 
+"vim sessions
+Bundle 'xolox/vim-session'
+
 filetype plugin indent on 
 " Some settings to enable the theme:
 " Show line numbers
 set number       
+
 " Use syntax highlighting
 syntax enable     
 let g:solarized_termcolors = 256
@@ -118,10 +122,23 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 
-" Stick this in your vimrc to open NERDTree with Ctrl+n (you can set whatever key you want):
-
+" NERDTree with Ctrl+n (you can set whatever key you want):
 map <C-n> :NERDTreeToggle<CR>
 
 
 "close vim if the only window left open is a NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+
+"vim sessions
+let g:session_directory = "~/.vim/session"
+let g:session_autoload = "no"
+let g:session_autosave = "no"
+let g:session_command_aliases = 1
+"vim sessionc custom mapping
+" can now hit ,ss to save session for example
+let mapleader = ","
+nnoremap <leader>so :OpenSession
+nnoremap <leader>ss :SaveSession
+nnoremap <leader>sd :DeleteSession<CR>
+nnoremap <leader>sc :CloseSesssion<CR>
