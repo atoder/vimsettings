@@ -1,6 +1,7 @@
 set nocompatible
 filetype off    " Required
 
+" set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
@@ -17,18 +18,21 @@ Bundle 'scrooloose/syntastic'
 
 " silver surfer search text ack bundle
 Bundle 'ggreer/the_silver_searcher'
-Bundle 'mileszs/ack.vim'
 Bundle 'rking/ag.vim'
+
+"Nerd Tree collapse window
 Bundle 'scrooloose/nerdtree'
 
-"ctags
+"tags
 Bundle 'xolox/vim-misc'
 Bundle 'xolox/vim-easytags'
 
 "vim sessions
 Bundle 'xolox/vim-session'
 
+
 filetype plugin indent on 
+
 " Some settings to enable the theme:
 " Show line numbers
 set number       
@@ -132,6 +136,7 @@ let g:session_directory = "~/.vim/session"
 let g:session_autoload = "no"
 let g:session_autosave = "no"
 let g:session_command_aliases = 1
+
 "vim sessionc custom mapping
 " can now hit ,ss to save session for example
 let mapleader = ","
