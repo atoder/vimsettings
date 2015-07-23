@@ -7,8 +7,20 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'    
 
+"supertab
+Bundle 'ervandew/supertab'
+
+"Provides an overview of the structure of source code files 
+Bundle 'vim-scripts/taglist.vim'
+
 "color scheme
 Bundle 'altercation/vim-colors-solarized'
+
+"Lean & mean status/tabline for vim that's light as air.
+Bundle 'bling/vim-airline'
+
+"railcasts color scheme
+Bundle 'jpo/vim-railscasts-theme'
 
 "find files
 Bundle 'kien/ctrlp.vim'
@@ -30,6 +42,11 @@ Bundle 'xolox/vim-easytags'
 "vim sessions
 Bundle 'xolox/vim-session'
 
+"vim ruby
+Bundle 'vim-ruby/vim-ruby'
+
+"vim javascript
+Bundle "pangloss/vim-javascript"
 
 filetype plugin indent on 
 
@@ -39,8 +56,17 @@ set number
 
 " Use syntax highlighting
 syntax enable     
-let g:solarized_termcolors = 256
+"let g:solarized_termcolors = 256
+"let g:solarized_termcolors=16
+
+" solarized options 
+let g:solarized_visibility = "high"
+let g:solarized_contrast = "high"
+"let g:solarized_termtrans = 1
+
 colorscheme solarized
+"colorscheme railscasts
+
 
 set background=dark
 set history=700
@@ -108,15 +134,19 @@ if executable('ag')
 endif
 
 
- " Syntastic
- set statusline+=%#warningmsg#
- set statusline+=%{SyntasticStatuslineFlag()}
- set statusline+=%*
+" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
 
- let g:syntastic_always_populate_loc_list = 1
- let g:syntastic_auto_loc_list = 1
- let g:syntastic_check_on_open = 1
- let g:syntastic_check_on_wq = 0
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+
+"Tell NERDTree not to use the fancy arrow characters, by adding, otherwise arrows in NerdTree will look weird
+let g:NERDTreeDirArrows=0
 
 " open a NERDTree automatically when vim starts up if no files were specified
 autocmd StdinReadPre * let s:std_in=1
@@ -125,6 +155,9 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " NERDTree with Ctrl+n (you can set whatever key you want):
 map <C-n> :NERDTreeToggle<CR>
+
+"my own defined shortcut  display all class methods and source code structure
+map <C-l> :TlistToggle<CR>
 
 
 "close vim if the only window left open is a NERDTree
@@ -148,3 +181,18 @@ nnoremap <leader>sc :CloseSesssion<CR>
 "put away all .swp files into home dir instead of cluttering up in your projects
 set swapfile
 set dir=~/tmp
+
+"gets rid of possibly useless use of a variable in void context error
+let g:syntastic_eruby_ruby_quiet_messages =  {'regex': 'possibly useless use of a variable in void context'}
+
+" get rid of syntastic warning for ejs and javascript files
+" let g:syntastic_mode_map={ 'mode': 'active',
+"                     \ 'active_filetypes': [],
+"                     \ 'passive_filetypes': ['html'] }
+
+" JavaScript
+let javascript_enable_domhtmlcss = 1
+
+" html binding works way better
+au BufNewFile,BufRead *.ejs set filetype=html
+
