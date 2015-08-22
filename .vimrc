@@ -10,6 +10,9 @@ Bundle 'gmarik/vundle'
 "supertab
 Bundle 'ervandew/supertab'
 
+"CoffeeScript support to vim
+Plugin 'kchmck/vim-coffee-script'
+
 "Provides an overview of the structure of source code files 
 Bundle 'vim-scripts/taglist.vim'
 
@@ -57,11 +60,12 @@ set number
 " Use syntax highlighting
 syntax enable     
 "let g:solarized_termcolors = 256
-"let g:solarized_termcolors=16
+"let g:solarized_termcolors = 16
 
 " solarized options 
 let g:solarized_visibility = "high"
-let g:solarized_contrast = "high"
+"let g:solarized_contrast = "high"
+let g:solarized_contrast = "normal"
 "let g:solarized_termtrans = 1
 
 colorscheme solarized
@@ -99,7 +103,14 @@ syntax on
 set shiftwidth=2
 set tabstop=2
 set softtabstop=2
+
+"removes newline EOL 
+"so other non vim/terminal editors don't see extra line 
+set binary
+set noeol
+"spaces instead of tab, must be after binary and noel setting
 set expandtab
+
 autocmd Filetype html setlocal ts=4 sts=4 sw=4
 autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
 autocmd Filetype php setlocal ts=4 sts=4 sw=4
