@@ -21,6 +21,9 @@ let g:ycm_confirm_extra_conf=0
 set completeopt-=preview
 
 
+" bind K to grep word under cursor
+nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+
 Plugin 'flazz/vim-colorschemes'
 
 Plugin 'christoomey/vim-tmux-navigator'
@@ -49,7 +52,11 @@ Bundle 'bling/vim-airline'
 Bundle 'jpo/vim-railscasts-theme'
 
 "find files
-Bundle 'kien/ctrlp.vim'
+"Old one
+"Bundle 'kien/ctrlp.vim'
+
+"New ctrlp
+Bundle 'ctrlpvim/ctrlp.vim'
 
 "syntax cheker
 Bundle 'scrooloose/syntastic'
@@ -60,6 +67,11 @@ Bundle 'rking/ag.vim'
 
 "Nerd Tree collapse window
 Bundle 'scrooloose/nerdtree'
+" font icons for different file extensions in NerdTree
+" Install fonts for vim-devicons from https://github.com/ryanoasis/nerd-fonts
+Plugin 'ryanoasis/vim-devicons'
+"Encoding must be set to UTF-8 for the glyphs to show
+set encoding=utf8
 
 "tags
 Bundle 'xolox/vim-misc'
@@ -142,6 +154,7 @@ autocmd Filetype php setlocal ts=4 sts=4 sw=4
 autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
 
 au BufNewFile,BufRead *.ejs set filetype=javascript
+au BufNewFile,BufRead *.eco set filetype=html
 
 "show status at the bottom of vim file
 set laststatus=2
@@ -259,6 +272,8 @@ nmap <leader>st :SyntasticToggleMode<CR>
 
 
 
+
+
 "put away all .swp files into home dir instead of cluttering up in your projects
 set swapfile
 set dir=~/tmp
@@ -273,3 +288,30 @@ set dir=~/tmp
 
 " JavaScript
 let javascript_enable_domhtmlcss = 1
+
+
+" NERDTress File highlighting
+function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
+exec 'autocmd FileType nerdtree highlight ' . a:extension .' ctermbg='. a:bg .' ctermfg='. a:fg .' guibg='. a:guibg .' guifg='. a:guifg
+exec 'autocmd FileType nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
+endfunction
+
+autocmd VimEnter * call NERDTreeHighlightFile('jade', 'green', 'none', 'green', '#151515')
+autocmd VimEnter * call NERDTreeHighlightFile('ini', 'yellow', 'none', 'yellow', '#151515')
+autocmd VimEnter * call NERDTreeHighlightFile('md', 'blue', 'none', '#3366FF', '#151515')
+autocmd VimEnter * call NERDTreeHighlightFile('yml', 'yellow', 'none', 'yellow', '#151515')
+autocmd VimEnter * call NERDTreeHighlightFile('config', 'yellow', 'none', 'yellow', '#151515')
+autocmd VimEnter * call NERDTreeHighlightFile('conf', 'yellow', 'none', 'yellow', '#151515')
+autocmd VimEnter * call NERDTreeHighlightFile('json', 'yellow', 'none', 'yellow', '#151515')
+autocmd VimEnter * call NERDTreeHighlightFile('html', 'yellow', 'none', 'yellow', '#151515')
+autocmd VimEnter * call NERDTreeHighlightFile('styl', 'cyan', 'none', 'cyan', '#151515')
+autocmd VimEnter * call NERDTreeHighlightFile('css', 'cyan', 'none', 'cyan', '#151515')
+autocmd VimEnter * call NERDTreeHighlightFile('coffee', 'Red', 'none', 'red', '#151515')
+autocmd VimEnter * call NERDTreeHighlightFile('js', 'Red', 'none', '#ffa500', '#151515')
+autocmd VimEnter * call NERDTreeHighlightFile('php', 'Magenta', 'none', '#ff00ff', '#151515')
+autocmd VimEnter * call NERDTreeHighlightFile('ds_store', 'Gray', 'none', '#686868', '#151515')
+autocmd VimEnter * call NERDTreeHighlightFile('gitconfig', 'Gray', 'none', '#686868', '#151515')
+autocmd VimEnter * call NERDTreeHighlightFile('gitignore', 'Gray', 'none', '#686868', '#151515')
+autocmd VimEnter * call NERDTreeHighlightFile('bashrc', 'Gray', 'none', '#686868', '#151515')
+autocmd VimEnter * call NERDTreeHighlightFile('bashprofile', 'Gray', 'none', '#686868', '#151515')
+" NERDTress File highlighting
