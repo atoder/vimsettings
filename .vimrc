@@ -11,6 +11,10 @@ Bundle 'gmarik/vundle'
 Plugin 'Valloric/YouCompleteMe'
 "This is a Vim plugin that provides Tern-based JavaScript editing support.
 Plugin 'marijnh/tern_for_vim'
+"Supertab is a vim plugin which allows you to use <Tab> for all your
+"insert completion needs
+Bundle 'ervandew/supertab'
+
 
 " These are the tweaks I apply to YCM's config, you don't need them but they
 " might help.
@@ -28,32 +32,38 @@ Plugin 'flazz/vim-colorschemes'
 
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'tpope/vim-fugitive'
-
-"supertab
-Bundle 'ervandew/supertab'
-
-"Easy switching between buffers - vim-airline will show buffer at the top
-"unless multiple tabs are open
 Plugin 'tpope/vim-unimpaired'
+
+"Automatic close for common block and scope identifiers such as brackets
+" parentheses, brace, squares
+"https://github.com/jiangmiao/auto-pairs
+"Something I’ve found to be very useful, which doesn’t require any bundles other than delimitMate really,
+"is to add a key binding that will split my current line.
+" So if I type {, delimitMate will insert } after my cursor, then I can execute my
+" binding that will insert a new line in the middle of the two ready to receive some code.
+Plugin 'Raimondi/delimitMate'
+"Just hit control C and it will move the closing bracket down
+imap <C-c> <CR><Esc>O
+"<C-g>g mapping. CTRL+g g will put you after the matching bracket
 
 "CoffeeScript support to vim
 Plugin 'kchmck/vim-coffee-script'
 
 "Provides an overview of the structure of source code files
+"Lean & mean status/tabline for vim that's light as air.
 Plugin 'majutsushi/tagbar'
 
 "color scheme
 Bundle 'altercation/vim-colors-solarized'
 
-"Lean & mean status/tabline for vim that's light as air.
+"Easy switching between buffers - vim-airline will show buffer at the top
+"unless multiple tabs are open
 Bundle 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 "railcasts color scheme
 Bundle 'jpo/vim-railscasts-theme'
 
-"find files
-"Old one
-"Bundle 'kien/ctrlp.vim'
 
 "New ctrlp
 Bundle 'ctrlpvim/ctrlp.vim'
@@ -86,6 +96,13 @@ Bundle 'vim-ruby/vim-ruby'
 "vim javascript
 Bundle "pangloss/vim-javascript"
 
+"From http://oli.me.uk/2013/06/29/equipping-vim-for-javascript/
+Plugin 'jelera/vim-javascript-syntax'
+"Indent Guides is a plugin for visually displaying indent levels in Vim.
+
+Plugin 'nathanaelkane/vim-indent-guides'
+"to enable type mapleader (in my case space) and ig
+
 filetype plugin indent on
 
 " Some settings to enable the theme:
@@ -101,14 +118,24 @@ syntax enable
 let g:solarized_visibility = "high"
 let g:solarized_contrast = "high"
 "let g:solarized_contrast = "normal"
-let g:solarized_termtrans = 1
+"let g:solarized_termtrans = 1
+
+Plugin 'crusoexia/vim-monokai'
+"colorscheme monokai
+"set t_Co=256  " vim-monokai now only support 256 colours in terminal."
 
 colorscheme solarized
 "colorscheme railscasts
 "colorscheme wombat256
+"
 
+"Auto indent cod
+set autoindent
+
+"Switch between different backgrounds
 set background=dark
 "set background=light
+
 set history=700
 set wildmenu"Turn on WiLd menu
 set ruler
@@ -139,7 +166,7 @@ syntax on
 set shiftwidth=2
 set tabstop=2
 set softtabstop=2
-set paste
+"set paste
 
 "removes newline EOL
 "so other non vim/terminal editors don't see extra line
@@ -148,12 +175,13 @@ set noeol
 "spaces instead of tab, must be after binary and noel setting
 set expandtab
 
-autocmd Filetype html setlocal ts=4 sts=4 sw=4
-autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
-autocmd Filetype php setlocal ts=4 sts=4 sw=4
-autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
+autocmd Filetype html setlocal ts=2 sts=2 sw=2 expandtab
+autocmd Filetype ruby setlocal ts=2 sts=2 sw=2 expandtab
+autocmd Filetype php setlocal ts=4 sts=4 sw=4 expandtab
+autocmd Filetype javascript setlocal ts=2 sts=2 sw=2 expandtab
 
 au BufNewFile,BufRead *.ejs set filetype=javascript
+au BufNewFile,BufRead *.handlebars set filetype=html
 au BufNewFile,BufRead *.eco set filetype=html
 
 "show status at the bottom of vim file
@@ -289,29 +317,26 @@ set dir=~/tmp
 " JavaScript
 let javascript_enable_domhtmlcss = 1
 
-
-" NERDTress File highlighting
+"NERDTress File highlighting
 function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
 exec 'autocmd FileType nerdtree highlight ' . a:extension .' ctermbg='. a:bg .' ctermfg='. a:fg .' guibg='. a:guibg .' guifg='. a:guifg
 exec 'autocmd FileType nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
 endfunction
 
-autocmd VimEnter * call NERDTreeHighlightFile('jade', 'green', 'none', 'green', '#151515')
-autocmd VimEnter * call NERDTreeHighlightFile('ini', 'yellow', 'none', 'yellow', '#151515')
-autocmd VimEnter * call NERDTreeHighlightFile('md', 'blue', 'none', '#3366FF', '#151515')
-autocmd VimEnter * call NERDTreeHighlightFile('yml', 'yellow', 'none', 'yellow', '#151515')
-autocmd VimEnter * call NERDTreeHighlightFile('config', 'yellow', 'none', 'yellow', '#151515')
-autocmd VimEnter * call NERDTreeHighlightFile('conf', 'yellow', 'none', 'yellow', '#151515')
-autocmd VimEnter * call NERDTreeHighlightFile('json', 'yellow', 'none', 'yellow', '#151515')
-autocmd VimEnter * call NERDTreeHighlightFile('html', 'yellow', 'none', 'yellow', '#151515')
-autocmd VimEnter * call NERDTreeHighlightFile('styl', 'cyan', 'none', 'cyan', '#151515')
-autocmd VimEnter * call NERDTreeHighlightFile('css', 'cyan', 'none', 'cyan', '#151515')
-autocmd VimEnter * call NERDTreeHighlightFile('coffee', 'Red', 'none', 'red', '#151515')
-autocmd VimEnter * call NERDTreeHighlightFile('js', 'Red', 'none', '#ffa500', '#151515')
-autocmd VimEnter * call NERDTreeHighlightFile('php', 'Magenta', 'none', '#ff00ff', '#151515')
-autocmd VimEnter * call NERDTreeHighlightFile('ds_store', 'Gray', 'none', '#686868', '#151515')
-autocmd VimEnter * call NERDTreeHighlightFile('gitconfig', 'Gray', 'none', '#686868', '#151515')
-autocmd VimEnter * call NERDTreeHighlightFile('gitignore', 'Gray', 'none', '#686868', '#151515')
-autocmd VimEnter * call NERDTreeHighlightFile('bashrc', 'Gray', 'none', '#686868', '#151515')
-autocmd VimEnter * call NERDTreeHighlightFile('bashprofile', 'Gray', 'none', '#686868', '#151515')
-" NERDTress File highlighting
+au VimEnter * call NERDTreeHighlightFile('jade', 'green', 'none', 'green', '#151515')
+au VimEnter * call NERDTreeHighlightFile('handlebars', 'green', 'none', 'green', '#151515')
+au VimEnter * call NERDTreeHighlightFile('ini', 'yellow', 'none', 'yellow', '#151515')
+au VimEnter * call NERDTreeHighlightFile('md', 'blue', 'none', '#3366FF', '#151515')
+au VimEnter * call NERDTreeHighlightFile('yml', 'yellow', 'none', 'yellow', '#151515')
+au VimEnter * call NERDTreeHighlightFile('config', 'yellow', 'none', 'yellow', '#151515')
+au VimEnter * call NERDTreeHighlightFile('conf', 'yellow', 'none', 'yellow', '#151515')
+au VimEnter * call NERDTreeHighlightFile('json', 'yellow', 'none', 'yellow', '#151515')
+au VimEnter * call NERDTreeHighlightFile('html', 'yellow', 'none', 'yellow', '#151515')
+au VimEnter * call NERDTreeHighlightFile('styl', 'cyan', 'none', 'cyan', '#151515')
+au VimEnter * call NERDTreeHighlightFile('css', 'cyan', 'none', 'cyan', '#151515')
+au VimEnter * call NERDTreeHighlightFile('coffee', 'Red', 'none', 'red', '#151515')
+au VimEnter * call NERDTreeHighlightFile('js', 'Red', 'none', '#ffa500', '#151515')
+au VimEnter * call NERDTreeHighlightFile('rb', 'Red', 'none', '#ffa500', '#151515')
+au VimEnter * call NERDTreeHighlightFile('php', 'Magenta', 'none', '#ff00ff', '#151515')
+
+
