@@ -1,19 +1,111 @@
-set nocompatible
-filetype off    " Required
+set nocompatible              " be iMproved, required
+filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
 
-Bundle 'gmarik/vundle'
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
 
 "Amazing code completion
 Plugin 'Valloric/YouCompleteMe'
+
 "This is a Vim plugin that provides Tern-based JavaScript editing support.
 Plugin 'marijnh/tern_for_vim'
+
 "Supertab is a vim plugin which allows you to use <Tab> for all your
 "insert completion needs
-Bundle 'ervandew/supertab'
+Plugin 'ervandew/supertab'
+
+Plugin 'flazz/vim-colorschemes'
+
+Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-unimpaired'
+
+
+"Automatic close for common block and scope identifiers such as brackets
+" parentheses, brace, squares
+"https://github.com/jiangmiao/auto-pairs
+"Something I’ve found to be very useful, which doesn’t require any bundles other than delimitMate really,
+"is to add a key binding that will split my current line.
+" So if I type {, delimitMate will insert } after my cursor, then I can execute my
+" binding that will insert a new line in the middle of the two ready to receive some code.
+Plugin 'Raimondi/delimitMate'
+
+"Provides an overview of the structure of source code files
+"Lean & mean status/tabline for vim that's light as air.
+Plugin 'majutsushi/tagbar'
+
+"color scheme
+Plugin 'altercation/vim-colors-solarized'
+
+"Easy switching between buffers - vim-airline will show buffer at the top
+"unless multiple tabs are open
+Plugin 'bling/vim-airline'
+
+Plugin 'vim-airline/vim-airline-themes'
+
+"railcasts color scheme
+Plugin 'jpo/vim-railscasts-theme'
+
+
+"New ctrlp
+Plugin 'ctrlpvim/ctrlp.vim'
+
+"syntax cheker
+Plugin 'scrooloose/syntastic'
+
+" silver surfer search text ack bundle
+Plugin 'ggreer/the_silver_searcher'
+Plugin 'rking/ag.vim'
+
+"Nerd Tree collapse window
+Plugin 'scrooloose/nerdtree'
+" font icons for different file extensions in NerdTree
+" Install fonts for vim-devicons from https://github.com/ryanoasis/nerd-fonts
+Plugin 'ryanoasis/vim-devicons'
+
+
+
+"tags
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-easytags'
+
+"vim sessions
+Plugin 'xolox/vim-session'
+
+"vim ruby
+Plugin 'vim-ruby/vim-ruby'
+
+"vim javascript
+Plugin 'pangloss/vim-javascript'
+
+"From http://oli.me.uk/2013/06/29/equipping-vim-for-javascript/
+Plugin 'jelera/vim-javascript-syntax'
+
+"Indent Guides is a plugin for visually displaying indent levels in Vim.
+Plugin 'nathanaelkane/vim-indent-guides'
+"to enable type mapleader (in my case space) and ig
+Plugin 'crusoexia/vim-monokai'
+
+"colorscheme monokai
+"set t_Co=256  " vim-monokai now only support 256 colours in terminal."
+
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+
+" can now hit space ss to save session for example
+let mapleader = " " "this is space
+
+"Encoding must be set to UTF-8 for the glyphs to show
+set encoding=utf8
 
 
 " These are the tweaks I apply to YCM's config, you don't need them but they
@@ -26,82 +118,14 @@ set completeopt-=preview
 
 
 " bind K to grep word under cursor
-nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+"nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+" Use Ag instead of grep (more advanced)
+nnoremap K :Ag! "\b<C-R><C-W>\b"<CR>:cw<CR>
 
-Plugin 'flazz/vim-colorschemes'
-
-Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-unimpaired'
-
-"Automatic close for common block and scope identifiers such as brackets
-" parentheses, brace, squares
-"https://github.com/jiangmiao/auto-pairs
-"Something I’ve found to be very useful, which doesn’t require any bundles other than delimitMate really,
-"is to add a key binding that will split my current line.
-" So if I type {, delimitMate will insert } after my cursor, then I can execute my
-" binding that will insert a new line in the middle of the two ready to receive some code.
-Plugin 'Raimondi/delimitMate'
 "Just hit control C and it will move the closing bracket down
 imap <C-c> <CR><Esc>O
 "<C-g>g mapping. CTRL+g g will put you after the matching bracket
 
-"CoffeeScript support to vim
-Plugin 'kchmck/vim-coffee-script'
-
-"Provides an overview of the structure of source code files
-"Lean & mean status/tabline for vim that's light as air.
-Plugin 'majutsushi/tagbar'
-
-"color scheme
-Bundle 'altercation/vim-colors-solarized'
-
-"Easy switching between buffers - vim-airline will show buffer at the top
-"unless multiple tabs are open
-Bundle 'bling/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-
-"railcasts color scheme
-Bundle 'jpo/vim-railscasts-theme'
-
-
-"New ctrlp
-Bundle 'ctrlpvim/ctrlp.vim'
-
-"syntax cheker
-Bundle 'scrooloose/syntastic'
-
-" silver surfer search text ack bundle
-Bundle 'ggreer/the_silver_searcher'
-Bundle 'rking/ag.vim'
-
-"Nerd Tree collapse window
-Bundle 'scrooloose/nerdtree'
-" font icons for different file extensions in NerdTree
-" Install fonts for vim-devicons from https://github.com/ryanoasis/nerd-fonts
-Plugin 'ryanoasis/vim-devicons'
-"Encoding must be set to UTF-8 for the glyphs to show
-set encoding=utf8
-
-"tags
-Bundle 'xolox/vim-misc'
-Bundle 'xolox/vim-easytags'
-
-"vim sessions
-Bundle 'xolox/vim-session'
-
-"vim ruby
-Bundle 'vim-ruby/vim-ruby'
-
-"vim javascript
-Bundle "pangloss/vim-javascript"
-
-"From http://oli.me.uk/2013/06/29/equipping-vim-for-javascript/
-Plugin 'jelera/vim-javascript-syntax'
-"Indent Guides is a plugin for visually displaying indent levels in Vim.
-
-Plugin 'nathanaelkane/vim-indent-guides'
-"to enable type mapleader (in my case space) and ig
 
 filetype plugin indent on
 
@@ -119,10 +143,6 @@ let g:solarized_visibility = "high"
 let g:solarized_contrast = "high"
 "let g:solarized_contrast = "normal"
 "let g:solarized_termtrans = 1
-
-Plugin 'crusoexia/vim-monokai'
-"colorscheme monokai
-"set t_Co=256  " vim-monokai now only support 256 colours in terminal."
 
 colorscheme solarized
 "colorscheme railscasts
@@ -167,6 +187,7 @@ set shiftwidth=2
 set tabstop=2
 set softtabstop=2
 "set paste
+set relativenumber
 
 "removes newline EOL
 "so other non vim/terminal editors don't see extra line
@@ -177,7 +198,7 @@ set expandtab
 
 autocmd Filetype html setlocal ts=2 sts=2 sw=2 expandtab
 autocmd Filetype ruby setlocal ts=2 sts=2 sw=2 expandtab
-autocmd Filetype php setlocal ts=4 sts=4 sw=4 expandtab
+autocmd Filetype php setlocal ts=2 sts=2 sw=2 expandtab
 autocmd Filetype javascript setlocal ts=2 sts=2 sw=2 expandtab
 
 au BufNewFile,BufRead *.ejs set filetype=javascript
@@ -241,9 +262,10 @@ set statusline+=%*
 "Tell NERDTree not to use the fancy arrow characters, by adding, otherwise arrows in NerdTree will look weird
 let g:NERDTreeDirArrows=0
 
+
 " open a NERDTree automatically when vim starts up if no files were specified
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+"autocmd StdinReadPre * let s:std_in=1
+"autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 
 " NERDTree with Ctrl+n (you can set whatever key you want):
@@ -251,7 +273,10 @@ map <C-n> :NERDTreeToggle<CR>
 
 "my own defined shortcut  display all class methods and source code structure
 "for tag bar
-nmap <C-o> :TagbarToggle<CR>
+" C-o used for jumping
+"nmap <C-o> :TagbarToggle<CR>
+"to open tag bar hit space and oo
+nnoremap <leader>oo :TagbarToggle<CR>
 
 
 "close vim if the only window left open is a NERDTree
@@ -265,9 +290,6 @@ let g:session_autosave = "no"
 let g:session_command_aliases = 1
 
 "vim sessionc custom mapping
-" can now hit space ss to save session for example
-
-let mapleader = " " "this is space
 nnoremap <leader>so :OpenSession
 nnoremap <leader>ss :SaveSession
 nnoremap <leader>sd :DeleteSession<CR>
@@ -297,9 +319,6 @@ let g:syntastic_check_on_wq = 0
 
 "space st will enable and disable syntastic
 nmap <leader>st :SyntasticToggleMode<CR>
-
-
-
 
 
 "put away all .swp files into home dir instead of cluttering up in your projects
@@ -339,4 +358,17 @@ au VimEnter * call NERDTreeHighlightFile('js', 'Red', 'none', '#ffa500', '#15151
 au VimEnter * call NERDTreeHighlightFile('rb', 'Red', 'none', '#ffa500', '#151515')
 au VimEnter * call NERDTreeHighlightFile('php', 'Magenta', 'none', '#ff00ff', '#151515')
 
+""folding settings
+set foldmethod=indent   "fold based on indent
+set foldnestmax=10      "deepest fold is 10 levels
+set nofoldenable        "dont fold by default
+set foldlevel=1         "this is just what i use
+"zm to close fold level by level
+"za to toggle open and close of a fold (don't need to use zc or zo)
+"zR open ALL folds
 
+"zc to close a fold
+"zo open a fold
+
+"zr open fold level by level
+"close all folds with zM (not really needed?)
