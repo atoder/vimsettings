@@ -1,4 +1,4 @@
-set nocompatible              " be iMproved, required
+set nocompatible"              " be iMproved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
@@ -10,22 +10,87 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
+"https://github.com/heavenshell/vim-jsdoc
+"JSDOC for js
+"To use it, hover over a function and type in :JSDoc
+Plugin 'heavenshell/vim-jsdoc'
+
+"Plugin for commenting and uncommenting blocks of line
+Plugin 'scrooloose/nerdcommenter'
+"Comment out the current line or text selected in visual mode.
+"[count]<leader>cc |NERDComComment|
+"
+"
+"Uncomments the selected line(s).
+"[count]<leader>cu |NERDComUncommentLine|
+"
+"
+"Comments out the selected lines with a pretty block formatted layout.
+"[count]<leader>cs |NERDComSexyComment|
+"
+
 "Amazing code completion
 Plugin 'Valloric/YouCompleteMe'
 
 "This is a Vim plugin that provides Tern-based JavaScript editing support.
 Plugin 'marijnh/tern_for_vim'
 
+Plugin 'morhetz/gruvbox'
+
 "Supertab is a vim plugin which allows you to use <Tab> for all your
 "insert completion needs
 Plugin 'ervandew/supertab'
 
 Plugin 'flazz/vim-colorschemes'
+"railcasts color scheme
+Plugin 'jpo/vim-railscasts-theme'
+
+"one dark color scheme
+Plugin 'joshdick/onedark.vim'
+
+Plugin 'chriskempson/base16-vim'
+
+"YAJS: Yet Another JavaScript Syntax
+Plugin 'othree/yajs.vim'
+
+Plugin 'sheerun/vim-polyglot'
+
+"color scheme
+Plugin 'altercation/vim-colors-solarized'
+
 
 Plugin 'christoomey/vim-tmux-navigator'
+
+"do git in vim
+":GStatus
+":Gwrite
+":Gcommit
 Plugin 'tpope/vim-fugitive'
+
+"Fugitive extension to manage and merge Git branches
+":Merginal
+Plugin 'idanarye/vim-merginal'
+
 Plugin 'tpope/vim-unimpaired'
 
+
+
+"Show which line changed since your last commit.
+"GitGutterToggle
+Plugin 'airblade/vim-gitgutter'
+
+"Vim Better Whitespace Plugin
+":ToggleWhitespace
+": StripWhitespace
+Plugin 'ntpeters/vim-better-whitespace'
+
+" Easy align interactive
+"" Just select and type Return then space. Type Return many type to change the
+" alignments.
+"
+" If you want to align the second column, Return then 2 then space.
+Plugin 'junegunn/vim-easy-align'
+vnoremap <silent> <Enter> :EasyAlign<cr>
 
 "Automatic close for common block and scope identifiers such as brackets
 " parentheses, brace, squares
@@ -40,18 +105,12 @@ Plugin 'Raimondi/delimitMate'
 "Lean & mean status/tabline for vim that's light as air.
 Plugin 'majutsushi/tagbar'
 
-"color scheme
-Plugin 'altercation/vim-colors-solarized'
 
 "Easy switching between buffers - vim-airline will show buffer at the top
 "unless multiple tabs are open
 Plugin 'bling/vim-airline'
 
 Plugin 'vim-airline/vim-airline-themes'
-
-"railcasts color scheme
-Plugin 'jpo/vim-railscasts-theme'
-
 
 "New ctrlp
 Plugin 'ctrlpvim/ctrlp.vim'
@@ -69,8 +128,6 @@ Plugin 'scrooloose/nerdtree'
 " Install fonts for vim-devicons from https://github.com/ryanoasis/nerd-fonts
 Plugin 'ryanoasis/vim-devicons'
 
-
-
 "tags
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-easytags'
@@ -78,8 +135,6 @@ Plugin 'xolox/vim-easytags'
 "vim sessions
 Plugin 'xolox/vim-session'
 
-"vim ruby
-Plugin 'vim-ruby/vim-ruby'
 
 "vim javascript
 Plugin 'pangloss/vim-javascript'
@@ -87,14 +142,21 @@ Plugin 'pangloss/vim-javascript'
 "From http://oli.me.uk/2013/06/29/equipping-vim-for-javascript/
 Plugin 'jelera/vim-javascript-syntax'
 
+"provide the keyword highlight of famous js libraries and start to support "native methods.
+Plugin 'crusoexia/vim-javascript-lib'
+
 "Indent Guides is a plugin for visually displaying indent levels in Vim.
 Plugin 'nathanaelkane/vim-indent-guides'
 "to enable type mapleader (in my case space) and ig
+"
+"colorschemes
 Plugin 'crusoexia/vim-monokai'
 
-"colorscheme monokai
-"set t_Co=256  " vim-monokai now only support 256 colours in terminal."
 
+
+"Tracks time you spend coding, branch, language, coding editor
+"wakatime.com
+Plugin 'wakatime/vim-wakatime'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -106,7 +168,7 @@ let mapleader = " " "this is space
 
 "Encoding must be set to UTF-8 for the glyphs to show
 set encoding=utf8
-
+set fileencoding=utf8
 
 " These are the tweaks I apply to YCM's config, you don't need them but they
 " might help.
@@ -133,8 +195,12 @@ filetype plugin indent on
 " Show line numbers
 set number
 
+"let g:solarized_termtrans = 1
+
 " Use syntax highlighting
 syntax enable
+
+
 "let g:solarized_termcolors = 256
 "let g:solarized_termcolors = 16
 
@@ -142,12 +208,40 @@ syntax enable
 let g:solarized_visibility = "high"
 let g:solarized_contrast = "high"
 "let g:solarized_contrast = "normal"
-"let g:solarized_termtrans = 1
 
-colorscheme solarized
+let g:gruvbox_italic=1
+
+"set term=screen-256color
+
+"colorscheme solarized
 "colorscheme railscasts
 "colorscheme wombat256
+"colorscheme jellybeans
+"colorscheme janah
+"colorscheme onedark
+colorscheme monokai
+"colorscheme apprentice
+"colorscheme gruvbox
+
+
+"set t_Co=256  " vim-monokai now only support 256 colours in terminal."
+"let g:monokai_term_italic = 1
+"let g:monokai_gui_italic = 1
+
+"let g:onedark_termcolors=16
+"colorscheme onedark
 "
+"airline Automatically displays all buffers when there's only one tab open.
+let g:airline#extensions#tabline#enabled = 1
+" power fonts
+let g:airline_powerline_fonts = 1
+"let g:airline_theme='base16'
+let g:airline_theme='onedark'
+
+"
+let base16colorspace=256  " Access colors present in 256 colorspace
+
+
 
 "Auto indent cod
 set autoindent
@@ -155,6 +249,12 @@ set autoindent
 "Switch between different backgrounds
 set background=dark
 "set background=light
+
+"enable cursor line
+set cursorline
+
+"highlight tabs and trailing spaces
+"set list listchars=tab:→\ ,trail:·,space:␣
 
 set history=700
 set wildmenu"Turn on WiLd menu
@@ -183,9 +283,9 @@ set si
 set nowrap
 set number
 syntax on
-set shiftwidth=2
-set tabstop=2
-set softtabstop=2
+set shiftwidth=4
+set tabstop=4
+set softtabstop=4
 "set paste
 set relativenumber
 
@@ -196,10 +296,10 @@ set noeol
 "spaces instead of tab, must be after binary and noel setting
 set expandtab
 
-autocmd Filetype html setlocal ts=2 sts=2 sw=2 expandtab
+autocmd Filetype html setlocal ts=4 sts=4 sw=4 expandtab
 autocmd Filetype ruby setlocal ts=2 sts=2 sw=2 expandtab
-autocmd Filetype php setlocal ts=2 sts=2 sw=2 expandtab
-autocmd Filetype javascript setlocal ts=2 sts=2 sw=2 expandtab
+autocmd Filetype php setlocal ts=4 sts=4 sw=4 expandtab
+autocmd Filetype javascript setlocal ts=4 sts=4 sw=4 expandtab
 
 au BufNewFile,BufRead *.ejs set filetype=javascript
 au BufNewFile,BufRead *.handlebars set filetype=html
@@ -211,7 +311,6 @@ set laststatus=2
 "tail of the filename
 set statusline=%f
 
-
 "mapping buffer switching and closing to shortcuts
 map gn :bn<cr>
 map gp :bp<cr>
@@ -222,12 +321,6 @@ map gd :bd<cr>
 "]b     |:bnext|
 "[B     |:bfirst|
 " --- END REFERENCE
-
-"airline Automatically displays all buffers when there's only one tab open.
-let g:airline#extensions#tabline#enabled = 1
-" power fonts
-let g:airline_powerline_fonts = 1
-let g:airline_theme='base16'
 
 
 "CtrlP finding files
@@ -275,13 +368,17 @@ map <C-n> :NERDTreeToggle<CR>
 "for tag bar
 " C-o used for jumping
 "nmap <C-o> :TagbarToggle<CR>
-"to open tag bar hit space and oo
+"to open tag bar hit space and o
 nnoremap <leader>oo :TagbarToggle<CR>
 
 
 "close vim if the only window left open is a NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
+" Control + C mapping to run :bp | bd #
+" which moves to previous buffer and closes the buffer we just moved from
+" this way you can close a buffer and still have a vsplit for example
+nnoremap <C-c> :bp\|bd #<CR>
 
 "vim sessions
 let g:session_directory = "~/.vim/session"
@@ -293,7 +390,7 @@ let g:session_command_aliases = 1
 nnoremap <leader>so :OpenSession
 nnoremap <leader>ss :SaveSession
 nnoremap <leader>sd :DeleteSession<CR>
-nnoremap <leader>sc :CloseSesssion<CR>
+nnoremap <leader>sc :CloseSession<CR>
 
 
 " Easier buffer switching
@@ -311,11 +408,35 @@ nmap <leader>9 <Plug>AirlineSelectTab9
 " Switch to last active buffer
 noremap <leader><space> :buffer #<CR>
 
+"https://github.com/xolox/vim-easytags
+" Since version 3.6 the vim-easytags plug-in tries to squeeze as much performance as
+" possible out of Vim by using keyword highlighting where this is possible without sacrificing accuracy.
+" If your Vim's syntax highlighting is still too slow you can add the following to your [vimrc script] vimrc:
+let g:easytags_syntax_keyword = 'always'
+
+"The g:easytags_async option
+" By default vim-easytags runs Exuberant Ctags and updates your tags file in the foreground, blocking Vim in the process.
+" As your tags files get larger this becomes more annoying. It has been the number one complaint about vim-easytags since
+" I published the first release online.  In version 3.5 of the vim-easytags plug-in support for asynchronous tags
+" file updates was added. It's not enabled by default yet because I want to make sure I'm not breaking the
+" plug-in for the majority of users. However after I've gathered some feedback I definitely want to make this the default mode.
+" By setting this option to true (1) you enable asynchronous tags file updates. Good luck! ;-)
+let g:easytags_async=1
+
+"By default the plug-in automatically updates and highlights your tags when you stop typing for a moment.
+"If you want to disable automatic highlighting while keeping automatic updating enabled you can set this option to false:
+let g:easytags_auto_highlight=0
+
+
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+
+
+
 
 "space st will enable and disable syntastic
 nmap <leader>st :SyntasticToggleMode<CR>
@@ -335,6 +456,7 @@ set dir=~/tmp
 
 " JavaScript
 let javascript_enable_domhtmlcss = 1
+
 
 "NERDTress File highlighting
 function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
@@ -364,11 +486,35 @@ set foldnestmax=10      "deepest fold is 10 levels
 set nofoldenable        "dont fold by default
 set foldlevel=1         "this is just what i use
 "zm to close fold level by level
+"zr open fold level by level
 "za to toggle open and close of a fold (don't need to use zc or zo)
 "zR open ALL folds
 
 "zc to close a fold
 "zo open a fold
 
-"zr open fold level by level
 "close all folds with zM (not really needed?)
+"
+" Allow mouse to scroll the vim windows and resize splits
+set mouse=a
+
+"Allow mouse to resize splits when vim is inside tmux
+if has("mouse_sgr")
+  set ttymouse=sgr
+else
+  set ttymouse=xterm2
+end
+
+
+
+" Overwrite colorschemes background when trying to enable transparency
+" this will allow you to go to transparent mode in in terminal
+hi Normal ctermbg=none
+highlight NonText ctermbg=none
+
+
+"Overwrite hightlight color change
+"for the GUI
+hi Search guifg=grey guibg=blue
+" for terminal vim
+hi Search cterm=NONE ctermfg=grey ctermbg=blue

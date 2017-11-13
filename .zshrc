@@ -1,33 +1,82 @@
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
+
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/atoder/.oh-my-zsh
 export TERM="xterm-256color"
 setopt CORRECT
 
-export PYTHONPATH=/usr/bin/python
+# easy access to art3
+alias art3='cd /Users/atoder/Documents/ART3Server/web/ART3'
+
+# easy access to art2
+alias art2='cd /Users/atoder/Documents/ART2'
 
 # make sure that if a program wants you to edit
-# text, that Vim is going to be there for you
+# # text, that Vim is going to be there for you
 export EDITOR="vim"
 export USE_EDITOR=$EDITOR
 export VISUAL=$EDITOR
-export SASS_LIBSASS_PATH=/usr/local/Cellar/libsass/3.2.5/lib/
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
+#tiny-care-terminal settings
+# List of accounts to read the last tweet from, comma separated
+# The first in the list is read by the party parrot.
+export TTC_BOTS='tinycarebot,selfcare_bot,tinycarebot'
+
+# List of folders to look into for `git` commits, comma separated.
+export TTC_REPOS='~'
+
+#TTC_SAY_BOX = parrot | bunny | llama | cat | yeoman | mario | ironman | minions | panda
+export TTC_SAY_BOX='bunny'
+#export TTC_SAY_BOX='llama'
+
+# The max directory-depth to look for git repositories in
+# the directories defined with `TTC_REPOS`. Note that the deeper
+# the directory depth, the slower the results will be fetched.
+export TTC_REPOS_DEPTH=8
+
+# Which method is to be used to read the git commits ('gitstandup' | 'gitlog').
+# If you're having problems seeing your commits in the dahsboard, set
+# this value to gitlog.
+export TTC_GITBOT='gitlog'
+
+# F mode on
+export TTC_CELSIUS=false
+
+# Location/zip code to check the weather for. Both 90210 and "San Francisco, CA"
+# _should_ be ok (the zip code doesn't always work -- use a location
+# first, if you can). It's using weather.service.msn.com behind the curtains.
+export TTC_WEATHER='95014'
+
+# Unset this if you _don't_ want to use Twitter keys and want to
+# use web scraping instead.
+export TTC_APIKEYS=false
+
+# Refresh the dashboard every 20 minutes.
+export TTC_UPDATE_INTERVAL=20
+
+# Turn off terminal title
+export TTC_TERMINAL_TITLE=false
+
+# Set name of the theme to load. Optionally, if you set this to "random"
+# it'll load a random theme each time that oh-my-zsh is loaded.
+# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+#ZSH_THEME="robbyrussell"
 #ZSH_THEME="random"
 #ZSH_THEME="simple"
 #ZSH_THEME="wezm"
 ZSH_THEME="agnoster"
-
+#ZSH_THEME="af-magic"
 
 # optionally set DEFAULT_USER in ~/.zshrc to your regular username to hide the “user@hostname” info when you’re logged in as yourself on your local machine.
 DEFAULT_USER=`whoami`
 
-
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
+
+# Uncomment the following line to use hyphen-insensitive completion. Case
+# sensitive completion must be off. _ and - will be interchangeable.
+# HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
@@ -39,7 +88,7 @@ DEFAULT_USER=`whoami`
 # DISABLE_LS_COLORS="true"
 
 # Uncomment the following line to disable auto-setting terminal title.
-#DISABLE_AUTO_TITLE="true"
+# DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
 # ENABLE_CORRECTION="true"
@@ -64,14 +113,13 @@ DEFAULT_USER=`whoami`
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(osx git battery)
+plugins=(git)
+
+source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/ImageMagick/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
-
-source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -98,8 +146,4 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
-source ~/.oh-my-zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source $HOME/.zshenv
-
-export NVM_DIR="/Users/atoder/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
