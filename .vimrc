@@ -152,8 +152,6 @@ Plugin 'nathanaelkane/vim-indent-guides'
 "colorschemes
 Plugin 'crusoexia/vim-monokai'
 
-
-
 "Tracks time you spend coding, branch, language, coding editor
 "wakatime.com
 Plugin 'wakatime/vim-wakatime'
