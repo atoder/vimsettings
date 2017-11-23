@@ -2,15 +2,10 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/atoder/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 export TERM="xterm-256color"
 setopt CORRECT
 
-# easy access to art3
-alias art3='cd /Users/atoder/Documents/ART3Server/web/ART3'
-
-# easy access to art2
-alias art2='cd /Users/atoder/Documents/ART2'
 
 # make sure that if a program wants you to edit
 # # text, that Vim is going to be there for you
@@ -116,6 +111,7 @@ DEFAULT_USER=`whoami`
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
+source $ZSH/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # User configuration
 
@@ -146,4 +142,3 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

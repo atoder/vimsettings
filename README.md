@@ -11,7 +11,7 @@ On Mac OSX/Linux create symbolic links:
 
 $ ln -s  ~/Documents/vimsettings/.vimrc $HOME/.vimrc
 
-$ ln -s  ~/Documents/vimsettings/tmux.conf $HOME/.tmux.conf
+$ ln -s  ~/Documents/vimsettings/.tmux.conf $HOME/.tmux.conf
 
 $ ln -s  ~/Documents/vimsettings/.zshrc $HOME/.zshrc
 
