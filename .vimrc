@@ -217,6 +217,7 @@ let g:gruvbox_italic=1
 "colorscheme jellybeans
 "colorscheme janah
 "colorscheme onedark
+"MAIN ONE
 colorscheme monokai
 "colorscheme apprentice
 "colorscheme gruvbox
