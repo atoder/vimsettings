@@ -481,10 +481,24 @@ au VimEnter * call NERDTreeHighlightFile('rb', 'Red', 'none', '#ffa500', '#15151
 au VimEnter * call NERDTreeHighlightFile('php', 'Magenta', 'none', '#ff00ff', '#151515')
 
 ""folding settings
-set foldmethod=indent   "fold based on indent
-set foldnestmax=10      "deepest fold is 10 levels
+"set foldmethod = indent   "fold based on indent
+
+set foldmethod=syntax
+set foldlevelstart=1
+"set foldnestmax=10      "deepest fold is 10 levels
 set nofoldenable        "dont fold by default
 set foldlevel=1         "this is just what i use
+
+let javaScript_fold=1         " JavaScript
+let perl_fold=1               " Perl
+let php_folding=1             " PHP
+let r_syntax_folding=1        " R
+let ruby_fold=1               " Ruby
+let sh_fold_enabled=1         " sh
+let vimsyn_folding='af'       " Vim script
+let xml_syntax_folding=1      " XML
+
+
 "zm to close fold level by level
 "zr open fold level by level
 "za to toggle open and close of a fold (don't need to use zc or zo)
