@@ -530,7 +530,7 @@ else
   set ttymouse=xterm2
 end
 
-" Speed up Syntax Highlighting
+" START Speed up Syntax Highlighting
 " The defaults for syncing in some syntaxes for vim can be very slow, especially for large files and slow machines.
 augroup vimrc
     autocmd!
@@ -542,7 +542,7 @@ set nocursorline
 syntax sync minlines=256
 set synmaxcol=300
 set re=1
-" speed up syntax highlighting
+" END speed up syntax highlighting
 
 
 
