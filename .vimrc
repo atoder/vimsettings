@@ -530,6 +530,20 @@ else
   set ttymouse=xterm2
 end
 
+" Speed up Syntax Highlighting
+" The defaults for syncing in some syntaxes for vim can be very slow, especially for large files and slow machines.
+augroup vimrc
+    autocmd!
+    autocmd BufWinEnter,Syntax * syn sync minlines=500 maxlines=500
+augroup END
+" speed up syntax highlighting
+set nocursorcolumn
+set nocursorline
+syntax sync minlines=256
+set synmaxcol=300
+set re=1
+" speed up syntax highlighting
+
 
 
 " Overwrite colorschemes background when trying to enable transparency
