@@ -539,9 +539,9 @@ augroup END
 " speed up syntax highlighting
 set nocursorcolumn
 set nocursorline
-syntax sync minlines=256
-set synmaxcol=300
-set re=1
+"syntax sync minlines=256
+"set synmaxcol=300
+"set re=1
 " END speed up syntax highlighting
 
 
