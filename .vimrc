@@ -219,9 +219,9 @@ let g:gruvbox_italic=1
 "colorscheme janah
 "colorscheme onedark
 "MAIN ONE
-colorscheme monokai
+"colorscheme monokai
 "colorscheme apprentice
-"colorscheme gruvbox
+colorscheme gruvbox
 
 
 "set t_Co=256  " vim-monokai now only support 256 colours in terminal."
@@ -539,9 +539,9 @@ augroup END
 " speed up syntax highlighting
 set nocursorcolumn
 set nocursorline
-"syntax sync minlines=256
-"set synmaxcol=300
-"set re=1
+syntax sync minlines=256
+set synmaxcol=300
+set re=1
 " END speed up syntax highlighting
 
 

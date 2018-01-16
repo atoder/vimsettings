@@ -8,7 +8,7 @@
 # You can also adjust your PATH do include that directory, eg. write into your ~/.profile file the following
 
 
- export PATH=/usr/local/php5/bin:$PATH
+export PATH=/usr/local/php5/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
@@ -21,6 +21,9 @@ setopt CORRECT
 export EDITOR="vim"
 export USE_EDITOR=$EDITOR
 export VISUAL=$EDITOR
+
+# Vi mode
+bindkey -v
 
 #tiny-care-terminal settings
 # List of accounts to read the last tweet from, comma separated
