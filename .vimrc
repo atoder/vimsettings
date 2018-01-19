@@ -270,13 +270,16 @@ set background=dark
 "enable cursor line
 set cursorline
 
-"highlight tabs and trailing spaces
-"set list listchars=tab:→\ ,trail:·,space:␣
 
 "I really get frustrated with tabs that look like white spaces,
 "so I ensure they are visible by telling Vim to show all tabs as little arrows ▷.
 "This line also ensures that end of lines are shown with a negation sign ¬ :
+"highlight tabs and trailing spaces
+" turn on with   -> set list
+" turn off with  -> set nolist
 set listchars=eol:¬,tab:▷\ ,
+set list
+"set list listchars=tab:→\ ,trail:·,space:␣
 
 "A classic “Python tell” in Vim is the 79th or 80th character highlight:
 set colorcolumn=80              " Show the 80th char column.
