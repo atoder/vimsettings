@@ -72,11 +72,10 @@ export TTC_TERMINAL_TITLE=false
 #ZSH_THEME="random"
 #ZSH_THEME="simple"
 #ZSH_THEME="wezm"
-ZSH_THEME="agnoster"
-#ZSH_THEME="af-magic"
+#ZSH_THEME="agnoster"
+ZSH_THEME="af-magic"
 
-# optionally set DEFAULT_USER in ~/.zshrc to your regular username to hide the “user@hostname” info when you’re logged in as yourself on your local machine.
-DEFAULT_USER=`whoami`
+
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -153,4 +152,14 @@ source $ZSH/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-#
+
+
+# optionally set DEFAULT_USER in ~/.zshrc to your regular username to hide the “user@hostname” info when you’re logged in as yourself on your local machine for 'agnoster' theme
+prompt_context() {
+  if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
+    prompt_segment black default "%(!.%{%F{yellow}%}.)$USER"
+  fi
+}
+
+# disables right promp name for af-magic
+RPROMPT='%F{black}$USER'

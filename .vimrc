@@ -212,17 +212,24 @@ let g:gruvbox_italic=1
 
 "set term=screen-256color
 
+
+
+"Current one
+colorscheme zenburn
+
+
+"MAIN ONES
 "colorscheme solarized
+"colorscheme monokai
+"colorscheme apprentice
+"colorscheme gruvbox
+
+"BONUS ONES
 "colorscheme railscasts
 "colorscheme wombat256
 "colorscheme jellybeans
 "colorscheme janah
 "colorscheme onedark
-"MAIN ONE
-"colorscheme monokai
-"colorscheme apprentice
-colorscheme gruvbox
-
 
 "set t_Co=256  " vim-monokai now only support 256 colours in terminal."
 "let g:monokai_term_italic = 1
@@ -477,10 +484,6 @@ endfunction
 au VimEnter * call NERDTreeHighlightFile('jade', 'green', 'none', 'green', '#151515')
 au VimEnter * call NERDTreeHighlightFile('handlebars', 'green', 'none', 'green', '#151515')
 au VimEnter * call NERDTreeHighlightFile('ini', 'yellow', 'none', 'yellow', '#151515')
-au VimEnter * call NERDTreeHighlightFile('md', 'blue', 'none', '#3366FF', '#151515')
-au VimEnter * call NERDTreeHighlightFile('yml', 'yellow', 'none', 'yellow', '#151515')
-au VimEnter * call NERDTreeHighlightFile('config', 'yellow', 'none', 'yellow', '#151515')
-au VimEnter * call NERDTreeHighlightFile('conf', 'yellow', 'none', 'yellow', '#151515')
 au VimEnter * call NERDTreeHighlightFile('json', 'yellow', 'none', 'yellow', '#151515')
 au VimEnter * call NERDTreeHighlightFile('html', 'yellow', 'none', 'yellow', '#151515')
 au VimEnter * call NERDTreeHighlightFile('styl', 'cyan', 'none', 'cyan', '#151515')
@@ -557,3 +560,7 @@ highlight NonText ctermbg=none
 hi Search guifg=grey guibg=blue
 " for terminal vim
 hi Search cterm=NONE ctermfg=grey ctermbg=blue
+
+
+" for zenburn colorscheme
+colors zenburn "have to use this for proper contrast
