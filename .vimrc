@@ -567,8 +567,5 @@ hi Search guifg=grey guibg=blue
 hi Search cterm=NONE ctermfg=grey ctermbg=blue
 
 
-" for zenburn colorscheme
-colors zenburn "have to use this for proper contrast
-
-
-
+" * You can now set a darker background for bright environments. To activate, use:
+let g:zenburn_high_Contrast = 1
