@@ -273,6 +273,15 @@ set cursorline
 "highlight tabs and trailing spaces
 "set list listchars=tab:→\ ,trail:·,space:␣
 
+"I really get frustrated with tabs that look like white spaces,
+"so I ensure they are visible by telling Vim to show all tabs as little arrows ▷.
+"This line also ensures that end of lines are shown with a negation sign ¬ :
+set listchars=eol:¬,tab:▷\ ,
+
+"A classic “Python tell” in Vim is the 79th or 80th character highlight:
+set colorcolumn=80              " Show the 80th char column.
+highlight ColorColumn ctermbg=5
+
 set history=700
 set wildmenu"Turn on WiLd menu
 set ruler
@@ -451,10 +460,6 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-
-
-
-
 "space st will enable and disable syntastic
 nmap <leader>st :SyntasticToggleMode<CR>
 
@@ -564,3 +569,6 @@ hi Search cterm=NONE ctermfg=grey ctermbg=blue
 
 " for zenburn colorscheme
 colors zenburn "have to use this for proper contrast
+
+
+
