@@ -163,3 +163,4 @@ prompt_context() {
 
 # disables right promp name for af-magic
 RPROMPT='%F{black}$USER'
+export PATH=/usr/local/php5/bin:/Library/Frameworks/Python.framework/Versions/3.6/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/php5/bin:/Users/atoder/bin

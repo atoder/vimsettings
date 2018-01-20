@@ -69,6 +69,9 @@ Plugin 'idanarye/vim-merginal'
 Plugin 'tpope/vim-unimpaired'
 
 
+"Add python PEP8 checking with this nifty little plugin:
+Plugin 'nvie/vim-flake8'
+
 
 "Show which line changed since your last commit.
 "GitGutterToggle
@@ -269,6 +272,11 @@ set background=dark
 
 "enable cursor line
 set cursorline
+
+
+"make your python code look pretty
+let python_highlight_all=1
+
 
 
 "I really get frustrated with tabs that look like white spaces,
