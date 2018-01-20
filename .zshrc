@@ -142,3 +142,7 @@ source $ZSH/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
+
+
+# VIm mode
+bindkey -v
