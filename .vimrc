@@ -244,8 +244,8 @@ colorscheme lucario
 "colorscheme space-vim-dark
 
 "colorscheme zenburn
-"colorscheme solarized
 "colorscheme janah
+"colorscheme solarized
 "colorscheme jellybeans
 "colorscheme monokai
 "colorscheme gruvbox
