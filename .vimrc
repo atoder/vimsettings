@@ -72,6 +72,7 @@ Plugin 'tpope/vim-unimpaired'
 "Add python PEP8 checking with this nifty little plugin:
 Plugin 'nvie/vim-flake8'
 
+Plugin 'python-mode/python-mode'
 
 "Show which line changed since your last commit.
 "GitGutterToggle
@@ -163,6 +164,9 @@ Plugin 'nathanaelkane/vim-indent-guides'
 "colorschemes
 Plugin 'crusoexia/vim-monokai'
 
+"https://github.com/liuchengxu/space-vim-dark
+Plugin 'liuchengxu/space-vim-dark'
+
 "Tracks time you spend coding, branch, language, coding editor
 "wakatime.com
 Plugin 'wakatime/vim-wakatime'
@@ -223,14 +227,17 @@ let g:gruvbox_italic=1
 "set term=screen-256color
 
 "256 colors in vim
-set t_Co=256  " vim-monokai now only support 256 colours in terminal."
+"set t_Co=256  " vim-monokai now only support 256 colours in terminal."
 
 "Current one
-colorscheme zenburn
-
+colorscheme space-vim-dark
+"colorscheme zenburn
+"let g:space_vim_dark_background = 234
+"color space-vim-dark
 
 "MAIN ONES
 "colorscheme solarized
+"colorscheme jellybeans
 "colorscheme monokai
 "colorscheme apprentice
 "colorscheme gruvbox
@@ -238,7 +245,6 @@ colorscheme zenburn
 "BONUS ONES
 "colorscheme railscasts
 "colorscheme wombat256
-"colorscheme jellybeans
 "colorscheme janah
 "colorscheme onedark
 
