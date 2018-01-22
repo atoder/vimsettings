@@ -222,7 +222,8 @@ let g:gruvbox_italic=1
 
 "set term=screen-256color
 
-
+"256 colors in vim
+set t_Co=256  " vim-monokai now only support 256 colours in terminal."
 
 "Current one
 colorscheme zenburn
