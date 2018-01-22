@@ -619,3 +619,6 @@ hi Search cterm=NONE ctermfg=grey ctermbg=blue
 " * You can now set a darker background for bright environments.
 " To activate, use:
 let g:zenburn_high_Contrast = 1
+
+"changing color of the folds
+hi Folded ctermbg=235
