@@ -146,6 +146,9 @@ Plugin 'xolox/vim-easytags'
 "vim sessions
 Plugin 'xolox/vim-session'
 
+"A fancy start screen for Vim.
+Plugin 'mhinz/vim-startify'
+
 
 "vim javascript
 Plugin 'pangloss/vim-javascript'
@@ -164,6 +167,11 @@ Plugin 'nathanaelkane/vim-indent-guides'
 "colorschemes
 Plugin 'crusoexia/vim-monokai'
 
+"lucario colorscheme"
+" iterm2 set up https://github.com/raphamorim/lucario#iterm"
+Plugin 'raphamorim/lucario'
+
+"colorscheme
 "https://github.com/liuchengxu/space-vim-dark
 Plugin 'liuchengxu/space-vim-dark'
 
@@ -229,23 +237,23 @@ let g:gruvbox_italic=1
 "256 colors in vim
 "set t_Co=256  " vim-monokai now only support 256 colours in terminal."
 
-"Current one
-colorscheme space-vim-dark
-"colorscheme zenburn
-"let g:space_vim_dark_background = 234
-"color space-vim-dark
+
 
 "MAIN ONES
+colorscheme lucario
+"colorscheme space-vim-dark
+
+"colorscheme zenburn
 "colorscheme solarized
+"colorscheme janah
 "colorscheme jellybeans
 "colorscheme monokai
-"colorscheme apprentice
 "colorscheme gruvbox
 
 "BONUS ONES
 "colorscheme railscasts
+"colorscheme apprentice
 "colorscheme wombat256
-"colorscheme janah
 "colorscheme onedark
 
 "set t_Co=256  " vim-monokai now only support 256 colours in terminal."
