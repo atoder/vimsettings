@@ -239,7 +239,7 @@ let g:gruvbox_italic=1
 
 
 
-"MAIN ONES
+"MAIN FAVORITE ONES
 colorscheme lucario
 "colorscheme space-vim-dark
 
