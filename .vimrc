@@ -175,6 +175,9 @@ Plugin 'raphamorim/lucario'
 "https://github.com/liuchengxu/space-vim-dark
 Plugin 'liuchengxu/space-vim-dark'
 
+"Vim syntax highlighting for c, bison, flex
+Plugin 'justinmk/vim-syntax-extra'
+
 "Tracks time you spend coding, branch, language, coding editor
 "wakatime.com
 Plugin 'wakatime/vim-wakatime'
@@ -266,6 +269,7 @@ colorscheme lucario
 
 "airline Automatically displays all buffers when there's only one tab open.
 let g:airline#extensions#tabline#enabled = 1
+
 " power fonts
 let g:airline_powerline_fonts = 1
 "let g:airline_theme='base16'
