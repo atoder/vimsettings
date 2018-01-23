@@ -242,7 +242,7 @@ let g:gruvbox_italic=1
 "set term=screen-256color
 
 "256 colors in vim
-"set t_Co=256  " vim-monokai now only support 256 colours in terminal."
+set t_Co=256
 
 
 
@@ -616,11 +616,11 @@ hi Normal ctermbg=none
 highlight NonText ctermbg=none
 
 
-"Overwrite hightlight color change
+"Overwrite hightlight color change for SEARCH
 "for the GUI
-hi Search guifg=grey guibg=blue
+hi Search guifg=black guibg=red
 " for terminal vim
-hi Search cterm=NONE ctermfg=grey ctermbg=blue
+hi Search cterm=NONE ctermfg=black ctermbg=red
 
 
 " * You can now set a darker background for bright environments.
