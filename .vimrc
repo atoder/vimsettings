@@ -208,6 +208,9 @@ set completeopt-=preview
 " Use Ag instead of grep (more advanced)
 nnoremap K :Ag! "\b<C-R><C-W>\b"<CR>:cw<CR>
 
+"You can configure ag.vim to always start searching from your project root instead of the cwd
+let g:ag_working_path_mode="r"
+
 "Just hit control C and it will move the closing bracket down
 imap <C-c> <CR><Esc>O
 "<C-g>g mapping. CTRL+g g will put you after the matching bracket
@@ -436,7 +439,6 @@ map <C-n> :NERDTreeToggle<CR>
 "nmap <C-o> :TagbarToggle<CR>
 "to open tag bar hit space and o
 nnoremap <leader>oo :TagbarToggle<CR>
-
 
 "close vim if the only window left open is a NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
