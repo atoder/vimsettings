@@ -182,6 +182,7 @@ Plugin 'justinmk/vim-syntax-extra'
 "wakatime.com
 Plugin 'wakatime/vim-wakatime'
 
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -246,8 +247,8 @@ let g:gruvbox_italic=1
 
 
 "MAIN FAVORITE ONES
-colorscheme lucario
-"colorscheme space-vim-dark
+"colorscheme lucario
+colorscheme space-vim-dark
 
 "colorscheme zenburn
 "colorscheme janah
