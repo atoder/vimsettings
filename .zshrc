@@ -188,6 +188,7 @@ function zle-line-finish {
 zle -N zle-line-finish
 #RPROMPT='${vim_mode}'
 #show vim mode and time
+
 RPROMPT='${vim_mode}%t'
 
 # END OF VIM INSERT VS COMMAND MODE
