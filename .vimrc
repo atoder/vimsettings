@@ -246,9 +246,10 @@ set t_Co=256
 
 
 
-"MAIN FAVORITE ONES
-"colorscheme lucario
+"MAIN FAVORITE ONES COLORSCHEMES
+"Works well with Terminus font and Darkside iTerm2 color preset
 colorscheme space-vim-dark
+"colorscheme lucario
 
 "colorscheme zenburn
 "colorscheme janah
