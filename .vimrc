@@ -186,6 +186,13 @@ Plugin 'wakatime/vim-wakatime'
 "A Personal Wiki For Vim
 Plugin 'vimwiki/vimwiki'
 
+"Vim-wiki setup
+" path - where the files are saved. I link it to my google drive so it's synced
+" path_html - where the html pages get saved
+" auto-export - automatically create html files
+let g:vimwiki_list = [{'path': '~/Google\ Drive/vim-wiki/', 'path_html': '~/Google\ Drive/vim-wiki/html', 'auto_export': 1}]
+
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
