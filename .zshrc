@@ -162,7 +162,32 @@ prompt_context() {
 
 # disables right promp name for af-magic
 #RPROMPT='%F{black}$USER'
-RPROMPT=''
+#RPROMPT=''
 
 # Vim mode
 bindkey -v
+
+
+# START OF VIM INSERT VS COMMAND MODE
+# perform parameter expansion/command substitution in prompt
+setopt PROMPT_SUBST
+
+vim_ins_mode="[INS]"
+vim_cmd_mode="[CMD]"
+vim_mode=$vim_ins_mode
+
+function zle-keymap-select {
+  vim_mode="${${KEYMAP/vicmd/${vim_cmd_mode}}/(main|viins)/${vim_ins_mode}}"
+  zle reset-prompt
+}
+zle -N zle-keymap-select
+
+function zle-line-finish {
+  vim_mode=$vim_ins_mode
+}
+zle -N zle-line-finish
+#RPROMPT='${vim_mode}'
+#show vim mode and time
+RPROMPT='${vim_mode}%t'
+
+# END OF VIM INSERT VS COMMAND MODE
