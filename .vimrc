@@ -614,7 +614,9 @@ syntax sync minlines=256
 set synmaxcol=300
 set re=1
 " END speed up syntax highlighting
+"
 
+"TO REFRESH syntax higlight type in :filetype detect
 
 
 " Overwrite colorschemes background when trying to enable transparency
