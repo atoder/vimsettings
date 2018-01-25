@@ -185,6 +185,13 @@ Plugin 'wakatime/vim-wakatime'
 
 "A Personal Wiki For Vim
 Plugin 'vimwiki/vimwiki'
+" to search for entries :VWS <keyword>
+"    Search for /pattern/ in all files of current wiki.
+"    To display all matches use |:lopen| command.
+"    To display next match use |:lnext| command.
+"    To display previous match use |:lprevious| command.
+"    more https://raw.githubusercontent.com/vimwiki/vimwiki/master/doc/vimwiki.txt
+
 
 "Calendar
 Plugin 'mattn/calendar-vim'
@@ -624,10 +631,13 @@ syntax sync minlines=256
 set synmaxcol=300
 set re=1
 " END speed up syntax highlighting
-"
+
 
 "TO REFRESH syntax higlight type in :filetype detect
 
+" yy will not just use internal vim buffer but will also copy
+" into OS's clipboard
+set clipboard=unnamed
 
 " Overwrite colorschemes background when trying to enable transparency
 " this will allow you to go to transparent mode in in terminal
