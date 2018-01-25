@@ -202,6 +202,17 @@ Plugin 'mattn/calendar-vim'
 " auto-export - automatically create html files
 let g:vimwiki_list = [{'path': '~/Google\ Drive/vim-wiki/', 'path_html': '~/Google\ Drive/vim-wiki/html', 'auto_export': 1}]
 
+"Vimwiki also has bindings to quickly create and view diary pages.
+"This at first seemed fairly useless to me, but now I can't live without them.
+"By pressing <Leader>w<Leader>w, you are taken to a page named for the current date.
+"I use this page to record notes on meetings, to store context copied from emails that has informed decisions,
+"as a scratch page for random code snippets for discussion, regexes I found useful... the list goes on and on.
+"I make use of the Vimwiki tagging system (a word that begins and ends with a colon like :music:)
+"in order to categorize things by meetings, notes, scraps, etc. Just like the links, the Vim omnicompletion system
+"will listen to and complete your tags as well. I often will simply ripgrep/ack the whole folder.
+"If you press <Leader>wi, you will be taken to a special Diary Index page, and
+"by pressing <Leader>w<Leader>i you will generate an index of all your diary pages,
+"which will be titled by the first header in the file, or by the date... very cool for answering the ever troublesome question: Just what exactly did I do this week?
 
 
 " All of your Plugins must be added before the following line
