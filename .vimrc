@@ -209,8 +209,9 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 
 
+" map leader is a space in this case
 " can now hit space ss to save session for example
-let mapleader = " " "this is space
+let mapleader = " "
 
 "Encoding must be set to UTF-8 for the glyphs to show
 set encoding=utf8
