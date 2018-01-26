@@ -661,6 +661,9 @@ set re=1
 " into OS's clipboard
 set clipboard=unnamed
 
+"To access all currently defined registers type
+" :reg
+
 " Overwrite colorschemes background when trying to enable transparency
 " this will allow you to go to transparent mode in in terminal
 hi Normal ctermbg=none
