@@ -185,6 +185,8 @@ Plugin 'wakatime/vim-wakatime'
 
 "A Personal Wiki For Vim
 Plugin 'vimwiki/vimwiki'
+" To open <leader>ww
+"
 " to search for entries :VWS <keyword>
 "    Search for /pattern/ in all files of current wiki.
 "    To display all matches use |:lopen| command.
@@ -193,8 +195,12 @@ Plugin 'vimwiki/vimwiki'
 "    more https://raw.githubusercontent.com/vimwiki/vimwiki/master/doc/vimwiki.txt
 
 
-"Calendar
-Plugin 'mattn/calendar-vim'
+" Vim-wiki uses Mediawiki syntax by default
+"https://www.mediawiki.org/wiki/Help:Formatting
+
+
+" if you switch to markdown it will disable some featuers such as export to  html
+" https://www.dailydrip.com/blog/vimwiki.html
 
 "Vim-wiki setup
 " path - where the files are saved. I link it to my google drive so it's synced
@@ -213,6 +219,10 @@ let g:vimwiki_list = [{'path': '~/Google\ Drive/vim-wiki/', 'path_html': '~/Goog
 "If you press <Leader>wi, you will be taken to a special Diary Index page, and
 "by pressing <Leader>w<Leader>i you will generate an index of all your diary pages,
 "which will be titled by the first header in the file, or by the date... very cool for answering the ever troublesome question: Just what exactly did I do this week?
+
+"Calendar
+Plugin 'mattn/calendar-vim'
+
 
 
 " All of your Plugins must be added before the following line
