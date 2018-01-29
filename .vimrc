@@ -655,7 +655,10 @@ set re=1
 " END speed up syntax highlighting
 
 
-"TO REFRESH syntax higlight type in :filetype detect
+"TO REFRESH syntax higlight type in
+":filetype detect
+"also try
+":syntax sync fromstart
 
 " yy will not just use internal vim buffer but will also copy
 " into OS's clipboard
