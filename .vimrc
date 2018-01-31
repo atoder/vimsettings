@@ -120,8 +120,8 @@ Plugin 'kopischke/vim-stay'
 "Easy switching between buffers - vim-airline will show buffer at the top
 "unless multiple tabs are open
 Plugin 'bling/vim-airline'
-
 Plugin 'vim-airline/vim-airline-themes'
+
 
 "New ctrlp
 Plugin 'ctrlpvim/ctrlp.vim'
@@ -149,6 +149,9 @@ Plugin 'xolox/vim-session'
 "A fancy start screen for Vim.
 Plugin 'mhinz/vim-startify'
 
+"https://github.com/terryma/vim-smooth-scroll
+"vim-smooth-scroll makes scrolling in Vim nice and smooth
+Plugin 'terryma/vim-smooth-scroll'
 
 "vim javascript
 Plugin 'pangloss/vim-javascript'
@@ -167,7 +170,7 @@ Plugin 'nathanaelkane/vim-indent-guides'
 "colorschemes
 Plugin 'crusoexia/vim-monokai'
 
-"lucario colorscheme"
+" lucario colorscheme
 " iterm2 set up https://github.com/raphamorim/lucario#iterm"
 Plugin 'raphamorim/lucario'
 
@@ -181,6 +184,16 @@ Plugin 'justinmk/vim-syntax-extra'
 "Tracks time you spend coding, branch, language, coding editor
 "wakatime.com
 Plugin 'wakatime/vim-wakatime'
+
+" EasyMotion makes jumping to specific characters in the visible
+" portion of your file effortless. Simply press leader-leader and a movement,
+" and all currently visible possible matches are highlighted with one key to
+" press to jump to that location.
+"<Leader><Leader>w highlight first character of every word after the cursor with jump to keys
+"<Leader><Leader>b highlight first character of every word before the cursor with jump to keys
+"<Leader><Leader>f will ask for a character to search for and highlight all those characters
+" ahead of the cursor with jump-to keys.
+Plugin 'easymotion/vim-easymotion'
 
 
 "A Personal Wiki For Vim
@@ -539,7 +552,7 @@ nmap <leader>9 <Plug>AirlineSelectTab9
 
 
 " Switch to last active buffer
-noremap <leader><space> :buffer #<CR>
+noremap <leader>b :buffer #<CR>
 
 "https://github.com/xolox/vim-easytags
 " Since version 3.6 the vim-easytags plug-in tries to squeeze as much
@@ -569,7 +582,6 @@ let g:easytags_async=1
 "you stop typing for a moment.  "If you want to disable automatic highlighting
 "while keeping automatic updating enabled you can set this option to false:
 let g:easytags_auto_highlight=0
-
 
 
 let g:syntastic_always_populate_loc_list = 1
