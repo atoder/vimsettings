@@ -187,6 +187,19 @@ Plugin 'wakatime/vim-wakatime'
 Plugin 'vimwiki/vimwiki'
 " To open <leader>ww
 "
+"normal mode:
+""<Leader>ww -- Open default wiki index file.
+""<Leader>wt -- Open default wiki index file in a new tab.
+""<Leader>ws -- Select and open wiki index file.
+""<Leader>wd -- Delete wiki file you are in.
+""<Leader>wr -- Rename wiki file you are in.
+""<Enter> -- Folow/Create wiki link
+""<Shift-Enter> -- Split and folow/create wiki link
+""<Ctrl-Enter> -- Vertical split and folow/create wiki link
+""<Backspace> -- Go back to parent(previous) wiki link
+""<Tab> -- Find next wiki link
+""<Shift-Tab> -- Find previous wiki
+
 " to search for entries :VWS <keyword>
 "    Search for /pattern/ in all files of current wiki.
 "    To display all matches use |:lopen| command.
@@ -206,7 +219,12 @@ Plugin 'vimwiki/vimwiki'
 " path - where the files are saved. I link it to my google drive so it's synced
 " path_html - where the html pages get saved
 " auto-export - automatically create html files
+"
 let g:vimwiki_list = [{'path': '~/Google\ Drive/vim-wiki/', 'path_html': '~/Google\ Drive/vim-wiki/html', 'auto_export': 1}]
+
+let g:vimwiki_automatic_nested_syntaxes = 1
+let g:vimwiki_automatic_nested_syntaxes = {'python': 'python', 'c++': 'cpp'}
+
 
 "Vimwiki also has bindings to quickly create and view diary pages.
 "This at first seemed fairly useless to me, but now I can't live without them.
