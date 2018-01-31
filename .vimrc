@@ -56,17 +56,28 @@ Plugin 'altercation/vim-colors-solarized'
 
 Plugin 'christoomey/vim-tmux-navigator'
 
-"do git in vim
-":GStatus
-":Gwrite
-":Gcommit
+" do git in vim
+" :GStatus
+" :Gwrite
+" :Gcommit
 Plugin 'tpope/vim-fugitive'
 
-"Fugitive extension to manage and merge Git branches
-":Merginal
+" Fugitive extension to manage and merge Git branches
+" :Merginal
 Plugin 'idanarye/vim-merginal'
 
 Plugin 'tpope/vim-unimpaired'
+
+" Handles bracketed-paste-mode in vim (aka. automatic `:set paste`)
+" Then whenever you are in the insert mode and paste into your 
+" terminal emulator using command+v, shift+insert, ctrl+shift+v or middle-click, 
+" vim will automatically :set paste for you.
+Plugin 'ConradIrwin/vim-bracketed-paste'
+
+" https://github.com/junegunn/goyo.vim
+"Goyo is a plugin for “distraction-free writing in Vim”
+":Goyo
+Plugin 'junegunn/goyo.vim' ":Goyo to exit as well
 
 
 "Add python PEP8 checking with this nifty little plugin:
@@ -432,6 +443,7 @@ set shiftwidth=4
 set tabstop=4
 set softtabstop=4
 "set paste
+"^ using ConradIrwin/vim-bracketed-paste instead
 set relativenumber
 
 "removes newline EOL
