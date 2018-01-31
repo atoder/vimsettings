@@ -77,7 +77,7 @@ Plugin 'ConradIrwin/vim-bracketed-paste'
 " https://github.com/junegunn/goyo.vim
 "Goyo is a plugin for “distraction-free writing in Vim”
 ":Goyo
-Plugin 'junegunn/goyo.vim' ":Goyo to exit as well
+Plugin 'junegunn/goyo.vim'
 
 
 "Add python PEP8 checking with this nifty little plugin:
