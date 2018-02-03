@@ -215,6 +215,11 @@ Plugin 'vimwiki/vimwiki'
 " <Tab> -- Find next wiki link
 " <Shift-Tab> -- Find previous wiki
 
+" Diary
+" If you press <Leader>wi, you will be taken to a special Diary Index page
+" By pressing <Leader>w<Leader>w you create a new diary
+" By pressing <Leader>w<Leader>i you will generate an index of all your diary pages
+
 " to search for entries :VWS <keyword>
 "    Search for /pattern/ in all files of current wiki.
 "    To display all matches use |:lopen| command.
