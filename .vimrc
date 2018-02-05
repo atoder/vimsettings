@@ -242,9 +242,6 @@ Plugin 'vimwiki/vimwiki'
 "
 let g:vimwiki_list = [{'path': '~/Google\ Drive/vim-wiki/', 'path_html': '~/Google\ Drive/vim-wiki/html', 'auto_export': 1}]
 
-let g:vimwiki_automatic_nested_syntaxes = 1
-let g:vimwiki_automatic_nested_syntaxes = {'python': 'python', 'c++': 'cpp'}
-
 
 "Vimwiki also has bindings to quickly create and view diary pages.
 "This at first seemed fairly useless to me, but now I can't live without them.
@@ -260,8 +257,7 @@ let g:vimwiki_automatic_nested_syntaxes = {'python': 'python', 'c++': 'cpp'}
 
 "Calendar
 Plugin 'mattn/calendar-vim'
-
-
+":Calendar
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -723,3 +719,6 @@ let g:zenburn_high_Contrast = 1
 
 "changing color of the folds
 hi Folded ctermbg=235
+
+
+let wiki.nested_syntaxes = {'python': 'python', 'c++': 'cpp'}
