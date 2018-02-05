@@ -719,6 +719,3 @@ let g:zenburn_high_Contrast = 1
 
 "changing color of the folds
 hi Folded ctermbg=235
-
-
-let wiki.nested_syntaxes = {'python': 'python', 'c++': 'cpp'}
