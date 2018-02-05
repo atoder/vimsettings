@@ -240,7 +240,12 @@ Plugin 'vimwiki/vimwiki'
 " path_html - where the html pages get saved
 " auto-export - automatically create html files
 "
-let g:vimwiki_list = [{'path': '~/Google\ Drive/vim-wiki/', 'path_html': '~/Google\ Drive/vim-wiki/html', 'auto_export': 1}]
+let g:vimwiki_list = [{'path': '~/Google\ Drive/vim-wiki/', 
+                        \ 'path_html': '~/Google\ Drive/vim-wiki/html', 
+                        \ 'auto_export': 1,
+                        \ 'nested_syntaxes': {'ruby': 'ruby', 'python': 'python', 'c++': 'cpp', 'sh': 'sh', 'racket': 'racket', 'php': 'php', 'javascript': 'js', 'sql': 'sql'}
+                        \ }]
+
 
 
 "Vimwiki also has bindings to quickly create and view diary pages.
@@ -254,6 +259,7 @@ let g:vimwiki_list = [{'path': '~/Google\ Drive/vim-wiki/', 'path_html': '~/Goog
 "If you press <Leader>wi, you will be taken to a special Diary Index page, and
 "by pressing <Leader>w<Leader>i you will generate an index of all your diary pages,
 "which will be titled by the first header in the file, or by the date... very cool for answering the ever troublesome question: Just what exactly did I do this week?
+
 
 "Calendar
 Plugin 'mattn/calendar-vim'
