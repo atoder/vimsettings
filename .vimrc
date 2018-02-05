@@ -240,12 +240,21 @@ Plugin 'vimwiki/vimwiki'
 " path_html - where the html pages get saved
 " auto-export - automatically create html files
 "
-let g:vimwiki_list = [{'path': '~/Google\ Drive/vim-wiki/', 
-                        \ 'path_html': '~/Google\ Drive/vim-wiki/html', 
-                        \ 'auto_export': 1,
-                        \ 'nested_syntaxes': {'ruby': 'ruby', 'python': 'python', 'c++': 'cpp', 'sh': 'sh', 'racket': 'racket', 'php': 'php', 'javascript': 'js', 'sql': 'sql'}
-                        \ }]
+let wiki_user = {}
+let wiki_user.path = '~/Google\ Drive/vim-wiki/'
+let wiki_user.path_html = '~/Google\ Drive/vim-wiki/html'
+let wiki_user.auto_export = 1
+let wiki_user.nested_syntaxes = {'python': 'python', 'cxx': 'cpp', 'cc': 'c', 'rust': 'rust', 'sql': 'sql', 'javascript': 'javascript', 'sh': 'sh', 'bash': 'sh', 'conf': 'conf', 'ssh': 'python', 'yaml': 'yaml', 'md': 'markdown', 'makefile': 'make', 'messages': 'messages'}
+" Handler for precise linking
+let g:vimwiki_list = [wiki_user]
 
+
+"old all in 1 setting
+"let g:vimwiki_list = [{'path': '~/Google\ Drive/vim-wiki/', 
+"                        \ 'path_html': '~/Google\ Drive/vim-wiki/html', 
+"                        \ 'auto_export': 1,
+"                        \ 'nested_syntaxes': {'ruby': 'ruby', 'python': 'python', 'c++': 'cpp', 'sh': 'sh', 'racket': 'racket', 'php': 'php', 'javascript': 'js', 'sql': 'sql'}
+"                        \ }]
 
 
 "Vimwiki also has bindings to quickly create and view diary pages.
