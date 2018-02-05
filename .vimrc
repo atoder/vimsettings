@@ -244,7 +244,8 @@ let wiki_user = {}
 let wiki_user.path = '~/Google\ Drive/vim-wiki/'
 let wiki_user.path_html = '~/Google\ Drive/vim-wiki/html'
 let wiki_user.auto_export = 1
-let wiki_user.nested_syntaxes = {'python': 'python', 'cxx': 'cpp', 'cc': 'c', 'rust': 'rust', 'sql': 'sql', 'javascript': 'javascript', 'sh': 'sh', 'bash': 'sh', 'conf': 'conf', 'ssh': 'python', 'yaml': 'yaml', 'md': 'markdown', 'makefile': 'make', 'messages': 'messages'}
+let wiki_user.nested_syntaxes = {'python': 'python', 'c++': 'cpp', 'cc': 'c', 'rust': 'rust', 'sql': 'sql', 'javascript': 'javascript', 'sh': 'sh', 'bash': 'sh', 'conf': 'conf', 'ssh': 'python', 'yaml': 'yaml', 'md': 'markdown', 'makefile': 'make', 'messages': 'messages'}
+let wiki_user.automatic_nested_syntaxes = 1
 " Handler for precise linking
 let g:vimwiki_list = [wiki_user]
 
