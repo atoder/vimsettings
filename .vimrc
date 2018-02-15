@@ -42,8 +42,6 @@ Plugin 'morhetz/gruvbox'
 Plugin 'ervandew/supertab'
 
 Plugin 'flazz/vim-colorschemes'
-"railcasts color scheme
-Plugin 'jpo/vim-railscasts-theme'
 
 "one dark color scheme
 Plugin 'joshdick/onedark.vim'
@@ -354,7 +352,6 @@ colorscheme space-vim-dark
 "colorscheme gruvbox
 
 "BONUS ONES
-"colorscheme railscasts
 "colorscheme apprentice
 "colorscheme wombat256
 "colorscheme onedark
