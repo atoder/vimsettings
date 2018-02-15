@@ -741,3 +741,7 @@ let g:zenburn_high_Contrast = 1
 
 "changing color of the folds
 hi Folded ctermbg=235
+
+" http://vim.wikia.com/wiki/Single_tags_file_for_a_source_tree
+" Here, the leading "./" tells Vim to use the directory of the current file rather than Vim's working directory.
+"set tags=./tags;
