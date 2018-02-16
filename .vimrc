@@ -709,7 +709,7 @@ set re=1
 
 "TO REFRESH syntax higlight type in
 ":filetype detect
-"also try
+" OR also try
 ":syntax sync fromstart
 
 " yy will not just use internal vim buffer but will also copy
