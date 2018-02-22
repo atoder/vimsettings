@@ -300,6 +300,20 @@ set completeopt-=preview
 " Use Ag instead of grep (more advanced)
 nnoremap F :Ag! "\b<C-R><C-W>\b"<CR>:cw<CR>
 
+
+" == Shift K actives man pages ==
+
+" == GIT ==
+" https://salferrarello.com/using-vim-view-git-commits/#oneline-gitlog-vim
+" $ git log | vim -R -
+" Running this command in command line, executes git log and opens a copy of Vim populated
+" with the results of git log. Once you’re in Vim, if you place your cursor over
+" a commit (e.g. 083279917ae3bbe8bfc25b2bf785acbbee302415)
+" and click K, you’ll be temporarily shown the result of running git show on the commit.
+" == Why does this work? ==
+" When you’re in Vim, the default behavior when you click K is to take the word under the cursor and look it up using the man program. This behavior can be modified by setting the value of keywordprg to something other than man.
+" Vim automatically sets keywordprg for some filetypes, including the filetype git. When the filetype is set to git, keywordprg is set to git show.
+
 "You can configure ag.vim to always start searching from your project root instead of the cwd
 let g:ag_working_path_mode="r"
 
@@ -342,7 +356,7 @@ set t_Co=256
 " M+ 1M font, Hack font, Roboto Mono for Powerline (thin version as well)
 " and Fira Mono Powerline
 colorscheme space-vim-dark
-"colorscheme lucario
+" colorscheme lucario
 
 "colorscheme zenburn
 "colorscheme janah
@@ -354,14 +368,14 @@ colorscheme space-vim-dark
 "BONUS ONES
 "colorscheme apprentice
 "colorscheme wombat256
+
+"let g:onedark_termcolors=16
 "colorscheme onedark
 
 "set t_Co=256  " vim-monokai now only support 256 colours in terminal."
 "let g:monokai_term_italic = 1
 "let g:monokai_gui_italic = 1
 
-"let g:onedark_termcolors=16
-"colorscheme onedark
 
 
 "airline Automatically displays all buffers when there's only one tab open.
