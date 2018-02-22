@@ -249,8 +249,8 @@ let g:vimwiki_list = [wiki_user]
 
 
 "old all in 1 setting
-"let g:vimwiki_list = [{'path': '~/Google\ Drive/vim-wiki/', 
-"                        \ 'path_html': '~/Google\ Drive/vim-wiki/html', 
+"let g:vimwiki_list = [{'path': '~/Google\ Drive/vim-wiki/',
+"                        \ 'path_html': '~/Google\ Drive/vim-wiki/html',
 "                        \ 'auto_export': 1,
 "                        \ 'nested_syntaxes': {'ruby': 'ruby', 'python': 'python', 'c++': 'cpp', 'sh': 'sh', 'racket': 'racket', 'php': 'php', 'javascript': 'js', 'sql': 'sql'}
 "                        \ }]
@@ -295,10 +295,10 @@ let g:ycm_confirm_extra_conf=0
 set completeopt-=preview
 
 
-" bind K to grep word under cursor
-"nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+" bind F to grep word under cursor
+"nnoremap F :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 " Use Ag instead of grep (more advanced)
-nnoremap K :Ag! "\b<C-R><C-W>\b"<CR>:cw<CR>
+nnoremap F :Ag! "\b<C-R><C-W>\b"<CR>:cw<CR>
 
 "You can configure ag.vim to always start searching from your project root instead of the cwd
 let g:ag_working_path_mode="r"
