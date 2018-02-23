@@ -1,4 +1,4 @@
-set nocompatible              " be iMproved, required
+set nocompatible              " be improved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
@@ -295,10 +295,10 @@ let g:ycm_confirm_extra_conf=0
 set completeopt-=preview
 
 
-" bind F to grep word under cursor
-"nnoremap F :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+" bind shift KK to grep word under cursor
+"nnoremap KK :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 " Use Ag instead of grep (more advanced)
-nnoremap F :Ag! "\b<C-R><C-W>\b"<CR>:cw<CR>
+nnoremap KK :Ag! "\b<C-R><C-W>\b"<CR>:cw<CR>
 
 
 " == Shift K actives man pages ==
@@ -721,17 +721,10 @@ set re=1
 " END speed up syntax highlighting
 
 
-"TO REFRESH syntax higlight type in
-":filetype detect
-" OR also try
-":syntax sync fromstart
 
 " yy will not just use internal vim buffer but will also copy
 " into OS's clipboard
 set clipboard=unnamed
-
-"To access all currently defined registers type
-" :reg
 
 " Overwrite colorschemes background when trying to enable transparency
 " this will allow you to go to transparent mode in in terminal
@@ -756,3 +749,17 @@ hi Folded ctermbg=235
 " http://vim.wikia.com/wiki/Single_tags_file_for_a_source_tree
 " Here, the leading "./" tells Vim to use the directory of the current file rather than Vim's working directory.
 "set tags=./tags;
+
+
+" === VIM CheatSheet ===
+"
+" @: will repeat  any Ex command (:w) for example
+" &  will repeat :substitute commands
+"
+" To access all currently defined registers type
+" :reg
+"
+" TO REFRESH syntax higlight type in
+" :filetype detect
+"  OR also try
+" :syntax sync fromstart
