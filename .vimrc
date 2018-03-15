@@ -322,8 +322,6 @@ imap <C-c> <CR><Esc>O
 "<C-g>g mapping. CTRL+g g will put you after the matching bracket
 
 
-filetype plugin indent on
-
 " Some settings to enable the theme:
 " Show line numbers
 set number
@@ -430,6 +428,8 @@ set list
 "A classic “Python tell” in Vim is the 79th or 80th character highlight:
 set colorcolumn=80              " Show the 80th char column.
 highlight ColorColumn ctermbg=5
+" turn off the color by
+" :set cc=
 
 set history=700
 set wildmenu"Turn on WiLd menu
