@@ -426,10 +426,10 @@ set list
 "set list listchars=tab:→\ ,trail:·,space:␣
 
 "A classic “Python tell” in Vim is the 79th or 80th character highlight:
-set colorcolumn=80              " Show the 80th char column.
-highlight ColorColumn ctermbg=5
+" set colorcolumn=80              " Show the 80th char column.
+" highlight ColorColumn ctermbg=5
 " turn off the color by
-" :set cc=
+set cc=
 
 set history=700
 set wildmenu"Turn on WiLd menu
