@@ -52,3 +52,14 @@ def FlagsForFile( filename, **kwargs ):
 
 If you're using c++, add a 'c++' flag instead of 'c'
 or 'objective-c' for objective c
+
+
+https://github.com/Valloric/YouCompleteMe#mac-os-x
+
+./install.sh --clang-completer --system-libclang
+To install YouComplete with c type languages
+
+or
+
+./install.sh --all
+for all languages
