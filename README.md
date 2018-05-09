@@ -15,9 +15,12 @@ https://stackoverflow.com/questions/1031396/how-to-share-one-vimrc-file-among-mu
 ## YouComplete C error checking
 
 in ~/.vimrc you should already have 
-let g:ycm_global_ycm_extra_conf = "$HOME/.vim/.ycm_extra_conf.py"
 
-and create the .ycm_extra_conf.py file with the following content
+```
+let g:ycm_global_ycm_extra_conf = "$HOME/.vim/.ycm_extra_conf.py"
+```
+
+and create the ~/.vim/.ycm_extra_conf.py file with the following content
 
 ```
 import os
