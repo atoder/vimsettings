@@ -413,24 +413,6 @@ set cursorline
 let python_highlight_all=1
 
 
-
-"I really get frustrated with tabs that look like white spaces,
-"so I ensure they are visible by telling Vim to show all tabs
-"as little arrows ▷.
-"This line also ensures that end of lines are shown with a negation sign ¬ :
-"highlight tabs and trailing spaces
-" turn on with   -> set list
-" turn off with  -> set nolist
-set listchars=eol:¬,tab:▷\ ,
-set list
-"set list listchars=tab:→\ ,trail:·,space:␣
-
-"A classic “Python tell” in Vim is the 79th or 80th character highlight:
-" set colorcolumn=80              " Show the 80th char column.
-" highlight ColorColumn ctermbg=5
-" turn off the color by
-set cc=
-
 set history=700
 set wildmenu"Turn on WiLd menu
 set ruler
@@ -470,6 +452,26 @@ set binary
 set noeol
 "spaces instead of tab, must be after binary and noel setting
 set expandtab
+
+
+"I really get frustrated with tabs that look like white spaces,
+"so I ensure they are visible by telling Vim to show all tabs
+"as little arrows ▷.
+"This line also ensures that end of lines are shown with a negation sign ¬ :
+"highlight tabs and trailing spaces
+" turn on with   -> set list
+" turn off with  -> set nolist
+set listchars=eol:¬,tab:▷\ ,
+set list
+"set list listchars=tab:→\ ,trail:·,space:␣
+
+"A classic “Python tell” in Vim is the 79th or 80th character highlight:
+" set colorcolumn=80              " Show the 80th char column.
+" highlight ColorColumn ctermbg=5
+" turn off the color by
+set cc=
+
+
 
 autocmd Filetype html setlocal ts=4 sts=4 sw=4 expandtab
 autocmd Filetype ruby setlocal ts=2 sts=2 sw=2 expandtab
