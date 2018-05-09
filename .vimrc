@@ -294,6 +294,13 @@ let g:ycm_add_preview_to_completeopt=0
 let g:ycm_confirm_extra_conf=0
 set completeopt-=preview
 
+" default c config
+" To auto-complete source code for C family,
+" you should provide custom .ycm_extra_conf.py file for your project.
+" If you don’t do this, YCM will be unable to use semantic completion.
+let g:ycm_global_ycm_extra_conf = "$HOME/.vim/.ycm_extra_conf.py"
+
+
 
 " bind shift KK to grep word under cursor
 "nnoremap KK :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
