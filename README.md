@@ -58,9 +58,13 @@ https://github.com/Valloric/YouCompleteMe#mac-os-x
 
 To install YouComplete with c type languages
 
+```
 ./install.sh --clang-completer --system-libclang
+```
 
 or
 
+```
 ./install.sh --all
 for all languages
+```
