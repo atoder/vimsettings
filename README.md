@@ -64,7 +64,7 @@ To install YouComplete with c type languages
 
 or
 
+for all languages
 ```
 ./install.sh --all
-for all languages
 ```
