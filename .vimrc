@@ -756,8 +756,10 @@ let g:zenburn_high_Contrast = 1
 hi Folded ctermbg=235
 
 " http://vim.wikia.com/wiki/Single_tags_file_for_a_source_tree
-" Here, the leading "./" tells Vim to use the directory of the current file rather than Vim's working directory.
-"set tags=./tags;
+" https://stackoverflow.com/questions/5017500/vim-difficulty-setting-up-ctags-source-in-subdirectories-dont-see-tags-file-i
+" In case you get here and, like me, are puzzled by tags;/, the ;/ suffix directs vim to do an upward search from the directory containing
+" tags up to the stop directory, in this case /. If you want to use your home directory as the stop-directory, use set tags+=tags;~
+set tags+=tags;/
 
 
 " === VIM CheatSheet ===

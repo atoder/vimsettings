@@ -59,12 +59,41 @@ https://github.com/Valloric/YouCompleteMe#mac-os-x
 To install YouComplete with c type languages
 
 ```
-./install.sh --clang-completer --system-libclang
+./install.py --clang-completer --js-completer
 ```
 
-or
+To install all
 
-for all languages
 ```
-./install.sh --all
+./install.py --all
+```
+
+Create file
+```
+~/.tern-config
+```
+and put this into it
+```
+{
+  "ecmaVersion": 6,
+  "libs": [
+    "browser",
+    "ecma5",
+    "ecma6",
+    "browser",
+    "jquery",
+    "underscore",
+    "chai"
+  ],
+  "plugins": {
+    "modules": {},
+    "es_modules": {},
+    "node": {},
+    "doc_comment": {
+      "fullDocs": true,
+      "strong": true
+    }
+  }
+}
+
 ```
