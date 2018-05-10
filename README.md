@@ -56,8 +56,9 @@ or 'objective-c' for objective c
 
 https://github.com/Valloric/YouCompleteMe#mac-os-x
 
-./install.sh --clang-completer --system-libclang
 To install YouComplete with c type languages
+
+./install.sh --clang-completer --system-libclang
 
 or
 
