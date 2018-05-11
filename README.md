@@ -68,7 +68,12 @@ To install all
 ./install.py --all
 ```
 
-Create file
+2 ways to set up JavaScript completition.
+1) Have a .tern-project file in your project directory or above with settings below
+or
+2) Global file in home directory
+I prefer global
+
 ```
 ~/.tern-config
 ```
