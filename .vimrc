@@ -157,6 +157,9 @@ Plugin 'ryanoasis/vim-devicons'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-easytags'
 
+" set proper path for ctags
+let g:easytags_cmd = '/usr/local/bin/ctags'
+
 "vim sessions
 Plugin 'xolox/vim-session'
 
