@@ -32,8 +32,15 @@ Plugin 'scrooloose/nerdcommenter'
 "Amazing code completion
 Plugin 'Valloric/YouCompleteMe'
 
+Plugin 'ternjs/tern'
+
 "This is a Vim plugin that provides Tern-based JavaScript editing support.
-Plugin 'marijnh/tern_for_vim'
+" will display argument type hints when the cursor is left over a function
+let g:tern_show_argument_hints='on_hold'
+" and
+"
+" Vim plugin has excellent keyboard shortcuts that aren’t enabled by default. To enable them
+let g:tern_map_keys=1
 
 Plugin 'morhetz/gruvbox'
 
@@ -71,8 +78,6 @@ Plugin 'junegunn/goyo.vim'
 
 "Add python PEP8 checking with this nifty little plugin:
 Plugin 'nvie/vim-flake8'
-
-Plugin 'python-mode/python-mode'
 
 "Show which line changed since your last commit.
 "GitGutterToggle
