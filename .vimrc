@@ -34,6 +34,15 @@ Plugin 'Valloric/YouCompleteMe'
 
 Plugin 'ternjs/tern'
 
+
+Plugin 'ternjs/tern_for_vim'
+" to use
+" TernDef: Jump to the definition of the thing under the cursor.
+" TernDoc: Look up the documentation of something.
+" TernType: Find the type of the thing under the cursor.
+" TernRefs: Show all references to the variable or property under the cursor.
+" TernRename: Rename the variable under the cursor.
+
 "This is a Vim plugin that provides Tern-based JavaScript editing support.
 " will display argument type hints when the cursor is left over a function
 let g:tern_show_argument_hints='on_hold'
