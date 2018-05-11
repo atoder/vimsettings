@@ -97,3 +97,14 @@ and put this into it
 }
 
 ```
+
+Now you can do the following in JavaScript
+
+```
+Intelligent auto-completion
+Renaming variables (:YcmCompleter RefactorRename <new name>)
+Go to definition, find references (:YcmCompleter GoToDefinition, :YcmCompleter GoToReferences)
+Type information for identifiers (:YcmCompleter GetType)
+View documentation comments for identifiers (:YcmCompleter GetDoc)
+Management of Tern server instance
+```
