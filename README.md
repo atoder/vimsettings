@@ -172,3 +172,29 @@ Create ~/.ctags
 --regex-typescript=/^[ \t]*(export)?[ \t]*enum[ \t]+([a-zA-Z0-9_]+)/\2/e,enums/
 --regex-typescript=/^[ \t]*import[ \t]+([a-zA-Z0-9_]+)/\1/I,imports/
 ```
+
+## Basic Ranger shortcuts
+
+# ranger is a text-based file manager written in Python. Directories are displayed in one pane with three columns. Moving between them is accomplished with keystrokes, bookmarks, the mouse or the command history. File previews and directory contents show automatically for the current selection.
+# Installation
+
+```
+brew install ranger
+```
+
+These are the basic key binds in ranger, even outside of my configs. Note that they are mostly vim-based.
+
+```
+h/j/k/l -- Move left/down/up/right (where left moves up in the directory structure, right moves into a folder)
+Space -- select/highlight file
+dd -- cut selected files
+yy -- copy/yank selected files
+pp -- paste/move cut/copied files
+/ -- search, when (n/N) next/previos result
+zh or CTRL-h -- show hidden files
+Renaming files:
+cw -- rename file from scratch
+A -- rename file adding to the end
+aa -- rename file appending before the extension
+I -- rename file adding at the beginning
+```

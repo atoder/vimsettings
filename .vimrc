@@ -651,6 +651,16 @@ let g:syntastic_warning_symbol='⚠'
 let g:syntastic_style_error_symbol='✗'
 let g:syntastic_style_warning_symbol='⚠'
 
+"The native support for Java includes YCM's native realtime diagnostics display.
+"This can conflict with other dianostics plugins like Syntastic,
+"so when enabling Java support, please manually disable Syntastic Java diagnostics.
+let g:syntastic_java_checkers = []
+
+" The native support for Java includes YCM's native realtime diagnostics display.
+" This can conflict with other dianostics plugins like Eclim, so when enabling
+" Java support, please manually disable Eclim Java diagnostics.
+let g:EclimFileTypeValidate = 0
+
 "space st will enable and disable syntastic
 nmap <leader>st :SyntasticToggleMode<CR>
 

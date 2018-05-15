@@ -192,3 +192,7 @@ zle -N zle-line-finish
 RPROMPT='${vim_mode}%t'
 
 # END OF VIM INSERT VS COMMAND MODE
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/atoder/.sdkman"
+[[ -s "/Users/atoder/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/atoder/.sdkman/bin/sdkman-init.sh"
