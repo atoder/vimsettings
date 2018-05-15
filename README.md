@@ -179,6 +179,7 @@ ranger is a text-based file manager written in Python. Directories are displayed
 
 ```
 brew install ranger
+ranger --copy-config=all
 ```
 
 These are the basic key binds in ranger, even outside of my configs. Note that they are mostly vim-based.
@@ -197,3 +198,5 @@ A -- rename file adding to the end
 aa -- rename file appending before the extension
 I -- rename file adding at the beginning
 ```
+
+
