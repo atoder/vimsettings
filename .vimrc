@@ -375,7 +375,7 @@ set t_Co=256
 
 " MAIN FAVORITE ONES COLORSCHEMES and FONTS
 " 1) Roboto Mono for Powerline
-" 2) Robot Mono Thin Version
+" 2) Robot Mono Light Version
 " 3) Hack Font
 " 4)and Fira Mono Powerline
 " 5) works well with Terminus font and Darkside iTerm2 color preset
