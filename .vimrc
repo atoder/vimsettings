@@ -374,9 +374,13 @@ set t_Co=256
 
 
 " MAIN FAVORITE ONES COLORSCHEMES and FONTS
-" Works well with Terminus font and Darkside iTerm2 color preset
-" M+ 1M font, Hack font, Roboto Mono for Powerline (thin version as well)
-" and Fira Mono Powerline
+" 1) Roboto Mono for Powerline
+" 2) Robot Mono Thin Version
+" 3) Hack Font
+" 4)and Fira Mono Powerline
+" 5) works well with Terminus font and Darkside iTerm2 color preset
+" 6) M+ 1M font
+"
 colorscheme space-vim-dark
 " colorscheme lucario
 
