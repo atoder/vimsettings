@@ -379,8 +379,9 @@ set t_Co=256
 " 3) Hack Font
 " 4) Fira Mono Powerline
 " 5) Terminus font and Darkside iTerm2 color preset
-" 6) M+ 1M font
-"
+" 6) M+ 2M font
+
+set guifont=Monaco\ 12
 colorscheme space-vim-dark
 " colorscheme lucario
 
@@ -406,6 +407,10 @@ colorscheme space-vim-dark
 
 "airline Automatically displays all buffers when there's only one tab open.
 let g:airline#extensions#tabline#enabled = 1
+
+
+" show buffer number in buffer tabs
+let g:airline#extensions#tabline#buffer_nr_show = 1
 
 " power fonts
 let g:airline_powerline_fonts = 1
@@ -489,15 +494,16 @@ set expandtab
 "highlight tabs and trailing spaces
 " turn on with   -> set list
 " turn off with  -> set nolist
+"set nolist
 set listchars=eol:¬,tab:▷\ ,
 set list
-"set list listchars=tab:→\ ,trail:·,space:␣
+
 
 "A classic “Python tell” in Vim is the 79th or 80th character highlight:
 " set colorcolumn=80              " Show the 80th char column.
 " highlight ColorColumn ctermbg=5
 " turn off the color by
-set cc=
+"set cc=
 
 
 
@@ -735,6 +741,12 @@ let xml_syntax_folding=1      " XML
 
 "close all folds with zM (not really needed?)
 "
+" The easiest way to disable (and enable) folding on the fly is zi.
+" zi is the normal mode command that toggles 'foldenable', just like :set foldenable!.
+" Mnemonic: "fold invert". See :h zi.
+
+
+
 " Allow mouse to scroll the vim windows and resize splits
 set mouse=a
 
