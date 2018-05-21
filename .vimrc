@@ -364,7 +364,7 @@ let g:solarized_visibility = "high"
 let g:solarized_contrast = "high"
 "let g:solarized_contrast = "normal"
 
-let g:gruvbox_italic=1
+let g:gruvbox_contrast_dark='hard'
 
 "set term=screen-256color
 
@@ -381,8 +381,12 @@ set t_Co=256
 " 5) Terminus font and Darkside iTerm2 color preset
 " 6) M+ 2M font
 
-set guifont=Monaco\ 12
-colorscheme space-vim-dark
+"set guifont=Monaco\ 12
+
+colorscheme gruvbox
+set guifont=Roboto\ Mono\ Light\ for\ Powerline:h15
+
+"colorscheme space-vim-dark
 " colorscheme lucario
 
 "colorscheme zenburn
@@ -408,9 +412,20 @@ colorscheme space-vim-dark
 "airline Automatically displays all buffers when there's only one tab open.
 let g:airline#extensions#tabline#enabled = 1
 
-
+let g:airline_powerline_fonts = 1
 " show buffer number in buffer tabs
-let g:airline#extensions#tabline#buffer_nr_show = 1
+"let g:airline#extensions#tabline#buffer_nr_show = 1
+" to switch to buffer number 5
+" :b 5
+
+let g:airline#extensions#tabline#enabled                      = 1
+let g:airline#extensions#tabline#buffer_idx_mode              = 1
+"let g:airline#extensions#tabline#show_buffers                 = 1
+"let g:airline#extensions#tabline#buffer_min_count             = 1
+"let g:airline#extensions#tabline#tab_min_count                = 1
+"let g:airline#extensions#branch#enabled                       = 1
+"let g:airline#extensions#tagbar#enabled                       = 0
+
 
 " power fonts
 let g:airline_powerline_fonts = 1
