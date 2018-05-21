@@ -34,7 +34,6 @@ Plugin 'Valloric/YouCompleteMe'
 
 Plugin 'ternjs/tern'
 
-
 Plugin 'ternjs/tern_for_vim'
 " to use
 " TernDef: Jump to the definition of the thing under the cursor.
@@ -78,6 +77,10 @@ Plugin 'tpope/vim-fugitive'
 
 Plugin 'tpope/vim-unimpaired'
 
+
+
+" A collection of language packs for Vim.
+Plugin 'sheerun/vim-polyglot'
 
 " https://github.com/junegunn/goyo.vim
 "Goyo is a plugin for “distraction-free writing in Vim”
@@ -392,7 +395,9 @@ set t_Co=256
 
 set guifont=Roboto\ Mono\ Light\ for\ Powerline:h15
 
-colorscheme space-vim-dark
+colorscheme mustang
+"colorscheme onedark
+" colorscheme space-vim-dark
 " colorscheme lucario
 
 "colorscheme gruvbox
@@ -405,9 +410,9 @@ colorscheme space-vim-dark
 "BONUS ONES
 "colorscheme apprentice
 "colorscheme wombat256
-
 "let g:onedark_termcolors=16
-"colorscheme onedark
+
+
 
 
 "let g:monokai_term_italic = 1
