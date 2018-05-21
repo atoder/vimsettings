@@ -390,18 +390,17 @@ set t_Co=256
 
 "set guifont=Monaco\ 12
 
-colorscheme gruvbox
 set guifont=Roboto\ Mono\ Light\ for\ Powerline:h15
 
-"colorscheme space-vim-dark
+colorscheme space-vim-dark
 " colorscheme lucario
 
+"colorscheme gruvbox
 "colorscheme zenburn
 "colorscheme janah
 "colorscheme solarized
 "colorscheme jellybeans
 "colorscheme monokai
-"colorscheme gruvbox
 
 "BONUS ONES
 "colorscheme apprentice
@@ -410,7 +409,7 @@ set guifont=Roboto\ Mono\ Light\ for\ Powerline:h15
 "let g:onedark_termcolors=16
 "colorscheme onedark
 
-"set t_Co=256  " vim-monokai now only support 256 colours in terminal."
+
 "let g:monokai_term_italic = 1
 "let g:monokai_gui_italic = 1
 
