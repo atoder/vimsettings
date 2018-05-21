@@ -510,7 +510,8 @@ set expandtab
 " turn on with   -> set list
 " turn off with  -> set nolist
 "set nolist
-set listchars=eol:¬,tab:▷\ ,
+"set listchars=eol:¬,tab:▷\ ,
+set listchars=tab:▷\ ,
 set list
 
 
