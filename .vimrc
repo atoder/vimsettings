@@ -374,12 +374,19 @@ set t_Co=256
 
 
 " MAIN FAVORITE ONES COLORSCHEMES and FONTS
-" 1) Robot Mono Light Version
-" 2) Roboto Mono for Powerline
+" 1) Fira Mono Powerline
+" 2) Robot Mono Light Version
 " 3) Hack Font
-" 4) Fira Mono Powerline
-" 5) Terminus font and Darkside iTerm2 color preset
-" 6) M+ 2M font
+" 4) Terminus font and Darkside iTerm2 color preset
+" 5) M+ 2M font
+
+" MAIN FAVORITE iterm2 colorschemes
+" 1) Darkside
+" 2) space-vim-dark
+" 3) One Dark
+" 4) gruvbox-dark
+" 5) Solarized Dark
+
 
 "set guifont=Monaco\ 12
 
