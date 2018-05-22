@@ -87,6 +87,8 @@ Plugin 'sheerun/vim-polyglot'
 ":Goyo
 Plugin 'junegunn/goyo.vim'
 
+"mustang colorscheme
+Plugin 'croaker/mustang-vim'
 
 "Add python PEP8 checking with this nifty little plugin:
 Plugin 'nvie/vim-flake8'
@@ -395,9 +397,9 @@ set t_Co=256
 
 set guifont=Roboto\ Mono\ Light\ for\ Powerline:h15
 
-colorscheme mustang
+colorscheme space-vim-dark
+"colorscheme mustang
 "colorscheme onedark
-" colorscheme space-vim-dark
 " colorscheme lucario
 
 "colorscheme gruvbox
@@ -413,11 +415,8 @@ colorscheme mustang
 "let g:onedark_termcolors=16
 
 
-
-
 "let g:monokai_term_italic = 1
 "let g:monokai_gui_italic = 1
-
 
 
 "airline Automatically displays all buffers when there's only one tab open.
