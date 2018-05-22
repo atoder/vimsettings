@@ -358,8 +358,74 @@ set number
 "let g:solarized_termtrans = 1
 
 " Use syntax highlighting
+set history=700
+set wildmenu"Turn on WiLd menu
+set ruler
+set cmdheight=2
+set hid
+set backspace=eol,start,indent
+set whichwrap+=<,>,h,l
+set ignorecase
+set smartcase
+set hlsearch
+set incsearch
+set nolazyredraw
+set magic
+set showmatch
+set mat=2
+set noerrorbells
+set novisualbell
+set t_vb=
+set tm=500
+set smarttab
+set lbr
+set tw=500
+set ai
+set si
+set nowrap
+set number
+" syntax enable will keep your current color setting
+" syntax on will overwrite with vim defaults.
 syntax enable
+" syntax on
+set shiftwidth=4
+set tabstop=4
+set softtabstop=4
+set relativenumber
 
+"removes newline EOL
+"so other non vim/terminal editors don't see extra line
+set binary
+set noeol
+"spaces instead of tab, must be after binary and noel setting
+set expandtab
+
+
+"I really get frustrated with tabs that look like white spaces,
+"so I ensure they are visible by telling Vim to show all tabs
+"as little arrows ▷.
+"This line also ensures that end of lines are shown with a negation sign ¬ :
+"highlight tabs and trailing spaces
+" turn on with   -> set list
+" turn off with  -> set nolist
+"set nolist
+"set listchars=eol:¬,tab:▷\ ,
+set listchars=tab:▷\ ,
+set list
+
+
+"A classic “Python tell” in Vim is the 79th or 80th character highlight:
+" set colorcolumn=80              " Show the 80th char column.
+" highlight ColorColumn ctermbg=5
+" turn off the color by
+"set cc=
+
+
+"show status at the bottom of vim file
+set laststatus=2
+
+"tail of the filename
+set statusline=%f
 
 "let g:solarized_termcolors = 256
 "let g:solarized_termcolors = 16
@@ -376,6 +442,10 @@ let g:gruvbox_contrast_dark='hard'
 "256 colors in vim
 set t_Co=256
 
+
+"Switch between different backgrounds
+set background=dark
+"set background=light
 
 
 " MAIN FAVORITE ONES COLORSCHEMES and FONTS
@@ -397,23 +467,23 @@ set t_Co=256
 
 "set guifont=Monaco\ 12
 
-set guifont=Roboto\ Mono\ Light\ for\ Powerline:h15
 
 colorscheme space-vim-dark
-"colorscheme mustang
-"colorscheme onedark
+
+" colorscheme mustang
+" colorscheme onedark
 " colorscheme lucario
 
-"colorscheme gruvbox
-"colorscheme zenburn
-"colorscheme janah
-"colorscheme solarized
-"colorscheme jellybeans
-"colorscheme monokai
+" colorscheme gruvbox
+" colorscheme zenburn
+" colorscheme janah
+" colorscheme solarized
+" colorscheme jellybeans
+" colorscheme monokai
 
 "BONUS ONES
-"colorscheme apprentice
-"colorscheme wombat256
+" colorscheme apprentice
+" colorscheme wombat256
 "let g:onedark_termcolors=16
 
 
@@ -461,10 +531,6 @@ let base16colorspace=256  " Access colors present in 256 colorspace
 "Auto indent cod
 set autoindent
 
-"Switch between different backgrounds
-set background=dark
-"set background=light
-
 "enable cursor line
 set cursorline
 
@@ -472,66 +538,8 @@ set cursorline
 "make your python code look pretty
 let python_highlight_all=1
 
-
-set history=700
-set wildmenu"Turn on WiLd menu
-set ruler
-set cmdheight=2
-set hid
-set backspace=eol,start,indent
-set whichwrap+=<,>,h,l
-set ignorecase
-set smartcase
-set hlsearch
-set incsearch
-set nolazyredraw
-set magic
-set showmatch
-set mat=2
-set noerrorbells
-set novisualbell
-set t_vb=
-set tm=500
-set smarttab
-set lbr
-set tw=500
-set ai
-set si
-set nowrap
-set number
-syntax on
-set shiftwidth=4
-set tabstop=4
-set softtabstop=4
-"set paste
-set relativenumber
-
-"removes newline EOL
-"so other non vim/terminal editors don't see extra line
-set binary
-set noeol
-"spaces instead of tab, must be after binary and noel setting
-set expandtab
-
-
-"I really get frustrated with tabs that look like white spaces,
-"so I ensure they are visible by telling Vim to show all tabs
-"as little arrows ▷.
-"This line also ensures that end of lines are shown with a negation sign ¬ :
-"highlight tabs and trailing spaces
-" turn on with   -> set list
-" turn off with  -> set nolist
-"set nolist
-"set listchars=eol:¬,tab:▷\ ,
-set listchars=tab:▷\ ,
-set list
-
-
-"A classic “Python tell” in Vim is the 79th or 80th character highlight:
-" set colorcolumn=80              " Show the 80th char column.
-" highlight ColorColumn ctermbg=5
-" turn off the color by
-"set cc=
+"grey comments
+hi Comment guifg=#5C6370 ctermfg=59
 
 
 
@@ -544,11 +552,7 @@ au BufNewFile,BufRead *.ejs set filetype=javascript
 au BufNewFile,BufRead *.handlebars set filetype=html
 au BufNewFile,BufRead *.eco set filetype=html
 
-"show status at the bottom of vim file
-set laststatus=2
 
-"tail of the filename
-set statusline=%f
 
 "mapping buffer switching and closing to shortcuts
 map gn :bn<cr>
@@ -817,9 +821,9 @@ highlight NonText ctermbg=none
 
 "Overwrite hightlight color change for SEARCH
 "for the GUI
-hi Search guifg=black guibg=red
+"hi Search guifg=black guibg=red
 " for terminal vim
-hi Search cterm=NONE ctermfg=black ctermbg=red
+"hi Search cterm=NONE ctermfg=black ctermbg=red
 
 
 " * You can now set a darker background for bright environments.
@@ -827,7 +831,7 @@ hi Search cterm=NONE ctermfg=black ctermbg=red
 let g:zenburn_high_Contrast = 1
 
 "changing color of the folds
-hi Folded ctermbg=235
+"hi Folded ctermbg=235
 
 " http://vim.wikia.com/wiki/Single_tags_file_for_a_source_tree
 " https://stackoverflow.com/questions/5017500/vim-difficulty-setting-up-ctags-source-in-subdirectories-dont-see-tags-file-i
@@ -848,3 +852,4 @@ set tags+=tags;/
 " :filetype detect
 "  OR also try
 " :syntax sync fromstart
+"
