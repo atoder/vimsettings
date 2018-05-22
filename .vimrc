@@ -706,6 +706,9 @@ nmap <leader>st :SyntasticToggleMode<CR>
 set swapfile
 set dir=~/tmp
 
+" When opening a file or bookmark, change to its directory.
+let g:startify_change_to_dir = 0
+
 "gets rid of possibly useless use of a variable in void context error
 "let g:syntastic_eruby_ruby_quiet_messages =  {'regex': 'possibly useless use
 "of a variable in void context'}
