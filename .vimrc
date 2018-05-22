@@ -381,9 +381,10 @@ set t_Co=256
 " MAIN FAVORITE ONES COLORSCHEMES and FONTS
 " 1) Fira Mono Powerline
 " 2) Robot Mono Light Version
-" 3) Hack Font
-" 4) Terminus font and Darkside iTerm2 color preset
-" 5) M+ 2M font
+" 3) Terminus font and Darkside iTerm2 color preset
+" 4) Hack Font
+" 5) Consolas
+" 6) M+ 1M font
 
 " MAIN FAVORITE iterm2 colorschemes
 " 1) Darkside
