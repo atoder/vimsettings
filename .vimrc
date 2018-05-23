@@ -855,4 +855,3 @@ set tags+=tags;/
 
 " Use true colors
 set termguicolors
-"
