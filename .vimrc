@@ -852,4 +852,7 @@ set tags+=tags;/
 " :filetype detect
 "  OR also try
 " :syntax sync fromstart
+
+" Use true colors
+set termguicolors
 "
