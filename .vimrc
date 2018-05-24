@@ -807,7 +807,8 @@ set synmaxcol=300
 set re=1
 " END speed up syntax highlighting
 
-
+" Use true colors
+set termguicolors
 
 " yy will not just use internal vim buffer but will also copy
 " into OS's clipboard
@@ -815,9 +816,7 @@ set clipboard=unnamed
 
 " Overwrite colorschemes background when trying to enable transparency
 " this will allow you to go to transparent mode in in terminal
-hi Normal ctermbg=none
-highlight NonText ctermbg=none
-
+hi Normal ctermbg=NONE guibg=NONE
 
 "Overwrite hightlight color change for SEARCH
 "for the GUI
@@ -852,6 +851,3 @@ set tags+=tags;/
 " :filetype detect
 "  OR also try
 " :syntax sync fromstart
-
-" Use true colors
-set termguicolors
