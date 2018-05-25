@@ -199,8 +199,8 @@ export SDKMAN_DIR="/Users/atoder/.sdkman"
 
 
 # Prepands money back emoji to the prompt
-PROMPT='💡 '$PROMPT
-#PROMPT='💰 'PROMPT
+PROMPT='💡  '$PROMPT
+#PROMPT+='💰  '
 
 # This is GOLD for finding out what is taking so much space on your drives!
 alias diskspace="du -h | sort -n -r |more"
