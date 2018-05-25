@@ -440,7 +440,7 @@ let g:gruvbox_contrast_dark='hard'
 "set term=screen-256color
 
 "256 colors in vim
-set t_Co=256
+"set t_Co=256
 
 
 "Switch between different backgrounds
@@ -524,7 +524,7 @@ if ! has('gui_running')
 endif
 
 "
-let base16colorspace=256  " Access colors present in 256 colorspace
+"let base16colorspace=256  " Access colors present in 256 colorspace
 
 
 
