@@ -196,3 +196,15 @@ RPROMPT='${vim_mode}%t'
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/atoder/.sdkman"
 [[ -s "/Users/atoder/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/atoder/.sdkman/bin/sdkman-init.sh"
+
+
+# Prepands money back emoji to the prompt
+PROMPT='💡 '$PROMPT
+#PROMPT='💰 'PROMPT
+
+# This is GOLD for finding out what is taking so much space on your drives!
+alias diskspace="du -h | sort -n -r |more"
+
+# Show me the size (sorted) of only the folders in this directory
+alias folders="find . -maxdepth 1 -type d -print | xargs du -hs | sort -rn"
+
