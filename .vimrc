@@ -50,14 +50,8 @@ let g:tern_show_argument_hints='on_hold'
 " Vim plugin has excellent keyboard shortcuts that aren’t enabled by default. To enable them
 let g:tern_map_keys=1
 
-Plugin 'ludovicchabant/vim-gutentags'
-"Specifies a directory in which to create all the tags files,
-"instead of writing them at the root of each project.
-let g:gutentags_cache_dir = $HOME
-
 " Vim's MatchParen for HTML tags
 Plugin 'gregsexton/MatchTag'
-
 
 
 Plugin 'ramitos/jsctags'
@@ -176,8 +170,19 @@ Plugin 'ryanoasis/vim-devicons'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-easytags'
 
+" Exuberant Ctags
+" to install ctags on Mac OS X (not default mac os x ctags)
+" brew install ctags
+" alias ctags="`brew --prefix`/bin/ctags"
+" alias ctags >> ~/.zshrc
+
+" if you get an error with ctags such as E431: Format error in tags file tags
+" before byte 23232 for example. Open the tag file, hit
+" :go 23232 and remove the offending lines
+
+
 " set proper path for ctags
-let g:easytags_cmd = '/usr/local/bin/ctags'
+"let g:easytags_cmd = '/usr/local/bin/ctags'
 
 "vim sessions
 Plugin 'xolox/vim-session'
@@ -854,8 +859,15 @@ let g:zenburn_high_Contrast = 1
 " In case you get here and, like me, are puzzled by tags;/, the ;/ suffix directs vim to do an upward search from the directory containing
 " tags up to the stop directory, in this case /. If you want to use your home directory as the stop-directory, use set tags+=tags;~
 "set tags+=~/tags;
-set tags=$HOME
+"set tags=$HOME
+"set tags+=tags;/
+"set tags=./tags;
 
+
+" ./tags means look for a tags file in the directory of the current file,
+" tags means look for a tags file in the working directory, ;/ means
+" keep looking up and up until you reach /.
+set tags=./tags,tags;/
 
 " === VIM CheatSheet ===
 "
