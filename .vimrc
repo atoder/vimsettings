@@ -55,6 +55,10 @@ Plugin 'ludovicchabant/vim-gutentags'
 "instead of writing them at the root of each project.
 let g:gutentags_cache_dir = $HOME
 
+" Vim's MatchParen for HTML tags
+Plugin 'gregsexton/MatchTag'
+
+
 
 Plugin 'ramitos/jsctags'
 
@@ -83,9 +87,11 @@ Plugin 'christoomey/vim-tmux-navigator'
 " :Gcommit
 Plugin 'tpope/vim-fugitive'
 
+" :GitLog
+Plugin 'kablamo/vim-git-log'
+
+
 Plugin 'tpope/vim-unimpaired'
-
-
 
 " A collection of language packs for Vim.
 Plugin 'sheerun/vim-polyglot'
