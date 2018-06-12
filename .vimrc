@@ -50,6 +50,14 @@ let g:tern_show_argument_hints='on_hold'
 " Vim plugin has excellent keyboard shortcuts that aren’t enabled by default. To enable them
 let g:tern_map_keys=1
 
+Plugin 'ludovicchabant/vim-gutentags'
+"Specifies a directory in which to create all the tags files,
+"instead of writing them at the root of each project.
+let g:gutentags_cache_dir = $HOME
+
+
+Plugin 'ramitos/jsctags'
+
 Plugin 'morhetz/gruvbox'
 
 "Supertab is a vim plugin which allows you to use <Tab> for all your
@@ -839,7 +847,8 @@ let g:zenburn_high_Contrast = 1
 " https://stackoverflow.com/questions/5017500/vim-difficulty-setting-up-ctags-source-in-subdirectories-dont-see-tags-file-i
 " In case you get here and, like me, are puzzled by tags;/, the ;/ suffix directs vim to do an upward search from the directory containing
 " tags up to the stop directory, in this case /. If you want to use your home directory as the stop-directory, use set tags+=tags;~
-set tags+=tags;/
+"set tags+=~/tags;
+set tags=$HOME
 
 
 " === VIM CheatSheet ===
