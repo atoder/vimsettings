@@ -55,9 +55,6 @@ Plugin 'ludovicchabant/vim-gutentags'
 "instead of writing them at the root of each project.
 let g:gutentags_cache_dir = $HOME
 
-
-Plugin 'ramitos/jsctags'
-
 Plugin 'morhetz/gruvbox'
 
 "Supertab is a vim plugin which allows you to use <Tab> for all your
