@@ -180,8 +180,13 @@ Plugin 'ryanoasis/vim-devicons'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-easytags'
 
-"If this is the case you can set the global variable g:easytags_cmd to the location where you've installed Exuberant Ctags
-let g:easytags_cmd = '/usr/local/bin/ctags'
+" ----- xolox/vim-easytags settings -----
+set tags=./tags;,~/.vimtags
+let g:easytags_events = ['BufReadPost', 'BufWritePost']
+let g:easytags_async = 1
+let g:easytags_dynamic_files = 2
+let g:easytags_resolve_links = 1
+let g:easytags_suppress_ctags_warning = 1
 
 "https://codeyarns.com/2015/03/21/easytags-plugin-for-vim/
 " By default :UpdateTags only writes to the global tags file,
@@ -531,7 +536,6 @@ colorscheme space-vim-dark
 "airline Automatically displays all buffers when there's only one tab open.
 let g:airline#extensions#tabline#enabled = 1
 
-let g:airline_powerline_fonts = 1
 " show buffer number in buffer tabs
 "let g:airline#extensions#tabline#buffer_nr_show = 1
 " to switch to buffer number 5
