@@ -54,7 +54,17 @@ let g:tern_map_keys=1
 Plugin 'gregsexton/MatchTag'
 
 
-Plugin 'ramitos/jsctags'
+" Gutentags is a plugin that takes care of the much needed management of tags files in Vim.
+Plugin 'ludovicchabant/vim-gutentags'
+
+" You can display an indicator of tag generation progress in your |status-line|
+set statusline+=%{gutentags#statusline()}
+
+" exclude the following files
+let g:gutentags_ctags_exclude = ["*.min.js", "*.min.css", "build", "vendor", ".git", "node_modules", "*.vim/bundle/*"]
+let g:gutentags_trace = 1
+
+
 
 Plugin 'morhetz/gruvbox'
 
@@ -867,7 +877,8 @@ let g:zenburn_high_Contrast = 1
 " ./tags means look for a tags file in the directory of the current file,
 " tags means look for a tags file in the working directory, ;/ means
 " keep looking up and up until you reach /.
-set tags=./tags,tags;/
+"set tags=./tags,tags;/
+set tags=./tags;tags
 
 " === VIM CheatSheet ===
 "
