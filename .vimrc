@@ -15,7 +15,7 @@ Plugin 'VundleVim/Vundle.vim'
 "To use it, hover over a function and type in :JSDoc
 Plugin 'heavenshell/vim-jsdoc'
 
-"Plugin for commenting and uncommenting blocks of line
+"For commenting and uncommenting blocks of line
 Plugin 'scrooloose/nerdcommenter'
 "Comment out the current line or text selected in visual mode.
 "[count]<leader>cc |NERDComComment|
@@ -52,19 +52,6 @@ let g:tern_map_keys=1
 
 " Vim's MatchParen for HTML tags
 Plugin 'gregsexton/MatchTag'
-
-
-" Gutentags is a plugin that takes care of the much needed management of tags files in Vim.
-"Plugin 'ludovicchabant/vim-gutentags'
-
-" You can display an indicator of tag generation progress in your |status-line|
-"set statusline+=%{gutentags#statusline()}
-
-"let g:gutentags_project_root = ['tags']
-
-" exclude the following files
-"let g:gutentags_ctags_exclude = ["*.min.js", "*.min.css", "build", "vendor", ".git", "node_modules", "*.vim/bundle/*"]
-"let g:gutentags_trace = 1
 
 Plugin 'morhetz/gruvbox'
 
@@ -223,14 +210,18 @@ Plugin 'pangloss/vim-javascript'
 "From http://oli.me.uk/2013/06/29/equipping-vim-for-javascript/
 Plugin 'jelera/vim-javascript-syntax'
 
-"provide the keyword highlight of famous js libraries and
-"start to support "native methods.
-Plugin 'crusoexia/vim-javascript-lib'
 
 "Indent Guides is a plugin for visually displaying indent levels in Vim.
 Plugin 'nathanaelkane/vim-indent-guides'
 "to enable type mapleader (in my case space) and ig
 "
+
+" React Syntax Highlighting
+Plugin 'mxw/vim-jsx'
+let g:jsx_ext_required = 0 " Allow JSX in normal JS files
+"Plugin 'neoclide/vim-jsx-improve'
+"Plugin 'othree/yajs.vim'
+
 "colorschemes
 Plugin 'crusoexia/vim-monokai'
 
