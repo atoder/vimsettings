@@ -168,7 +168,7 @@ Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-easytags'
 
 " ----- xolox/vim-easytags settings -----
-set tags=./tags;,~/.vimtags
+set tags=~/.vimtags
 let g:easytags_events = ['BufReadPost', 'BufWritePost']
 let g:easytags_async = 1
 let g:easytags_dynamic_files = 2
@@ -451,7 +451,7 @@ set list
 " set colorcolumn=80              " Show the 80th char column.
 " highlight ColorColumn ctermbg=5
 " turn off the color by
-"set cc=
+set cc=
 
 
 "show status at the bottom of vim file
