@@ -590,6 +590,15 @@ au BufNewFile,BufRead *.eco set filetype=html
 map gn :bn<cr>
 map gp :bp<cr>
 map gd :bd<cr>
+
+
+"vim-unimpaired shortcuts
+" [q - :cprev
+" ]q - :cprev
+" [Q - :cfirst
+" ]Q - :clast
+
+
 "ALSO BELOW are shortcuts from vim-unimpared plugin
 " JUST REFERENCE BELOW
 "[b     |:bprevious|
@@ -607,7 +616,6 @@ let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
 
 
-"vim-unimpaired shortcuts
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
 " The Silver Searcher
