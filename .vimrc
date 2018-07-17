@@ -482,7 +482,6 @@ set background=dark
 
 
 " MAIN FAVORITE ONES COLORSCHEMES and FONTS
-" 0) Monaco 14pt
 " 1) Fira Mono Powerline
 " 2) Robot Mono Light Version
 " 3) Terminus font and Darkside iTerm2 color preset
@@ -490,6 +489,7 @@ set background=dark
 " 5) Inconsolata-g Review
 " 6) Consolas
 " 7) M+ 1M font
+" 8) Monaco 14pt
 
 " MAIN FAVORITE iterm2 colorschemes
 " 1) Darkside
@@ -502,14 +502,14 @@ set background=dark
 "set guifont=Monaco\ 12
 
 
- colorscheme janah
+ colorscheme gruvbox
+" colorscheme janah
 " colorscheme space-vim-dark
 
 " colorscheme mustang
 " colorscheme onedark
 " colorscheme lucario
 
-" colorscheme gruvbox
 " colorscheme zenburn
 " colorscheme solarized
 " colorscheme jellybeans
