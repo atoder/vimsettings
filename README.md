@@ -85,6 +85,8 @@ To get diagnostics in JavaScript, set the checkJs option to true in your jsconfi
     }
 }
 
+Put this file into your project directory and add it to .gitignore if you want to
+
 
 --------------------- ---------------------
 ## Below is old set up for JavaScript (outdated)
