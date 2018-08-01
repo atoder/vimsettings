@@ -864,6 +864,14 @@ set re=1
 " Use true colors
 set termguicolors
 
+" Enable true color 启用终端24位色
+if exists('+termguicolors')
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+  set termguicolors
+endif
+
+
 " yy will not just use internal vim buffer but will also copy
 " into OS's clipboard
 set clipboard=unnamed
