@@ -79,11 +79,13 @@ TSServer relies on the jsconfig.json file for JavaScript and the tsconfig.json f
 
 To get diagnostics in JavaScript, set the checkJs option to true in your jsconfig.json file:
 
+```
 {
     "compilerOptions": {
         "checkJs": true
     }
 }
+```
 
 Put this file into your project directory and add it to .gitignore if you want to
 
