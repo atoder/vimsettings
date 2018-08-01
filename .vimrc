@@ -32,6 +32,7 @@ Plugin 'scrooloose/nerdcommenter'
 "Amazing code completion
 Plugin 'Valloric/YouCompleteMe'
 
+
 Plugin 'ternjs/tern'
 
 Plugin 'ternjs/tern_for_vim'
@@ -193,6 +194,15 @@ let g:easytags_suppress_ctags_warning = 1
 " if you get an error with ctags such as E431: Format error in tags file tags
 " before byte 23232 for example. Open the tag file, hit
 " :go 23232 and remove the offending lines
+
+
+" jsctags
+" https://github.com/ramitos/jsctags
+
+" Vim plugin for selectively illuminating other uses of current word under the cursor
+Plugin 'RRethy/vim-illuminate'
+
+
 
 "vim sessions
 Plugin 'xolox/vim-session'
@@ -888,3 +898,7 @@ let g:zenburn_high_Contrast = 1
 " :filetype detect
 "  OR also try
 " :syntax sync fromstart
+
+
+"let g:ycm_keep_logfiles = 1
+"let g:ycm_log_level = 'debug'

@@ -56,17 +56,45 @@ or 'objective-c' for objective c
 
 https://github.com/Valloric/YouCompleteMe#mac-os-x
 
-To install YouComplete with c type languages
-
-```
-./install.py --clang-completer --js-completer
-```
-
 To install all
 
 ```
 ./install.py --all
 ```
+
+To install YouComplete only with C type languages and Java
+
+```
+./install.py --clang-completer --java-completer
+
+```
+
+All JavaScript and TypeScript features are provided by the TSServer engine, which is included in the TypeScript SDK. To get the SDK, install Node.js and npm and run the command:
+
+```
+npm install -g typescript
+
+```
+TSServer relies on the jsconfig.json file for JavaScript and the tsconfig.json file for TypeScript to analyze your project. Ensure the file exists at the root of your project.
+
+To get diagnostics in JavaScript, set the checkJs option to true in your jsconfig.json file:
+
+{
+    "compilerOptions": {
+        "checkJs": true
+    }
+}
+
+
+--------------------- ---------------------
+## Below is old set up for JavaScript (outdated)
+
+You would use tern and add the following
+```
+./install.py --js-completer
+```
+
+
 
 2 ways to set up JavaScript completition.
 1) Have a .tern-project file in your project directory or above with settings below
