@@ -512,7 +512,7 @@ set background=dark
 "set guifont=Monaco\ 12
 
 
- colorscheme gruvbox
+colorscheme gruvbox
 " colorscheme janah
 " colorscheme space-vim-dark
 
