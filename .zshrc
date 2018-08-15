@@ -65,11 +65,11 @@ export TTC_TERMINAL_TITLE=false
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+#ZSH_THEME="robbyrussell"
 #ZSH_THEME="random"
 #ZSH_THEME="simple"
 #ZSH_THEME="wezm"
-#ZSH_THEME="agnoster"
+ZSH_THEME="agnoster"
 #ZSH_THEME="af-magic"
 
 
@@ -116,7 +116,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git zsh-completions zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 source $ZSH/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -156,7 +156,7 @@ source $ZSH/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # optionally set DEFAULT_USER in ~/.zshrc to your regular username to hide the “user@hostname” info when you’re logged in as yourself on your local machine for 'agnoster' theme
 prompt_context() {
   if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
-    prompt_segment black default "%(!.%{%F{yellow}%}.)$USER"
+    #prompt_segment black default "%(!.%{%F{yellow}%}.)$USER"
   fi
 }
 
@@ -209,3 +209,50 @@ alias diskspace="du -h | sort -n -r |more"
 alias folders="find . -maxdepth 1 -type d -print | xargs du -hs | sort -rn"
 
 ctags=/usr/local/bin/ctags
+
+# https://github.com/bhilburn/powerlevel9k
+# https://medium.freecodecamp.org/how-you-can-style-your-terminal-like-medium-freecodecamp-or-any-way-you-want-f499234d48bc
+
+# Customise the Powerlevel9k prompts
+#POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
+#  custom_medium custom_freecodecamp dir vcs newline status
+#)
+#POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
+#POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
+## Add the custom Medium M icon prompt segment
+#POWERLEVEL9K_CUSTOM_MEDIUM="echo -n $'\uF859'"
+#POWERLEVEL9K_CUSTOM_MEDIUM_FOREGROUND="black"
+#POWERLEVEL9K_CUSTOM_MEDIUM_BACKGROUND="white"
+## Add the custom freeCodeCamp prompt segment
+#POWERLEVEL9K_CUSTOM_FREECODECAMP="echo -n $'\uE242'"
+#POWERLEVEL9K_CUSTOM_FREECODECAMP_FOREGROUND="white"
+#POWERLEVEL9K_CUSTOM_FREECODECAMP_BACKGROUND="cyan"
+## Load Nerd Fonts with Powerlevel9k theme for Zsh
+#POWERLEVEL9K_MODE='nerdfont-complete'
+#source ~/powerlevel9k/powerlevel9k.zsh-theme
+#
+## Set a color for iTerm2 tab title background using rgb values
+#function title_background_color {
+#  echo -ne "\033]6;1;bg;red;brightness;$ITERM2_TITLE_BACKGROUND_RED\a"
+#  echo -ne "\033]6;1;bg;green;brightness;$ITERM2_TITLE_BACKGROUND_GREEN\a"
+#  echo -ne "\033]6;1;bg;blue;brightness;$ITERM2_TITLE_BACKGROUND_BLUE\a"
+#}
+#ITERM2_TITLE_BACKGROUND_RED="18"
+#ITERM2_TITLE_BACKGROUND_GREEN="26"
+#ITERM2_TITLE_BACKGROUND_BLUE="33"
+#title_background_color
+## Set iTerm2 tab title text
+#function title_text {
+#    echo -ne "\033]0;"$*"\007"
+#}
+#title_text freeCodeCamp
+
+# gem install lc
+alias lc="colorls"
+
+# See also https://github.com/Falkor/dotfiles/blob/master/oh-my-zsh/
+# Font taken from https://github.com/stefano-meschiari/dotemacs/blob/master/SourceCodePro%2BPowerline%2BAwesome%2BRegular.ttf
+# Set name of the theme to load. Optionally, if you set this to "random"
+# it'll load a random theme each time that oh-my-zsh is loaded.
+# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+

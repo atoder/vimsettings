@@ -52,7 +52,7 @@ let g:tern_show_argument_hints='on_hold'
 let g:tern_map_keys=1
 
 " Vim's MatchParen for HTML tags
-Plugin 'gregsexton/MatchTag'
+"Plugin 'gregsexton/MatchTag'
 
 Plugin 'morhetz/gruvbox'
 
