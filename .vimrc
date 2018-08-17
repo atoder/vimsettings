@@ -514,8 +514,10 @@ set background=dark
 
 
 "set guifont=Monaco\ 12
+let ayucolor="mirage" " for mirage version of theme
+colorscheme ayu
 
-colorscheme palenight
+"colorscheme palenight
 " colorscheme gruvbox
 " colorscheme evening
 " colorscheme janah
@@ -866,16 +868,7 @@ set synmaxcol=300
 set re=1
 " END speed up syntax highlighting
 
-" Use true colors
-set termguicolors
-set term=xterm-256color
 
-" Enable true color 启用终端24位色
-if exists('+termguicolors')
-  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-  set termguicolors
-endif
 
 
 " yy will not just use internal vim buffer but will also copy
@@ -915,4 +908,14 @@ let g:zenburn_high_Contrast = 1
 
 
 "let g:ycm_keep_logfiles = 1
-"let g:ycm_log_level = 'debug'
+let g:ycm_log_level = 'debug'
+" Use true colors
+set termguicolors
+set term=xterm-256color
+
+" Enable true color
+if exists('+termguicolors')
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+  set termguicolors
+endif
