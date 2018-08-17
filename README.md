@@ -9,6 +9,14 @@ $ ln -s  ~/Documents/vimsettings/.tmux.conf $HOME/.tmux.conf
 
 $ ln -s  ~/Documents/vimsettings/.zshrc $HOME/.zshrc
 
+##
+For zsh-completions in zshell
+
+```
+git clone https://github.com/zsh-users/zsh-completions ~/.oh-my-zsh/custom/plugins/zsh-completions
+```
+
+
 ## External link 
 https://stackoverflow.com/questions/1031396/how-to-share-one-vimrc-file-among-multiple-clients
 
