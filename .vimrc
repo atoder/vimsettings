@@ -758,7 +758,8 @@ let g:syntastic_style_warning_symbol='⚠'
 let g:syntastic_java_checkers = ['']
 
 " JavaScript
-let g:syntastic_javascript_checkers = ['eslint']
+" npm install -g jshint
+let g:syntastic_javascript_checkers = ['jshint']
 
 " The native support for Java includes YCM's native realtime diagnostics display.
 " This can conflict with other dianostics plugins like Eclim, so when enabling
