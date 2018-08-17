@@ -497,7 +497,7 @@ set background=dark
 
 " MAIN FAVORITE ONES COLORSCHEMES and FONTS
 " 1a) Fira Mono Powerline
-" 1b) Input Font Regular || Condensed (different types) || extra light
+" 1b) Input Mono Condensed regular
 " 2) Robot Mono Light Version
 " 3) Terminus font and Darkside iTerm2 color preset
 " 4) Hack Font
@@ -650,10 +650,7 @@ if executable('ag')
 endif
 
 
-" Syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+
 
 "Tell NERDTree not to use the fancy arrow characters, by adding,
 "otherwise arrows in NerdTree will look weird
@@ -741,6 +738,10 @@ let g:easytags_async=1
 let g:easytags_auto_highlight=0
 
 
+" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
@@ -751,6 +752,8 @@ let g:syntastic_error_symbol='✗'
 let g:syntastic_warning_symbol='⚠'
 let g:syntastic_style_error_symbol='✗'
 let g:syntastic_style_warning_symbol='⚠'
+" To turn off column signs
+" set signcolumn=no
 
 "The native support for Java includes YCM's native realtime diagnostics display.
 "This can conflict with other dianostics plugins like Syntastic,
@@ -758,8 +761,9 @@ let g:syntastic_style_warning_symbol='⚠'
 let g:syntastic_java_checkers = ['']
 
 " JavaScript
-" npm install -g jshint
-let g:syntastic_javascript_checkers = ['jshint']
+" npm install -g eslint
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_eslint_exe = 'npm run lint --'
 
 " The native support for Java includes YCM's native realtime diagnostics display.
 " This can conflict with other dianostics plugins like Eclim, so when enabling
@@ -910,7 +914,9 @@ let g:zenburn_high_Contrast = 1
 " :filetype detect
 "  OR also try
 " :syntax sync fromstart
-
+"
+" To turn off column signs for syntastic
+" set signcolumn=no
 
 "let g:ycm_keep_logfiles = 1
 let g:ycm_log_level = 'debug'
