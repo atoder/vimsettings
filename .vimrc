@@ -496,7 +496,8 @@ set background=dark
 
 
 " MAIN FAVORITE ONES COLORSCHEMES and FONTS
-" 1) Fira Mono Powerline
+" 1a) Fira Mono Powerline
+" 1b) Input Font Regular || Condensed (different types) || extra light
 " 2) Robot Mono Light Version
 " 3) Terminus font and Darkside iTerm2 color preset
 " 4) Hack Font
@@ -754,7 +755,10 @@ let g:syntastic_style_warning_symbol='⚠'
 "The native support for Java includes YCM's native realtime diagnostics display.
 "This can conflict with other dianostics plugins like Syntastic,
 "so when enabling Java support, please manually disable Syntastic Java diagnostics.
-let g:syntastic_java_checkers = []
+let g:syntastic_java_checkers = ['']
+
+" JavaScript
+let g:syntastic_javascript_checkers = ['eslint']
 
 " The native support for Java includes YCM's native realtime diagnostics display.
 " This can conflict with other dianostics plugins like Eclim, so when enabling
