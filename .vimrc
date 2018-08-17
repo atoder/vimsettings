@@ -366,7 +366,6 @@ set completeopt-=preview
 let g:ycm_global_ycm_extra_conf = "$HOME/.vim/.ycm_extra_conf.py"
 
 
-
 " bind shift KK to grep word under cursor
 "nnoremap KK :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 " Use Ag instead of grep (more advanced)
@@ -478,7 +477,7 @@ let g:solarized_visibility = "high"
 let g:solarized_contrast = "high"
 "let g:solarized_contrast = "normal"
 
-let g:gruvbox_contrast_dark='hard'
+"let g:gruvbox_contrast_dark='hard'
 
 "set term=screen-256color
 
@@ -589,7 +588,7 @@ hi Comment guifg=#5C6370 ctermfg=59
 autocmd Filetype html setlocal ts=4 sts=4 sw=4 expandtab
 autocmd Filetype ruby setlocal ts=2 sts=2 sw=2 expandtab
 autocmd Filetype php setlocal ts=4 sts=4 sw=4 expandtab
-autocmd Filetype javascript setlocal ts=4 sts=4 sw=4 expandtab
+autocmd Filetype javascript setlocal ts=2 sts=2 sw=2 expandtab
 
 au BufNewFile,BufRead *.ejs set filetype=javascript
 au BufNewFile,BufRead *.handlebars set filetype=html
@@ -863,6 +862,7 @@ set re=1
 
 " Use true colors
 set termguicolors
+set term=xterm-256color
 
 " Enable true color 启用终端24位色
 if exists('+termguicolors')
