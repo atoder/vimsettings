@@ -10,6 +10,11 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
+" vim colorschemes
+Plugin 'drewtempelmeyer/palenight.vim'
+"colorscheme palenight
+Plugin 'ayu-theme/ayu-vim'
+
 "https://github.com/heavenshell/vim-jsdoc
 "JSDOC for js
 "To use it, hover over a function and type in :JSDoc
@@ -52,7 +57,7 @@ let g:tern_show_argument_hints='on_hold'
 let g:tern_map_keys=1
 
 " Vim's MatchParen for HTML tags
-Plugin 'gregsexton/MatchTag'
+"Plugin 'gregsexton/MatchTag'
 
 Plugin 'morhetz/gruvbox'
 
@@ -510,8 +515,9 @@ set background=dark
 
 "set guifont=Monaco\ 12
 
-
-colorscheme gruvbox
+colorscheme palenight
+" colorscheme gruvbox
+" colorscheme evening
 " colorscheme janah
 " colorscheme space-vim-dark
 
