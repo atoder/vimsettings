@@ -233,7 +233,7 @@ Plugin 'nathanaelkane/vim-indent-guides'
 
 " React Syntax Highlighting
 Plugin 'mxw/vim-jsx'
-let g:jsx_ext_required = 0 " Allow JSX in normal JS files
+let g:jsx_ext_required = 1 " Allow JSX in normal JS files
 "Plugin 'neoclide/vim-jsx-improve'
 "Plugin 'othree/yajs.vim'
 
@@ -484,16 +484,9 @@ let g:solarized_contrast = "high"
 
 "let g:gruvbox_contrast_dark='hard'
 
-"set term=screen-256color
-
-"256 colors in vim
-"set t_Co=256
-
-
 "Switch between different backgrounds
 set background=dark
-"set background=light
-
+" set background=light
 
 " MAIN FAVORITE ONES COLORSCHEMES and FONTS
 " 1a) Fira Mono Powerline
@@ -515,11 +508,13 @@ set background=dark
 
 
 "set guifont=Monaco\ 12
-let ayucolor="mirage" " for mirage version of theme
-colorscheme ayu
+"let ayucolor="mirage" " for mirage version of theme
+"let ayucolor="dark"   " for dark version of theme
+"let ayucolor="light"  " for light version of theme - should be used with set background=light instead of dark
+"colorscheme ayu
 
-"colorscheme palenight
-" colorscheme gruvbox
+" colorscheme palenight
+colorscheme gruvbox
 " colorscheme evening
 " colorscheme janah
 " colorscheme space-vim-dark
@@ -836,19 +831,7 @@ let vimsyn_folding='af'       " Vim script
 let xml_syntax_folding=1      " XML
 
 
-"zm to close fold level by level
-"zr open fold level by level
-"za to toggle open and close of a fold (don't need to use zc or zo)
-"zR open ALL folds
 
-"zc to close a fold
-"zo open a fold
-
-"close all folds with zM (not really needed?)
-"
-" The easiest way to disable (and enable) folding on the fly is zi.
-" zi is the normal mode command that toggles 'foldenable', just like :set foldenable!.
-" Mnemonic: "fold invert". See :h zi.
 
 
 
@@ -876,8 +859,6 @@ syntax sync minlines=256
 set synmaxcol=300
 set re=1
 " END speed up syntax highlighting
-
-
 
 
 " yy will not just use internal vim buffer but will also copy
@@ -917,6 +898,21 @@ let g:zenburn_high_Contrast = 1
 "
 " To turn off column signs for syntastic
 " set signcolumn=no
+"
+" FOLDING
+" zm to close fold level by level
+" zr open fold level by level
+" za to toggle open and close of a fold (don't need to use zc or zo)
+" zR open ALL folds
+
+" zc to close a fold
+" zo open a fold
+
+"close all folds with zM (not really needed?)
+"
+" The easiest way to disable (and enable) folding on the fly is zi.
+" zi is the normal mode command that toggles 'foldenable', just like :set foldenable!.
+" Mnemonic: "fold invert". See :h zi.
 
 "let g:ycm_keep_logfiles = 1
 let g:ycm_log_level = 'debug'
