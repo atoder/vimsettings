@@ -64,7 +64,11 @@ or 'objective-c' for objective c
 
 https://github.com/Valloric/YouCompleteMe#mac-os-x
 
-To install all
+To install all go to youcomplete vim directory
+
+```
+cd ~/.vim/bundle/YouCompleteMe
+```
 
 ```
 ./install.py --all
