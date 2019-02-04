@@ -37,6 +37,13 @@ Plugin 'scrooloose/nerdcommenter'
 "Amazing code completion
 Plugin 'Valloric/YouCompleteMe'
 
+"Replaced auto completition with tabnin
+"https://tabnine.com/semantic - replacement for youcompleteme
+"My project isn't a Git or Mercurial repository.
+"How can I make TabNine index it?
+" Add a file named .tabnine_root to the root of your project directory.
+" TabNine respects .tabnineignore, .gitignore, .hgignore, and .ignore files.
+Plugin 'zxqfl/tabnine-vim'
 
 Plugin 'ternjs/tern'
 
@@ -772,7 +779,7 @@ nmap <leader>st :SyntasticToggleMode<CR>
 "put away all .swp files into home dir instead of cluttering up in your
 "projects
 set swapfile
-set dir=~/tmp
+set dir=~/tmp/
 
 " When opening a file or bookmark, change to its directory.
 let g:startify_change_to_dir = 0
