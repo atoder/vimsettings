@@ -520,8 +520,9 @@ set background=dark
 "let ayucolor="light"  " for light version of theme - should be used with set background=light instead of dark
 "colorscheme ayu
 
+colorscheme base16-default-dark
 " colorscheme palenight
-colorscheme gruvbox
+"colorscheme gruvbox
 " colorscheme evening
 " colorscheme janah
 " colorscheme space-vim-dark
@@ -778,8 +779,8 @@ nmap <leader>st :SyntasticToggleMode<CR>
 
 "put away all .swp files into home dir instead of cluttering up in your
 "projects
-set swapfile
-set dir=~/tmp/
+"set swapfile
+"set dir=~/tmp/
 
 " When opening a file or bookmark, change to its directory.
 let g:startify_change_to_dir = 0
