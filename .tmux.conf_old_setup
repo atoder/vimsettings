@@ -30,29 +30,45 @@ set -g @tpm_plugins '              \
 # git@github.com/user/plugin     \
 # git@bitbucket.com/user/plugin  \
 
-set -g status-position bottom
-set -g status-bg colour234
-set -g status-fg colour137
-set -g status-attr dim
-set -g status-left ''
-set -g status-right '#[fg=colour233,bg=colour241,bold] %m/%d #[fg=colour233,bg=colour245,bold] %H:%M:%S '
-set -g status-right-length 50
-set -g status-left-length 20
 
-setw -g window-status-current-fg colour81
-setw -g window-status-current-bg colour238
-setw -g window-status-current-attr bold
-setw -g window-status-current-format ' #I#[fg=colour250]:#[fg=colour255]#W#[fg=colour50]#F '
 
-#setw -g window-status-fg colour138
-setw -g window-status-fg colour246
-setw -g window-status-bg colour235
-setw -g window-status-attr none
-setw -g window-status-format ' #I#[fg=colour237]:#[fg=colour250]#W#[fg=colour244]#F '
+#### COLOUR (Solarized dark)
+# Define my custom menu bar
+# status bar colors
+set -g status-bg black
+set -g status-fg white
 
-setw -g window-status-bell-attr bold
-setw -g window-status-bell-fg colour255
-setw -g window-status-bell-bg colour1
+# status left options
+set-option -g status-left '#[fg=green][#[bg=black,fg=cyan]#S#[fg=green]]'
+set-option -g status-left-length 20
+
+
+#### COLOUR (Solarized dark) END
+
+#### COLOUR (Solarized light)
+
+# default statusbar colors
+#set-option -g status-bg white #base2
+#set-option -g status-fg yellow #yellow
+#set-option -g status-attr default
+
+#### COLOUR (Solarized light) END
+
+# alignment settings
+set-option -g status-justify centre
+# display current path in bottom of tmux window
+# set -g status-left "#{pane_current_path}"
+
+# window list options
+setw -g automatic-rename on
+set-window-option -g window-status-format '#[fg=cyan,dim]#I#[fg=blue]:#[default]#W#[fg=grey,dim]#F'
+set-window-option -g window-status-current-format '#[bg=blue,fg=cyan,bold]#I#[bg=blue,fg=cyan]:#[fg=colour230]#W#[fg=dim]#F'
+set -g base-index 1
+
+#setw -g window-status-format "#{pane_current_path}"
+
+# status right options
+set -g status-right '#[fg=green][#[fg=blue]%Y-%m-%d #[fg=white]%H:%M#[default]  #($HOME/bin/battery)#[fg=green]]'
 
 # Smart pane switching with awareness of vim splits
 is_vim='echo "#{pane_current_command}" | grep -iqE "(^|\/)g?(view|n?vim?)(diff)?$"'
