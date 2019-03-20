@@ -593,7 +593,11 @@ set cursorline
 let python_highlight_all=1
 
 "grey comments
-hi Comment guifg=#5C6370 ctermfg=59
+"hi Comment guifg=#5C6370 ctermfg=59
+
+"green comments
+hi Comment guifg=#7ea869 ctermfg=green
+
 
 
 
