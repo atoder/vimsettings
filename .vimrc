@@ -507,9 +507,9 @@ set background=dark
 " 8) Monaco 14pt
 
 " MAIN FAVORITE iterm2 colorschemes
-" 1) space-vim-dark
+" 1) One Dark
 " 2) Darkside
-" 3) One Dark
+" 3) space-vim-dark
 " 4) gruvbox-dark
 " 5) Solarized Dark
 
