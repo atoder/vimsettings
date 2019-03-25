@@ -496,8 +496,12 @@ set background=dark
 " set background=light
 
 " MAIN FAVORITE ONES COLORSCHEMES and FONTS
-" 1a) Robot Mono Light Version
-" 1b) Input Mono Condensed regular
+" 1a) Dank Mono
+" 1b) Operator-Mono - book
+" 1c) Office-Code-Pro - medium
+" 1d) Andale mono
+" 1e) Robot Mono Light Version
+" 1f) Input Mono Condensed regular
 " 2) Fira Mono Powerline
 " 3) Terminus font and Darkside iTerm2 color preset
 " 4) Hack Font
