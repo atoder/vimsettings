@@ -945,6 +945,9 @@ let &t_ZH="\e[3m"
 let &t_ZR="\e[23m"
 highlight Comment cterm=italic gui=italic
 
+"Enable HTML attributes to be italic
+highlight htmlArg cterm=italic gui=italic
+
 " Enable true color
 if exists('+termguicolors')
   let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
