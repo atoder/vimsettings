@@ -12,7 +12,7 @@ export PATH=/usr/local/php5/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
-export TERM="xterm-256color"
+#export TERM="xterm-256color"
 setopt CORRECT
 
 

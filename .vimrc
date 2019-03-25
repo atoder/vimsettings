@@ -605,6 +605,11 @@ hi Comment guifg=#7ea869 ctermfg=green
 
 
 
+
+
+
+
+
 autocmd Filetype html setlocal ts=4 sts=4 sw=4 expandtab
 autocmd Filetype ruby setlocal ts=2 sts=2 sw=2 expandtab
 autocmd Filetype php setlocal ts=4 sts=4 sw=4 expandtab
@@ -934,7 +939,11 @@ let g:zenburn_high_Contrast = 1
 let g:ycm_log_level = 'debug'
 " Use true colors
 set termguicolors
-set term=xterm-256color
+"set term=xterm-256color
+"ENABLE italic fonts
+let &t_ZH="\e[3m"
+let &t_ZR="\e[23m"
+highlight Comment cterm=italic
 
 " Enable true color
 if exists('+termguicolors')
