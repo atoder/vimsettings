@@ -943,7 +943,7 @@ set termguicolors
 "ENABLE italic fonts
 let &t_ZH="\e[3m"
 let &t_ZR="\e[23m"
-highlight Comment cterm=italic
+highlight Comment cterm=italic gui=italic
 
 " Enable true color
 if exists('+termguicolors')
