@@ -526,7 +526,7 @@ set background=dark
 
 colorscheme base16-default-dark
 " colorscheme palenight
-"colorscheme gruvbox
+" colorscheme gruvbox
 " colorscheme evening
 " colorscheme janah
 " colorscheme space-vim-dark
@@ -947,6 +947,9 @@ highlight Comment cterm=italic gui=italic
 
 "Enable HTML attributes to be italic
 highlight htmlArg cterm=italic gui=italic
+
+"Enable HTML italic highlight
+highlight htmlItalic cterm=italic gui=italic
 
 " Enable true color
 if exists('+termguicolors')
