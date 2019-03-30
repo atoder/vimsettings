@@ -496,6 +496,8 @@ set background=dark
 " set background=light
 
 " MAIN FAVORITE ONES COLORSCHEMES and FONTS
+" 0 - Favorite right now)  Inconsolata-g
+" 0 - 2nd favorite PT Mono
 " 1a) Dank Mono
 " 1b) Operator-Mono - book
 " 1c) Office-Code-Pro - medium
@@ -505,7 +507,7 @@ set background=dark
 " 2) Fira Mono Powerline
 " 3) Terminus font and Darkside iTerm2 color preset
 " 4) Hack Font
-" 5) Inconsolata-g Review
+" 5)
 " 6) Consolas
 " 7) M+ 1M font
 " 8) Monaco 14pt
@@ -524,8 +526,9 @@ set background=dark
 "let ayucolor="light"  " for light version of theme - should be used with set background=light instead of dark
 "colorscheme ayu
 
-colorscheme base16-default-dark
-" colorscheme palenight
+"favorite
+colorscheme palenight
+" colorscheme base16-default-dark
 " colorscheme gruvbox
 " colorscheme evening
 " colorscheme janah
@@ -533,11 +536,9 @@ colorscheme base16-default-dark
 
 " colorscheme mustang
 " colorscheme onedark
-" colorscheme lucario
-
+"
 " colorscheme zenburn
 " colorscheme solarized
-" colorscheme jellybeans
 " colorscheme monokai
 
 "BONUS ONES
