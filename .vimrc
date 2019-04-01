@@ -35,7 +35,7 @@ Plugin 'scrooloose/nerdcommenter'
 "
 
 "Amazing code completion - DISABLED FOR TabNine
-"Plugin 'Valloric/YouCompleteMe'
+Plugin 'Valloric/YouCompleteMe'
 
 "Replaced auto completition with tabnin
 "https://tabnine.com/semantic - replacement for youcompleteme
@@ -43,7 +43,7 @@ Plugin 'scrooloose/nerdcommenter'
 "How can I make TabNine index it?
 " Add a file named .tabnine_root to the root of your project directory.
 " TabNine respects .tabnineignore, .gitignore, .hgignore, and .ignore files.
-Plugin 'zxqfl/tabnine-vim'
+"Plugin 'zxqfl/tabnine-vim'
 
 Plugin 'ternjs/tern'
 
@@ -365,7 +365,7 @@ set fileencoding=utf8
 
 " These are the tweaks I apply to YCM's config, you don't need them but they
 " might help.
-" " YCM gives you popups and splits by default that some people might not
+" YCM gives you popups and splits by default that some people might not
 " like, so these should tidy it up a bit for you.
 let g:ycm_add_preview_to_completeopt=0
 let g:ycm_confirm_extra_conf=0
@@ -375,7 +375,7 @@ set completeopt-=preview
 " To auto-complete source code for C family,
 " you should provide custom .ycm_extra_conf.py file for your project.
 " If you don’t do this, YCM will be unable to use semantic completion.
-let g:ycm_global_ycm_extra_conf = "$HOME/.vim/.ycm_extra_conf.py"
+"let g:ycm_global_ycm_extra_conf = "$HOME/.vim/.ycm_extra_conf.py"
 
 
 " bind shift KK to grep word under cursor
@@ -497,20 +497,19 @@ set background=dark
 
 " MAIN FAVORITE ONES COLORSCHEMES and FONTS
 " 0 - Favorite right now)  Inconsolata-g
-" 0 - 2nd favorite PT Mono
-" 1a) Dank Mono
-" 1b) Operator-Mono - book
-" 1c) Office-Code-Pro - medium
-" 1d) Andale mono
-" 1e) Robot Mono Light Version
-" 1f) Input Mono Condensed regular
-" 2) Fira Mono Powerline
-" 3) Terminus font and Darkside iTerm2 color preset
-" 4) Hack Font
-" 5)
-" 6) Consolas
-" 7) M+ 1M font
-" 8) Monaco 14pt
+" 1 - Operator-Mono - book
+" 2 - 2nd favorite PT Mono
+" 3 - Dank Mono
+" 4 - Office-Code-Pro - medium
+" 5 - Andale mono
+" 6 - Robot Mono Light Version
+" 7 - Input Mono Condensed regular
+" 8 - Fira Mono Powerline
+" 9 - Terminus font and Darkside iTerm2 color preset
+" 10 - Hack Font
+" 11 - Consolas
+" 12 - M+ 1M font
+" 13 - Monaco 14pt
 
 " MAIN FAVORITE iterm2 colorschemes
 " 1) One Dark
