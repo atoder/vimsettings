@@ -20,19 +20,65 @@ Plugin 'ayu-theme/ayu-vim'
 "To use it, hover over a function and type in :JSDoc
 Plugin 'heavenshell/vim-jsdoc'
 
+Plugin 'honza/vim-snippets'
+Plugin 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx'] }
+Plugin 'othree/jspc.vim', { 'for': ['javascript', 'javascript.jsx'] }
+
+
+"Supertab is a vim plugin which allows you to use <Tab> for all your
+"insert completion needs
+Plugin 'ervandew/supertab'
+
 "For commenting and uncommenting blocks of line
 Plugin 'scrooloose/nerdcommenter'
 "Comment out the current line or text selected in visual mode.
 "[count]<leader>cc |NERDComComment|
-"
-"
 "Uncomments the selected line(s).
 "[count]<leader>cu |NERDComUncommentLine|
-"
-"
 "Comments out the selected lines with a pretty block formatted layout.
 "[count]<leader>cs |NERDComSexyComment|
+
+
+""use TAB as the mapping
+"inoremap <silent><expr> <TAB>
+"      \ pumvisible() ?  "\<C-n>" :
+"      \ <SID>check_back_space() ? "\<TAB>" :
+"      \ deoplete#mappings#manual_complete()
+"function! s:check_back_space() abort ""
+"  let col = col(.) - 1
+"  return !col || getline(.)[col - 1]  =~ s
+"endfunction ""
 "
+"inoremap <silent><expr><S-TAB>  pumvisible() ? "\<C-p>" : "\<TAB>"
+"inoremap <expr><BS>  deoplete#smart_close_popup()."\<C-h>"
+
+
+"#### Code completion
+"" Plugin 'neoclide/coc.nvim'
+" Use tab for trigger completion with characters ahead and navigate.
+" Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
+"inoremap <silent><expr> <TAB>
+"      \ pumvisible() ? "\<C-n>" :
+"      \ <SID>check_back_space() ? "\<TAB>" :
+"      \ coc#refresh()
+"inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+"
+"function! s:check_back_space() abort
+"  let col = col('.') - 1
+"  return !col || getline('.')[col - 1]  =~# '\s'
+"endfunction
+"
+"" Use <c-space> for trigger completion.
+"inoremap <silent><expr> <c-space> coc#refresh()
+"
+"" Use <cr> for confirm completion, `<C-g>u` means break undo chain at current position.
+"" Coc only does snippet and additional edit on confirm.
+"inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+"#### code completion for coc end
+
+"A plugin of NERDTree showing git status flags. Works with the LATEST version of NERDTree.
+ Plugin 'Xuyuanp/nerdtree-git-plugin'
 
 "Amazing code completion - DISABLED FOR TabNine
 Plugin 'Valloric/YouCompleteMe'
@@ -46,7 +92,6 @@ Plugin 'Valloric/YouCompleteMe'
 "Plugin 'zxqfl/tabnine-vim'
 
 Plugin 'ternjs/tern'
-
 Plugin 'ternjs/tern_for_vim'
 " to use
 " TernDef: Jump to the definition of the thing under the cursor.
@@ -68,9 +113,6 @@ let g:tern_map_keys=1
 
 Plugin 'morhetz/gruvbox'
 
-"Supertab is a vim plugin which allows you to use <Tab> for all your
-"insert completion needs
-Plugin 'ervandew/supertab'
 
 Plugin 'flazz/vim-colorschemes'
 
@@ -375,7 +417,7 @@ set completeopt-=preview
 " To auto-complete source code for C family,
 " you should provide custom .ycm_extra_conf.py file for your project.
 " If you don’t do this, YCM will be unable to use semantic completion.
-"let g:ycm_global_ycm_extra_conf = "$HOME/.vim/.ycm_extra_conf.py"
+let g:ycm_global_ycm_extra_conf = "$HOME/.ycm_extra_conf.py"
 
 
 " bind shift KK to grep word under cursor
@@ -496,7 +538,8 @@ set background=dark
 " set background=light
 
 " MAIN FAVORITE ONES COLORSCHEMES and FONTS
-" 0 - Favorite right now)  Inconsolata-g
+" - Favorite right now ->  IBM Plex Mono <-
+" 0 - Inconsolata-g
 " 1 - Operator-Mono - book
 " 2 - 2nd favorite PT Mono
 " 3 - Dank Mono

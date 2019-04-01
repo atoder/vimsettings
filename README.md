@@ -8,6 +8,7 @@ $ ln -s  ~/Documents/vimsettings/.vimrc $HOME/.vimrc
 $ ln -s  ~/Documents/vimsettings/.tmux.conf $HOME/.tmux.conf
 
 $ ln -s  ~/Documents/vimsettings/.zshrc $HOME/.zshrc
+$ ln -s  ~/Documents/vimsettings/.ycm_extra_conf.py $HOME/.ycm_extra_conf.py
 
 ##
 For zsh-completions in zshell
@@ -16,6 +17,10 @@ For zsh-completions in zshell
 git clone https://github.com/zsh-users/zsh-completions ~/.oh-my-zsh/custom/plugins/zsh-completions
 ```
 
+Also install macvim and
+```
+alias vim='mvim -v'
+```
 
 ## External link 
 https://stackoverflow.com/questions/1031396/how-to-share-one-vimrc-file-among-multiple-clients
@@ -25,10 +30,8 @@ https://stackoverflow.com/questions/1031396/how-to-share-one-vimrc-file-among-mu
 in ~/.vimrc you should already have 
 
 ```
-let g:ycm_global_ycm_extra_conf = "$HOME/.vim/.ycm_extra_conf.py"
+let g:ycm_global_ycm_extra_conf = "$HOME/.ycm_extra_conf.py"
 ```
-
-and create the ~/.vim/.ycm_extra_conf.py file with the following content
 
 ```
 import os
