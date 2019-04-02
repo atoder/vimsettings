@@ -217,13 +217,16 @@ Plugin 'scrooloose/nerdtree'
 " font icons for different file extensions in NerdTree
 " Install fonts for vim-devicons from https://github.com/ryanoasis/nerd-fonts
 Plugin 'ryanoasis/vim-devicons'
+Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
+
+Plugin 'skammer/vim-css-color'
 
 "tags
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-easytags'
 
 " ----- xolox/vim-easytags settings -----
-set tags=~/.vimtags
+set tags=~/Sites/tags
 let g:easytags_events = ['BufReadPost', 'BufWritePost']
 let g:easytags_async = 1
 let g:easytags_dynamic_files = 2
@@ -234,9 +237,8 @@ let g:easytags_suppress_ctags_warning = 1
 " By default :UpdateTags only writes to the global tags file,
 " but it can be configured to look for project specific tags files by adding the following lines to your [vimrc script]
 " Let Vim walk up directory hierarchy from CWD to root looking for tags file
-"set tags=tags;/
 " Tell EasyTags to use the tags file found by Vim
-"let g:easytags_dynamic_files = 1
+let g:easytags_dynamic_files = 1
 
 
 " Exuberant Ctags
@@ -255,8 +257,6 @@ let g:easytags_suppress_ctags_warning = 1
 
 " Vim plugin for selectively illuminating other uses of current word under the cursor
 Plugin 'RRethy/vim-illuminate'
-
-
 
 "vim sessions
 Plugin 'xolox/vim-session'
@@ -555,6 +555,7 @@ set background=dark
 " 13 - Monaco 14pt
 
 " MAIN FAVORITE iterm2 colorschemes
+" 0) - favorite one is Molokai
 " 1) One Dark
 " 2) Darkside
 " 3) space-vim-dark

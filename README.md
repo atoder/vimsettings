@@ -8,6 +8,7 @@ $ ln -s  ~/Documents/vimsettings/.vimrc $HOME/.vimrc
 $ ln -s  ~/Documents/vimsettings/.tmux.conf $HOME/.tmux.conf
 
 $ ln -s  ~/Documents/vimsettings/.zshrc $HOME/.zshrc
+
 $ ln -s  ~/Documents/vimsettings/.ycm_extra_conf.py $HOME/.ycm_extra_conf.py
 
 ##
@@ -21,6 +22,13 @@ Also install macvim and
 ```
 alias vim='mvim -v'
 ```
+
+Do brew install
+
+```
+brew install reattach-to-user-namespace
+```
+
 
 ## External link 
 https://stackoverflow.com/questions/1031396/how-to-share-one-vimrc-file-among-multiple-clients
