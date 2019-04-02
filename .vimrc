@@ -219,7 +219,8 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
 
-Plugin 'skammer/vim-css-color'
+" Highlight css colors
+Plugin 'ap/vim-css-color'
 
 "tags
 Plugin 'xolox/vim-misc'
