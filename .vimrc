@@ -10,6 +10,9 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
+" For Mac OS X, use Karabiner app to remap ESC to Caps Lock
+" It's easier to use than hitting ESC key
+
 " vim colorschemes
 Plugin 'drewtempelmeyer/palenight.vim'
 "colorscheme palenight
@@ -51,31 +54,6 @@ Plugin 'scrooloose/nerdcommenter'
 "
 "inoremap <silent><expr><S-TAB>  pumvisible() ? "\<C-p>" : "\<TAB>"
 "inoremap <expr><BS>  deoplete#smart_close_popup()."\<C-h>"
-
-
-"#### Code completion
-"" Plugin 'neoclide/coc.nvim'
-" Use tab for trigger completion with characters ahead and navigate.
-" Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
-"inoremap <silent><expr> <TAB>
-"      \ pumvisible() ? "\<C-n>" :
-"      \ <SID>check_back_space() ? "\<TAB>" :
-"      \ coc#refresh()
-"inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-"
-"function! s:check_back_space() abort
-"  let col = col('.') - 1
-"  return !col || getline('.')[col - 1]  =~# '\s'
-"endfunction
-"
-"" Use <c-space> for trigger completion.
-"inoremap <silent><expr> <c-space> coc#refresh()
-"
-"" Use <cr> for confirm completion, `<C-g>u` means break undo chain at current position.
-"" Coc only does snippet and additional edit on confirm.
-"inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-
-"#### code completion for coc end
 
 "A plugin of NERDTree showing git status flags. Works with the LATEST version of NERDTree.
  Plugin 'Xuyuanp/nerdtree-git-plugin'
@@ -141,6 +119,9 @@ Plugin 'tpope/vim-unimpaired'
 
 " A collection of language packs for Vim.
 Plugin 'sheerun/vim-polyglot'
+
+" Plugin to display svg formatting properly
+Plugin 'vim-scripts/svg.vim'
 
 " https://github.com/junegunn/goyo.vim
 "Goyo is a plugin for “distraction-free writing in Vim”
@@ -485,9 +466,9 @@ set number
 " syntax on will overwrite with vim defaults.
 syntax enable
 " syntax on
-set shiftwidth=4
-set tabstop=4
-set softtabstop=4
+set shiftwidth=2
+set tabstop=2
+set softtabstop=2
 set relativenumber
 
 "removes newline EOL
@@ -647,15 +628,7 @@ let python_highlight_all=1
 "green comments
 hi Comment guifg=#7ea869 ctermfg=green
 
-
-
-
-
-
-
-
-
-autocmd Filetype html setlocal ts=4 sts=4 sw=4 expandtab
+autocmd Filetype html setlocal ts=2 sts=2 sw=2 expandtab
 autocmd Filetype ruby setlocal ts=2 sts=2 sw=2 expandtab
 autocmd Filetype php setlocal ts=4 sts=4 sw=4 expandtab
 autocmd Filetype javascript setlocal ts=2 sts=2 sw=2 expandtab
@@ -1002,3 +975,10 @@ if exists('+termguicolors')
   let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
   set termguicolors
 endif
+
+
+" Make paste copy what you just pasted into the buffer
+" so the pasted over data won't go into the buffer
+" 'p' to paste, 'gv' to re-select what was originally selected. 'y' to copy it again.
+" Can still use P for original type of paste
+xnoremap p pgvy
