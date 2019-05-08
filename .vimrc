@@ -520,7 +520,8 @@ set background=dark
 " set background=light
 
 " MAIN FAVORITE ONES COLORSCHEMES and FONTS
-" - Favorite right now ->  IBM Plex Mono <-
+" - Favorite right now -> PT-Mono
+" 0 - IBM Plex Mono <-
 " 0 - Inconsolata-g
 " 1 - Operator-Mono - book
 " 2 - 2nd favorite PT Mono
