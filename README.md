@@ -107,6 +107,8 @@ To get diagnostics in JavaScript, set the checkJs option to true in your jsconfi
     "compilerOptions": {
         "checkJs": true,
          "moduleResolution": "node",
+         "target": "es6",
+
     },
 }
 ```

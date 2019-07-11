@@ -18,6 +18,19 @@ Plugin 'drewtempelmeyer/palenight.vim'
 "colorscheme palenight
 Plugin 'ayu-theme/ayu-vim'
 
+
+" code prettier
+" https://github.com/prettier/vim-prettier
+" also need to run 'npm install -g prettier'
+Plugin 'prettier/vim-prettier'
+
+"colorscheme carbonized-dark
+Plugin 'nightsense/carbonized'
+
+"The optimized dark theme for web development.
+" https://github.com/taniarascia/new-moon
+Plugin 'taniarascia/new-moon.vim'
+
 "https://github.com/heavenshell/vim-jsdoc
 "JSDOC for js
 "To use it, hover over a function and type in :JSDoc
@@ -26,6 +39,9 @@ Plugin 'heavenshell/vim-jsdoc'
 Plugin 'honza/vim-snippets'
 Plugin 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx'] }
 Plugin 'othree/jspc.vim', { 'for': ['javascript', 'javascript.jsx'] }
+
+"xcode_dark theme
+Plugin 'nickaroot/vim-xcode-dark-theme'
 
 
 "Supertab is a vim plugin which allows you to use <Tab> for all your
@@ -260,7 +276,12 @@ Plugin 'jelera/vim-javascript-syntax'
 "Indent Guides is a plugin for visually displaying indent levels in Vim.
 Plugin 'nathanaelkane/vim-indent-guides'
 "to enable type mapleader (in my case space) and ig
-"
+
+
+" Oceanic-Next.vim is a neovim theme inspired by Oceanic Next for Sublime. It
+" is not a direct port, but uses some colors from the sublime theme, that are
+" fitted to work with neovim and vim8.
+Plugin 'mhartington/oceanic-next'
 
 " React Syntax Highlighting
 Plugin 'mxw/vim-jsx'
@@ -516,19 +537,23 @@ let g:solarized_contrast = "high"
 "let g:gruvbox_contrast_dark='hard'
 
 "Switch between different backgrounds
-set background=dark
-" set background=light
+" set background=dark
+set background=light
 
 " MAIN FAVORITE ONES COLORSCHEMES and FONTS
-" - Favorite right now -> PT-Mono
-" 0 - IBM Plex Mono <-
-" 0 - Inconsolata-g
+" Favorite right now-> Space Mono with horizontal space 90%
+" 0. Iosevka
+" 0 Input Mono Narrow
+" 0 SF Mono
+" 0a PT-Mono
+" 0b - IBM Plex Mono
+" 0c - Inconsolata-g
 " 1 - Operator-Mono - book
 " 2 - 2nd favorite PT Mono
 " 3 - Dank Mono
 " 4 - Office-Code-Pro - medium
 " 5 - Andale mono
-" 6 - Robot Mono Light Version
+" 6 - Robot Mono Version
 " 7 - Input Mono Condensed regular
 " 8 - Fira Mono Powerline
 " 9 - Terminus font and Darkside iTerm2 color preset
@@ -552,8 +577,20 @@ set background=dark
 "let ayucolor="light"  " for light version of theme - should be used with set background=light instead of dark
 "colorscheme ayu
 
+
 "favorite
-colorscheme palenight
+
+colorscheme OceanicNext
+"colorscheme desert
+
+"colorscheme palenight
+
+"light theme
+"colorscheme Light
+"
+"colorscheme carbonized-dark
+"colorscheme  new-moon
+"colorscheme xcode_dark
 " colorscheme base16-default-dark
 " colorscheme gruvbox
 " colorscheme evening
@@ -800,6 +837,7 @@ let g:syntastic_java_checkers = ['']
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_javascript_eslint_exe = 'npm run lint --'
 
+
 " The native support for Java includes YCM's native realtime diagnostics display.
 " This can conflict with other dianostics plugins like Eclim, so when enabling
 " Java support, please manually disable Eclim Java diagnostics.
@@ -869,9 +907,6 @@ let ruby_fold=1               " Ruby
 let sh_fold_enabled=1         " sh
 let vimsyn_folding='af'       " Vim script
 let xml_syntax_folding=1      " XML
-
-
-
 
 
 

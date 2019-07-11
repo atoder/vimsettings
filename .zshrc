@@ -7,9 +7,6 @@
 # The new php binary is therefore in /usr/local/php5/bin/php.
 # You can also adjust your PATH do include that directory, eg. write into your ~/.profile file the following
 
-
-export PATH=/usr/local/php5/bin:$PATH
-
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 #export TERM="xterm-256color"
@@ -248,7 +245,7 @@ ctags=/usr/local/bin/ctags
 #title_text freeCodeCamp
 
 # gem install lc
-alias lc="colorls"
+alias l="colorls -la"
 
 # See also https://github.com/Falkor/dotfiles/blob/master/oh-my-zsh/
 # Font taken from https://github.com/stefano-meschiari/dotemacs/blob/master/SourceCodePro%2BPowerline%2BAwesome%2BRegular.ttf
@@ -256,5 +253,12 @@ alias lc="colorls"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 
+# configure clang
+export CC=clang
+export CFLAGS="-fsanitize=integer -fsanitize=undefined -ggdb3 -O0 -std=c11 -Wall -Werror -Wextra -Wno-sign-compare -Wshadow"
+export LDLIBS="-lcrypt -lcs50 -lm"
 
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+export LIBRARY_PATH=/usr/local/lib
+export C_INCLUDE_PATH=/usr/local/include
+
+function make50 { gcc "$1".c -o "$1" -I /usr/local/include -L /usr/local/lib -lcs50; }
