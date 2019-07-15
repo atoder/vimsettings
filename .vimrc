@@ -286,8 +286,8 @@ Plugin 'mhartington/oceanic-next'
 " React Syntax Highlighting
 Plugin 'mxw/vim-jsx'
 let g:jsx_ext_required = 1 " Allow JSX in normal JS files
-"Plugin 'neoclide/vim-jsx-improve'
-"Plugin 'othree/yajs.vim'
+Plugin 'neoclide/vim-jsx-improve'
+Plugin 'othree/yajs.vim'
 
 "colorschemes
 Plugin 'crusoexia/vim-monokai'
@@ -537,8 +537,8 @@ let g:solarized_contrast = "high"
 "let g:gruvbox_contrast_dark='hard'
 
 "Switch between different backgrounds
-" set background=dark
-set background=light
+set background=dark
+"set background=light
 
 " MAIN FAVORITE ONES COLORSCHEMES and FONTS
 " Favorite right now-> Space Mono with horizontal space 90%
@@ -580,7 +580,8 @@ set background=light
 
 "favorite
 
-colorscheme OceanicNext
+colorscheme gruvbox
+"colorscheme OceanicNext
 "colorscheme desert
 
 "colorscheme palenight
@@ -591,8 +592,8 @@ colorscheme OceanicNext
 "colorscheme carbonized-dark
 "colorscheme  new-moon
 "colorscheme xcode_dark
+"colorscheme gruvbox
 " colorscheme base16-default-dark
-" colorscheme gruvbox
 " colorscheme evening
 " colorscheme janah
 " colorscheme space-vim-dark
@@ -942,7 +943,8 @@ set clipboard=unnamed
 
 " Overwrite colorschemes background when trying to enable transparency
 " this will allow you to go to transparent mode in in terminal
-hi Normal ctermbg=NONE guibg=NONE
+"hi Normal ctermbg=NONE guibg=NONE
+
 
 "Overwrite hightlight color change for SEARCH
 "for the GUI
@@ -953,7 +955,7 @@ hi Normal ctermbg=NONE guibg=NONE
 
 " * You can now set a darker background for bright environments.
 " To activate, use:
-let g:zenburn_high_Contrast = 1
+"let g:zenburn_high_Contrast = 1
 
 "changing color of the folds
 "hi Folded ctermbg=235
@@ -1018,3 +1020,4 @@ endif
 " 'p' to paste, 'gv' to re-select what was originally selected. 'y' to copy it again.
 " Can still use P for original type of paste
 xnoremap p pgvy
+

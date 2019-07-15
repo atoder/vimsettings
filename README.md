@@ -101,6 +101,7 @@ npm install -g typescript
 TSServer relies on the jsconfig.json file for JavaScript and the tsconfig.json file for TypeScript to analyze your project. Ensure the file exists at the root of your project.
 
 To get diagnostics in JavaScript, set the checkJs option to true in your jsconfig.json file:
+and also to allow JSX in javascript files
 
 ```
 {
@@ -108,12 +109,14 @@ To get diagnostics in JavaScript, set the checkJs option to true in your jsconfi
         "checkJs": true,
          "moduleResolution": "node",
          "target": "es6",
+         "jsx": "react",
 
     },
 }
 ```
 
-Put this file into your project directory and add it to .gitignore if you want to
+Put this file into your project directory and add it to .gitignore 
+or you can also put this file into parent directory
 
 
 ## Basic Ranger shortcuts
