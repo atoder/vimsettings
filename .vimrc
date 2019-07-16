@@ -513,11 +513,6 @@ set listchars=tab:▷\ ,
 set list
 
 
-"A classic “Python tell” in Vim is the 79th or 80th character highlight:
-" set colorcolumn=80              " Show the 80th char column.
-" highlight ColorColumn ctermbg=5
-" turn off the color by
-set cc=
 
 
 "show status at the bottom of vim file
@@ -650,6 +645,10 @@ endif
 "let base16colorspace=256  " Access colors present in 256 colorspace
 
 
+"Sometimes it is helpful if your working directory
+"is always the same as the file you are editing.
+"To achieve this, put the following in your vimrc:
+set autochdir
 
 "Auto indent cod
 set autoindent
@@ -988,7 +987,8 @@ set clipboard=unnamed
 "close all folds with zM (not really needed?)
 "
 " The easiest way to disable (and enable) folding on the fly is zi.
-" zi is the normal mode command that toggles 'foldenable', just like :set foldenable!.
+" zi is the normal mode command that toggles 'foldenable', 
+" just like :set foldenable!.
 " Mnemonic: "fold invert". See :h zi.
 
 "let g:ycm_keep_logfiles = 1
@@ -1017,7 +1017,17 @@ endif
 
 " Make paste copy what you just pasted into the buffer
 " so the pasted over data won't go into the buffer
-" 'p' to paste, 'gv' to re-select what was originally selected. 'y' to copy it again.
+" 'p' to paste, 'gv' to re-select what was originally selected. 'y' to copy it
+" again.
 " Can still use P for original type of paste
-xnoremap p pgvy
+"
+" Show the 80th char column to monitor we don't go over that line
+"highlight ColorColumn ctermbg=gray
+"set colorcolumn=80
 
+" turn off the color by
+"set cc=
+"This results in the character being highlighted in magenta (the screenshot is
+"in DarkCyan) when the line goes over the 80-character maximum.
+highlight ColorColumn ctermbg=magenta
+call matchadd('ColorColumn', '\%81v', 100)
