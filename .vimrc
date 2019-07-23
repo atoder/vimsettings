@@ -18,7 +18,6 @@ Plugin 'drewtempelmeyer/palenight.vim'
 "colorscheme palenight
 Plugin 'ayu-theme/ayu-vim'
 
-
 " code prettier
 " https://github.com/prettier/vim-prettier
 " also need to run 'npm install -g prettier'
@@ -43,7 +42,6 @@ Plugin 'othree/jspc.vim', { 'for': ['javascript', 'javascript.jsx'] }
 "xcode_dark theme
 Plugin 'nickaroot/vim-xcode-dark-theme'
 
-
 "Supertab is a vim plugin which allows you to use <Tab> for all your
 "insert completion needs
 Plugin 'ervandew/supertab'
@@ -57,19 +55,6 @@ Plugin 'scrooloose/nerdcommenter'
 "Comments out the selected lines with a pretty block formatted layout.
 "[count]<leader>cs |NERDComSexyComment|
 
-
-""use TAB as the mapping
-"inoremap <silent><expr> <TAB>
-"      \ pumvisible() ?  "\<C-n>" :
-"      \ <SID>check_back_space() ? "\<TAB>" :
-"      \ deoplete#mappings#manual_complete()
-"function! s:check_back_space() abort ""
-"  let col = col(.) - 1
-"  return !col || getline(.)[col - 1]  =~ s
-"endfunction ""
-"
-"inoremap <silent><expr><S-TAB>  pumvisible() ? "\<C-p>" : "\<TAB>"
-"inoremap <expr><BS>  deoplete#smart_close_popup()."\<C-h>"
 
 "A plugin of NERDTree showing git status flags. Works with the LATEST version of NERDTree.
  Plugin 'Xuyuanp/nerdtree-git-plugin'
@@ -107,7 +92,6 @@ let g:tern_map_keys=1
 
 Plugin 'morhetz/gruvbox'
 
-
 Plugin 'flazz/vim-colorschemes'
 
 "one dark color scheme
@@ -117,7 +101,6 @@ Plugin 'chriskempson/base16-vim'
 
 "color scheme
 Plugin 'altercation/vim-colors-solarized'
-
 
 Plugin 'christoomey/vim-tmux-navigator'
 
@@ -129,7 +112,6 @@ Plugin 'tpope/vim-fugitive'
 
 " :GitLog
 Plugin 'kablamo/vim-git-log'
-
 
 Plugin 'tpope/vim-unimpaired'
 
@@ -942,7 +924,7 @@ set clipboard=unnamed
 
 " Overwrite colorschemes background when trying to enable transparency
 " this will allow you to go to transparent mode in in terminal
-"hi Normal ctermbg=NONE guibg=NONE
+hi Normal ctermbg=NONE guibg=NONE
 
 
 "Overwrite hightlight color change for SEARCH
@@ -987,7 +969,7 @@ set clipboard=unnamed
 "close all folds with zM (not really needed?)
 "
 " The easiest way to disable (and enable) folding on the fly is zi.
-" zi is the normal mode command that toggles 'foldenable', 
+" zi is the normal mode command that toggles 'foldenable',
 " just like :set foldenable!.
 " Mnemonic: "fold invert". See :h zi.
 
