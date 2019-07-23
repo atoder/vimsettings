@@ -927,11 +927,11 @@ set clipboard=unnamed
 hi Normal ctermbg=NONE guibg=NONE
 
 
-"Overwrite hightlight color change for SEARCH
-"for the GUI
-"hi Search guifg=black guibg=red
+" Overwrite hightlight color change for SEARCH
+" for the GUI
+" hi Search guifg=black guibg=red
 " for terminal vim
-"hi Search cterm=NONE ctermfg=black ctermbg=red
+" hi Search cterm=NONE ctermfg=black ctermbg=red
 
 
 " * You can now set a darker background for bright environments.
