@@ -518,10 +518,11 @@ set background=dark
 "set background=light
 
 " MAIN FAVORITE ONES COLORSCHEMES and FONTS
-" Favorite right now-> Space Mono with horizontal space 90%
+" Favorite right now->
+" 0. Space Mono with horizontal space 90%
+" 0 SF Mono
 " 0. Iosevka
 " 0 Input Mono Narrow
-" 0 SF Mono
 " 0a PT-Mono
 " 0b - IBM Plex Mono
 " 0c - Inconsolata-g
@@ -558,7 +559,9 @@ set background=dark
 "favorite
 
 colorscheme gruvbox
+"colorscheme deus
 "colorscheme OceanicNext
+"colorscheme falcon
 "colorscheme desert
 
 "colorscheme palenight
@@ -925,7 +928,6 @@ set clipboard=unnamed
 " Overwrite colorschemes background when trying to enable transparency
 " this will allow you to go to transparent mode in in terminal
 hi Normal ctermbg=NONE guibg=NONE
-
 
 " Overwrite hightlight color change for SEARCH
 " for the GUI

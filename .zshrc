@@ -148,6 +148,8 @@ source $ZSH/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 
+alias rm="echo Use 'trash' app to move files into trash. If you really need rm, use the full path i.e. '/bin/rm'"
+
 
 
 # optionally set DEFAULT_USER in ~/.zshrc to your regular username to hide the “user@hostname” info when you’re logged in as yourself on your local machine for 'agnoster' theme
