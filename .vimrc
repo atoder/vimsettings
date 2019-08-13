@@ -114,6 +114,18 @@ if executable('ag')
 endif
 
 
+" Overwrite hightlight color change for SEARCH
+" for the GUI
+"hi Search guifg=black guibg=red
+" for terminal vim
+"hi Search cterm=NONE ctermfg=black ctermbg=red
+
+"Highlight all search pattern matches
+set hlsearch
+
+"	While typing a search command, show where the pattern,
+"	as it was typed so far, matches.
+set incsearch
 
 " FINDING FILES:
 
