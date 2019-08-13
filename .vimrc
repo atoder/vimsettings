@@ -66,6 +66,14 @@ set showmatch
 "enable cursor line
 "set cursorline
 
+"Switch between different backgrounds
+set background=dark
+"set background=light
+
+"Sometimes it is helpful if your working directory
+"is always the same as the file you are editing.
+"To achieve this, put the following in your vimrc:
+set autochdir
 
 
 
@@ -78,7 +86,6 @@ nnoremap <C-c> :bp\|bd #<CR>
 " into OS's clipboard
 set clipboard=unnamed
 
-"set termguicolors
 
 autocmd Filetype html setlocal ts=2 sts=2 sw=2 expandtab
 autocmd Filetype ruby setlocal ts=2 sts=2 sw=2 expandtab
@@ -152,8 +159,8 @@ endif
 "Highlight all search pattern matches
 set hlsearch
 
-"	While typing a search command, show where the pattern,
-"	as it was typed so far, matches.
+" While typing a search command, show where the pattern,
+" as it was typed so far, matches.
 set incsearch
 
 " FINDING FILES:
@@ -335,6 +342,7 @@ imap <C-c> <CR><Esc>O
 "<C-g>g mapping. CTRL+g g will put you after the matching bracket
 
 
+"NOW WE CAN
 
 " Syntastic
 set statusline+=%#warningmsg#
@@ -359,9 +367,20 @@ Plugin 'pangloss/vim-javascript'
 "From http://oli.me.uk/2013/06/29/equipping-vim-for-javascript/
 Plugin 'jelera/vim-javascript-syntax'
 
+Plugin 'vim-scripts/JavaScript-syntax'
+
+
+
 " silver surfer search text ack bundle
 Plugin 'ggreer/the_silver_searcher'
 Plugin 'rking/ag.vim'
+
+" bind shift KK to grep word under cursor
+" Use Ag instead of grep (more advanced)
+nnoremap KK :Ag! "\b<C-R><C-W>\b"<CR>:cw<CR>
+
+" :GitLog
+Plugin 'kablamo/vim-git-log'
 
 " Install fonts for vim-devicons from https://github.com/ryanoasis/nerd-fonts
 Plugin 'ryanoasis/vim-devicons'
@@ -370,11 +389,38 @@ Plugin 'ryanoasis/vim-devicons'
 "insert completion needs
 Plugin 'ervandew/supertab'
 
+"Show which line changed since your last commit.
+"GitGutterToggle
+Plugin 'airblade/vim-gitgutter'
+
+"Indent Guides is a plugin for visually displaying indent levels in Vim.
+Plugin 'nathanaelkane/vim-indent-guides'
+"to enable type mapleader (in my case space) and ig
+
+
 
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
+
+"ENABLE italic fonts
+let &t_ZH="\e[3m"
+let &t_ZR="\e[23m"
+highlight Comment cterm=italic gui=italic
+
+"Enable HTML attributes to be italic
+highlight htmlArg cterm=italic gui=italic
+
+"Enable HTML italic highlight
+highlight htmlItalic cterm=italic gui=italic
+
+" Enable true color
+if exists('+termguicolors')
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+  set termguicolors
+endif
 
 "colorscheme default
 "colorscheme gruvbox
@@ -382,6 +428,80 @@ call vundle#end()            " required
 "hi Comment guifg=#5C6370 ctermfg=59
 
 "green comments
-"hi Comment guifg=#7ea869 ctermfg=green
+hi Comment guifg=#7ea869 ctermfg=green
 "hi Comment guifg=#a9f2a8 ctermfg=lightgreen
-hi Comment guifg=#a9f2a ctermfg=DarkGreen
+"hi Comment guifg=#a9f2a ctermfg=DarkGreen
+
+
+
+" MAIN FAVORITE ONES COLORSCHEMES and FONTS
+" Favorite right now top 4->
+" 0. Programma
+" 1. Space Mono with horizontal space 90%
+" 2. ProFont for powerline
+" 3. Dank Mono
+" -------
+" 0. ProggyVector
+" 0. Proggy
+" 0 SF Mono
+" 0. Iosevka
+" 0 Input Mono Narrow
+" 0a PT-Mono
+" 0b - IBM Plex Mono
+" 0c - Inconsolata-g
+" 1 - Operator-Mono - book
+" 2 - 2nd favorite PT Mono
+" 4 - Office-Code-Pro - medium
+" 5 - Andale mono
+" 6 - Robot Mono Version
+" 7 - Input Mono Condensed regular
+" 8 - Fira Mono Powerline
+" 9 - Terminus font and Darkside iTerm2 color preset
+" 10 - Hack Font
+" 11 - Consolas
+" 12 - M+ 1M font
+" 13 - Monaco 14pt
+
+" MAIN FAVORITE iterm2 colorschemes
+" 0) - favorite one is Molokai
+" 1) One Dark
+" 2) Darkside
+" 3) space-vim-dark
+" 4) gruvbox-dark
+" 5) Solarized Dark
+
+
+"set guifont=Monaco\ 12
+"let ayucolor="mirage" " for mirage version of theme
+"let ayucolor="dark"   " for dark version of theme
+"let ayucolor="light"  " for light version of theme - should be used with set background=light instead of dark
+"colorscheme ayu
+
+
+"favorite
+
+"by default it will be default
+"colorscheme default
+"colorscheme minimalist
+"colorscheme gruvbox
+"colorscheme deus
+"colorscheme OceanicNext
+"colorscheme falcon
+"colorscheme desert
+"colorscheme palenight
+
+"light theme
+"colorscheme Light
+
+"colorscheme xcode_dark
+"colorscheme base16-default-dark
+" colorscheme evening
+" colorscheme janah
+" colorscheme space-vim-dark
+
+"colorscheme mustang
+" colorscheme onedark
+"colorscheme zenburn
+" colorscheme solarized
+" colorscheme monokai
+
