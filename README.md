@@ -33,6 +33,45 @@ brew install reattach-to-user-namespace
 ## External link 
 https://stackoverflow.com/questions/1031396/how-to-share-one-vimrc-file-among-multiple-clients
 
+## Basic Ranger shortcuts
+ranger is a text-based file manager written in Python. Directories are displayed in one pane with three columns. Moving between them is accomplished with keystrokes, bookmarks, the mouse or the command history. File previews and directory contents show automatically for the current selection.
+# Installation
+
+```
+brew install ranger
+ranger --copy-config=all
+```
+
+These are the basic key binds in ranger, even outside of my configs. Note that they are mostly vim-based.
+
+```
+h/j/k/l -- Move left/down/up/right (where left moves up in the directory structure, right moves into a folder)
+Space -- select/highlight file
+dd -- cut selected files
+yy -- copy/yank selected files
+pp -- paste/move cut/copied files
+/ -- search, when (n/N) next/previous result
+zh or CTRL-h -- show hidden files
+Renaming files:
+cw -- rename file from scratch
+A -- rename file adding to the end
+aa -- rename file appending before the extension
+I -- rename file adding at the beginning
+`
+
+## Syntastic using JSHint to support es6
+https://stackoverflow.com/questions/20160921/syntastic-complaining-about-es6-module-syntax
+
+
+Create .jshintrc file in your project or parent directory
+```
+{
+  "esversion": 6
+}
+```
+
+
+# OLD plugins I used before
 ## YouComplete C error checking
 
 in ~/.vimrc you should already have 
@@ -118,31 +157,6 @@ and also to allow JSX in javascript files
 Put this file into your project directory and add it to .gitignore 
 or you can also put this file into parent directory
 
-
-## Basic Ranger shortcuts
-ranger is a text-based file manager written in Python. Directories are displayed in one pane with three columns. Moving between them is accomplished with keystrokes, bookmarks, the mouse or the command history. File previews and directory contents show automatically for the current selection.
-# Installation
-
-```
-brew install ranger
-ranger --copy-config=all
-```
-
-These are the basic key binds in ranger, even outside of my configs. Note that they are mostly vim-based.
-
-```
-h/j/k/l -- Move left/down/up/right (where left moves up in the directory structure, right moves into a folder)
-Space -- select/highlight file
-dd -- cut selected files
-yy -- copy/yank selected files
-pp -- paste/move cut/copied files
-/ -- search, when (n/N) next/previos result
-zh or CTRL-h -- show hidden files
-Renaming files:
-cw -- rename file from scratch
-A -- rename file adding to the end
-aa -- rename file appending before the extension
-I -- rename file adding at the beginning
-```
+``
 
 
