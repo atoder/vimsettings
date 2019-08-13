@@ -364,10 +364,9 @@ let g:syntastic_style_warning_symbol='⚠'
 "vim javascript
 Plugin 'pangloss/vim-javascript'
 
-"From http://oli.me.uk/2013/06/29/equipping-vim-for-javascript/
-Plugin 'jelera/vim-javascript-syntax'
-
-Plugin 'vim-scripts/JavaScript-syntax'
+""From http://oli.me.uk/2013/06/29/equipping-vim-for-javascript/
+"Plugin 'jelera/vim-javascript-syntax'
+"Plugin 'vim-scripts/JavaScript-syntax'
 
 
 
