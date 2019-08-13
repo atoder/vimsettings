@@ -299,6 +299,10 @@ Plugin 'xolox/vim-easytags'
 Plugin 'majutsushi/tagbar'
 Plugin 'hushicai/tagbar-javascript.vim'
 
+"nmap <C-o> :TagbarToggle<CR>
+"to open tag bar hit space and o
+nnoremap <leader>oo :TagbarToggle<CR>
+
 
 ""A fancy start screen for Vim.
 Plugin 'mhinz/vim-startify'
