@@ -53,7 +53,7 @@ Plugin 'scrooloose/nerdcommenter'
 "A plugin of NERDTree showing git status flags. Works with the LATEST version of NERDTree.
  Plugin 'Xuyuanp/nerdtree-git-plugin'
 
-"Amazing code completion - DISABLED FOR TabNine
+"Amazing code completion
 Plugin 'Valloric/YouCompleteMe'
 
 "Replaced auto completition with tabnin
