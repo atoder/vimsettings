@@ -57,7 +57,7 @@ cw -- rename file from scratch
 A -- rename file adding to the end
 aa -- rename file appending before the extension
 I -- rename file adding at the beginning
-`
+```
 
 ## Syntastic using JSHint to support es6
 https://stackoverflow.com/questions/20160921/syntastic-complaining-about-es6-module-syntax
