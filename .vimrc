@@ -368,10 +368,25 @@ let g:syntastic_style_warning_symbol='⚠'
 "vim javascript
 Plugin 'pangloss/vim-javascript'
 
+" vim set up for developing with react js
+" https://andrewsinclair.github.io/vim/react/javascript/syntastic/eslint/2017/02/28/vim-setup-for-developing-react-js.html
+" javascript and jsx
+let g:syntastic_javascript_checkers = ['eslint']
+" React Syntax Highlighting
+Plugin 'mxw/vim-jsx'
+let g:jsx_ext_required = 1 " Allow JSX in normal JS files
+Plugin 'neoclide/vim-jsx-improve'
+Plugin 'othree/yajs.vim'
+
+
+
+"Plugin 'elzr/vim-json'
+"Plugin 'mattn/emmet-vim'
+"Plugin 'alampros/vim-styled-jsx'
+
 ""From http://oli.me.uk/2013/06/29/equipping-vim-for-javascript/
 "Plugin 'jelera/vim-javascript-syntax'
 "Plugin 'vim-scripts/JavaScript-syntax'
-
 
 
 " silver surfer search text ack bundle
