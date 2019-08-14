@@ -70,8 +70,6 @@ Create .jshintrc file in your project or parent directory
 }
 ```
 
-
-# OLD plugins I used before
 ## YouComplete C error checking
 
 in ~/.vimrc you should already have 

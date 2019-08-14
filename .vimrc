@@ -123,14 +123,6 @@ else
   set ttymouse=xterm2
 end
 
-highlight Comment cterm=italic gui=italic
-
-"Enable HTML attributes to be italic
-highlight htmlArg cterm=italic gui=italic
-
-"Enable HTML italic highlight
-highlight htmlItalic cterm=italic gui=italic
-
 
 "This results in the character being highlighted in magenta (the screenshot is
 "in DarkCyan) when the line goes over the 80-character maximum.
@@ -331,22 +323,6 @@ Plugin 'kopischke/vim-stay'
 
 "syntax cheker
 Plugin 'scrooloose/syntastic'
-"Automatic close for common block and scope identifiers such as brackets
-" parentheses, brace, squares
-"https://github.com/jiangmiao/auto-pairs
-"Something I’ve found to be very useful,
-"which doesn’t require any bundles other than delimitMate really,
-"is to add a key binding that will split my current line.
-" So if I type {, delimitMate will insert } after my cursor,
-" then I can execute my binding that will insert a new line in
-" the middle of the two ready to receive some code.
-Plugin 'Raimondi/delimitMate'
-"Just hit control C and it will move the closing bracket down
-imap <C-c> <CR><Esc>O
-"<C-g>g mapping. CTRL+g g will put you after the matching bracket
-
-
-"NOW WE CAN
 
 " Syntastic
 set statusline+=%#warningmsg#
@@ -379,14 +355,19 @@ Plugin 'neoclide/vim-jsx-improve'
 Plugin 'othree/yajs.vim'
 
 
-
-"Plugin 'elzr/vim-json'
-"Plugin 'mattn/emmet-vim'
-"Plugin 'alampros/vim-styled-jsx'
-
-""From http://oli.me.uk/2013/06/29/equipping-vim-for-javascript/
-"Plugin 'jelera/vim-javascript-syntax'
-"Plugin 'vim-scripts/JavaScript-syntax'
+"Automatic close for common block and scope identifiers such as brackets
+" parentheses, brace, squares
+"https://github.com/jiangmiao/auto-pairs
+"Something I’ve found to be very useful,
+"which doesn’t require any bundles other than delimitMate really,
+"is to add a key binding that will split my current line.
+" So if I type {, delimitMate will insert } after my cursor,
+" then I can execute my binding that will insert a new line in
+" the middle of the two ready to receive some code.
+Plugin 'Raimondi/delimitMate'
+"Just hit control C and it will move the closing bracket down
+imap <C-c> <CR><Esc>O
+"<C-g>g mapping. CTRL+g g will put you after the matching bracket
 
 
 " silver surfer search text ack bundle
@@ -456,16 +437,6 @@ if exists('+termguicolors')
   set termguicolors
 endif
 
-"colorscheme default
-"colorscheme gruvbox
-"grey comments
-"hi Comment guifg=#5C6370 ctermfg=59
-
-"green comments
-hi Comment guifg=#7ea869 ctermfg=green
-"hi Comment guifg=#a9f2a8 ctermfg=lightgreen
-"hi Comment guifg=#a9f2a ctermfg=DarkGreen
-
 
 
 " MAIN FAVORITE ONES COLORSCHEMES and FONTS
@@ -515,7 +486,7 @@ hi Comment guifg=#7ea869 ctermfg=green
 "favorite
 
 "by default it will be default
-"colorscheme default
+colorscheme default
 "colorscheme minimalist
 "colorscheme gruvbox
 "colorscheme deus
@@ -539,3 +510,20 @@ hi Comment guifg=#7ea869 ctermfg=green
 " colorscheme solarized
 " colorscheme monokai
 
+
+" Overwrite colors and font style
+highlight Comment cterm=italic gui=italic
+
+"Enable HTML attributes to be italic
+highlight htmlArg cterm=italic gui=italic
+
+"Enable HTML italic highlight
+highlight htmlItalic cterm=italic gui=italic
+
+"grey comments
+"hi Comment guifg=#5C6370 ctermfg=59
+
+"green comments
+hi Comment guifg=#7ea869 ctermfg=green
+"hi Comment guifg=#a9f2a8 ctermfg=lightgreen
+"hi Comment guifg=#a9f2a ctermfg=DarkGreen
