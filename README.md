@@ -155,6 +155,3 @@ and also to allow JSX in javascript files
 Put this file into your project directory and add it to .gitignore 
 or you can also put this file into parent directory
 
-``
-
-
