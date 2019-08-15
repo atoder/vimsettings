@@ -129,6 +129,12 @@ To install YouComplete only with C type languages and Java
 
 ```
 
+
+
+
+
+
+
 All JavaScript and TypeScript features are provided by the TSServer engine, which is included in the TypeScript SDK. To get the SDK, install Node.js and npm and run the command:
 
 ```
