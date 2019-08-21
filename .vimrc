@@ -1,7 +1,6 @@
 " For Mac OS X, use Karabiner app to remap ESC to Caps Lock
 " It's easier to use than hitting ESC key
 
-
 " enter the current millenium
 set nocompatible
 
@@ -74,8 +73,6 @@ set background=dark
 "is always the same as the file you are editing.
 "To achieve this, put the following in your vimrc:
 set autochdir
-
-
 
 " Control + C mapping to run :bp | bd #
 " which moves to previous buffer and closes the buffer we just moved from
@@ -205,11 +202,12 @@ command! MakeTags !ctags -R .
 " FILE BROWSING:
 
 " Tweaks for browsing
-let g:netrw_banner=0        " disable annoying banner
-let g:netrw_browse_split=4  " open in prior window
-"let g:netrw_browse_split=0  " reuse the same window
-let g:netrw_altv=1          " open splits to the right
-let g:netrw_liststyle=3     " tree view
+let g:netrw_banner = 0        " disable annoying banner
+let g:netrw_browse_split = 4  " open in prior window
+"let g:netrw_browse_split = 0  " reuse the same window
+let g:netrw_altv = 1          " open splits to the right
+let g:netrw_liststyle = 3     " tree view
+let g:netrw_winsize = 25    " width in percent
 "let g:netrw_list_hide=netrw_gitignore#Hide()
 "let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
 
@@ -233,8 +231,7 @@ endfunction
 
 " Add your own mapping. For example:
 noremap <silent> <C-n> :call ToggleNetrw()<CR>
-
-" netrw with Ctrl+n (you can set whatever key you want):
+" OLD netrw with Ctrl+n (you can set whatever key you want):
 " map <C-n> :Vexplore<CR>
 
 
@@ -364,7 +361,8 @@ let g:syntastic_warning_symbol='⚠'
 let g:syntastic_style_error_symbol='✗'
 let g:syntastic_style_warning_symbol='⚠'
 
-
+"space st will enable and disable syntastic
+nmap <leader>st :SyntasticToggleMode<CR>
 
 "vim javascript
 Plugin 'pangloss/vim-javascript'
@@ -409,6 +407,13 @@ Plugin 'kablamo/vim-git-log'
 " Install fonts for vim-devicons from https://github.com/ryanoasis/nerd-fonts
 Plugin 'ryanoasis/vim-devicons'
 
+" Easily interact with tmux from vim
+Plugin 'benmills/vimux'
+" Prompt for a command to run in another pane
+map <Leader><Leader>p  :VimuxPromptCommand<CR>
+" rerun previous command
+map <Leader><Leader>r :VimuxRunLastCommand<CR>
+
 "Supertab is a vim plugin which allows you to use <Tab> for all your
 "insert completion needs
 Plugin 'ervandew/supertab'
@@ -420,7 +425,6 @@ Plugin 'airblade/vim-gitgutter'
 "Indent Guides is a plugin for visually displaying indent levels in Vim.
 Plugin 'nathanaelkane/vim-indent-guides'
 "to enable type mapleader (in my case space) and ig
-
 
 
 "Amazing code completion
@@ -463,13 +467,20 @@ if exists('+termguicolors')
 endif
 
 
+"put away .swp files into home dir instead of cluttering up in your projects
+" Don't forget to create this directory
+set swapfile
+set dir=~/tmp/
 
 " MAIN FAVORITE ONES COLORSCHEMES and FONTS
 " Favorite right now top 4->
 " 0. Programma
 " 1. Space Mono with horizontal space 90%
-" 2. ProFont for powerline
-" 3. Dank Mono
+" 2. Anonymous pro
+" 3. ProFont for powerline
+" 4. Dank Mono
+" 5 - Fira Mono Powerline
+" 6 - Overpass mono
 " -------
 " 0. ProggyVector
 " 0. Proggy
@@ -485,7 +496,6 @@ endif
 " 5 - Andale mono
 " 6 - Robot Mono Version
 " 7 - Input Mono Condensed regular
-" 8 - Fira Mono Powerline
 " 9 - Terminus font and Darkside iTerm2 color preset
 " 10 - Hack Font
 " 11 - Consolas
@@ -498,42 +508,23 @@ endif
 " 2) Darkside
 " 3) space-vim-dark
 " 4) gruvbox-dark
-" 5) Solarized Dark
-
-
-"set guifont=Monaco\ 12
-"let ayucolor="mirage" " for mirage version of theme
-"let ayucolor="dark"   " for dark version of theme
-"let ayucolor="light"  " for light version of theme - should be used with set background=light instead of dark
-"colorscheme ayu
 
 
 "favorite
 
 "by default it will be default
 colorscheme default
-"colorscheme minimalist
 "colorscheme gruvbox
-"colorscheme deus
-"colorscheme OceanicNext
-"colorscheme falcon
-"colorscheme desert
-"colorscheme palenight
 
-"light theme
-"colorscheme Light
+"light theme - don't forget to
+"set background = light
+"colorscheme zellner
 
-"colorscheme xcode_dark
-"colorscheme base16-default-dark
+" need to install via Vundle first before using them
+" colorscheme base16-default-dark
 " colorscheme evening
 " colorscheme janah
 " colorscheme space-vim-dark
-
-"colorscheme mustang
-" colorscheme onedark
-"colorscheme zenburn
-" colorscheme solarized
-" colorscheme monokai
 
 
 " Overwrite colors and font style
@@ -552,3 +543,11 @@ highlight htmlItalic cterm=italic gui=italic
 hi Comment guifg=#7ea869 ctermfg=green
 "hi Comment guifg=#a9f2a8 ctermfg=lightgreen
 "hi Comment guifg=#a9f2a ctermfg=DarkGreen
+
+"make background of any theme black
+"highlight Normal guibg=black guifg=white
+
+" Overwrite colorschemes background when trying to enable transparency
+" this will allow you to go to transparent mode in in terminal
+" Set background color with iterm2 or whatever terminal you are using
+hi Normal ctermbg=NONE guibg=NONE

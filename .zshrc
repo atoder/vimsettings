@@ -63,10 +63,16 @@ export TTC_TERMINAL_TITLE=false
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 #ZSH_THEME="robbyrussell"
+ZSH_THEME="awesomepanda"
 #ZSH_THEME="random"
+#ZSH_THEME="kolo"
+#ZSH_THEME="cloud"
+#ZSH_THEME="sammy"
+#ZSH_THEME="minimal"
+#ZSH_THEME="fino"
 #ZSH_THEME="simple"
 #ZSH_THEME="wezm"
-ZSH_THEME="agnoster"
+#ZSH_THEME="agnoster"
 #ZSH_THEME="af-magic"
 
 
@@ -264,3 +270,5 @@ export LIBRARY_PATH=/usr/local/lib
 export C_INCLUDE_PATH=/usr/local/include
 
 function make50 { gcc "$1".c -o "$1" -I /usr/local/include -L /usr/local/lib -lcs50; }
+alias python=/usr/local/bin/python3
+alias pip=pip3
