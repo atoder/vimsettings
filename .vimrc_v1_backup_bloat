@@ -880,7 +880,7 @@ au VimEnter * call NERDTreeHighlightFile('rb', 'Red', 'none', '#ffa500', '#15151
 au VimEnter * call NERDTreeHighlightFile('php', 'Magenta', 'none', '#ff00ff', '#151515')
 
 ""folding settings
-"set foldmethod = indent   "fold based on indent
+"set foldmethod=indent   "fold based on indent
 
 set foldmethod=syntax
 "set foldmethod=manual

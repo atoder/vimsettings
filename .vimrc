@@ -1,6 +1,6 @@
 " For Mac OS X, use Karabiner app to remap ESC to Caps Lock
 " It's easier to use than hitting ESC key
-
+"
 " enter the current millenium
 set nocompatible
 
@@ -84,6 +84,8 @@ nnoremap <C-c> :bp\|bd #<CR>
 set clipboard=unnamed
 
 
+let python_highlight_all=1
+
 autocmd Filetype html setlocal ts=2 sts=2 sw=2 expandtab
 autocmd Filetype ruby setlocal ts=2 sts=2 sw=2 expandtab
 autocmd Filetype php setlocal ts=4 sts=4 sw=4 expandtab
@@ -95,9 +97,9 @@ au BufNewFile,BufRead *.eco set filetype=html
 
 
 "mapping buffer switching and closing to shortcuts
-map gn :bn<cr>
-map gp :bp<cr>
-map gd :bd<cr>
+map bn :bn<cr>
+map bp :bp<cr>
+map bd :bd<cr>
 
 " map leader is a space in this case
 " can now hit space ss to save session for example
@@ -106,6 +108,7 @@ let mapleader = " "
 "Encoding must be set to UTF-8 for the glyphs to show
 set encoding=utf8
 set fileencoding=utf8
+
 
 " Switch to last active buffer
 noremap <leader>b :buffer #<CR>
@@ -211,6 +214,9 @@ let g:netrw_winsize = 25    " width in percent
 "let g:netrw_list_hide=netrw_gitignore#Hide()
 "let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
 
+" To create a file use %
+" To create a folder use d
+
 " for toggling netrw like nerdtree
 let g:NetrwIsOpen=0
 function! ToggleNetrw()
@@ -243,16 +249,168 @@ noremap <silent> <C-n> :call ToggleNetrw()<CR>
 " - check |netrw-browse-maps| for more mappings
 
 
+" FOLDING:
+"set foldmethod=indent   "fold based on indent
+set foldmethod=syntax
+"set foldmethod=manual
+set foldlevelstart=1
+"set foldnestmax=10      "deepest fold is 10 levels
+set nofoldenable        "dont fold by default
+set foldlevel=1         "this is just what i use
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
 
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+let javaScript_fold=1         " JavaScript
+let perl_fold=1               " Perl
+let php_folding=1             " PHP
+let r_syntax_folding=1        " R
+let ruby_fold=1               " Ruby
+let sh_fold_enabled=1         " sh
+let vimsyn_folding='af'       " Vim script
+let xml_syntax_folding=1      " XML
 
+
+" FOLDING
+" zf to create a fold
+" zm to close fold level by level
+" zr open fold level by level
+" za to toggle open and close of a fold (don't need to use zc or zo)
+" zR open ALL folds
+
+" zc to close a fold
+" zo open a fold
+
+"close all folds with zM (not really needed?)
+"
+" The easiest way to disable (and enable) folding on the fly is zi.
+" zi is the normal mode command that toggles 'foldenable',
+" just like :set foldenable!.
+" Mnemonic: "fold invert". See :h zi.
+
+
+
+" START PLUGINS:
+" Specify a directory for plugins
+" - For Neovim: stdpath('data') . '/plugged'
+" - Avoid using standard Vim directory names like 'plugin'
+call plug#begin('~/.vim/plugged')
+" Initialize plugin system
+" Install code completion using Vim plug (doesn't have vundle version)
+ Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+"Tagbar replacement
+Plug 'liuchengxu/vista.vim'
+
+ " coc config
+let g:coc_global_extensions = [
+  \ 'coc-snippets',
+  \ 'coc-pairs',
+  \ 'coc-tsserver',
+  \ 'coc-eslint',
+  \ 'coc-prettier',
+  \ 'coc-json',
+  \ 'coc-java',
+  \ 'coc-python',
+  \ 'coc-phpls',
+  \ 'coc-highlight',
+  \ ]
+"make sure to have eslint set up in local directory
+"eslint --init
+
+"neoclide settings
+" if hidden is not set, TextEdit might fail.
+set hidden
+
+" Some servers have issues with backup files, see #649
+set nobackup
+set nowritebackup
+
+" Better display for messages
+set cmdheight=2
+
+" You will have bad experience for diagnostic messages when it's default 4000.
+set updatetime=300
+
+" don't give |ins-completion-menu| messages.
+set shortmess+=c
+
+" always show signcolumns
+set signcolumn=yes
+
+" Use tab for trigger completion with characters ahead and navigate.
+" Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+" Use <c-space> to trigger completion.
+inoremap <silent><expr> <c-space> coc#refresh()
+
+" Use <cr> to confirm completion, `<C-g>u` means break undo chain at current position.
+" Coc only does snippet and additional edit on confirm.
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+" Or use `complete_info` if your vim support it, like:
+" inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
+
+" Use `[g` and `]g` to navigate diagnostics
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
+
+" Remap keys for gotos
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+" Use K to show documentation in preview window
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
+
+" Highlight symbol under cursor on CursorHold
+autocmd CursorHold * silent call CocActionAsync('highlight')
+
+" Remap for rename current word
+nmap <leader>rn <Plug>(coc-rename)
+
+" Remap for format selected region
+xmap <leader>f  <Plug>(coc-format-selected)
+nmap <leader>f  <Plug>(coc-format-selected)
+
+augroup mygroup
+  autocmd!
+  " Setup formatexpr specified filetype(s).
+  autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
+  " Update signature help on jump placeholder
+  autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
+augroup end
+
+
+" Use `:Format` to format current buffer
+command! -nargs=0 Format :call CocAction('format')
+
+" Use `:Fold` to fold current buffer
+command! -nargs=? Fold :call     CocAction('fold', <f-args>)
+
+" use `:OR` for organize import of current buffer
+command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
+
+" Add status line support, for integration with other plugin, checkout `:h coc-status`
+set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 "For commenting and uncommenting blocks of line
-Plugin 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdcommenter'
 "Comment out the current line or text selected in visual mode.
 "[count]<leader>cc |NERDComComment|
 "Uncomments the selected line(s).
@@ -260,12 +418,15 @@ Plugin 'scrooloose/nerdcommenter'
 "Comments out the selected lines with a pretty block formatted layout.
 "[count]<leader>cs |NERDComSexyComment|
 
-Plugin 'christoomey/vim-tmux-navigator'
+Plug 'christoomey/vim-tmux-navigator'
+
+"typescript highlight
+Plug 'HerringtonDarkholme/yats.vim'
 
 "Easy switching between buffers - vim-airline will show buffer at the top
 "unless multiple tabs are open
-Plugin 'bling/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 " airline Automatically displays all buffers when there's only one tab open.
 let g:airline#extensions#tabline#enabled = 1
 
@@ -294,11 +455,14 @@ let g:airline_powerline_fonts = 1
 let g:airline_theme='onedark'
 
 " Gruvbox colorscheme
-Plugin 'morhetz/gruvbox'
+Plug 'morhetz/gruvbox'
+
+" jellybeans colorscheme
+Plug 'nanotech/jellybeans.vim'
 
 "tags
-Plugin 'xolox/vim-misc'
-Plugin 'xolox/vim-easytags'
+Plug 'xolox/vim-misc'
+Plug 'xolox/vim-easytags'
 
 " ----- xolox/vim-easytags settings -----
 "set tags=~/Sites/tags
@@ -310,41 +474,43 @@ Plugin 'xolox/vim-easytags'
 
 "Provides an overview of the structure of source code files
 "Lean & mean status/tabline for vim that's light as air.
-Plugin 'majutsushi/tagbar'
-Plugin 'hushicai/tagbar-javascript.vim'
+"Plug 'majutsushi/tagbar'
+"Plug 'hushicai/tagbar-javascript.vim'
 
 "nmap <C-o> :TagbarToggle<CR>
 "to open tag bar hit space and o
-nnoremap <leader>oo :TagbarToggle<CR>
+"nnoremap <leader>oo :TagbarToggle<CR>
+"Updated to use Vista coc
+nnoremap <leader>oo :Vista coc<CR>
 
 
 ""A fancy start screen for Vim.
-Plugin 'mhinz/vim-startify'
+Plug 'mhinz/vim-startify'
 
 "" git in vim
 "" :GStatus
 "" :Gwrite
 "" :Gcommit
-Plugin 'tpope/vim-fugitive'
+Plug 'tpope/vim-fugitive'
 
-""Vim Better Whitespace Plugin
+""Vim Better Whitespace Plug
 "":ToggleWhitespace
 "": StripWhitespace
-Plugin 'ntpeters/vim-better-whitespace'
+Plug 'ntpeters/vim-better-whitespace'
 
 "Automatic folds (that is, folds generated by a fold method different
 "from manual), bog down VIM noticeably in insert mode.
 "They are also often recomputed too early (for example, when inserting an
 "opening fold marker whose closing counterpart is yet missing to complete
 "the fold.)
-Plugin 'Konfekt/FastFold'
+Plug 'Konfekt/FastFold'
 
 "FastFold integrates with the plug-in vim-stay that restores the folds of
 "a file buffer by :mkview and :loadview.
-Plugin 'kopischke/vim-stay'
+Plug 'kopischke/vim-stay'
 
 "syntax cheker
-Plugin 'scrooloose/syntastic'
+Plug 'scrooloose/syntastic'
 
 " Syntastic
 set statusline+=%#warningmsg#
@@ -365,17 +531,17 @@ let g:syntastic_style_warning_symbol='⚠'
 nmap <leader>st :SyntasticToggleMode<CR>
 
 "vim javascript
-Plugin 'pangloss/vim-javascript'
+Plug 'pangloss/vim-javascript'
 
 " vim set up for developing with react js
 " https://andrewsinclair.github.io/vim/react/javascript/syntastic/eslint/2017/02/28/vim-setup-for-developing-react-js.html
 " javascript and jsx
 let g:syntastic_javascript_checkers = ['eslint']
 " React Syntax Highlighting
-Plugin 'mxw/vim-jsx'
+Plug 'mxw/vim-jsx'
 let g:jsx_ext_required = 1 " Allow JSX in normal JS files
-Plugin 'neoclide/vim-jsx-improve'
-Plugin 'othree/yajs.vim'
+Plug 'neoclide/vim-jsx-improve'
+Plug 'othree/yajs.vim'
 
 
 "Automatic close for common block and scope identifiers such as brackets
@@ -387,28 +553,28 @@ Plugin 'othree/yajs.vim'
 " So if I type {, delimitMate will insert } after my cursor,
 " then I can execute my binding that will insert a new line in
 " the middle of the two ready to receive some code.
-Plugin 'Raimondi/delimitMate'
+Plug 'Raimondi/delimitMate'
 "Just hit control C and it will move the closing bracket down
 imap <C-c> <CR><Esc>O
 "<C-g>g mapping. CTRL+g g will put you after the matching bracket
 
 
 " silver surfer search text ack bundle
-Plugin 'ggreer/the_silver_searcher'
-Plugin 'rking/ag.vim'
+Plug 'ggreer/the_silver_searcher'
+Plug 'rking/ag.vim'
 
 " bind shift KK to grep word under cursor
 " Use Ag instead of grep (more advanced)
 nnoremap KK :Ag! "\b<C-R><C-W>\b"<CR>:cw<CR>
 
 " :GitLog
-Plugin 'kablamo/vim-git-log'
+Plug 'kablamo/vim-git-log'
 
 " Install fonts for vim-devicons from https://github.com/ryanoasis/nerd-fonts
-Plugin 'ryanoasis/vim-devicons'
+Plug 'ryanoasis/vim-devicons'
 
 " Easily interact with tmux from vim
-Plugin 'benmills/vimux'
+Plug 'benmills/vimux'
 " Prompt for a command to run in another pane
 map <Leader><Leader>p  :VimuxPromptCommand<CR>
 " rerun previous command
@@ -416,19 +582,21 @@ map <Leader><Leader>r :VimuxRunLastCommand<CR>
 
 "Supertab is a vim plugin which allows you to use <Tab> for all your
 "insert completion needs
-Plugin 'ervandew/supertab'
+"Plug 'ervandew/supertab'
 
 "Show which line changed since your last commit.
 "GitGutterToggle
-Plugin 'airblade/vim-gitgutter'
+Plug 'airblade/vim-gitgutter'
 
 "Indent Guides is a plugin for visually displaying indent levels in Vim.
-Plugin 'nathanaelkane/vim-indent-guides'
+Plug 'nathanaelkane/vim-indent-guides'
 "to enable type mapleader (in my case space) and ig
 
+"New ctrlp
+Plug 'ctrlpvim/ctrlp.vim'
 
 "Amazing code completion
-Plugin 'Valloric/YouCompleteMe'
+"Plug 'Valloric/YouCompleteMe'
 " These are the tweaks I apply to YCM's config, you don't need them but they
 " might help.
 " YCM gives you popups and splits by default that some people might not
@@ -436,6 +604,14 @@ Plugin 'Valloric/YouCompleteMe'
 let g:ycm_add_preview_to_completeopt=0
 let g:ycm_confirm_extra_conf=0
 set completeopt-=preview
+
+"New code completion
+" Use release branch (Recommend)
+" Cant install it with Vundle so use
+" https://github.com/neoclide/coc.nvim/wiki/Install-coc.nvim
+" git clone https://github.com/neoclide/coc.nvim.git --depth=1
+" https://medium.com/@rohmanhakim/how-to-set-up-code-completion-for-vim-in-macos-9766dd459385
+"Plug 'neoclide/coc.nvim'
 
 " default c config
 " To auto-complete source code for C family,
@@ -445,7 +621,9 @@ let g:ycm_global_ycm_extra_conf = "$HOME/.ycm_extra_conf.py"
 
 
 " All of your Plugins must be added before the following line
-call vundle#end()            " required
+
+call plug#end()
+"END PLUGINS: 
 
 
 "ENABLE italic fonts
@@ -472,21 +650,20 @@ endif
 set swapfile
 set dir=~/tmp/
 
-" MAIN FAVORITE ONES COLORSCHEMES and FONTS
-" Favorite right now top 4->
-" 0. Programma
-" 1. Space Mono with horizontal space 90%
+" MAIN FAVORITE ONES COLORSCHEMES AND FONTS:
+" 0. Space Mono For Powerline
+" 1. Programma
 " 2. Anonymous pro
 " 3. ProFont for powerline
-" 4. Dank Mono
-" 5 - Fira Mono Powerline
-" 6 - Overpass mono
+" 4. Iosevka
+" 5. Input Mono
+" 6. Dank Mono
+" 7 - Fira Mono Powerline
+" 8 - Overpass mono
 " -------
 " 0. ProggyVector
 " 0. Proggy
 " 0 SF Mono
-" 0. Iosevka
-" 0 Input Mono Narrow
 " 0a PT-Mono
 " 0b - IBM Plex Mono
 " 0c - Inconsolata-g
@@ -495,7 +672,6 @@ set dir=~/tmp/
 " 4 - Office-Code-Pro - medium
 " 5 - Andale mono
 " 6 - Robot Mono Version
-" 7 - Input Mono Condensed regular
 " 9 - Terminus font and Darkside iTerm2 color preset
 " 10 - Hack Font
 " 11 - Consolas
@@ -515,9 +691,10 @@ set dir=~/tmp/
 "by default it will be default
 colorscheme default
 "colorscheme gruvbox
+"colorscheme jellybeans
 
-"light theme - don't forget to
-"set background = light
+"light themes - don't forget to set to light background
+" and might have to move to the bottom of the file
 "colorscheme zellner
 
 " need to install via Vundle first before using them
@@ -525,7 +702,6 @@ colorscheme default
 " colorscheme evening
 " colorscheme janah
 " colorscheme space-vim-dark
-
 
 " Overwrite colors and font style
 highlight Comment cterm=italic gui=italic
@@ -539,11 +715,6 @@ highlight htmlItalic cterm=italic gui=italic
 "grey comments
 "hi Comment guifg=#5C6370 ctermfg=59
 
-"green comments
-hi Comment guifg=#7ea869 ctermfg=green
-"hi Comment guifg=#a9f2a8 ctermfg=lightgreen
-"hi Comment guifg=#a9f2a ctermfg=DarkGreen
-
 "make background of any theme black
 "highlight Normal guibg=black guifg=white
 
@@ -551,3 +722,12 @@ hi Comment guifg=#7ea869 ctermfg=green
 " this will allow you to go to transparent mode in in terminal
 " Set background color with iterm2 or whatever terminal you are using
 hi Normal ctermbg=NONE guibg=NONE
+
+"set background=light
+"colorscheme zellner
+
+"green comments
+"hi Comment guifg=#7ea869 ctermfg=green
+"hi Comment guifg=#a9f2a8 ctermfg=lightgreen
+"hi Comment guifg=#a9f2a ctermfg=DarkGreen
+
