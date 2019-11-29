@@ -469,6 +469,9 @@ let g:airline_theme='onedark'
 " Gruvbox colorscheme
 Plug 'morhetz/gruvbox'
 
+"Molokai colorschme
+Plug 'tomasr/molokai'
+
 " jellybeans colorscheme
 Plug 'nanotech/jellybeans.vim'
 
@@ -523,23 +526,6 @@ Plug 'kopischke/vim-stay'
 
 "syntax cheker
 Plug 'scrooloose/syntastic'
-
-"Vim debugger
-"install
-"npm install -g vimdebug
-"usage
-"A debugger, agent and vim session will have to be launched. These can either all be started individually:
-"
-"start your program with debugger enabled
-"node --debug-brk yourprogram.js
-"start agent
-"node-vim-inspector
-"connect vim to agent:
-"vim -nb
-"# or if you have vim already running, type `:nbs` in command mode
-"Alternatively, launch node-vim-inspector with a path to your script to do step 1&2 at once:
-"node-vim-inspector yourprogram.js
-Plug 'sidorares/node-vim-debugger'
 
 " Syntastic
 set statusline+=%#warningmsg#
@@ -720,8 +706,12 @@ set dir=~/tmp/
 
 "by default it will be default
 "colorscheme default
-colorscheme gruvbox
+"colorscheme gruvbox
 "colorscheme jellybeans
+"colorscheme murphy
+colorscheme molokai
+
+
 
 "light themes - don't forget to set to light background
 " and might have to move to the bottom of the file
@@ -758,6 +748,12 @@ hi Normal ctermbg=NONE guibg=NONE
 hi Comment guifg=#7ea869 ctermfg=green
 "hi Comment guifg=#a9f2a8 ctermfg=lightgreen
 "hi Comment guifg=#a9f2a ctermfg=DarkGreen
+"hi Comment guifg=#a9f2a8 ctermfg=lightgreen
+
+" clears Special keyword highlight
+" and sets it to custom light blue color
+hi clear Special
+hi Special term=bold ctermfg=81 guifg=#66D9EF
 
 " gutter aka sign column
 "highlight SignColumn guibg=black ctermbg=black
