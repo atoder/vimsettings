@@ -295,10 +295,22 @@ let xml_syntax_folding=1      " XML
 call plug#begin('~/.vim/plugged')
 " Initialize plugin system
 " Install code completion using Vim plug (doesn't have vundle version)
- Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 "Tagbar replacement
 Plug 'liuchengxu/vista.vim'
+
+function! NearestMethodOrFunction() abort
+  return get(b:, 'vista_nearest_method_or_function', '')
+endfunction
+
+set statusline+=%{NearestMethodOrFunction()}
+
+" By default vista.vim never run if you don't call it explicitly.
+"
+" If you want to show the nearest function in your statusline automatically,
+" you can add the following line to your vimrc
+autocmd VimEnter * call vista#RunForNearestMethodOrFunction()
 
  " coc config
 let g:coc_global_extensions = [
@@ -512,6 +524,23 @@ Plug 'kopischke/vim-stay'
 "syntax cheker
 Plug 'scrooloose/syntastic'
 
+"Vim debugger
+"install
+"npm install -g vimdebug
+"usage
+"A debugger, agent and vim session will have to be launched. These can either all be started individually:
+"
+"start your program with debugger enabled
+"node --debug-brk yourprogram.js
+"start agent
+"node-vim-inspector
+"connect vim to agent:
+"vim -nb
+"# or if you have vim already running, type `:nbs` in command mode
+"Alternatively, launch node-vim-inspector with a path to your script to do step 1&2 at once:
+"node-vim-inspector yourprogram.js
+Plug 'sidorares/node-vim-debugger'
+
 " Syntastic
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -539,9 +568,9 @@ Plug 'pangloss/vim-javascript'
 let g:syntastic_javascript_checkers = ['eslint']
 " React Syntax Highlighting
 Plug 'mxw/vim-jsx'
-let g:jsx_ext_required = 1 " Allow JSX in normal JS files
 Plug 'neoclide/vim-jsx-improve'
 Plug 'othree/yajs.vim'
+let g:jsx_ext_required = 1 " Allow JSX in normal JS files
 
 
 "Automatic close for common block and scope identifiers such as brackets
@@ -623,7 +652,7 @@ let g:ycm_global_ycm_extra_conf = "$HOME/.ycm_extra_conf.py"
 " All of your Plugins must be added before the following line
 
 call plug#end()
-"END PLUGINS: 
+"END PLUGINS:
 
 
 "ENABLE italic fonts
@@ -652,6 +681,7 @@ set dir=~/tmp/
 
 " MAIN FAVORITE ONES COLORSCHEMES AND FONTS:
 " 0. Space Mono For Powerline
+" 1a. ShureTechnoMono Nerd Font
 " 1. Programma
 " 2. Anonymous pro
 " 3. ProFont for powerline
@@ -689,8 +719,8 @@ set dir=~/tmp/
 "favorite
 
 "by default it will be default
-colorscheme default
-"colorscheme gruvbox
+"colorscheme default
+colorscheme gruvbox
 "colorscheme jellybeans
 
 "light themes - don't forget to set to light background
@@ -723,11 +753,14 @@ highlight htmlItalic cterm=italic gui=italic
 " Set background color with iterm2 or whatever terminal you are using
 hi Normal ctermbg=NONE guibg=NONE
 
-"set background=light
-"colorscheme zellner
 
 "green comments
-"hi Comment guifg=#7ea869 ctermfg=green
+hi Comment guifg=#7ea869 ctermfg=green
 "hi Comment guifg=#a9f2a8 ctermfg=lightgreen
 "hi Comment guifg=#a9f2a ctermfg=DarkGreen
 
+" gutter aka sign column
+"highlight SignColumn guibg=black ctermbg=black
+
+" Make gutter same color as where your line numbers show up
+highlight clear SignColumn
