@@ -475,6 +475,14 @@ Plug 'tomasr/molokai'
 " jellybeans colorscheme
 Plug 'nanotech/jellybeans.vim'
 
+
+"Dracula
+Plug 'dracula/vim', { 'name': 'dracula' }
+
+"Okaidia theme
+Plug 'lawrence-yu/okaidia'
+
+
 "tags
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-easytags'
@@ -707,11 +715,10 @@ set dir=~/tmp/
 "by default it will be default
 "colorscheme default
 "colorscheme gruvbox
-"colorscheme jellybeans
-"colorscheme murphy
-colorscheme molokai
-
-
+colorscheme jellybeans
+"colorscheme molokai
+"colorscheme dracula
+"colorscheme okaidia
 
 "light themes - don't forget to set to light background
 " and might have to move to the bottom of the file
