@@ -475,6 +475,10 @@ Plug 'tomasr/molokai'
 " jellybeans colorscheme
 Plug 'nanotech/jellybeans.vim'
 
+"vim-synthwave84 colorscheme
+Plug 'artanikin/vim-synthwave84'
+"vim horizon synthwave
+Plug 'ntk148v/vim-horizon'
 
 "Dracula
 Plug 'dracula/vim', { 'name': 'dracula' }
@@ -674,7 +678,9 @@ set swapfile
 set dir=~/tmp/
 
 " MAIN FAVORITE ONES COLORSCHEMES AND FONTS:
-" 0. Space Mono For Powerline
+" 0a Hermet NerdFontCompletemono
+" 0b Fura Mono Regular for Powerline Nerd Font Complete Mono
+" 0c. Space Mono For Powerline
 " 1a. ShureTechnoMono Nerd Font
 " 1. Programma
 " 2. Anonymous pro
@@ -714,8 +720,10 @@ set dir=~/tmp/
 
 "by default it will be default
 "colorscheme default
+"colorscheme synthwave84
+colorscheme horizon
 "colorscheme gruvbox
-colorscheme jellybeans
+"colorscheme jellybeans
 "colorscheme molokai
 "colorscheme dracula
 "colorscheme okaidia
@@ -759,8 +767,8 @@ hi Comment guifg=#7ea869 ctermfg=green
 
 " clears Special keyword highlight
 " and sets it to custom light blue color
-hi clear Special
-hi Special term=bold ctermfg=81 guifg=#66D9EF
+"hi clear Special
+"hi Special term=bold ctermfg=81 guifg=#66D9EF
 
 " gutter aka sign column
 "highlight SignColumn guibg=black ctermbg=black
