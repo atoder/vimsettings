@@ -756,7 +756,7 @@ highlight htmlItalic cterm=italic gui=italic
 " Overwrite colorschemes background when trying to enable transparency
 " this will allow you to go to transparent mode in in terminal
 " Set background color with iterm2 or whatever terminal you are using
-hi Normal ctermbg=NONE guibg=NONE
+hi Normal guibg=NONE ctermbg=NONE
 
 
 "green comments
@@ -774,4 +774,4 @@ hi Comment guifg=#7ea869 ctermfg=green
 "highlight SignColumn guibg=black ctermbg=black
 
 " Make gutter same color as where your line numbers show up
-highlight clear SignColumn
+"highlight clear SignColumn
