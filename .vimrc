@@ -477,15 +477,26 @@ Plug 'nanotech/jellybeans.vim'
 
 "vim-synthwave84 colorscheme
 Plug 'artanikin/vim-synthwave84'
-"vim horizon synthwave
+"vim horizon synthwave colorschme
 Plug 'ntk148v/vim-horizon'
 
-"Dracula
-Plug 'dracula/vim', { 'name': 'dracula' }
+"spacecamp colorscheme
+Plug 'jaredgorski/SpaceCamp'
+
+"vim snazzy bright colors colorschme
+Plug 'connorholyday/vim-snazzy'
 
 "Okaidia theme
 Plug 'lawrence-yu/okaidia'
 
+"src Dark colorscheme
+Plug 'srcery-colors/srcery-vim'
+
+"gruvbox material
+Plug 'gruvbox-material/vim', {'as': 'gruvbox-material'}
+
+"badwolf
+Plug 'leafgarland/badwolf'
 
 "tags
 Plug 'xolox/vim-misc'
@@ -646,9 +657,7 @@ set completeopt-=preview
 " If you don’t do this, YCM will be unable to use semantic completion.
 let g:ycm_global_ycm_extra_conf = "$HOME/.ycm_extra_conf.py"
 
-
 " All of your Plugins must be added before the following line
-
 call plug#end()
 "END PLUGINS:
 
@@ -720,12 +729,19 @@ set dir=~/tmp/
 
 "by default it will be default
 "colorscheme default
+"colorscheme srcery
+colorscheme badwolf
+"colorscheme snazzy
+
+"colorscheme horizon
 "colorscheme synthwave84
-colorscheme horizon
+"colorscheme spacecamp
+
+"let g:gruvbox_material_background = 'hard'
+"colorscheme gruvbox-material
 "colorscheme gruvbox
 "colorscheme jellybeans
 "colorscheme molokai
-"colorscheme dracula
 "colorscheme okaidia
 
 "light themes - don't forget to set to light background
