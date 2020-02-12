@@ -480,14 +480,8 @@ Plug 'artanikin/vim-synthwave84'
 "vim horizon synthwave colorschme
 Plug 'ntk148v/vim-horizon'
 
-"spacecamp colorscheme
-Plug 'jaredgorski/SpaceCamp'
-
 "vim snazzy bright colors colorschme
 Plug 'connorholyday/vim-snazzy'
-
-"Okaidia theme
-Plug 'lawrence-yu/okaidia'
 
 "src Dark colorscheme
 Plug 'srcery-colors/srcery-vim'
@@ -497,6 +491,24 @@ Plug 'gruvbox-material/vim', {'as': 'gruvbox-material'}
 
 "badwolf
 Plug 'leafgarland/badwolf'
+
+"Citylights
+Plug 'agreco/vim-citylights'
+
+"ayu-theme
+Plug 'ayu-theme/ayu-vim'
+
+"This plugin is used for displaying thin vertical lines at each indentation
+"level for code indented with spaces
+Plug 'Yggdroot/indentLine'
+
+" IndentLine {{
+"
+"each indent level has a distinct character.
+let g:indentLine_char_list = ['|', '¦', '┆', '┊']
+"let g:indentLine_char = '┊'
+":IndentLinesToggle toggles lines on and off.
+" }}
 
 "tags
 Plug 'xolox/vim-misc'
@@ -687,10 +699,12 @@ set swapfile
 set dir=~/tmp/
 
 " MAIN FAVORITE ONES COLORSCHEMES AND FONTS:
-" 0a Hermet NerdFontCompletemono
+" 0a Hurmit NerdFontCompletemono
+" 0b Lekton nfplus - 
 " 0b Fura Mono Regular for Powerline Nerd Font Complete Mono
-" 0c. Space Mono For Powerline
-" 1a. ShureTechnoMono Nerd Font
+" 0c. ShureTechnoMono Nerd Font
+" 0d. Space Mono For Powerline
+" 0e. GohuFONT
 " 1. Programma
 " 2. Anonymous pro
 " 3. ProFont for powerline
@@ -729,26 +743,31 @@ set dir=~/tmp/
 
 "by default it will be default
 "colorscheme default
-"colorscheme srcery
-colorscheme badwolf
 "colorscheme snazzy
-
-"colorscheme horizon
+"colorscheme srcery
 "colorscheme synthwave84
-"colorscheme spacecamp
+"colorscheme horizon
+"colorscheme citylights
+"colorscheme jellybeans
+"colorscheme badwolf
+"colorscheme slate
 
+
+let ayucolor="dark"
+colorscheme ayu
+
+
+
+"colorscheme gruvbox
 "let g:gruvbox_material_background = 'hard'
 "colorscheme gruvbox-material
-"colorscheme gruvbox
-"colorscheme jellybeans
 "colorscheme molokai
-"colorscheme okaidia
 
 "light themes - don't forget to set to light background
 " and might have to move to the bottom of the file
 "colorscheme zellner
 
-" need to install via Vundle first before using them
+" need to install
 " colorscheme base16-default-dark
 " colorscheme evening
 " colorscheme janah
