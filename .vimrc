@@ -743,18 +743,21 @@ set dir=~/tmp/
 
 "by default it will be default
 "colorscheme default
-"colorscheme snazzy
 "colorscheme srcery
-"colorscheme synthwave84
+let ayucolor="dark"
+"colorscheme ayu
+
+"bright colors and bold font
+"colorscheme snazzy
+
+colorscheme synthwave84
+"colorscheme jellybeans
 "colorscheme horizon
 "colorscheme citylights
-"colorscheme jellybeans
-"colorscheme badwolf
 "colorscheme slate
+"colorscheme badwolf
 
 
-let ayucolor="dark"
-colorscheme ayu
 
 
 
