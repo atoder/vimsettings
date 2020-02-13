@@ -750,7 +750,7 @@ let ayucolor="dark"
 "bright colors and bold font
 "colorscheme snazzy
 
-colorscheme synthwave84
+"colorscheme synthwave84
 "colorscheme jellybeans
 "colorscheme horizon
 "colorscheme citylights
@@ -762,8 +762,8 @@ colorscheme synthwave84
 
 
 "colorscheme gruvbox
-"let g:gruvbox_material_background = 'hard'
-"colorscheme gruvbox-material
+let g:gruvbox_material_background = 'hard'
+colorscheme gruvbox-material
 "colorscheme molokai
 
 "light themes - don't forget to set to light background
