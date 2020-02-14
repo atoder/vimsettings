@@ -464,7 +464,10 @@ nmap <leader>9 <Plug>AirlineSelectTab9
 " power fonts
 let g:airline_powerline_fonts = 1
 "let g:airline_theme='base16'
-let g:airline_theme='onedark'
+
+"Main
+"let g:airline_theme='onedark'
+let g:airline_theme='gotham256'
 
 " Gruvbox colorscheme
 Plug 'morhetz/gruvbox'
@@ -488,6 +491,9 @@ Plug 'srcery-colors/srcery-vim'
 
 "gruvbox material
 Plug 'gruvbox-material/vim', {'as': 'gruvbox-material'}
+
+" vim-plug
+Plug 'whatyouhide/vim-gotham'
 
 "badwolf
 Plug 'leafgarland/badwolf'
@@ -747,6 +753,7 @@ set dir=~/tmp/
 let ayucolor="dark"
 "colorscheme ayu
 
+colorscheme gotham256
 "bright colors and bold font
 "colorscheme snazzy
 
@@ -763,7 +770,7 @@ let ayucolor="dark"
 
 "colorscheme gruvbox
 let g:gruvbox_material_background = 'hard'
-colorscheme gruvbox-material
+"colorscheme gruvbox-material
 "colorscheme molokai
 
 "light themes - don't forget to set to light background
