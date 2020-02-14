@@ -467,7 +467,8 @@ let g:airline_powerline_fonts = 1
 
 "Main
 "let g:airline_theme='onedark'
-let g:airline_theme='gotham256'
+"let g:airline_theme='gotham256'
+let g:airline_theme='purify'
 
 " Gruvbox colorscheme
 Plug 'morhetz/gruvbox'
@@ -492,8 +493,23 @@ Plug 'srcery-colors/srcery-vim'
 "gruvbox material
 Plug 'gruvbox-material/vim', {'as': 'gruvbox-material'}
 
-" vim-plug
+" vim-plug gotham theme
 Plug 'whatyouhide/vim-gotham'
+
+
+"Purify colortheme
+Plug 'kyoz/purify', { 'rtp': 'vim' }
+
+"Syntax file and other settings for TypeScript
+Plug 'leafgarland/typescript-vim'
+
+"vi-jsx-pretty for React js
+Plug 'MaxMEllon/vim-jsx-pretty'
+" vim-colors-xcode colortheme
+Plug 'arzg/vim-colors-xcode'
+
+" nord colortheme
+Plug 'arcticicestudio/nord-vim'
 
 "badwolf
 Plug 'leafgarland/badwolf'
@@ -706,7 +722,7 @@ set dir=~/tmp/
 
 " MAIN FAVORITE ONES COLORSCHEMES AND FONTS:
 " 0a Hurmit NerdFontCompletemono
-" 0b Lekton nfplus - 
+" 0b Lekton nfplus -
 " 0b Fura Mono Regular for Powerline Nerd Font Complete Mono
 " 0c. ShureTechnoMono Nerd Font
 " 0d. Space Mono For Powerline
@@ -749,11 +765,23 @@ set dir=~/tmp/
 
 "by default it will be default
 "colorscheme default
+
+
+colorscheme purify
+" for purify colortheme since it seems to be missing this identifier
+highlight javaScriptIdentifier ctermbg=DarkGray guibg=darkred
+
+"colorscheme gotham256
 "colorscheme srcery
-let ayucolor="dark"
+"
+"let ayucolor="dark"
 "colorscheme ayu
 
-colorscheme gotham256
+
+"colorscheme nord
+"colorscheme xcodewwdc
+"colorscheme xcodedark
+
 "bright colors and bold font
 "colorscheme snazzy
 
@@ -764,12 +792,8 @@ colorscheme gotham256
 "colorscheme slate
 "colorscheme badwolf
 
-
-
-
-
 "colorscheme gruvbox
-let g:gruvbox_material_background = 'hard'
+"let g:gruvbox_material_background = 'hard'
 "colorscheme gruvbox-material
 "colorscheme molokai
 
@@ -820,3 +844,5 @@ hi Comment guifg=#7ea869 ctermfg=green
 
 " Make gutter same color as where your line numbers show up
 "highlight clear SignColumn
+"
+"
