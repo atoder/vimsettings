@@ -505,6 +505,7 @@ Plug 'leafgarland/typescript-vim'
 
 "vi-jsx-pretty for React js
 Plug 'MaxMEllon/vim-jsx-pretty'
+
 " vim-colors-xcode colortheme
 Plug 'arzg/vim-colors-xcode'
 
@@ -754,9 +755,9 @@ set dir=~/tmp/
 " 13 - Monaco 14pt
 
 " MAIN FAVORITE iterm2 colorschemes
-" 0) - favorite one is Molokai
-" 1) One Dark
-" 2) Darkside
+" 0) Darkside
+" 1) - favorite one is Molokai
+" 2) One Dark
 " 3) space-vim-dark
 " 4) gruvbox-dark
 
@@ -767,18 +768,15 @@ set dir=~/tmp/
 "colorscheme default
 
 
-colorscheme purify
-" for purify colortheme since it seems to be missing this identifier
-highlight javaScriptIdentifier ctermbg=DarkGray guibg=darkred
-
-"colorscheme gotham256
-"colorscheme srcery
-"
-"let ayucolor="dark"
+"colorscheme purify
+colorscheme gotham256
 "colorscheme ayu
+"colorscheme srcery
+
 
 
 "colorscheme nord
+"colorscheme citylights
 "colorscheme xcodewwdc
 "colorscheme xcodedark
 
@@ -788,7 +786,6 @@ highlight javaScriptIdentifier ctermbg=DarkGray guibg=darkred
 "colorscheme synthwave84
 "colorscheme jellybeans
 "colorscheme horizon
-"colorscheme citylights
 "colorscheme slate
 "colorscheme badwolf
 
@@ -806,6 +803,10 @@ highlight javaScriptIdentifier ctermbg=DarkGray guibg=darkred
 " colorscheme evening
 " colorscheme janah
 " colorscheme space-vim-dark
+
+" for purify colortheme since it seems to be missing this identifier
+highlight javaScriptIdentifier ctermbg=DarkGray guibg=darkred
+
 
 " Overwrite colors and font style
 highlight Comment cterm=italic gui=italic
@@ -844,5 +845,3 @@ hi Comment guifg=#7ea869 ctermfg=green
 
 " Make gutter same color as where your line numbers show up
 "highlight clear SignColumn
-"
-"
