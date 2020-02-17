@@ -432,9 +432,6 @@ Plug 'scrooloose/nerdcommenter'
 
 Plug 'christoomey/vim-tmux-navigator'
 
-"typescript highlight
-Plug 'HerringtonDarkholme/yats.vim'
-
 "Easy switching between buffers - vim-airline will show buffer at the top
 "unless multiple tabs are open
 Plug 'bling/vim-airline'
@@ -467,8 +464,8 @@ let g:airline_powerline_fonts = 1
 
 "Main
 "let g:airline_theme='onedark'
-"let g:airline_theme='gotham256'
-let g:airline_theme='purify'
+let g:airline_theme='gotham256'
+"let g:airline_theme='purify'
 
 " Gruvbox colorscheme
 Plug 'morhetz/gruvbox'
@@ -476,8 +473,14 @@ Plug 'morhetz/gruvbox'
 "Molokai colorschme
 Plug 'tomasr/molokai'
 
-" jellybeans colorscheme
+"Monokai
+Plug 'sickill/vim-monokai'
+
+"jellybeans colorscheme
 Plug 'nanotech/jellybeans.vim'
+
+"desert-ink
+Plug 'toupeira/vim-desertink'
 
 "vim-synthwave84 colorscheme
 Plug 'artanikin/vim-synthwave84'
@@ -489,6 +492,10 @@ Plug 'connorholyday/vim-snazzy'
 
 "src Dark colorscheme
 Plug 'srcery-colors/srcery-vim'
+
+"desert night color
+Plug 'kooparse/vim-color-desert-night'
+
 
 "gruvbox material
 Plug 'gruvbox-material/vim', {'as': 'gruvbox-material'}
@@ -503,17 +510,11 @@ Plug 'kyoz/purify', { 'rtp': 'vim' }
 "moonfly
 Plug 'bluz71/vim-moonfly-colors'
 
-" vim-colors-xcode colortheme
-Plug 'arzg/vim-colors-xcode'
-
 " nord colortheme
 Plug 'arcticicestudio/nord-vim'
 
 "badwolf
 Plug 'leafgarland/badwolf'
-
-"Citylights
-Plug 'agreco/vim-citylights'
 
 "ayu-theme
 Plug 'ayu-theme/ayu-vim'
@@ -531,25 +532,20 @@ let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 " }}
 
 
-"Plug 'sheerun/vim-polyglot'
-
-"vi-jsx-pretty for React js
-"already has "Plug 'sheerun/vim-polyglot' in vim-jsx-pretty
-"Plug 'MaxMEllon/vim-jsx-pretty'
-
-"more javascript
-"Plug 'jelera/vim-javascript-syntax'
-"Plug 'othree/javascript-libraries-syntax.vim'
-
 " React Syntax Highlighting
 Plug 'othree/yajs.vim'
 
 "For es next
 Plug 'othree/es.next.syntax.vim'
 
-"Plug 'pangloss/vim-javascript'
 
-"Plug 'jelera/vim-javascript-syntax'
+"PURIFY COLORSCHEME RECOMMENDED JS plugins
+Plug 'sheerun/vim-polyglot' "Syntax for almost all language that exist
+Plug 'leafgarland/typescript-vim' "Typescripts Syntax
+Plug 'plasticboy/vim-markdown' "Markdown's Syntax ]'
+Plug 'ap/vim-css-color' "Help colorize text color
+Plug 'Valloric/MatchTagAlways' "Always highlights the XML/HTML tags that enclose your cursor location''
+
 
 "vim javascript
 let g:javascript_plugin_jsdoc = 1
@@ -801,35 +797,32 @@ set dir=~/tmp/
 "by default it will be default
 "colorscheme default
 
-"colorscheme purify
-" for purify colortheme since it seems to be missing this identifier
-"highlight javaScriptIdentifier ctermbg=DarkGray guibg=darkred
+colorscheme srcery
+"colorscheme snazzy
+"colorscheme jellybeans
+"colorscheme synthwave84
+"colorscheme gruvbox
+"colorscheme desertink
+"colorscheme monokai
+"colorscheme molokai
 
+"colorscheme purify
+"colorscheme desert-night
+"colorscheme horizon
 
 "colorscheme gotham256
 "colorscheme ayu
-colorscheme srcery
-"colorscheme moonfly
 
 "bright colors and bold font
-"colorscheme snazzy
-"colorscheme synthwave84
 
 "colorscheme nord
-"colorscheme citylights
-"colorscheme xcodewwdc
-"colorscheme xcodedark
+"colorscheme moonfly
 
-
-"colorscheme jellybeans
-"colorscheme horizon
 "colorscheme slate
 "colorscheme badwolf
 
-"colorscheme gruvbox
-"let g:gruvbox_material_background = 'hard'
+
 "colorscheme gruvbox-material
-"colorscheme molokai
 
 "light themes - don't forget to set to light background
 " and might have to move to the bottom of the file
@@ -879,3 +872,6 @@ hi Comment guifg=#7ea869 ctermfg=green
 
 " Make gutter same color as where your line numbers show up
 "highlight clear SignColumn
+"
+"
+"
