@@ -500,11 +500,8 @@ Plug 'whatyouhide/vim-gotham'
 "Purify colortheme
 Plug 'kyoz/purify', { 'rtp': 'vim' }
 
-"Syntax file and other settings for TypeScript
-Plug 'leafgarland/typescript-vim'
-
-"vi-jsx-pretty for React js
-Plug 'MaxMEllon/vim-jsx-pretty'
+"moonfly
+Plug 'bluz71/vim-moonfly-colors'
 
 " vim-colors-xcode colortheme
 Plug 'arzg/vim-colors-xcode'
@@ -533,9 +530,58 @@ let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 ":IndentLinesToggle toggles lines on and off.
 " }}
 
+
+"Plug 'sheerun/vim-polyglot'
+
+"vi-jsx-pretty for React js
+"already has "Plug 'sheerun/vim-polyglot' in vim-jsx-pretty
+"Plug 'MaxMEllon/vim-jsx-pretty'
+
+"more javascript
+"Plug 'jelera/vim-javascript-syntax'
+"Plug 'othree/javascript-libraries-syntax.vim'
+
+" React Syntax Highlighting
+Plug 'othree/yajs.vim'
+
+"For es next
+Plug 'othree/es.next.syntax.vim'
+
+"Plug 'pangloss/vim-javascript'
+
+"Plug 'jelera/vim-javascript-syntax'
+
+"vim javascript
+let g:javascript_plugin_jsdoc = 1
+
+" vim set up for developing with react js
+" https://andrewsinclair.github.io/vim/react/javascript/syntastic/eslint/2017/02/28/vim-setup-for-developing-react-js.html
+" javascript and jsx
+let g:syntastic_javascript_checkers = ['eslint']
+
+" React Syntax Highlighting
+"Plug 'mxw/vim-jsx'
+"Plug 'neoclide/vim-jsx-improve'
+"Plug 'othree/yajs.vim'
+
+
+
+let g:jsx_ext_required = 1 " Allow JSX in normal JS files
+
+
+" https://andrewsinclair.github.io/vim/react/javascript/syntastic/eslint/2017/02/28/vim-setup-for-developing-react-js.html
+" javascript and jsx
+let g:syntastic_javascript_checkers = ['eslint']
+"This syntax file is for ECMAScript future syntax. Need to work with yajs.vim.
+"Plug 'othree/es.next.syntax.vim'
+
+let g:jsx_ext_required = 1 " Allow JSX in normal JS files
+
+
+
 "tags
-Plug 'xolox/vim-misc'
-Plug 'xolox/vim-easytags'
+"Plug 'xolox/vim-misc'
+"Plug 'xolox/vim-easytags'
 
 " ----- xolox/vim-easytags settings -----
 "set tags=~/Sites/tags
@@ -603,18 +649,7 @@ let g:syntastic_style_warning_symbol='⚠'
 "space st will enable and disable syntastic
 nmap <leader>st :SyntasticToggleMode<CR>
 
-"vim javascript
-Plug 'pangloss/vim-javascript'
 
-" vim set up for developing with react js
-" https://andrewsinclair.github.io/vim/react/javascript/syntastic/eslint/2017/02/28/vim-setup-for-developing-react-js.html
-" javascript and jsx
-let g:syntastic_javascript_checkers = ['eslint']
-" React Syntax Highlighting
-Plug 'mxw/vim-jsx'
-Plug 'neoclide/vim-jsx-improve'
-Plug 'othree/yajs.vim'
-let g:jsx_ext_required = 1 " Allow JSX in normal JS files
 
 
 "Automatic close for common block and scope identifiers such as brackets
@@ -762,28 +797,30 @@ set dir=~/tmp/
 " 4) gruvbox-dark
 
 
-"favorite
 
 "by default it will be default
 "colorscheme default
 
-
 "colorscheme purify
-colorscheme gotham256
+" for purify colortheme since it seems to be missing this identifier
+"highlight javaScriptIdentifier ctermbg=DarkGray guibg=darkred
+
+
+"colorscheme gotham256
 "colorscheme ayu
-"colorscheme srcery
+colorscheme srcery
+"colorscheme moonfly
 
-
+"bright colors and bold font
+"colorscheme snazzy
+"colorscheme synthwave84
 
 "colorscheme nord
 "colorscheme citylights
 "colorscheme xcodewwdc
 "colorscheme xcodedark
 
-"bright colors and bold font
-"colorscheme snazzy
 
-"colorscheme synthwave84
 "colorscheme jellybeans
 "colorscheme horizon
 "colorscheme slate
@@ -803,9 +840,6 @@ colorscheme gotham256
 " colorscheme evening
 " colorscheme janah
 " colorscheme space-vim-dark
-
-" for purify colortheme since it seems to be missing this identifier
-highlight javaScriptIdentifier ctermbg=DarkGray guibg=darkred
 
 
 " Overwrite colors and font style
