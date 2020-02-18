@@ -876,6 +876,9 @@ highlight htmlItalic cterm=italic gui=italic
 " this will allow you to go to transparent mode in in terminal
 " Set background color with iterm2 or whatever terminal you are using
 hi Normal guibg=NONE ctermbg=NONE
+"overwites the non text background
+hi NonText guibg=NONE ctermbg=NONE
+hi EndOfBuffer guibg=NONE ctermbg=NONE
 
 
 "green comments
