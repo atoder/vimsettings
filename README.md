@@ -59,7 +59,39 @@ aa -- rename file appending before the extension
 I -- rename file adding at the beginning
 ```
 
-## Syntastic using JSHint to support es6
+## .eslintrc
+Create .eslintrc file in your project or parent directory
+```
+module.exports = {
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true,
+    "mocha": true
+  },
+  "extends": "eslint:recommended",
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react"
+  ],
+  "rules": {
+  }
+};
+```
+
+# BELOW IS OLD SET UP
+
+## Syntastic using JSHint to support es6 (OLD - use .eslintrc instead above)
 https://stackoverflow.com/questions/20160921/syntastic-complaining-about-es6-module-syntax
 
 

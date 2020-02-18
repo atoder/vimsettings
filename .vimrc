@@ -555,9 +555,13 @@ Plug 'othree/yajs.vim'
 Plug 'othree/es.next.syntax.vim'
 
 
-"PURIFY COLORSCHEME RECOMMENDED JS plugins
-"some of them might slow down vim
-"Plug 'sheerun/vim-polyglot' "Syntax for almost all language that exist
+""https://github.com/jaxbot/semantic-highlight.vim"
+"Where every variable is a different color, an idea popularized by Evan Brooks
+"blog post.
+"https://medium.com/@evnbr/coding-in-color-3a6db2743a1e
+Plug 'jaxbot/semantic-highlight.vim'
+nnoremap <Leader>s :SemanticHighlightToggle<cr>
+
 "Plug 'leafgarland/typescript-vim' "Typescripts Syntax
 "Plug 'plasticboy/vim-markdown' "Markdown's Syntax ]'
 "Plug 'ap/vim-css-color' "Help colorize text color
@@ -770,6 +774,7 @@ set swapfile
 set dir=~/tmp/
 
 " MAIN FAVORITE ONES COLORSCHEMES AND FONTS:
+" 0 - Fantasque
 " 0a Hurmit NerdFontCompletemono
 " 0b cascadia code
 " 0c Lekton nfplus -
@@ -804,11 +809,12 @@ set dir=~/tmp/
 " 13 - Monaco 14pt
 
 " MAIN FAVORITE iterm2 colorschemes
-" 0) Darkside
-" 1) - favorite one is Molokai
-" 2) One Dark
-" 3) space-vim-dark
-" 4) gruvbox-dark
+" 0) Snazzy modified (by me)
+" 1) Darkside
+" 2) - favorite one is Molokai
+" 3) One Dark
+" 4) space-vim-dark
+" 5) gruvbox-dark
 
 
 
