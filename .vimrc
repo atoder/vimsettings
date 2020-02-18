@@ -496,13 +496,29 @@ Plug 'srcery-colors/srcery-vim'
 "desert night color
 Plug 'kooparse/vim-color-desert-night'
 
+" candycode
+Plug 'vim-scripts/candycode.vim'
+
+" colorscheme meta5
+Plug 'christophermca/meta5'
+
+"colorscheme lucius2
+Plug 'maksimr/Lucius2'
+
+"busybee colorscheme
+Plug 'vim-scripts/BusyBee'
+
+"nightowl theme
+Plug 'haishanh/night-owl.vim'
+
+"wimstefan/vim-artesanal colorscheme
+Plug 'wimstefan/vim-artesanal'
 
 "gruvbox material
 Plug 'gruvbox-material/vim', {'as': 'gruvbox-material'}
 
 " vim-plug gotham theme
 Plug 'whatyouhide/vim-gotham'
-
 
 "Purify colortheme
 Plug 'kyoz/purify', { 'rtp': 'vim' }
@@ -540,11 +556,12 @@ Plug 'othree/es.next.syntax.vim'
 
 
 "PURIFY COLORSCHEME RECOMMENDED JS plugins
-Plug 'sheerun/vim-polyglot' "Syntax for almost all language that exist
-Plug 'leafgarland/typescript-vim' "Typescripts Syntax
-Plug 'plasticboy/vim-markdown' "Markdown's Syntax ]'
-Plug 'ap/vim-css-color' "Help colorize text color
-Plug 'Valloric/MatchTagAlways' "Always highlights the XML/HTML tags that enclose your cursor location''
+"some of them might slow down vim
+"Plug 'sheerun/vim-polyglot' "Syntax for almost all language that exist
+"Plug 'leafgarland/typescript-vim' "Typescripts Syntax
+"Plug 'plasticboy/vim-markdown' "Markdown's Syntax ]'
+"Plug 'ap/vim-css-color' "Help colorize text color
+"Plug 'Valloric/MatchTagAlways' "Always highlights the XML/HTML tags that enclose your cursor location''
 
 
 "vim javascript
@@ -754,11 +771,12 @@ set dir=~/tmp/
 
 " MAIN FAVORITE ONES COLORSCHEMES AND FONTS:
 " 0a Hurmit NerdFontCompletemono
-" 0b Lekton nfplus -
-" 0b Fura Mono Regular for Powerline Nerd Font Complete Mono
-" 0c. ShureTechnoMono Nerd Font
-" 0d. Space Mono For Powerline
-" 0e. GohuFONT
+" 0b cascadia code
+" 0c Lekton nfplus -
+" 0d Fura Mono Regular for Powerline Nerd Font Complete Mono
+" 0e. ShureTechnoMono Nerd Font
+" 0f. Space Mono For Powerline
+" 0g. GohuFONT
 " 1. Programma
 " 2. Anonymous pro
 " 3. ProFont for powerline
@@ -797,31 +815,29 @@ set dir=~/tmp/
 "by default it will be default
 "colorscheme default
 
-colorscheme srcery
+"colorscheme srcery
+colorscheme night-owl
+"colorscheme candycode
 "colorscheme snazzy
 "colorscheme jellybeans
+"colorscheme purify
 "colorscheme synthwave84
 "colorscheme gruvbox
+"colorscheme busybee
+"colorscheme meta5
+"colorscheme artesanal
 "colorscheme desertink
 "colorscheme monokai
 "colorscheme molokai
-
-"colorscheme purify
+"colorscheme lucius
 "colorscheme desert-night
 "colorscheme horizon
-
 "colorscheme gotham256
 "colorscheme ayu
-
-"bright colors and bold font
-
 "colorscheme nord
 "colorscheme moonfly
-
 "colorscheme slate
 "colorscheme badwolf
-
-
 "colorscheme gruvbox-material
 
 "light themes - don't forget to set to light background
@@ -872,6 +888,3 @@ hi Comment guifg=#7ea869 ctermfg=green
 
 " Make gutter same color as where your line numbers show up
 "highlight clear SignColumn
-"
-"
-"
