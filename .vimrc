@@ -774,39 +774,38 @@ set swapfile
 set dir=~/tmp/
 
 " MAIN FAVORITE ONES COLORSCHEMES AND FONTS:
-" 0 - Fantasque
-" 0a Hurmit NerdFontCompletemono
-" 0b cascadia code
-" 0c Lekton nfplus -
-" 0d Fura Mono Regular for Powerline Nerd Font Complete Mono
-" 0e. ShureTechnoMono Nerd Font
-" 0f. Space Mono For Powerline
-" 0g. GohuFONT
-" 1. Programma
-" 2. Anonymous pro
-" 3. ProFont for powerline
-" 4. Iosevka
-" 5. Input Mono
-" 6. Dank Mono
-" 7 - Fira Mono Powerline
-" 8 - Overpass mono
-" -------
-" 0. ProggyVector
-" 0. Proggy
-" 0 SF Mono
-" 0a PT-Mono
-" 0b - IBM Plex Mono
-" 0c - Inconsolata-g
-" 1 - Operator-Mono - book
-" 2 - 2nd favorite PT Mono
-" 4 - Office-Code-Pro - medium
-" 5 - Andale mono
-" 6 - Robot Mono Version
-" 9 - Terminus font and Darkside iTerm2 color preset
-" 10 - Hack Font
-" 11 - Consolas
-" 12 - M+ 1M font
-" 13 - Monaco 14pt
+" * Hurmit NerdFontCompletemono
+" * cascadia code
+" * Fantasque
+" * Lekton nfplus -
+" * Fura Mono Regular for Powerline Nerd Font Complete Mono
+" * ShureTechnoMono Nerd Font
+" * Space Mono For Powerline
+" * GohuFONT
+" * Programma
+" * Anonymous pro
+" * ProFont for powerline
+" * Iosevka
+" * Input Mono
+" * Dank Mono
+" * Fira Mono Powerline
+" * Overpass mono
+" * ProggyVector
+" * Proggy
+" * SF Mono
+" * PT-Mono
+" * IBM Plex Mono
+" * Inconsolata-g
+" * Operator-Mono - book
+" * 2nd favorite PT Mono
+" * Office-Code-Pro - medium
+" * Andale mono
+" * Robot Mono Version
+" * Terminus font and Darkside iTerm2 color preset
+" * Hack Font
+" * Consolas
+" * M+ 1M font
+" * Monaco 14pt
 
 " MAIN FAVORITE iterm2 colorschemes
 " 0) Snazzy modified (by me)
