@@ -470,7 +470,7 @@ let g:airline_theme='gotham256'
 " Gruvbox colorscheme
 Plug 'morhetz/gruvbox'
 
-"Molokai colorschme
+"Molokai colorscheme
 Plug 'tomasr/molokai'
 
 "Monokai
@@ -484,10 +484,10 @@ Plug 'toupeira/vim-desertink'
 
 "vim-synthwave84 colorscheme
 Plug 'artanikin/vim-synthwave84'
-"vim horizon synthwave colorschme
+"vim horizon synthwave colorscheme
 Plug 'ntk148v/vim-horizon'
 
-"vim snazzy bright colors colorschme
+"vim snazzy bright colors colorscheme
 Plug 'connorholyday/vim-snazzy'
 
 "src Dark colorscheme
@@ -774,7 +774,7 @@ set swapfile
 set dir=~/tmp/
 
 " MAIN FAVORITE ONES COLORSCHEMES AND FONTS:
-" * Hurmit NerdFontCompletemono
+" * Hermit/Hurmit NerdFontCompletemono
 " * cascadia code
 " * Fantasque
 " * Lekton nfplus -
@@ -785,7 +785,7 @@ set dir=~/tmp/
 " * Programma
 " * Anonymous pro
 " * ProFont for powerline
-" * Iosevka
+" * Iosevkak
 " * Input Mono
 " * Dank Mono
 " * Fira Mono Powerline
@@ -821,11 +821,11 @@ set dir=~/tmp/
 "colorscheme default
 
 "colorscheme srcery
-colorscheme night-owl
+"colorscheme night-owl
 "colorscheme candycode
-"colorscheme snazzy
 "colorscheme jellybeans
-"colorscheme purify
+"colorscheme snazzy
+colorscheme purify
 "colorscheme synthwave84
 "colorscheme gruvbox
 "colorscheme busybee
