@@ -470,17 +470,11 @@ let g:airline_theme='gotham256'
 " Gruvbox colorscheme
 Plug 'morhetz/gruvbox'
 
-"Molokai colorscheme
-Plug 'tomasr/molokai'
-
 "Monokai
 Plug 'sickill/vim-monokai'
 
 "jellybeans colorscheme
 Plug 'nanotech/jellybeans.vim'
-
-"desert-ink
-Plug 'toupeira/vim-desertink'
 
 "vim-synthwave84 colorscheme
 Plug 'artanikin/vim-synthwave84'
@@ -493,9 +487,6 @@ Plug 'connorholyday/vim-snazzy'
 "src Dark colorscheme
 Plug 'srcery-colors/srcery-vim'
 
-"desert night color
-Plug 'kooparse/vim-color-desert-night'
-
 " candycode
 Plug 'vim-scripts/candycode.vim'
 
@@ -507,6 +498,9 @@ Plug 'maksimr/Lucius2'
 
 "busybee colorscheme
 Plug 'vim-scripts/BusyBee'
+
+"base 16 colorscheme
+Plug 'chriskempson/base16-vim'
 
 "nightowl theme
 Plug 'haishanh/night-owl.vim'
@@ -531,9 +525,6 @@ Plug 'arcticicestudio/nord-vim'
 
 "badwolf
 Plug 'leafgarland/badwolf'
-
-"ayu-theme
-Plug 'ayu-theme/ayu-vim'
 
 "This plugin is used for displaying thin vertical lines at each indentation
 "level for code indented with spaces
@@ -775,16 +766,17 @@ set dir=~/tmp/
 
 " MAIN FAVORITE ONES COLORSCHEMES AND FONTS:
 " * Hermit/Hurmit NerdFontCompletemono
+" * Operator-Mono - book
+" * ProFont for powerline
 " * cascadia code
 " * Fantasque
-" * Lekton nfplus -
+" * Lekton nfplus
 " * Fura Mono Regular for Powerline Nerd Font Complete Mono
 " * ShureTechnoMono Nerd Font
 " * Space Mono For Powerline
-" * GohuFONT
+" * font Gohu
 " * Programma
 " * Anonymous pro
-" * ProFont for powerline
 " * Iosevkak
 " * Input Mono
 " * Dank Mono
@@ -793,11 +785,9 @@ set dir=~/tmp/
 " * ProggyVector
 " * Proggy
 " * SF Mono
-" * PT-Mono
+" * PT Mono
 " * IBM Plex Mono
 " * Inconsolata-g
-" * Operator-Mono - book
-" * 2nd favorite PT Mono
 " * Office-Code-Pro - medium
 " * Andale mono
 " * Robot Mono Version
@@ -820,41 +810,42 @@ set dir=~/tmp/
 "by default it will be default
 "colorscheme default
 
+" artesanal colorscheme works well with dank mono font
+"- all hovered keywords will turn italic
+colorscheme artesanal
 "colorscheme srcery
+"colorscheme meta5
 "colorscheme night-owl
 "colorscheme candycode
+"colorscheme busybee
 "colorscheme jellybeans
 "colorscheme snazzy
-colorscheme purify
+"colorscheme purify
 "colorscheme synthwave84
 "colorscheme gruvbox
-"colorscheme busybee
-"colorscheme meta5
-"colorscheme artesanal
-"colorscheme desertink
+"colorscheme gruvbox-material
+"colorscheme slate
+"colorscheme base16-default-dark
 "colorscheme monokai
-"colorscheme molokai
-"colorscheme lucius
-"colorscheme desert-night
 "colorscheme horizon
 "colorscheme gotham256
-"colorscheme ayu
 "colorscheme nord
-"colorscheme moonfly
-"colorscheme slate
 "colorscheme badwolf
-"colorscheme gruvbox-material
+"colorscheme moonfly
+
 
 "light themes - don't forget to set to light background
 " and might have to move to the bottom of the file
 "colorscheme zellner
 
 " need to install
-" colorscheme base16-default-dark
 " colorscheme evening
 " colorscheme janah
 " colorscheme space-vim-dark
 
+"++++++++++++++++++++++++++++
+"  custom highlights below
+"++++++++++++++++++++++++++++
 
 " Overwrite colors and font style
 highlight Comment cterm=italic gui=italic
@@ -896,3 +887,9 @@ hi Comment guifg=#7ea869 ctermfg=green
 
 " Make gutter same color as where your line numbers show up
 "highlight clear SignColumn
+
+
+"make javascript
+"au Colorscheme * :hi javascriptNodeGlobal gui=italic cterm=italic
+"highlight default javascriptNodeGlobal cterm=italic
+"highlight default javascriptMethodName cterm=italic ctermfg=grey ctermbg=white
