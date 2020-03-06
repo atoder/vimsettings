@@ -487,6 +487,12 @@ Plug 'connorholyday/vim-snazzy'
 "src Dark colorscheme
 Plug 'srcery-colors/srcery-vim'
 
+"cobatl2 colorscheme
+Plug 'herrbischoff/cobalt2.vim'
+
+"random colorscheme picker
+Plug 'bkbncn/vim-colorschemes-picker'
+
 " candycode
 Plug 'vim-scripts/candycode.vim'
 
@@ -519,9 +525,6 @@ Plug 'kyoz/purify', { 'rtp': 'vim' }
 
 "moonfly
 Plug 'bluz71/vim-moonfly-colors'
-
-" nord colortheme
-Plug 'arcticicestudio/nord-vim'
 
 "badwolf
 Plug 'leafgarland/badwolf'
@@ -766,10 +769,10 @@ set dir=~/tmp/
 
 " MAIN FAVORITE ONES COLORSCHEMES AND FONTS:
 " * Hermit/Hurmit NerdFontCompletemono
+" * Fantasque
 " * Operator-Mono - book
 " * ProFont for powerline
 " * cascadia code
-" * Fantasque
 " * Lekton nfplus
 " * Fura Mono Regular for Powerline Nerd Font Complete Mono
 " * ShureTechnoMono Nerd Font
@@ -812,8 +815,9 @@ set dir=~/tmp/
 
 " artesanal colorscheme works well with dank mono font
 "- all hovered keywords will turn italic
-colorscheme artesanal
+"colorscheme artesanal
 "colorscheme srcery
+colorscheme cobalt2
 "colorscheme meta5
 "colorscheme night-owl
 "colorscheme candycode
@@ -829,7 +833,6 @@ colorscheme artesanal
 "colorscheme monokai
 "colorscheme horizon
 "colorscheme gotham256
-"colorscheme nord
 "colorscheme badwolf
 "colorscheme moonfly
 
@@ -872,7 +875,7 @@ hi EndOfBuffer guibg=NONE ctermbg=NONE
 
 
 "green comments
-hi Comment guifg=#7ea869 ctermfg=green
+"hi Comment guifg=#7ea869 ctermfg=green
 "hi Comment guifg=#a9f2a8 ctermfg=lightgreen
 "hi Comment guifg=#a9f2a ctermfg=DarkGreen
 "hi Comment guifg=#a9f2a8 ctermfg=lightgreen
