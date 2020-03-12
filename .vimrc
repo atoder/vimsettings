@@ -490,7 +490,9 @@ Plug 'srcery-colors/srcery-vim'
 "cobatl2 colorscheme
 Plug 'herrbischoff/cobalt2.vim'
 
-"random colorscheme picker
+Plug 'aonemd/kuroi.vim'
+
+"random colorscheme picker - picks automatically
 Plug 'bkbncn/vim-colorschemes-picker'
 
 " candycode
@@ -506,7 +508,7 @@ Plug 'maksimr/Lucius2'
 Plug 'vim-scripts/BusyBee'
 
 "base 16 colorscheme
-Plug 'chriskempson/base16-vim'
+"Plug 'chriskempson/base16-vim'
 
 "nightowl theme
 Plug 'haishanh/night-owl.vim'
@@ -564,20 +566,6 @@ nnoremap <Leader>s :SemanticHighlightToggle<cr>
 
 "vim javascript
 let g:javascript_plugin_jsdoc = 1
-
-" vim set up for developing with react js
-" https://andrewsinclair.github.io/vim/react/javascript/syntastic/eslint/2017/02/28/vim-setup-for-developing-react-js.html
-" javascript and jsx
-let g:syntastic_javascript_checkers = ['eslint']
-
-" React Syntax Highlighting
-"Plug 'mxw/vim-jsx'
-"Plug 'neoclide/vim-jsx-improve'
-"Plug 'othree/yajs.vim'
-
-
-
-let g:jsx_ext_required = 1 " Allow JSX in normal JS files
 
 
 " https://andrewsinclair.github.io/vim/react/javascript/syntastic/eslint/2017/02/28/vim-setup-for-developing-react-js.html
@@ -777,6 +765,7 @@ set dir=~/tmp/
 " * Fura Mono Regular for Powerline Nerd Font Complete Mono
 " * ShureTechnoMono Nerd Font
 " * Space Mono For Powerline
+" * NovaMoto
 " * font Gohu
 " * Programma
 " * Anonymous pro
@@ -817,7 +806,8 @@ set dir=~/tmp/
 "- all hovered keywords will turn italic
 "colorscheme artesanal
 "colorscheme srcery
-colorscheme cobalt2
+colorscheme kuroi
+"colorscheme cobalt2
 "colorscheme meta5
 "colorscheme night-owl
 "colorscheme candycode
