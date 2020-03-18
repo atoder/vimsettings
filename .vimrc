@@ -534,6 +534,9 @@ Plug 'leafgarland/badwolf'
 "This plugin is used for displaying thin vertical lines at each indentation
 "level for code indented with spaces
 Plug 'Yggdroot/indentLine'
+"indentLine will overwrite 'conceal' color with grey by default. 
+"If you want to highlight conceal color with your colorscheme, disable by:
+let g:indentLine_setColors = 0
 
 " IndentLine {{
 "
@@ -829,6 +832,7 @@ colorscheme kuroi
 
 "light themes - don't forget to set to light background
 " and might have to move to the bottom of the file
+" colorscheme peachpuff
 "colorscheme zellner
 
 " need to install
