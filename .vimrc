@@ -126,8 +126,8 @@ end
 
 "This results in the character being highlighted in magenta (the screenshot is
 "in DarkCyan) when the line goes over the 80-character maximum.
-highlight ColorColumn ctermbg=magenta
-call matchadd('ColorColumn', '\%81v', 100)
+"highlight ColorColumn ctermbg=magenta
+"call matchadd('ColorColumn', '\%81v', 100)
 
 " The Silver Searcher
 if executable('ag')
@@ -463,8 +463,8 @@ let g:airline_powerline_fonts = 1
 "let g:airline_theme='base16'
 
 "Main
-"let g:airline_theme='onedark'
-let g:airline_theme='gotham256'
+let g:airline_theme='onedark'
+"let g:airline_theme='gotham256'
 "let g:airline_theme='purify'
 
 " Gruvbox colorscheme
@@ -481,7 +481,7 @@ Plug 'artanikin/vim-synthwave84'
 "vim horizon synthwave colorscheme
 Plug 'ntk148v/vim-horizon'
 
-"vim snazzy bright colors colorscheme
+""vim snazzy bright colors colorscheme
 Plug 'connorholyday/vim-snazzy'
 
 "src Dark colorscheme
@@ -496,47 +496,44 @@ Plug 'aonemd/kuroi.vim'
 Plug 'bkbncn/vim-colorschemes-picker'
 
 " candycode
-Plug 'vim-scripts/candycode.vim'
-
-" colorscheme meta5
-Plug 'christophermca/meta5'
-
-"colorscheme lucius2
-Plug 'maksimr/Lucius2'
-
-"busybee colorscheme
-Plug 'vim-scripts/BusyBee'
-
-"base 16 colorscheme
-"Plug 'chriskempson/base16-vim'
-
-"nightowl theme
-Plug 'haishanh/night-owl.vim'
-
-"wimstefan/vim-artesanal colorscheme
-Plug 'wimstefan/vim-artesanal'
-
-"gruvbox material
-Plug 'gruvbox-material/vim', {'as': 'gruvbox-material'}
-
-" vim-plug gotham theme
-Plug 'whatyouhide/vim-gotham'
-
-"Purify colortheme
-Plug 'kyoz/purify', { 'rtp': 'vim' }
-
-"moonfly
-Plug 'bluz71/vim-moonfly-colors'
-
-"badwolf
-Plug 'leafgarland/badwolf'
+"Plug 'vim-scripts/candycode.vim'
+"
+"" colorscheme meta5
+"Plug 'christophermca/meta5'
+"
+""colorscheme lucius2
+"Plug 'maksimr/Lucius2'
+"
+""busybee colorscheme
+"Plug 'vim-scripts/BusyBee'
+"
+""base 16 colorscheme
+""Plug 'chriskempson/base16-vim'
+"
+""nightowl theme
+"Plug 'haishanh/night-owl.vim'
+"
+""wimstefan/vim-artesanal colorscheme
+"Plug 'wimstefan/vim-artesanal'
+"
+""gruvbox material
+"Plug 'gruvbox-material/vim', {'as': 'gruvbox-material'}
+"
+"" vim-plug gotham theme
+"Plug 'whatyouhide/vim-gotham'
+"
+""Purify colortheme
+"Plug 'kyoz/purify', { 'rtp': 'vim' }
+"
+""moonfly
+"Plug 'bluz71/vim-moonfly-colors'
+"
+""badwolf
+"Plug 'leafgarland/badwolf'
 
 "This plugin is used for displaying thin vertical lines at each indentation
 "level for code indented with spaces
 Plug 'Yggdroot/indentLine'
-"indentLine will overwrite 'conceal' color with grey by default. 
-"If you want to highlight conceal color with your colorscheme, disable by:
-let g:indentLine_setColors = 0
 
 " IndentLine {{
 "
@@ -869,7 +866,7 @@ hi EndOfBuffer guibg=NONE ctermbg=NONE
 
 
 "green comments
-"hi Comment guifg=#7ea869 ctermfg=green
+hi Comment guifg=#7ea869 ctermfg=green
 "hi Comment guifg=#a9f2a8 ctermfg=lightgreen
 "hi Comment guifg=#a9f2a ctermfg=DarkGreen
 "hi Comment guifg=#a9f2a8 ctermfg=lightgreen
