@@ -113,6 +113,9 @@ set fileencoding=utf8
 " Switch to last active buffer
 noremap <leader>b :buffer #<CR>
 
+"space space y will copy all the text
+map <Leader><Leader>y  :%y+<CR>
+
 " Allow mouse to scroll the vim windows and resize splits
 set mouse=a
 
@@ -477,12 +480,13 @@ Plug 'sickill/vim-monokai'
 Plug 'nanotech/jellybeans.vim'
 
 "vim-synthwave84 colorscheme
-Plug 'artanikin/vim-synthwave84'
-"vim horizon synthwave colorscheme
-Plug 'ntk148v/vim-horizon'
+"Plug 'artanikin/vim-synthwave84'
 
-""vim snazzy bright colors colorscheme
-Plug 'connorholyday/vim-snazzy'
+"vim horizon synthwave colorscheme
+"Plug 'ntk148v/vim-horizon'
+
+"vim snazzy bright colors colorscheme
+"Plug 'connorholyday/vim-snazzy'
 
 "src Dark colorscheme
 Plug 'srcery-colors/srcery-vim'
