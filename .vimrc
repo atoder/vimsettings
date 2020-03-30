@@ -110,17 +110,22 @@ set encoding=utf8
 set fileencoding=utf8
 
 
+"---------- CUSTOM MAPPING -----
+"
 " Switch to last active buffer
 noremap <leader>b :buffer #<CR>
 
 "space space y will copy all the text
 map <Leader><Leader>y :%y+<CR>
 
+map <Leader>hi :hi Comment guifg=#7ea869 ctermfg=green<CR>
 
 "pick random color scheme
-map <Leader>co :RandomColorScheme<CR>
+map <Leader>rc :RandomColorScheme<CR>
 "run it on vim start
 autocmd VimEnter * RandomColorScheme
+
+"---------- CUSTOM MAPPING END -----
 
 " Allow mouse to scroll the vim windows and resize splits
 set mouse=a
