@@ -114,7 +114,13 @@ set fileencoding=utf8
 noremap <leader>b :buffer #<CR>
 
 "space space y will copy all the text
-map <Leader><Leader>y  :%y+<CR>
+map <Leader><Leader>y :%y+<CR>
+
+
+"pick random color scheme
+map <Leader>co :RandomColorScheme<CR>
+"run it on vim start
+autocmd VimEnter * RandomColorScheme
 
 " Allow mouse to scroll the vim windows and resize splits
 set mouse=a
@@ -298,7 +304,7 @@ let xml_syntax_folding=1      " XML
 call plug#begin('~/.vim/plugged')
 " Initialize plugin system
 " Install code completion using Vim plug (doesn't have vundle version)
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 "Tagbar replacement
 Plug 'liuchengxu/vista.vim'
@@ -471,69 +477,66 @@ let g:airline_theme='onedark'
 "let g:airline_theme='purify'
 
 " Gruvbox colorscheme
-Plug 'morhetz/gruvbox'
+"Plug 'morhetz/gruvbox'
 
 "Monokai
 Plug 'sickill/vim-monokai'
 
-"jellybeans colorscheme
+""jellybeans colorscheme
 Plug 'nanotech/jellybeans.vim'
 
-"vim-synthwave84 colorscheme
-"Plug 'artanikin/vim-synthwave84'
+""vim-synthwave84 colorscheme
+Plug 'artanikin/vim-synthwave84'
 
-"vim horizon synthwave colorscheme
-"Plug 'ntk148v/vim-horizon'
+""vim horizon synthwave colorscheme
+Plug 'ntk148v/vim-horizon'
 
-"vim snazzy bright colors colorscheme
-"Plug 'connorholyday/vim-snazzy'
+""vim snazzy bright colors colorscheme
+Plug 'connorholyday/vim-snazzy'
 
-"src Dark colorscheme
+""src Dark colorscheme
 Plug 'srcery-colors/srcery-vim'
 
-"cobatl2 colorscheme
+""cobatl2 colorscheme
 Plug 'herrbischoff/cobalt2.vim'
 
 Plug 'aonemd/kuroi.vim'
 
 "random colorscheme picker - picks automatically
-Plug 'bkbncn/vim-colorschemes-picker'
+Plug 'xolox/vim-colorscheme-switcher'
+Plug 'xolox/vim-misc'
 
-" candycode
-"Plug 'vim-scripts/candycode.vim'
-"
+"" candycode
+Plug 'vim-scripts/candycode.vim'
+
 "" colorscheme meta5
-"Plug 'christophermca/meta5'
-"
-""colorscheme lucius2
-"Plug 'maksimr/Lucius2'
-"
-""busybee colorscheme
-"Plug 'vim-scripts/BusyBee'
-"
-""base 16 colorscheme
-""Plug 'chriskempson/base16-vim'
-"
+Plug 'christophermca/meta5'
+
+"colorscheme lucius2
+Plug 'maksimr/Lucius2'
+
+"busybee colorscheme
+Plug 'vim-scripts/BusyBee'
+
+
 ""nightowl theme
-"Plug 'haishanh/night-owl.vim'
-"
-""wimstefan/vim-artesanal colorscheme
-"Plug 'wimstefan/vim-artesanal'
-"
-""gruvbox material
-"Plug 'gruvbox-material/vim', {'as': 'gruvbox-material'}
-"
-"" vim-plug gotham theme
-"Plug 'whatyouhide/vim-gotham'
-"
-""Purify colortheme
-"Plug 'kyoz/purify', { 'rtp': 'vim' }
-"
-""moonfly
-"Plug 'bluz71/vim-moonfly-colors'
-"
-""badwolf
-"Plug 'leafgarland/badwolf'
+Plug 'haishanh/night-owl.vim'
+
+"wimstefan/vim-artesanal colorscheme
+Plug 'wimstefan/vim-artesanal'
+
+"gruvbox material
+Plug 'gruvbox-material/vim', {'as': 'gruvbox-material'}
+
+
+"Purify colorscheme
+Plug 'kyoz/purify', { 'rtp': 'vim' }
+
+"moonfly
+Plug 'bluz71/vim-moonfly-colors'
+
+"badwolf
+Plug 'leafgarland/badwolf'
 
 "This plugin is used for displaying thin vertical lines at each indentation
 "level for code indented with spaces
@@ -712,9 +715,9 @@ Plug 'ctrlpvim/ctrlp.vim'
 " might help.
 " YCM gives you popups and splits by default that some people might not
 " like, so these should tidy it up a bit for you.
-let g:ycm_add_preview_to_completeopt=0
-let g:ycm_confirm_extra_conf=0
-set completeopt-=preview
+"let g:ycm_add_preview_to_completeopt=0
+"let g:ycm_confirm_extra_conf=0
+"set completeopt-=preview
 
 "New code completion
 " Use release branch (Recommend)
@@ -728,7 +731,7 @@ set completeopt-=preview
 " To auto-complete source code for C family,
 " you should provide custom .ycm_extra_conf.py file for your project.
 " If you don’t do this, YCM will be unable to use semantic completion.
-let g:ycm_global_ycm_extra_conf = "$HOME/.ycm_extra_conf.py"
+"let g:ycm_global_ycm_extra_conf = "$HOME/.ycm_extra_conf.py"
 
 " All of your Plugins must be added before the following line
 call plug#end()
@@ -810,7 +813,7 @@ set dir=~/tmp/
 "- all hovered keywords will turn italic
 "colorscheme artesanal
 "colorscheme srcery
-colorscheme kuroi
+"colorscheme kuroi
 "colorscheme cobalt2
 "colorscheme meta5
 "colorscheme night-owl
@@ -822,7 +825,7 @@ colorscheme kuroi
 "colorscheme synthwave84
 "colorscheme gruvbox
 "colorscheme gruvbox-material
-"colorscheme slate
+colorscheme slate
 "colorscheme base16-default-dark
 "colorscheme monokai
 "colorscheme horizon
@@ -863,7 +866,7 @@ highlight htmlItalic cterm=italic gui=italic
 " Overwrite colorschemes background when trying to enable transparency
 " this will allow you to go to transparent mode in in terminal
 " Set background color with iterm2 or whatever terminal you are using
-hi Normal guibg=NONE ctermbg=NONE
+"hi Normal guibg=NONE ctermbg=NONE
 "overwites the non text background
 hi NonText guibg=NONE ctermbg=NONE
 hi EndOfBuffer guibg=NONE ctermbg=NONE
