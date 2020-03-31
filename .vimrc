@@ -218,13 +218,18 @@ command! MakeTags !ctags -R .
 
 " FILE BROWSING:
 
+"DISABLE netrw
+let g:loaded_netrw       = 1
+let g:loaded_netrwPlugin = 1
 " Tweaks for browsing
-let g:netrw_banner = 0        " disable annoying banner
-let g:netrw_browse_split = 4  " open in prior window
+"
+"let g:netrw_banner = 0        " disable annoying banner
+"let g:netrw_browse_split = 4  " open in prior window
+"let g:netrw_altv = 1          " open splits to the right
+"let g:netrw_liststyle = 3     " tree view
+"let g:netrw_winsize = 25    " width in percent
+
 "let g:netrw_browse_split = 0  " reuse the same window
-let g:netrw_altv = 1          " open splits to the right
-let g:netrw_liststyle = 3     " tree view
-let g:netrw_winsize = 25    " width in percent
 "let g:netrw_list_hide=netrw_gitignore#Hide()
 "let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
 
@@ -232,28 +237,26 @@ let g:netrw_winsize = 25    " width in percent
 " To create a folder use d
 
 " for toggling netrw like nerdtree
-let g:NetrwIsOpen=0
-function! ToggleNetrw()
-    if g:NetrwIsOpen
-        let i = bufnr("$")
-        while (i >= 1)
-            if (getbufvar(i, "&filetype") == "netrw")
-                silent exe "bwipeout " . i
-            endif
-            let i-=1
-        endwhile
-        let g:NetrwIsOpen=0
-    else
-        let g:NetrwIsOpen=1
-        silent Vexplore
-    endif
-endfunction
+"let g:NetrwIsOpen=0
+"function! ToggleNetrw()
+"    if g:NetrwIsOpen
+"        let i = bufnr("$")
+"        while (i >= 1)
+"            if (getbufvar(i, "&filetype") == "netrw")
+"                silent exe "bwipeout " . i
+"            endif
+"            let i-=1
+"        endwhile
+"        let g:NetrwIsOpen=0
+"    else
+"        let g:NetrwIsOpen=1
+"        silent Vexplore
+"    endif
+"endfunction
 
 " Add your own mapping. For example:
-noremap <silent> <C-n> :call ToggleNetrw()<CR>
+"noremap <silent> <C-n> :call ToggleNetrw()<CR>
 " OLD netrw with Ctrl+n (you can set whatever key you want):
-" map <C-n> :Vexplore<CR>
-
 
 
 
@@ -310,6 +313,7 @@ call plug#begin('~/.vim/plugged')
 " Initialize plugin system
 " Install code completion using Vim plug (doesn't have vundle version)
 "Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
 
 "Tagbar replacement
 Plug 'liuchengxu/vista.vim'
@@ -482,7 +486,7 @@ let g:airline_theme='onedark'
 "let g:airline_theme='purify'
 
 " Gruvbox colorscheme
-"Plug 'morhetz/gruvbox'
+Plug 'morhetz/gruvbox'
 
 "Monokai
 Plug 'sickill/vim-monokai'
@@ -562,6 +566,11 @@ Plug 'othree/yajs.vim'
 "For es next
 Plug 'othree/es.next.syntax.vim'
 
+"Nerd Tree
+Plug 'scrooloose/nerdtree'
+"shows git marks in nerd tree
+Plug 'Xuyuanp/nerdtree-git-plugin'
+nnoremap <C-n> :NERDTreeToggle<CR>
 
 ""https://github.com/jaxbot/semantic-highlight.vim"
 "Where every variable is a different color, an idea popularized by Evan Brooks
