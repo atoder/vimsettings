@@ -191,79 +191,12 @@ set wildmenu
 " Create the `tags` file (may need to install ctags first)
 command! MakeTags !ctags -R .
 
-" NOW WE CAN:
-" - Use ^] to jump to tag under cursor
-" - Use g^] for ambiguous tags
-" - Use ^t to jump back up the tag stack
-
-" THINGS TO CONSIDER:
-" - This doesn't help if you want a visual list of tags
-
-
-
-" AUTOCOMPLETE:
-
-" The good stuff is documented in |ins-completion|
-
-" HIGHLIGHTS:
-" - ^x^n for JUST this file
-" - ^x^f for filenames (works with our path trick!)
-" - ^x^] for tags only
-" - ^n for anything specified by the 'complete' option
-
-" NOW WE CAN:
-" - Use ^n and ^p to go back and forth in the suggestion list
-
-
-
 " FILE BROWSING:
 
 "DISABLE netrw
 let g:loaded_netrw       = 1
 let g:loaded_netrwPlugin = 1
-" Tweaks for browsing
-"
-"let g:netrw_banner = 0        " disable annoying banner
-"let g:netrw_browse_split = 4  " open in prior window
-"let g:netrw_altv = 1          " open splits to the right
-"let g:netrw_liststyle = 3     " tree view
-"let g:netrw_winsize = 25    " width in percent
 
-"let g:netrw_browse_split = 0  " reuse the same window
-"let g:netrw_list_hide=netrw_gitignore#Hide()
-"let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
-
-" To create a file use %
-" To create a folder use d
-
-" for toggling netrw like nerdtree
-"let g:NetrwIsOpen=0
-"function! ToggleNetrw()
-"    if g:NetrwIsOpen
-"        let i = bufnr("$")
-"        while (i >= 1)
-"            if (getbufvar(i, "&filetype") == "netrw")
-"                silent exe "bwipeout " . i
-"            endif
-"            let i-=1
-"        endwhile
-"        let g:NetrwIsOpen=0
-"    else
-"        let g:NetrwIsOpen=1
-"        silent Vexplore
-"    endif
-"endfunction
-
-" Add your own mapping. For example:
-"noremap <silent> <C-n> :call ToggleNetrw()<CR>
-" OLD netrw with Ctrl+n (you can set whatever key you want):
-
-
-
-" NOW WE CAN:
-" - :edit a folder to open a file browser
-" - <CR>/v/t to open in an h-split/v-split/tab
-" - check |netrw-browse-maps| for more mappings
 
 
 " FOLDING:
@@ -310,41 +243,9 @@ let xml_syntax_folding=1      " XML
 " - For Neovim: stdpath('data') . '/plugged'
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.vim/plugged')
-" Initialize plugin system
-" Install code completion using Vim plug (doesn't have vundle version)
-"Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-
-"Tagbar replacement
-Plug 'liuchengxu/vista.vim'
-
-function! NearestMethodOrFunction() abort
-  return get(b:, 'vista_nearest_method_or_function', '')
-endfunction
 
 set statusline+=%{NearestMethodOrFunction()}
-
-" By default vista.vim never run if you don't call it explicitly.
-"
-" If you want to show the nearest function in your statusline automatically,
-" you can add the following line to your vimrc
-autocmd VimEnter * call vista#RunForNearestMethodOrFunction()
-
- " coc config
-let g:coc_global_extensions = [
-  \ 'coc-snippets',
-  \ 'coc-pairs',
-  \ 'coc-tsserver',
-  \ 'coc-eslint',
-  \ 'coc-prettier',
-  \ 'coc-json',
-  \ 'coc-java',
-  \ 'coc-python',
-  \ 'coc-phpls',
-  \ 'coc-highlight',
-  \ ]
-"make sure to have eslint set up in local directory
-"eslint --init
 
 "neoclide settings
 " if hidden is not set, TextEdit might fail.
@@ -366,87 +267,16 @@ set shortmess+=c
 " always show signcolumns
 set signcolumn=yes
 
-" Use tab for trigger completion with characters ahead and navigate.
-" Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
-
-" Use <c-space> to trigger completion.
-inoremap <silent><expr> <c-space> coc#refresh()
-
-" Use <cr> to confirm completion, `<C-g>u` means break undo chain at current position.
-" Coc only does snippet and additional edit on confirm.
-inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-" Or use `complete_info` if your vim support it, like:
-" inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
-
-" Use `[g` and `]g` to navigate diagnostics
-nmap <silent> [g <Plug>(coc-diagnostic-prev)
-nmap <silent> ]g <Plug>(coc-diagnostic-next)
-
-" Remap keys for gotos
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
-
-" Use K to show documentation in preview window
-nnoremap <silent> K :call <SID>show_documentation()<CR>
-
-function! s:show_documentation()
-  if (index(['vim','help'], &filetype) >= 0)
-    execute 'h '.expand('<cword>')
-  else
-    call CocAction('doHover')
-  endif
-endfunction
-
-" Highlight symbol under cursor on CursorHold
-autocmd CursorHold * silent call CocActionAsync('highlight')
-
-" Remap for rename current word
-nmap <leader>rn <Plug>(coc-rename)
-
-" Remap for format selected region
-xmap <leader>f  <Plug>(coc-format-selected)
-nmap <leader>f  <Plug>(coc-format-selected)
-
-augroup mygroup
-  autocmd!
-  " Setup formatexpr specified filetype(s).
-  autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
-  " Update signature help on jump placeholder
-  autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
-augroup end
-
-
-" Use `:Format` to format current buffer
-command! -nargs=0 Format :call CocAction('format')
-
-" Use `:Fold` to fold current buffer
-command! -nargs=? Fold :call     CocAction('fold', <f-args>)
-
-" use `:OR` for organize import of current buffer
-command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
-
-" Add status line support, for integration with other plugin, checkout `:h coc-status`
-set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 "For commenting and uncommenting blocks of line
-Plug 'scrooloose/nerdcommenter'
-"Comment out the current line or text selected in visual mode.
-"[count]<leader>cc |NERDComComment|
-"Uncomments the selected line(s).
-"[count]<leader>cu |NERDComUncommentLine|
-"Comments out the selected lines with a pretty block formatted layout.
-"[count]<leader>cs |NERDComSexyComment|
+Plug 'tpope/vim-commentary'
+" gcc to comment current line (c count)
+" gc to comment out the target of motion
+" gcap comment out a paragram
+" gc in visual mode to comment out the seleciton
+" gc in operator pending mode to target a comment
+"You can also use it as a command, either with a range like :7,17Commentary,
+"or as part of a :global invocation like with :g/TODO/Commentary. That's
 
 Plug 'christoomey/vim-tmux-navigator'
 
@@ -560,11 +390,15 @@ let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 " }}
 
 
+"JS
+Plug 'yuezk/vim-js'
+Plug 'MaxMEllon/vim-jsx-pretty'
+
 " React Syntax Highlighting
-Plug 'othree/yajs.vim'
+"Plug 'othree/yajs.vim'
 
 "For es next
-Plug 'othree/es.next.syntax.vim'
+"Plug 'othree/es.next.syntax.vim'
 
 "Nerd Tree
 Plug 'scrooloose/nerdtree'
@@ -613,15 +447,12 @@ let g:jsx_ext_required = 1 " Allow JSX in normal JS files
 
 "Provides an overview of the structure of source code files
 "Lean & mean status/tabline for vim that's light as air.
-"Plug 'majutsushi/tagbar'
-"Plug 'hushicai/tagbar-javascript.vim'
-
+Plug 'majutsushi/tagbar'
+Plug 'sergioramos/jsctags'
+"Plug 'ludovicchabant/vim-gutentags'
+"Plug 'ternjs/tern_for_vim'
 "nmap <C-o> :TagbarToggle<CR>
-"to open tag bar hit space and o
-"nnoremap <leader>oo :TagbarToggle<CR>
-"Updated to use Vista coc
-nnoremap <leader>oo :Vista coc<CR>
-
+nnoremap <leader><leader>o :TagbarToggle <CR>
 
 ""A fancy start screen for Vim.
 Plug 'mhinz/vim-startify'
@@ -668,7 +499,6 @@ let g:syntastic_style_warning_symbol='⚠'
 
 "space st will enable and disable syntastic
 nmap <leader>st :SyntasticToggleMode<CR>
-
 
 
 
@@ -724,22 +554,14 @@ Plug 'nathanaelkane/vim-indent-guides'
 Plug 'ctrlpvim/ctrlp.vim'
 
 "Amazing code completion
-"Plug 'Valloric/YouCompleteMe'
+Plug 'Valloric/YouCompleteMe'
 " These are the tweaks I apply to YCM's config, you don't need them but they
 " might help.
 " YCM gives you popups and splits by default that some people might not
 " like, so these should tidy it up a bit for you.
-"let g:ycm_add_preview_to_completeopt=0
-"let g:ycm_confirm_extra_conf=0
-"set completeopt-=preview
-
-"New code completion
-" Use release branch (Recommend)
-" Cant install it with Vundle so use
-" https://github.com/neoclide/coc.nvim/wiki/Install-coc.nvim
-" git clone https://github.com/neoclide/coc.nvim.git --depth=1
-" https://medium.com/@rohmanhakim/how-to-set-up-code-completion-for-vim-in-macos-9766dd459385
-"Plug 'neoclide/coc.nvim'
+let g:ycm_add_preview_to_completeopt=0
+let g:ycm_confirm_extra_conf=0
+set completeopt-=preview
 
 " default c config
 " To auto-complete source code for C family,
@@ -825,7 +647,7 @@ set dir=~/tmp/
 
 " artesanal colorscheme works well with dank mono font
 "- all hovered keywords will turn italic
-"colorscheme artesanal
+colorscheme artesanal
 "colorscheme srcery
 "colorscheme kuroi
 "colorscheme cobalt2
@@ -839,7 +661,7 @@ set dir=~/tmp/
 "colorscheme synthwave84
 "colorscheme gruvbox
 "colorscheme gruvbox-material
-colorscheme slate
+"colorscheme slate
 "colorscheme base16-default-dark
 "colorscheme monokai
 "colorscheme horizon
@@ -902,9 +724,3 @@ hi Comment guifg=#7ea869 ctermfg=green
 
 " Make gutter same color as where your line numbers show up
 "highlight clear SignColumn
-
-
-"make javascript
-"au Colorscheme * :hi javascriptNodeGlobal gui=italic cterm=italic
-"highlight default javascriptNodeGlobal cterm=italic
-"highlight default javascriptMethodName cterm=italic ctermfg=grey ctermbg=white
