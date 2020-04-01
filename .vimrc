@@ -118,12 +118,15 @@ noremap <leader>b :buffer #<CR>
 "space space y will copy all the text
 map <Leader><Leader>y :%y+<CR>
 
-map <Leader>hi :hi Comment guifg=#7ea869 ctermfg=green<CR>
+map <Leader>gc :hi Comment guifg=#7ea869 ctermfg=green<CR>
 
 "pick random color scheme
 map <Leader>rc :RandomColorScheme<CR>
 "run it on vim start
 autocmd VimEnter * RandomColorScheme
+
+"make background of any theme black
+map <Leader>bb :hi Normal guibg=black guifg=white<CR>
 
 "---------- CUSTOM MAPPING END -----
 
@@ -344,6 +347,10 @@ Plug 'aonemd/kuroi.vim'
 "random colorscheme picker - picks automatically
 Plug 'xolox/vim-colorscheme-switcher'
 Plug 'xolox/vim-misc'
+"If you set this variable to 1 (true) and cycle to the next/previous color scheme,
+"the plug-in will skip color schemes with a different ['background'] bg.
+"By default this is set to 0 (false).
+let g:colorscheme_switcher_keep_background=1
 
 "" candycode
 Plug 'vim-scripts/candycode.vim'
@@ -356,7 +363,6 @@ Plug 'maksimr/Lucius2'
 
 "busybee colorscheme
 Plug 'vim-scripts/BusyBee'
-
 
 ""nightowl theme
 Plug 'haishanh/night-owl.vim'
@@ -647,11 +653,11 @@ set dir=~/tmp/
 
 " artesanal colorscheme works well with dank mono font
 "- all hovered keywords will turn italic
-colorscheme artesanal
+colorscheme meta5
+"colorscheme artesanal
 "colorscheme srcery
 "colorscheme kuroi
 "colorscheme cobalt2
-"colorscheme meta5
 "colorscheme night-owl
 "colorscheme candycode
 "colorscheme busybee
