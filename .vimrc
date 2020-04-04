@@ -51,7 +51,7 @@ set autoindent
 set smartindent
 
 " stricter rules for C programs
-set cindent
+"set cindent
 
 " Buffer screen updates instead of updating all the time
 "set lazyredraw
@@ -74,11 +74,6 @@ set background=dark
 "To achieve this, put the following in your vimrc:
 set autochdir
 
-" Control + C mapping to run :bp | bd #
-" which moves to previous buffer and closes the buffer we just moved from
-" this way you can close a buffer and still have a vsplit for example
-nnoremap <C-c> :bp\|bd #<CR>
-
 " yy will not just use internal vim buffer but will also copy
 " into OS's clipboard
 set clipboard=unnamed
@@ -95,23 +90,29 @@ au BufNewFile,BufRead *.ejs set filetype=javascript
 au BufNewFile,BufRead *.handlebars set filetype=html
 au BufNewFile,BufRead *.eco set filetype=html
 
-
-"mapping buffer switching and closing to shortcuts
-map bn :bn<cr>
-map bp :bp<cr>
-map bd :bd<cr>
-
-" map leader is a space in this case
-" can now hit space ss to save session for example
-let mapleader = " "
+"disable weird bracket highlight error in c files
+autocmd BufEnter *.c :syntax clear cErrInParen
 
 "Encoding must be set to UTF-8 for the glyphs to show
 set encoding=utf8
 set fileencoding=utf8
 
-
 "---------- CUSTOM MAPPING -----
-"
+"mapping buffer switching and closing to shortcuts
+map bn :bn<cr>
+map bp :bp<cr>
+map bd :bd<cr>
+
+
+" Control + C mapping to run :bp | bd #
+" which moves to previous buffer and closes the buffer we just moved from
+" this way you can close a buffer and still have a vsplit for example
+nnoremap <C-c> :bp\|bd #<CR>
+
+
+" map leader is a space in this case
+" can now hit space ss to save session for example
+let mapleader = " "
 " Switch to last active buffer
 noremap <leader>b :buffer #<CR>
 
@@ -425,6 +426,11 @@ nnoremap <Leader>s :SemanticHighlightToggle<cr>
 "Plug 'Valloric/MatchTagAlways' "Always highlights the XML/HTML tags that enclose your cursor location''
 
 
+"The default shortcut for opening Ranger is <leader>f (\f by default)
+"To disable the default key mapping, add this line in your .vimrc or init.vim: let g:ranger_map_keys = 0
+"then you can add a new mapping with this line: map <leader>f :Ranger<CR>.
+Plug 'francoiscabrol/ranger.vim'
+
 "vim javascript
 let g:javascript_plugin_jsdoc = 1
 
@@ -455,9 +461,6 @@ let g:jsx_ext_required = 1 " Allow JSX in normal JS files
 "Lean & mean status/tabline for vim that's light as air.
 Plug 'majutsushi/tagbar'
 Plug 'sergioramos/jsctags'
-"Plug 'ludovicchabant/vim-gutentags'
-"Plug 'ternjs/tern_for_vim'
-"nmap <C-o> :TagbarToggle<CR>
 nnoremap <leader><leader>o :TagbarToggle <CR>
 
 ""A fancy start screen for Vim.
@@ -505,8 +508,6 @@ let g:syntastic_style_warning_symbol='⚠'
 
 "space st will enable and disable syntastic
 nmap <leader>st :SyntasticToggleMode<CR>
-
-
 
 "Automatic close for common block and scope identifiers such as brackets
 " parentheses, brace, squares
@@ -656,6 +657,7 @@ set dir=~/tmp/
 colorscheme meta5
 "colorscheme artesanal
 "colorscheme srcery
+"colorscheme purify
 "colorscheme kuroi
 "colorscheme cobalt2
 "colorscheme night-owl
@@ -663,7 +665,6 @@ colorscheme meta5
 "colorscheme busybee
 "colorscheme jellybeans
 "colorscheme snazzy
-"colorscheme purify
 "colorscheme synthwave84
 "colorscheme gruvbox
 "colorscheme gruvbox-material
@@ -727,6 +728,4 @@ hi Comment guifg=#7ea869 ctermfg=green
 
 " gutter aka sign column
 "highlight SignColumn guibg=black ctermbg=black
-
-" Make gutter same color as where your line numbers show up
-"highlight clear SignColumn
+"
