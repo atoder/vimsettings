@@ -78,8 +78,7 @@ set autochdir
 " into OS's clipboard
 set clipboard=unnamed
 
-
-let python_highlight_all=1
+"let python_highlight_all=1
 
 autocmd Filetype html setlocal ts=2 sts=2 sw=2 expandtab
 autocmd Filetype ruby setlocal ts=2 sts=2 sw=2 expandtab
@@ -213,14 +212,14 @@ set nofoldenable        "dont fold by default
 set foldlevel=1         "this is just what i use
 
 
-let javaScript_fold=1         " JavaScript
-let perl_fold=1               " Perl
-let php_folding=1             " PHP
-let r_syntax_folding=1        " R
-let ruby_fold=1               " Ruby
-let sh_fold_enabled=1         " sh
-let vimsyn_folding='af'       " Vim script
-let xml_syntax_folding=1      " XML
+"let javaScript_fold=1         " JavaScript
+"let perl_fold=1               " Perl
+"let php_folding=1             " PHP
+"let r_syntax_folding=1        " R
+"let ruby_fold=1               " Ruby
+"let sh_fold_enabled=1         " sh
+"let vimsyn_folding='af'       " Vim script
+"let xml_syntax_folding=1      " XML
 
 
 " FOLDING
@@ -374,7 +373,6 @@ Plug 'wimstefan/vim-artesanal'
 "gruvbox material
 Plug 'gruvbox-material/vim', {'as': 'gruvbox-material'}
 
-
 "Purify colorscheme
 Plug 'kyoz/purify', { 'rtp': 'vim' }
 
@@ -383,6 +381,12 @@ Plug 'bluz71/vim-moonfly-colors'
 
 "badwolf
 Plug 'leafgarland/badwolf'
+
+"seti colorscheme"
+Plug 'trusktr/seti.vim'
+
+"vim deus
+Plug 'ajmwagar/vim-deus'
 
 "This plugin is used for displaying thin vertical lines at each indentation
 "level for code indented with spaces
@@ -397,15 +401,14 @@ let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 " }}
 
 
-"JS
-Plug 'yuezk/vim-js'
-Plug 'MaxMEllon/vim-jsx-pretty'
+" Prettier by default will run on auto save but can also be manually triggered by:
+" <Leader>p
+"post install (yarn install | npm install) then load plugin only for editing supported files
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 
 " React Syntax Highlighting
-"Plug 'othree/yajs.vim'
-
-"For es next
-"Plug 'othree/es.next.syntax.vim'
+Plug 'yuezk/vim-js'
+Plug 'maxmellon/vim-jsx-pretty'
 
 "Nerd Tree
 Plug 'scrooloose/nerdtree'
@@ -607,15 +610,17 @@ set dir=~/tmp/
 
 " MAIN FAVORITE ONES COLORSCHEMES AND FONTS:
 " * Hermit/Hurmit NerdFontCompletemono
-" * Fantasque
-" * Operator-Mono - book
-" * ProFont for powerline
 " * cascadia code
+" * NovaMoto
+" * Fantasque
+" * Space Mono For Powerline
+" * IBM Plex Mono
 " * Lekton nfplus
+"
 " * Fura Mono Regular for Powerline Nerd Font Complete Mono
 " * ShureTechnoMono Nerd Font
-" * Space Mono For Powerline
-" * NovaMoto
+" * Operator-Mono - book
+" * ProFont for powerline
 " * font Gohu
 " * Programma
 " * Anonymous pro
@@ -628,7 +633,6 @@ set dir=~/tmp/
 " * Proggy
 " * SF Mono
 " * PT Mono
-" * IBM Plex Mono
 " * Inconsolata-g
 " * Office-Code-Pro - medium
 " * Andale mono
@@ -642,7 +646,7 @@ set dir=~/tmp/
 " MAIN FAVORITE iterm2 colorschemes
 " 0) Snazzy modified (by me)
 " 1) Darkside
-" 2) - favorite one is Molokai
+" 2) favorite one is Molokai
 " 3) One Dark
 " 4) space-vim-dark
 " 5) gruvbox-dark
