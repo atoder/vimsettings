@@ -620,12 +620,16 @@ if (empty($TMUX))
   endif
 endif
 
-
-if exists('+termguicolors')
+if exists('$TMUX')
   let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
   let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
   set termguicolors
 endif
+"if exists('+termguicolors')
+"  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+"  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+"  set termguicolors
+"endif
 
 "put away .swp files into home dir instead of cluttering up in your projects
 " Don't forget to create this directory
@@ -757,3 +761,7 @@ hi Comment guifg=#7ea869 ctermfg=green
 
 " gutter aka sign column
 "highlight SignColumn guibg=black ctermbg=black
+
+
+
+

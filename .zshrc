@@ -10,7 +10,6 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 export SDKROOT="/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk"
-#export TERM="xterm-256color"
 setopt CORRECT
 
 
