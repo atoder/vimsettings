@@ -263,12 +263,11 @@ alias l="colorls -la"
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 
 # configure clang
-#export CC=clang
-#export CFLAGS="-fsanitize=integer -fsanitize=undefined -ggdb3 -O0 -std=c11 -Wall -Werror -Wextra -Wno-sign-compare -Wshadow"
-#export LDLIBS="-lcrypt -lcs50 -lm"
-#
-#export LIBRARY_PATH=/usr/local/lib
-#export C_INCLUDE_PATH=/usr/local/include
+CC="clang"
+CFLAGS="-fsanitize=signed-integer-overflow -fsanitize=undefined -ggdb3 -O0 -std=c11 -Wall -Werror -Wextra -Wno-sign-compare -Wno-unused-parameter -Wno-unused-variable -Wshadow"
+LDLIBS="-lcrypt -lcs50 -lm"
+export LIBRARY_PATH=/usr/local/lib
+export C_INCLUDE_PATH=/usr/local/include
 
 function make50 { gcc "$1".c -o "$1" -I /usr/local/include -L /usr/local/lib -lcs50; }
 alias python=/usr/local/bin/python3
