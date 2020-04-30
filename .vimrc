@@ -120,10 +120,17 @@ noremap <leader>b :buffer #<CR>
 "space space y will copy all the text
 map <Leader><Leader>y :%y+<CR>
 
-map <Leader>gc :hi Comment guifg=#7ea869 ctermfg=green<CR>
+
+function TurnCommentsGreen()
+  :hi Comment guifg=#7ea869<CR>
+  :hi JavaScriptLineComment guifg=#7ea869<CR>
+endfunction
+
+map <Leader>gc :exec TurnCommentsGreen()<CR>
 
 "pick random color scheme
 map <Leader>rc :RandomColorScheme<CR>
+
 "run it on vim start
 autocmd VimEnter * RandomColorScheme
 
@@ -418,7 +425,6 @@ let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 
 " React Syntax Highlighting
-Plug 'yuezk/vim-js'
 Plug 'maxmellon/vim-jsx-pretty'
 
 "Nerd Tree
@@ -427,7 +433,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 nnoremap <C-n> :NERDTreeToggle<CR>
 
-""https://github.com/jaxbot/semantic-highlight.vim"
+"https://github.com/jaxbot/semantic-highlight.vim"
 "Where every variable is a different color, an idea popularized by Evan Brooks
 "blog post.
 "https://medium.com/@evnbr/coding-in-color-3a6db2743a1e
@@ -598,8 +604,8 @@ call plug#end()
 
 
 "ENABLE italic fonts
-let &t_ZH="\e[3m"
-let &t_ZR="\e[23m"
+" let &t_ZH="\e[3m"
+" let &t_ZR="\e[23m"
 highlight Comment cterm=italic gui=italic
 
 "Enable HTML attributes to be italic
@@ -751,7 +757,8 @@ hi EndOfBuffer guibg=NONE ctermbg=NONE
 
 
 "green comments
-hi Comment guifg=#7ea869 ctermfg=green
+hi Comment guifg=#7ea869 ctermfg=green cterm=italic gui=italic
+hi JavaScriptLineComment guifg=#7ea869 ctermfg=green cterm=italic gui=italic
 "hi Comment guifg=#a9f2a8 ctermfg=lightgreen
 "hi Comment guifg=#a9f2a ctermfg=DarkGreen
 "hi Comment guifg=#a9f2a8 ctermfg=lightgreen
