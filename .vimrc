@@ -23,6 +23,7 @@ set ignorecase
 set binary
 set noeol
 
+
 "spaces instead of tab, must be after binary and noel setting
 set expandtab
 
@@ -84,6 +85,7 @@ autocmd Filetype html setlocal ts=2 sts=2 sw=2 expandtab
 autocmd Filetype ruby setlocal ts=2 sts=2 sw=2 expandtab
 autocmd Filetype php setlocal ts=4 sts=4 sw=4 expandtab
 autocmd Filetype javascript setlocal ts=2 sts=2 sw=2 expandtab
+autocmd Filetype c setlocal ts=4 sts=4 sw=4 expandtab
 
 au BufNewFile,BufRead *.ejs set filetype=javascript
 au BufNewFile,BufRead *.handlebars set filetype=html
@@ -391,6 +393,9 @@ Plug 'mhartington/oceanic-next'
 "one dark pro
 Plug 'joshdick/onedark.vim'
 
+"janah colorscheme
+Plug 'mhinz/vim-janah'
+
 "vim deus
 Plug 'ajmwagar/vim-deus'
 
@@ -577,6 +582,8 @@ Plug 'Valloric/YouCompleteMe'
 " like, so these should tidy it up a bit for you.
 let g:ycm_add_preview_to_completeopt=0
 let g:ycm_confirm_extra_conf=0
+" Disable signature help
+"let g:ycm_disable_signature_help = 1
 set completeopt-=preview
 
 " default c config
@@ -625,11 +632,6 @@ if exists('$TMUX')
   let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
   set termguicolors
 endif
-"if exists('+termguicolors')
-"  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-"  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-"  set termguicolors
-"endif
 
 "put away .swp files into home dir instead of cluttering up in your projects
 " Don't forget to create this directory
@@ -638,16 +640,16 @@ set dir=~/tmp/
 
 " MAIN FAVORITE ONES COLORSCHEMES AND FONTS:
 " * Hermit/Hurmit NerdFontCompletemono
-" * cascadia code
 " * NovaMoto
 " * Fantasque
+" * cascadia code
 " * Space Mono For Powerline
+" * Operator-Mono - book + all other styles
 " * IBM Plex Mono
 " * Lekton nfplus
-"
 " * Fura Mono Regular for Powerline Nerd Font Complete Mono
 " * ShureTechnoMono Nerd Font
-" * Operator-Mono - book
+" * Overpass mono
 " * ProFont for powerline
 " * font Gohu
 " * Programma
@@ -656,7 +658,6 @@ set dir=~/tmp/
 " * Input Mono
 " * Dank Mono
 " * Fira Mono Powerline
-" * Overpass mono
 " * ProggyVector
 " * Proggy
 " * SF Mono
@@ -684,13 +685,14 @@ set dir=~/tmp/
 "by default it will be default
 "colorscheme default
 
+"purify supports italic fonts
+colorscheme purify
 " artesanal colorscheme works well with dank mono font
 "- all hovered keywords will turn italic
 "colorscheme artesanal
-colorscheme onedark
+"colorscheme onedark
 "colorscheme meta5
 "colorscheme srcery
-"colorscheme purify
 "colorscheme kuroi
 "colorscheme cobalt2
 "colorscheme night-owl
@@ -761,7 +763,3 @@ hi Comment guifg=#7ea869 ctermfg=green
 
 " gutter aka sign column
 "highlight SignColumn guibg=black ctermbg=black
-
-
-
-
