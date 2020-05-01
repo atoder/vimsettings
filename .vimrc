@@ -127,14 +127,20 @@ map <Leader><Leader>y :%y+<CR>
 "turns on my own highlight colors
 function TurnOnCustomSettings()
   " comments
-  :hi cCommentL guifg=#7ea869<CR>
-  :hi cComment guifg=#7ea869<CR>
-  :hi JavaScriptLineComment guifg=#7ea869<CR>
-  :hi Comment guifg=#7ea869<CR>
+  :hi cCommentL guifg=#7ea869
+  :hi cComment guifg=#7ea869
+  :hi JavaScriptLineComment guifg=#7ea869
+  :hi Comment guifg=#7ea869
 
   "search
   "":hi Search term=reverse cterm=underline ctermfg=0 ctermbg=11 gui=underline guifg=#f0a0c0 guibg=#302028
   :hi Search term=reverse cterm=underline ctermfg=201 ctermbg=11 gui=underline guifg=#ff00ff guibg=#302028
+  :hi Function cterm=bold,italic gui=bold,italic
+  :hi JavaScriptFunction cterm=bold,italic gui=bold,italic
+  :hi javaScriptIdentifier cterm=bold,italic gui=bold,italic
+
+  "make background transparent
+  :hi Normal guibg=NONE ctermbg=NONE
 
 endfunction
 map <Leader>ts :exec TurnOnCustomSettings()<CR>
@@ -233,16 +239,14 @@ let g:loaded_netrw       = 1
 let g:loaded_netrwPlugin = 1
 
 
-
 " FOLDING:
-"set foldmethod=indent   "fold based on indent
-set foldmethod=syntax
+"set foldmethod=syntax
 "set foldmethod=manual
+set foldmethod=indent
 set foldlevelstart=1
-"set foldnestmax=10      "deepest fold is 10 levels
+set foldnestmax=10      "deepest fold is 10 levels
 set nofoldenable        "dont fold by default
-set foldlevel=1         "this is just what i use
-
+set foldlevel=2         "this is just what i use
 
 "let javaScript_fold=1         " JavaScript
 "let perl_fold=1               " Perl
@@ -447,8 +451,9 @@ let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 "post install (yarn install | npm install) then load plugin only for editing supported files
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 
-" React Syntax Highlighting
+" JavaScript and React Syntax Highlighting
 Plug 'maxmellon/vim-jsx-pretty'
+let g:vim_jsx_pretty_colorful_config = 1 " default 0
 
 "Nerd Tree
 Plug 'scrooloose/nerdtree'
@@ -774,6 +779,7 @@ highlight htmlItalic cterm=italic gui=italic
 " this will allow you to go to transparent mode in in terminal
 " Set background color with iterm2 or whatever terminal you are using
 "hi Normal guibg=NONE ctermbg=NONE
+
 "overwites the non text background
 hi NonText guibg=NONE ctermbg=NONE
 hi EndOfBuffer guibg=NONE ctermbg=NONE
