@@ -87,6 +87,9 @@ autocmd Filetype php setlocal ts=4 sts=4 sw=4 expandtab
 autocmd Filetype javascript setlocal ts=2 sts=2 sw=2 expandtab
 autocmd Filetype c setlocal ts=4 sts=4 sw=4 expandtab
 
+"augroup filetype javascript syntax=javascript
+
+
 au BufNewFile,BufRead *.ejs set filetype=javascript
 au BufNewFile,BufRead *.handlebars set filetype=html
 au BufNewFile,BufRead *.eco set filetype=html
@@ -121,12 +124,32 @@ noremap <leader>b :buffer #<CR>
 map <Leader><Leader>y :%y+<CR>
 
 
-function TurnCommentsGreen()
-  :hi Comment guifg=#7ea869<CR>
+"turns on my own highlight colors
+function TurnOnCustomSettings()
+  " comments
+  :hi cCommentL guifg=#7ea869<CR>
+  :hi cComment guifg=#7ea869<CR>
   :hi JavaScriptLineComment guifg=#7ea869<CR>
-endfunction
+  :hi Comment guifg=#7ea869<CR>
 
-map <Leader>gc :exec TurnCommentsGreen()<CR>
+  "search
+  "":hi Search term=reverse cterm=underline ctermfg=0 ctermbg=11 gui=underline guifg=#f0a0c0 guibg=#302028
+  :hi Search term=reverse cterm=underline ctermfg=201 ctermbg=11 gui=underline guifg=#ff00ff guibg=#302028
+
+endfunction
+map <Leader>ts :exec TurnOnCustomSettings()<CR>
+
+" This function will show what groups are being applied.
+" Add to your ~/.vimrc, place your cursor over the item in question, and press <leader>sp to output the groups.
+" https://jordanelver.co.uk/blog/2015/05/27/working-with-vim-colorschemes/
+nmap <leader>sp :call <SID>SynStack()<CR>
+function! <SID>SynStack()
+  if !exists("*synstack")
+    return
+  endif
+  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+endfunc
+
 
 "pick random color scheme
 map <Leader>rc :RandomColorScheme<CR>
