@@ -160,7 +160,7 @@ map <leader>ts :exec TurnOnCustomSettings()<cr>
 function ClearGutter()
   "clear line
   :hi clear SignColumn
-  "":hi clear LineNr
+  :hi clear LineNr
   ":hi clear CursorLineNr
   ":hi clear CursorLine
 
@@ -195,11 +195,18 @@ nmap <leader>sp :call <SID>SynStack()<CR>
 "pick random color scheme
 map <Leader>rc :RandomColorScheme<CR>
 
-"run it on vim start
+"---------------------
+" run it on vim start
+" --------------------
 autocmd VimEnter * RandomColorScheme
 
 "automatically clearn signcolumn
 autocmd VimEnter * hi clear SignColumn
+"overwites the non text background
+autocmd VimEnter * hi clear NonText
+autocmd VimEnter * hi clear EndOfBuffer
+autocmd VimEnter * hi clear Special
+autocmd VimEnter * hi clear LineNr
 
 "make background of any theme black
 map <Leader>bb :hi Normal guibg=black guifg=white<CR>
@@ -828,8 +835,10 @@ highlight htmlItalic cterm=italic gui=italic
 "hi Normal guibg=NONE ctermbg=NONE
 
 "overwites the non text background
-hi NonText guibg=NONE ctermbg=NONE
-hi EndOfBuffer guibg=NONE ctermbg=NONE
+"hi NonText guibg=NONE ctermbg=NONE
+"hi EndOfBuffer guibg=NONE ctermbg=NONE
+hi clear NonText
+hi clear EndOfBuffer
 
 
 "green comments
@@ -841,7 +850,23 @@ hi JavaScriptLineComment guifg=#7ea869 ctermfg=green cterm=italic gui=italic
 
 " clears Special keyword highlight
 " and sets it to custom light blue color
-"hi clear Special
+hi clear Special
+"hi Special term=bold ctermfg=81 guifg=#66D9EF
+
+" gutter aka sign column
+"highlight SignColumn guibg=black ctermbg=black
+hi clear SignColumn
+
+"green comments
+hi Comment guifg=#7ea869 ctermfg=green cterm=italic gui=italic
+hi JavaScriptLineComment guifg=#7ea869 ctermfg=green cterm=italic gui=italic
+"hi Comment guifg=#a9f2a8 ctermfg=lightgreen
+"hi Comment guifg=#a9f2a ctermfg=DarkGreen
+"hi Comment guifg=#a9f2a8 ctermfg=lightgreen
+
+" clears Special keyword highlight
+" and sets it to custom light blue color
+hi clear Special
 "hi Special term=bold ctermfg=81 guifg=#66D9EF
 
 " gutter aka sign column
