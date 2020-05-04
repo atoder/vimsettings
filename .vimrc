@@ -124,37 +124,72 @@ noremap <leader>b :buffer #<CR>
 map <Leader><Leader>y :%y+<CR>
 
 
-"turns on my own highlight colors
+
 function TurnOnCustomSettings()
   " comments
   :hi cCommentL guifg=#7ea869
   :hi cComment guifg=#7ea869
   :hi JavaScriptLineComment guifg=#7ea869
+  :hi JavaScriptComment guifg=#7ea869
   :hi Comment guifg=#7ea869
 
-  "search
-  "":hi Search term=reverse cterm=underline ctermfg=0 ctermbg=11 gui=underline guifg=#f0a0c0 guibg=#302028
+    "search
   :hi Search term=reverse cterm=underline ctermfg=201 ctermbg=11 gui=underline guifg=#ff00ff guibg=#302028
   :hi Function cterm=bold,italic gui=bold,italic
   :hi JavaScriptFunction cterm=bold,italic gui=bold,italic
-  :hi javaScriptIdentifier cterm=bold,italic gui=bold,italic
 
   "make background transparent
-  :hi Normal guibg=NONE ctermbg=NONE
+  "":hi Normal guibg=NONE ctermbg=NONE
+  :hi clear Normal
+
+  "overwites the non text background
+  "":hi NonText guibg=NONE ctermbg=NONE
+  "":hi EndOfBuffer guibg=NONE ctermbg=NONE
+  :hi clear NonText
+  :hi clear EndOfBuffer
+
+  "clear line
+  :hi clear SignColumn
+  :hi clear LineNr
+  :hi clear CursorLineNr
+  :hi clear CursorLine
 
 endfunction
-map <Leader>ts :exec TurnOnCustomSettings()<CR>
+map <leader>ts :exec TurnOnCustomSettings()<cr>
+
+function ClearGutter()
+  "clear line
+  :hi clear SignColumn
+  "":hi clear LineNr
+  ":hi clear CursorLineNr
+  ":hi clear CursorLine
+
+endfunction
+map <leader>cg :exec ClearGutter()<cr>
+
+"turns on my own highlight colors for comments only
+function GreenComments()
+  " comments
+  :hi JavaScriptLineComment guifg=#7ea869
+  :hi JavaScriptComment guifg=#7ea869
+  :hi Comment guifg=#7ea869
+  :hi cComment guifg=#7ea869
+  :hi cCommentL guifg=#7ea869
+endfunction
+map <Leader>gc :exec GreenComments()<CR>
+
+
 
 " This function will show what groups are being applied.
 " Add to your ~/.vimrc, place your cursor over the item in question, and press <leader>sp to output the groups.
 " https://jordanelver.co.uk/blog/2015/05/27/working-with-vim-colorschemes/
-nmap <leader>sp :call <SID>SynStack()<CR>
 function! <SID>SynStack()
   if !exists("*synstack")
     return
   endif
   echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
 endfunc
+nmap <leader>sp :call <SID>SynStack()<CR>
 
 
 "pick random color scheme
@@ -162,6 +197,9 @@ map <Leader>rc :RandomColorScheme<CR>
 
 "run it on vim start
 autocmd VimEnter * RandomColorScheme
+
+"automatically clearn signcolumn
+autocmd VimEnter * hi clear SignColumn
 
 "make background of any theme black
 map <Leader>bb :hi Normal guibg=black guifg=white<CR>
@@ -360,7 +398,7 @@ Plug 'morhetz/gruvbox'
 "Monokai
 Plug 'sickill/vim-monokai'
 
-""jellybeans colorscheme
+"jellybeans colorscheme
 Plug 'nanotech/jellybeans.vim'
 
 ""vim-synthwave84 colorscheme
@@ -372,10 +410,10 @@ Plug 'ntk148v/vim-horizon'
 ""vim snazzy bright colors colorscheme
 Plug 'connorholyday/vim-snazzy'
 
-""src Dark colorscheme
+"src Dark colorscheme
 Plug 'srcery-colors/srcery-vim'
 
-""cobatl2 colorscheme
+"cobatl2 colorscheme
 Plug 'herrbischoff/cobalt2.vim'
 
 Plug 'aonemd/kuroi.vim'
@@ -388,10 +426,10 @@ Plug 'xolox/vim-misc'
 "By default this is set to 0 (false).
 let g:colorscheme_switcher_keep_background=1
 
-"" candycode
+" candycode
 Plug 'vim-scripts/candycode.vim'
 
-"" colorscheme meta5
+" colorscheme meta5
 Plug 'christophermca/meta5'
 
 "colorscheme lucius2
@@ -400,7 +438,7 @@ Plug 'maksimr/Lucius2'
 "busybee colorscheme
 Plug 'vim-scripts/BusyBee'
 
-""nightowl theme
+"nightowl theme
 Plug 'haishanh/night-owl.vim'
 
 "wimstefan/vim-artesanal colorscheme
@@ -453,7 +491,15 @@ Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 
 " JavaScript and React Syntax Highlighting
 Plug 'maxmellon/vim-jsx-pretty'
-let g:vim_jsx_pretty_colorful_config = 1 " default 0
+"let g:vim_jsx_pretty_colorful_config = 1 " default 0
+"
+Plug 'ap/vim-css-color' "Help colorize text color
+
+" JavaScript and React Syntax Highlighting
+Plug 'jelera/vim-javascript-syntax'
+Plug 'maxmellon/vim-jsx-pretty'
+"Move cursor on function keyword line, Type :JsDoc to insert JSDoc
+Plug 'heavenshell/vim-jsdoc'
 
 "Nerd Tree
 Plug 'scrooloose/nerdtree'
@@ -774,6 +820,7 @@ highlight htmlItalic cterm=italic gui=italic
 
 "make background of any theme black
 "highlight Normal guibg=black guifg=white
+"hi clear Normal
 
 " Overwrite colorschemes background when trying to enable transparency
 " this will allow you to go to transparent mode in in terminal
@@ -799,3 +846,4 @@ hi JavaScriptLineComment guifg=#7ea869 ctermfg=green cterm=italic gui=italic
 
 " gutter aka sign column
 "highlight SignColumn guibg=black ctermbg=black
+hi clear SignColumn
