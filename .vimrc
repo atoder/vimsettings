@@ -4,14 +4,14 @@ let mapleader = " "
 
 " Plugins will be downloaded under the specified directory.
 call plug#begin('~/.vim/plugged')
-Plug 'morhetz/gruvbox'
+
 Plug 'neoclide/coc.nvim', {'branch' : 'release'}
 "use :leopen to see list of errors
 "and :CocConfig to see config options
 "Prettier by default will run on auto save but can also be manually triggered by:
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 nmap <leader>p :Prettier<CR>
-"open errors 
+"open errors
 nmap <leader>e :lopen<CR>
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() }}
@@ -71,10 +71,6 @@ Plug 'Konfekt/FastFold'
 "a file buffer by :mkview and :loadview.
 Plug 'kopischke/vim-stay'
 
-" custom error handling signs
-" Use CocConfig Instead
-" let g:ale_sign_error = '❌'
-" let g:ale_sign_warning = '⚠️'
 
 "Automatic close for common block and scope identifiers such as brackets
 " parentheses, brace, squares
@@ -140,7 +136,10 @@ Plug 'nanotech/jellybeans.vim'
 ""vim-synthwave84 colorscheme
 Plug 'artanikin/vim-synthwave84'
 
-""vim horizon synthwave colorscheme
+"gruvbox
+Plug 'morhetz/gruvbox'
+
+"vim horizon synthwave colorscheme
 Plug 'ntk148v/vim-horizon'
 
 ""vim snazzy bright colors colorscheme
@@ -520,8 +519,7 @@ hi clear EndOfBuffer
 " clears Special keyword highlight
 " and sets it to custom light blue color
 hi clear Special
-"hi Special term=bold ctermfg=81 guifg=#66D9EF
 
-"highlight SignColumn guibg=black ctermbg=black
+"clear sign column and line background
 hi clear SignColumn
-
+hi clear LineNr
