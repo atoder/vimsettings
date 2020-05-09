@@ -1,7 +1,19 @@
+" map leader is a space in this case
+" can now hit space ss to save session for example
+let mapleader = " "
+
 " Plugins will be downloaded under the specified directory.
 call plug#begin('~/.vim/plugged')
 Plug 'morhetz/gruvbox'
 Plug 'neoclide/coc.nvim', {'branch' : 'release'}
+"use :leopen to see list of errors
+"and :CocConfig to see config options
+"Prettier by default will run on auto save but can also be manually triggered by:
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
+nmap <leader>p :Prettier<CR>
+"open errors 
+nmap <leader>e :lopen<CR>
+
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() }}
 Plug 'junegunn/fzf.vim'
 Plug 'christoomey/vim-tmux-navigator'
@@ -17,10 +29,7 @@ let g:airline#extensions#tabline#buffer_idx_mode              = 1
 "markup pandoc
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
-" Prettier by default will run on auto save but can also be manually triggered by:
-" <Leader>p
-"post install (yarn install | npm install) then load plugin only for editing supported files
-Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+
 
 " JavaScript and React Syntax Highlighting
 Plug 'maxmellon/vim-jsx-pretty'
@@ -62,11 +71,10 @@ Plug 'Konfekt/FastFold'
 "a file buffer by :mkview and :loadview.
 Plug 'kopischke/vim-stay'
 
-" custom syntastic handling
-"let g:syntastic_error_symbol='✗'
-"let g:syntastic_warning_symbol='⚠'
-"let g:syntastic_style_error_symbol='✗'
-"let g:syntastic_style_warning_symbol='⚠'
+" custom error handling signs
+" Use CocConfig Instead
+" let g:ale_sign_error = '❌'
+" let g:ale_sign_warning = '⚠️'
 
 "Automatic close for common block and scope identifiers such as brackets
 " parentheses, brace, squares
@@ -298,9 +306,6 @@ au BufNewFile,BufRead *.eco set filetype=html
 "Mapping
 colorscheme janah
 
-" map leader is a space in this case
-" can now hit space ss to save session for example
-let mapleader = " "
 " Switch to last active buffer
 noremap <leader>b :buffer #<CR>
 
@@ -519,5 +524,4 @@ hi clear Special
 
 "highlight SignColumn guibg=black ctermbg=black
 hi clear SignColumn
-
 
