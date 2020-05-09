@@ -1,9 +1,3 @@
-" For Mac OS X, use Karabiner app to remap ESC to Caps Lock
-" It's easier to use than hitting ESC key
-
-" cool commands to remember
-" :TOhtml - converts current file to html
-
 " enter the current millenium
 set nocompatible
 
@@ -476,11 +470,6 @@ Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'maxmellon/vim-jsx-pretty'
 let g:vim_jsx_pretty_colorful_config = 1 " default 0
 
-" JavaScript and React Syntax Highlighting
-"Plug 'maxmellon/vim-jsx-pretty'
-"Move cursor on function keyword line, Type :JsDoc to insert JSDoc
-Plug 'heavenshell/vim-jsdoc'
-
 "Nerd Tree
 Plug 'scrooloose/nerdtree'
 "shows git marks in nerd tree
@@ -506,8 +495,6 @@ let g:javascript_plugin_jsdoc = 1
 " https://andrewsinclair.github.io/vim/react/javascript/syntastic/eslint/2017/02/28/vim-setup-for-developing-react-js.html
 " javascript and jsx
 let g:syntastic_javascript_checkers = ['eslint']
-"This syntax file is for ECMAScript future syntax. Need to work with yajs.vim.
-"Plug 'othree/es.next.syntax.vim'
 
 let g:jsx_ext_required = 1 " Allow JSX in normal JS files
 
