@@ -13,6 +13,10 @@ command! -nargs=0 Prettier :CocCommand prettier.formatFile
 nmap <leader>p :Prettier<CR>
 "open errors
 nmap <leader>e :lopen<CR>
+nmap <leader>gd <Plug>(coc-definition)
+nmap <leader>gr <Plug>(coc-references)
+nnoremap <C-p> :GFiles<CR>
+
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() }}
 Plug 'junegunn/fzf.vim'
@@ -26,28 +30,27 @@ let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#enabled                      = 1
 let g:airline#extensions#tabline#buffer_idx_mode              = 1
+
 "markup pandoc
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 
-
-" JavaScript and React Syntax Highlighting
-Plug 'maxmellon/vim-jsx-pretty'
-let g:vim_jsx_pretty_colorful_config = 1 " default 0
+"https://github.com/jaxbot/semantic-highlight.vim"
+"Where every variable is a different color, an idea popularized by Evan Brooks
+"blog post.
+"https://medium.com/@evnbr/coding-in-color-3a6db2743a1e
+Plug 'jaxbot/semantic-highlight.vim'
+nnoremap <Leader>s :SemanticHighlightToggle<cr>
 
 "Nerd Tree
 Plug 'scrooloose/nerdtree'
 "shows git marks in nerd tree
 Plug 'Xuyuanp/nerdtree-git-plugin'
 nnoremap <C-n> :NERDTreeToggle<CR>
-"https://github.com/jaxbot/semantic-highlight.vim"
-"Where every variable is a different color, an idea popularized by Evan Brooks
-"blog post.
-"https://medium.com/@evnbr/coding-in-color-3a6db2743a1e
-"Plug 'jaxbot/semantic-highlight.vim'
-"nnoremap <Leader>s :SemanticHighlightToggle<cr>
+
 ""A fancy start screen for Vim.
 Plug 'mhinz/vim-startify'
+
 
 "" git in vim
 "" :GStatus
@@ -124,14 +127,13 @@ Plug 'xolox/vim-misc'
 "By default this is set to 0 (false).
 let g:colorscheme_switcher_keep_background=1
 
-
-
 "Colorschemes
+
+"vim-auora
+Plug 'rafalbromirski/vim-aurora'
+
 "Monokai
 Plug 'sickill/vim-monokai'
-
-"jellybeans colorscheme
-Plug 'nanotech/jellybeans.vim'
 
 ""vim-synthwave84 colorscheme
 Plug 'artanikin/vim-synthwave84'
@@ -177,11 +179,6 @@ Plug 'gruvbox-material/vim', {'as': 'gruvbox-material'}
 "Purify colorscheme
 Plug 'kyoz/purify', { 'rtp': 'vim' }
 
-"material themej
-Plug 'kaicataldo/material.vim'
-
-
-let g:material_terminal_italics = 1
 "moonfly
 Plug 'bluz71/vim-moonfly-colors'
 
@@ -199,9 +196,6 @@ Plug 'joshdick/onedark.vim'
 
 "janah colorscheme
 Plug 'mhinz/vim-janah'
-
-"vim deus
-Plug 'ajmwagar/vim-deus'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
@@ -309,12 +303,6 @@ colorscheme janah
 noremap <leader>b :buffer #<CR>
 
 
-nmap <leader>gd <Plug>(coc-definition)
-nmap <leader>gr <Plug>(coc-references)
-nnoremap <C-p> :GFiles<CR>
-
-
-
 " Easier buffer switching
 nmap <leader>1 <Plug>AirlineSelectTab1
 nmap <leader>2 <Plug>AirlineSelectTab2
@@ -367,8 +355,12 @@ function TurnOnCustomSettings()
 
     "search
   :hi Search term=reverse cterm=underline ctermfg=201 ctermbg=11 gui=underline guifg=#ff00ff guibg=#302028
+
+  "functions
   :hi Function cterm=bold,italic gui=bold,italic
   :hi JavaScriptFunction cterm=bold,italic gui=bold,italic
+  ":hi jsBlock cterm=bold,italic gui=bold,italic
+  :hi jsIdentifier cterm=bold,italic gui=bold,italic
 
   "make background transparent
   "":hi Normal guibg=NONE ctermbg=NONE
@@ -479,7 +471,7 @@ autocmd VimEnter * hi clear NonText
 autocmd VimEnter * hi clear EndOfBuffer
 autocmd VimEnter * hi clear Special
 autocmd VimEnter * hi clear LineNr
-
+"
 "make background of any theme black
 map <Leader>mb :hi Normal guibg=black guifg=white<CR>
 "make background clear
@@ -496,6 +488,17 @@ endif
 "++++++++++++++++++++++++++++
 "  custom highlights below
 "++++++++++++++++++++++++++++
+" Enable italics for themes
+let g:onedark_terminal_italics=1
+let g:gruvbox_italic=1
+let g:two_firewatch_italics=1
+let g:dracula_italic=1
+let g:dracula_bold=1
+let g:enable_bold_font = 1
+let g:one_allow_italics = 1 " I love italic for comments
+let g:enable_italic_font = 1
+let g:oceanic_next_terminal_bold = 1
+let g:oceanic_next_terminal_italic = 1
 " Overwrite colors and font style
 "green comments
 hi Comment guifg=#7ea869 ctermfg=green cterm=italic gui=italic
