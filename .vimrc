@@ -31,9 +31,21 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#enabled                      = 1
 let g:airline#extensions#tabline#buffer_idx_mode              = 1
 
-"markup pandoc
-Plug 'vim-pandoc/vim-pandoc'
-Plug 'vim-pandoc/vim-pandoc-syntax'
+"run npm install below
+"npm install -g livedown
+Plug 'shime/vim-livedown'
+" launch the Livedown server and preview your markdown file
+"":LivedownPreview
+" stop the Livedown server
+"":LivedownKill
+" launch/kill the Livedown server
+"":LivedownToggle
+" should markdown preview get shown automatically upon opening markdown buffer
+let g:livedown_autorun = 0
+" should the browser window pop-up upon previewing
+let g:livedown_open = 1
+nmap <leader>ld :LivedownToggle<CR>
+
 
 "https://github.com/jaxbot/semantic-highlight.vim"
 "Where every variable is a different color, an idea popularized by Evan Brooks
@@ -73,7 +85,6 @@ Plug 'Konfekt/FastFold'
 "FastFold integrates with the plug-in vim-stay that restores the folds of
 "a file buffer by :mkview and :loadview.
 Plug 'kopischke/vim-stay'
-
 
 "Automatic close for common block and scope identifiers such as brackets
 " parentheses, brace, squares
@@ -127,79 +138,68 @@ Plug 'xolox/vim-misc'
 "By default this is set to 0 (false).
 let g:colorscheme_switcher_keep_background=1
 
-"Colorschemes
 
+Plug 'MaxMEllon/vim-jsx-pretty'
+let g:jsx_ext_required = 1 " Allow JSX in normal JS files
+let g:vim_jsx_pretty_colorful_config = 1 " default 0
+
+" silver surfer search text ack bundle
+Plug 'ggreer/the_silver_searcher'
+Plug 'rking/ag.vim'
+
+" bind shift KK to grep word under cursor
+" Use Ag instead of grep (more advanced)
+nnoremap KK :Ag! "\b<C-R><C-W>\b"<CR>:cw<CR>
+
+"Colorschemes
 "vim-auora
 Plug 'rafalbromirski/vim-aurora'
-
 "Monokai
 Plug 'sickill/vim-monokai'
-
 ""vim-synthwave84 colorscheme
 Plug 'artanikin/vim-synthwave84'
-
 "gruvbox
 Plug 'morhetz/gruvbox'
-
 "vim horizon synthwave colorscheme
 Plug 'ntk148v/vim-horizon'
-
 ""vim snazzy bright colors colorscheme
 Plug 'connorholyday/vim-snazzy'
-
 "src Dark colorscheme
 Plug 'srcery-colors/srcery-vim'
-
 "cobatl2 colorscheme
-"Plug 'herrbischoff/cobalt2.vim'
-
-Plug 'aonemd/kuroi.vim'
-
-"" candycode
+Plug 'herrbischoff/cobalt2.vim'
+" candycode
 Plug 'vim-scripts/candycode.vim'
-
 " colorscheme meta5
 Plug 'christophermca/meta5'
-
 "colorscheme lucius2
 Plug 'maksimr/Lucius2'
-
 "busybee colorscheme
 Plug 'vim-scripts/BusyBee'
-
 "nightowl theme
 Plug 'haishanh/night-owl.vim'
-
 "wimstefan/vim-artesanal colorscheme
 Plug 'wimstefan/vim-artesanal'
-
-"gruvbox material
 Plug 'gruvbox-material/vim', {'as': 'gruvbox-material'}
-
 "Purify colorscheme
 Plug 'kyoz/purify', { 'rtp': 'vim' }
-
 "moonfly
 Plug 'bluz71/vim-moonfly-colors'
-
 "badwolf
 Plug 'leafgarland/badwolf'
-
 "seti colorscheme"
 Plug 'trusktr/seti.vim'
-
 "oceanic-next
 Plug 'mhartington/oceanic-next'
-
 "one dark pro
 Plug 'joshdick/onedark.vim'
-
 "janah colorscheme
 Plug 'mhinz/vim-janah'
+"colorscheme
+Plug 'yassinebridi/vim-purpura'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
-
 
 " enter the current millenium
 set nocompatible
@@ -237,6 +237,9 @@ set expandtab
 "set listchars=eol:¬,tab:▷\ ,
 set listchars=tab:▷\ ,
 set list
+
+"lets you switch buffers without saving current modified file
+set hidden
 
 "show status at the bottom of vim file
 set laststatus=2
@@ -443,7 +446,7 @@ set foldlevel=2         "this is just what i use
 " just like :set foldenable!.
 " Mnemonic: "fold invert". See :h zi.
 
-"let g:jsx_ext_required = 1 " Allow JSX in normal JS files
+
 
 
 "put away .swp files into home dir instead of cluttering up in your projects
