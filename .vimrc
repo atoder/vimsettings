@@ -31,6 +31,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#enabled                      = 1
 let g:airline#extensions#tabline#buffer_idx_mode              = 1
 
+Plug 'plasticboy/vim-markdown'
 "run npm install below
 "npm install -g livedown
 Plug 'shime/vim-livedown'
@@ -129,7 +130,6 @@ Plug 'tpope/vim-commentary'
 "then you can add a new mapping with this line: map <leader>f :Ranger<CR>.
 Plug 'francoiscabrol/ranger.vim'
 
-
 "random colorscheme picker - picks automatically
 Plug 'xolox/vim-colorscheme-switcher'
 Plug 'xolox/vim-misc'
@@ -144,59 +144,81 @@ let g:jsx_ext_required = 1 " Allow JSX in normal JS files
 let g:vim_jsx_pretty_colorful_config = 1 " default 0
 
 " silver surfer search text ack bundle
-Plug 'ggreer/the_silver_searcher'
-Plug 'rking/ag.vim'
+"Plug 'ggreer/the_silver_searcher'
+"Plug 'rking/ag.vim'
 
 " bind shift KK to grep word under cursor
 " Use Ag instead of grep (more advanced)
-nnoremap KK :Ag! "\b<C-R><C-W>\b"<CR>:cw<CR>
+" TODO: FIX THIS WITH fzf
+"nnoremap KK :Ag! "\b<C-R><C-W>\b"<CR>:cw<CR>
 
 "Colorschemes
 "vim-auora
 Plug 'rafalbromirski/vim-aurora'
-"Monokai
-Plug 'sickill/vim-monokai'
-""vim-synthwave84 colorscheme
+
+"vim-synthwave84 colorscheme
 Plug 'artanikin/vim-synthwave84'
+
 "gruvbox
 Plug 'morhetz/gruvbox'
+
 "vim horizon synthwave colorscheme
 Plug 'ntk148v/vim-horizon'
-""vim snazzy bright colors colorscheme
+
+"vim snazzy bright colors colorscheme
 Plug 'connorholyday/vim-snazzy'
+
 "src Dark colorscheme
 Plug 'srcery-colors/srcery-vim'
+
 "cobatl2 colorscheme
 Plug 'herrbischoff/cobalt2.vim'
+
 " candycode
 Plug 'vim-scripts/candycode.vim'
+
 " colorscheme meta5
 Plug 'christophermca/meta5'
+
 "colorscheme lucius2
 Plug 'maksimr/Lucius2'
+
 "busybee colorscheme
 Plug 'vim-scripts/BusyBee'
+
 "nightowl theme
 Plug 'haishanh/night-owl.vim'
+
 "wimstefan/vim-artesanal colorscheme
 Plug 'wimstefan/vim-artesanal'
+
+"gruvbox material
 Plug 'gruvbox-material/vim', {'as': 'gruvbox-material'}
+
 "Purify colorscheme
 Plug 'kyoz/purify', { 'rtp': 'vim' }
+
 "moonfly
 Plug 'bluz71/vim-moonfly-colors'
+
 "badwolf
 Plug 'leafgarland/badwolf'
+
 "seti colorscheme"
 Plug 'trusktr/seti.vim'
+
 "oceanic-next
 Plug 'mhartington/oceanic-next'
+
 "one dark pro
 Plug 'joshdick/onedark.vim'
-"janah colorscheme
-Plug 'mhinz/vim-janah'
-"colorscheme
-Plug 'yassinebridi/vim-purpura'
+
+"molokayo
+Plug 'tomasr/molokai'
+Plug 'fmoralesc/molokayo'
+let g:molokayo#high_contrast#comments = 1
+"Monokai
+Plug 'sickill/vim-monokai'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
@@ -207,6 +229,10 @@ set nocompatible
 " enable syntax and plugins (for netrw)
 syntax enable
 filetype plugin on
+
+set formatoptions-=r " don't auto insert comment leader on enter in insert
+set formatoptions-=o " don't auto insert comment leader on o/O in normal mode
+set formatoptions-=c " don't auto-wrap comments using textwidth, inserting the current comment leader automatically
 
 " show numbers
 set number
@@ -299,8 +325,7 @@ au BufNewFile,BufRead *.handlebars set filetype=html
 au BufNewFile,BufRead *.eco set filetype=html
 
 
-"Mapping
-colorscheme janah
+colorscheme meta5
 
 " Switch to last active buffer
 noremap <leader>b :buffer #<CR>
@@ -360,11 +385,13 @@ function TurnOnCustomSettings()
   :hi Search term=reverse cterm=underline ctermfg=201 ctermbg=11 gui=underline guifg=#ff00ff guibg=#302028
 
   "functions
-  :hi Function cterm=bold,italic gui=bold,italic
-  :hi JavaScriptFunction cterm=bold,italic gui=bold,italic
+  :hi Function cterm=bold,italic gui=bold,italic ctermfg=75 guifg=#5FAFFF
+  :hi JavaScriptFunction cterm=bold,italic gui=bold,italic ctermfg=75 guifg=#5FAFFF
   ":hi jsBlock cterm=bold,italic gui=bold,italic
-  :hi jsIdentifier cterm=bold,italic gui=bold,italic
+  :hi jsIdentifier cterm=bold,italic gui=bold,italic ctermfg=75 guifg=#5FAFFF
 
+  "javaScript classes etc
+  :hi JavaScriptReserved term=underline cterm=italic ctermfg=84 gui=italic guifg=#5FFF87
   "make background transparent
   "":hi Normal guibg=NONE ctermbg=NONE
   :hi clear Normal
@@ -383,10 +410,14 @@ function TurnOnCustomSettings()
 
   " make javascript braces bold
   :hi javaScriptBraces cterm=bold gui=bold guifg=#f2f3f4
+  :set formatoptions-=r "don't auto insert comment leader on enter in insert
+  :set formatoptions-=o "don't auto insert comment leader on o/O in normal mode
+  :set formatoptions-=c "don't auto-wrap comments using textwidth
+
 endfunction
 map <leader>ts :exec TurnOnCustomSettings()<cr>
 
-function ClearGutter()
+function ClearSignColumn()
   "clear line
   :hi clear SignColumn
   :hi clear LineNr
@@ -394,19 +425,29 @@ function ClearGutter()
   ":hi clear CursorLine
 
 endfunction
-map <leader>cg :exec ClearGutter()<cr>
+map <leader>cs :exec ClearSignColumn()<cr>
 
 "turns on my own highlight colors for comments only
-function GreenComments()
+function CommentsGreen()
   " comments
-  :hi JavaScriptLineComment guifg=#7ea869
-  :hi JavaScriptComment guifg=#7ea869
-  :hi Comment guifg=#7ea869
-  :hi cComment guifg=#7ea869
-  :hi cCommentL guifg=#7ea869
+  :hi JavaScriptLineComment guifg=#7ea869 cterm=italic gui=italic
+  :hi JavaScriptComment guifg=#7ea869 cterm=italic gui=italic
+  :hi Comment guifg=#7ea869 cterm=italic gui=italic
+  :hi cComment guifg=#7ea869 cterm=italic gui=italic
+  :hi cCommentL guifg=#7ea869 cterm=italic gui=italic
 endfunction
-map <Leader>gc :exec GreenComments()<CR>
+map <Leader>cg :exec CommentsGreen()<CR>
 
+"turns on my own highlight colors for comments only
+function CommentsBlue()
+  " comments
+  :hi JavaScriptLineComment guifg=#80a0ff cterm=italic gui=italic
+  :hi JavaScriptComment guifg=#80a0ff cterm=italic gui=italic
+  :hi Comment guifg=#80a0ff cterm=italic gui=italic
+  :hi cComment guifg=#80a0ff cterm=italic gui=italic
+  :hi cCommentL guifg=#80a0ff cterm=italic gui=italic
+endfunction
+map <Leader>cb :exec CommentsBlue()<CR>
 " This function will show what groups are being applied.
 " Add to your ~/.vimrc, place your cursor over the item in question, and press <leader>sp to output the groups.
 " https://jordanelver.co.uk/blog/2015/05/27/working-with-vim-colorschemes/
@@ -529,3 +570,5 @@ hi clear Special
 "clear sign column and line background
 hi clear SignColumn
 hi clear LineNr
+
+
