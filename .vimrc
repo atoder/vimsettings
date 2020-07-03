@@ -180,6 +180,13 @@ Plug 'vim-scripts/candycode.vim'
 " colorscheme meta5
 Plug 'christophermca/meta5'
 
+
+
+
+" colorscheme ayu mirage
+Plug 'ayu-theme/ayu-vim' " or other package manager
+let ayucolor="mirage" " for mirage version of theme
+
 "colorscheme lucius2
 Plug 'maksimr/Lucius2'
 
@@ -219,6 +226,16 @@ Plug 'fmoralesc/molokayo'
 let g:molokayo#high_contrast#comments = 1
 "Monokai
 Plug 'sickill/vim-monokai'
+
+" Nueromancer colorscheme
+Plug 'zabanaa/neuromancer.vim'
+
+" neon colorscheme - cyberpunk type of theme with neon lights
+Plug 'yuratomo/neon.vim'
+
+"RainGlow - Bunch of good themes
+Plug 'rainglow/vim'
+
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
