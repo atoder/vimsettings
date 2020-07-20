@@ -336,7 +336,8 @@ au BufNewFile,BufRead *.handlebars set filetype=html
 au BufNewFile,BufRead *.eco set filetype=html
 
 
-colorscheme hyrule-contrast
+colorscheme newton-contrast
+"colorscheme hyrule-contrast
 "colorscheme freshcut-contrast
 "colorscheme hub-contrast
 "colorscheme overflow-contrast

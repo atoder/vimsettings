@@ -1,21 +1,6 @@
 # My VIM settings
 
 
-## Favorite Fonts
-1. Comic Mono
-2. Operator Mono Lig
-3. MonoLisa
-4. Gintronic
-5. Recursive Mono
-6. NovaMoto
-7. Cascadia Code
-8. Hermit
-9. Fantasque
-10. Inconsolata
-11. JetBrains Mono
-12. SpaceMono
-
-
 Upload the ```.vimrc, .tmux.conf, .zshrc``` to an online code repository in a directory called vimsettings. 
 On Mac OSX/Linux create symbolic links:
 
@@ -209,3 +194,17 @@ and also to allow JSX in javascript files
 Put this file into your project directory and add it to .gitignore 
 or you can also put this file into parent directory
 
+
+## Favorite Fonts
+1. Comic Mono
+2. Operator Mono Lig
+3. MonoLisa
+4. Gintronic
+5. Recursive Mono
+6. NovaMoto
+7. Cascadia Code
+8. Hermit
+9. Fantasque
+10. Inconsolata
+11. JetBrains Mono
+12. SpaceMono
