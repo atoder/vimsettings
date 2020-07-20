@@ -180,9 +180,6 @@ Plug 'vim-scripts/candycode.vim'
 " colorscheme meta5
 Plug 'christophermca/meta5'
 
-
-
-
 " colorscheme ayu mirage
 Plug 'ayu-theme/ayu-vim' " or other package manager
 let ayucolor="mirage" " for mirage version of theme
@@ -226,9 +223,6 @@ Plug 'fmoralesc/molokayo'
 let g:molokayo#high_contrast#comments = 1
 "Monokai
 Plug 'sickill/vim-monokai'
-
-" Nueromancer colorscheme
-Plug 'zabanaa/neuromancer.vim'
 
 " neon colorscheme - cyberpunk type of theme with neon lights
 Plug 'yuratomo/neon.vim'
@@ -342,7 +336,13 @@ au BufNewFile,BufRead *.handlebars set filetype=html
 au BufNewFile,BufRead *.eco set filetype=html
 
 
-colorscheme meta5
+colorscheme hyrule-contrast
+"colorscheme freshcut-contrast
+"colorscheme hub-contrast
+"colorscheme overflow-contrast
+"colorscheme juicy-contrast
+"colorscheme meta5
+"colorscheme neon2
 
 " Switch to last active buffer
 noremap <leader>b :buffer #<CR>
@@ -527,12 +527,13 @@ autocmd VimEnter * RandomColorScheme
 
 "automatically clearn signcolumn
 autocmd VimEnter * hi clear SignColumn
+
 "overwites the non text background
 autocmd VimEnter * hi clear NonText
 autocmd VimEnter * hi clear EndOfBuffer
 autocmd VimEnter * hi clear Special
 autocmd VimEnter * hi clear LineNr
-"
+
 "make background of any theme black
 map <Leader>mb :hi Normal guibg=black guifg=white<CR>
 "make background clear
@@ -543,8 +544,6 @@ if exists('$TMUX')
   let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
   set termguicolors
 endif
-
-
 
 "++++++++++++++++++++++++++++
 "  custom highlights below
@@ -587,5 +586,3 @@ hi clear Special
 "clear sign column and line background
 hi clear SignColumn
 hi clear LineNr
-
-
