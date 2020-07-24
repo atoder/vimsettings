@@ -159,9 +159,6 @@ Plug 'rafalbromirski/vim-aurora'
 "vim-synthwave84 colorscheme
 Plug 'artanikin/vim-synthwave84'
 
-"gruvbox
-Plug 'morhetz/gruvbox'
-
 "vim horizon synthwave colorscheme
 Plug 'ntk148v/vim-horizon'
 
@@ -195,9 +192,6 @@ Plug 'haishanh/night-owl.vim'
 
 "wimstefan/vim-artesanal colorscheme
 Plug 'wimstefan/vim-artesanal'
-
-"gruvbox material
-Plug 'gruvbox-material/vim', {'as': 'gruvbox-material'}
 
 "Purify colorscheme
 Plug 'kyoz/purify', { 'rtp': 'vim' }
@@ -336,13 +330,15 @@ au BufNewFile,BufRead *.handlebars set filetype=html
 au BufNewFile,BufRead *.eco set filetype=html
 
 
-colorscheme newton-contrast
+colorscheme meta5
+"colorscheme horizon-contrast
+"colorscheme vision-colorblind
+"colorscheme newton-contrast
 "colorscheme hyrule-contrast
 "colorscheme freshcut-contrast
 "colorscheme hub-contrast
 "colorscheme overflow-contrast
 "colorscheme juicy-contrast
-"colorscheme meta5
 "colorscheme neon2
 
 " Switch to last active buffer
