@@ -10,19 +10,39 @@ $ ln -s  ~/Documents/vimsettings/.tmux.conf $HOME/.tmux.conf
 
 $ ln -s  ~/Documents/vimsettings/.zshrc $HOME/.zshrc
 
-$ ln -s  ~/Documents/vimsettings/.ycm_extra_conf.py $HOME/.ycm_extra_conf.py
-
 ##
-For zsh-completions in zshell
+For zsh shell stuff
+
+```
+brew install zsh
+```
+
+```
+https://ohmyz.sh/
+```
 
 ```
 git clone https://github.com/zsh-users/zsh-completions ~/.oh-my-zsh/custom/plugins/zsh-completions
 ```
 
-Also install macvim and
+```
+chmod 755 /usr/local/share/zsh
+chmod 755 /usr/local/share/zsh/site-functions
+```
+
+Install macvim and
 ```
 alias vim='mvim -v'
 ```
+
+Trash Tool
+```
+brew install trash
+```
+
+``
+
+
 
 Do brew install
 
@@ -30,6 +50,10 @@ Do brew install
 brew install reattach-to-user-namespace
 ```
 
+Install fonts for vim-devicons from 
+```
+https://github.com/ryanoasis/nerd-fonts
+```
 
 ## External link 
 https://stackoverflow.com/questions/1031396/how-to-share-one-vimrc-file-among-multiple-clients
@@ -94,7 +118,7 @@ module.exports = {
 
 
 ## Favorite Fonts
-1. Recursive Mono
+1. Recursive Mono / Rec Mono Casual
 2. Comic Mono
 3. Operator Mono Lig
 4. MonoLisa
