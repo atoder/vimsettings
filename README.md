@@ -1,7 +1,7 @@
 # My VIM settings
 
 
-Upload the ```.vimrc, .tmux.conf, .zshrc``` to an online code repository in a directory called vimsettings. 
+Upload the ```.vimrc, .tmux.conf, .zshrc``` to an online code repository in a directory called vimsettings.
 On Mac OSX/Linux create symbolic links:
 
 $ ln -s  ~/Documents/vimsettings/.vimrc $HOME/.vimrc
@@ -40,8 +40,15 @@ Trash Tool
 brew install trash
 ```
 
-``
+```
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+```
 
+
+To install Tmux Plugins in settings use
+```
+prefix + I (ctrl B + capital i)
+```
 
 
 Do brew install
@@ -50,12 +57,12 @@ Do brew install
 brew install reattach-to-user-namespace
 ```
 
-Install fonts for vim-devicons from 
+Install fonts for vim-devicons from
 ```
 https://github.com/ryanoasis/nerd-fonts
 ```
 
-## External link 
+## External link
 https://stackoverflow.com/questions/1031396/how-to-share-one-vimrc-file-among-multiple-clients
 
 ## Basic Ranger shortcuts
@@ -117,7 +124,7 @@ module.exports = {
 
 
 
-## Favorite Fonts
+## Favorite Fonts Main Fonts (use ligatures in iterm2)
 1. Recursive Mono / Rec Mono Casual
 2. Comic Mono
 3. Operator Mono Lig
@@ -131,6 +138,10 @@ module.exports = {
 11. JetBrains Mono
 12. SpaceMono
 
+For fonts icons to display in tmux, use a secondary Non-ASCII font such as
+1. Hack Nerd Front Mono
+
 
 ## Window Manager
 [Rectangle](https://github.com/rxhanson/Rectangle)
+
