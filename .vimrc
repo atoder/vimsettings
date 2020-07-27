@@ -330,16 +330,15 @@ au BufNewFile,BufRead *.handlebars set filetype=html
 au BufNewFile,BufRead *.eco set filetype=html
 
 
-colorscheme meta5
-"colorscheme horizon-contrast
+colorscheme  solarflare-contrast
+"colorscheme meta5
+"colorscheme mud-contrast
 "colorscheme vision-colorblind
-"colorscheme newton-contrast
-"colorscheme hyrule-contrast
 "colorscheme freshcut-contrast
 "colorscheme hub-contrast
-"colorscheme overflow-contrast
 "colorscheme juicy-contrast
 "colorscheme neon2
+"colorscheme neon
 
 " Switch to last active buffer
 noremap <leader>b :buffer #<CR>

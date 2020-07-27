@@ -106,3 +106,7 @@ module.exports = {
 10. Inconsolata
 11. JetBrains Mono
 12. SpaceMono
+
+
+## Window Manager
+[Rectangle](https://github.com/rxhanson/Rectangle)
