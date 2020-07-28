@@ -50,6 +50,11 @@ To install Tmux Plugins in settings use
 prefix + I (ctrl B + capital i)
 ```
 
+Set up tmux italics
+```
+https://alexpearce.me/2014/05/italics-in-iterm2-vim-tmux/
+```
+
 
 Do brew install
 
