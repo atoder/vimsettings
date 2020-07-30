@@ -10,6 +10,12 @@ $ ln -s  ~/Documents/vimsettings/.tmux.conf $HOME/.tmux.conf
 
 $ ln -s  ~/Documents/vimsettings/.zshrc $HOME/.zshrc
 
+For VIM tmp file settings make sure to create tmp file
+
+```
+mkdir ~/tmp
+```
+
 ##
 For zsh shell stuff
 
@@ -22,7 +28,16 @@ https://ohmyz.sh/
 ```
 
 ```
-git clone https://github.com/zsh-users/zsh-completions ~/.oh-my-zsh/custom/plugins/zsh-completions
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+```
+
+
+```
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+```
+
+```
+git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
 ```
 
 ```
@@ -53,6 +68,12 @@ prefix + I (ctrl B + capital i)
 Set up tmux italics
 ```
 https://alexpearce.me/2014/05/italics-in-iterm2-vim-tmux/
+```
+
+There is a xterm-256-color-italic.terminfo
+run
+```
+tic xterm-256-color-italic.terminfo
 ```
 
 

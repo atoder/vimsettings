@@ -330,8 +330,10 @@ au BufNewFile,BufRead *.handlebars set filetype=html
 au BufNewFile,BufRead *.eco set filetype=html
 
 
-colorscheme  solarflare-contrast
-"colorscheme meta5
+colorscheme meta5
+"colorscheme patriot-contrast
+"colorscheme solarflare-contrast
+"colorscheme peacocks-in-space-contrast
 "colorscheme mud-contrast
 "colorscheme vision-colorblind
 "colorscheme freshcut-contrast
