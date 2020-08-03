@@ -6,6 +6,9 @@ export ZSH=$HOME/.oh-my-zsh
 export SDKROOT="/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk"
 setopt CORRECT
 
+# uses a different term when shing since remote machine won't have term-256color-italic
+alias ssh='TERM=xterm-256color ssh'
+
 
 # make sure that if a program wants you to edit
 # # text, that Vim is going to be there for you
@@ -37,7 +40,7 @@ ZSH_THEME="awesomepanda"
 plugins=(git zsh-completions zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
-source $ZSH/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+#source $ZSH/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 alias rm="echo Use 'trash' app to move files into trash. If you really need rm, use the full path i.e. '/bin/rm'"
 
@@ -126,10 +129,3 @@ export PATH="$PATH:$HOME/.rvm/bin"
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 export TERM=xterm-256color-italic
-
-PATH="/Users/atoder/perl5/bin${PATH:+:${PATH}}"; export PATH;
-PERL5LIB="/Users/atoder/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
-PERL_LOCAL_LIB_ROOT="/Users/atoder/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
-PERL_MB_OPT="--install_base \"/Users/atoder/perl5\""; export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=/Users/atoder/perl5"; export PERL_MM_OPT;
-eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib=$HOME/perl5)"
