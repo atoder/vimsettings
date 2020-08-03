@@ -1,7 +1,7 @@
 # My VIM settings
 
 
-Upload the ```.vimrc, .tmux.conf, .zshrc``` to an online code repository in a directory called vimsettings. 
+Upload the ```.vimrc, .tmux.conf, .zshrc``` to an online code repository in a directory called vimsettings.
 On Mac OSX/Linux create symbolic links:
 
 $ ln -s  ~/Documents/vimsettings/.vimrc $HOME/.vimrc
@@ -10,19 +10,72 @@ $ ln -s  ~/Documents/vimsettings/.tmux.conf $HOME/.tmux.conf
 
 $ ln -s  ~/Documents/vimsettings/.zshrc $HOME/.zshrc
 
-$ ln -s  ~/Documents/vimsettings/.ycm_extra_conf.py $HOME/.ycm_extra_conf.py
+For VIM tmp file settings make sure to create tmp file
+
+```
+mkdir ~/tmp
+```
 
 ##
-For zsh-completions in zshell
+For zsh shell stuff
 
 ```
-git clone https://github.com/zsh-users/zsh-completions ~/.oh-my-zsh/custom/plugins/zsh-completions
+brew install zsh
 ```
 
-Also install macvim and
+```
+https://ohmyz.sh/
+```
+
+```
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+```
+
+
+```
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+```
+
+```
+git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
+```
+
+```
+chmod 755 /usr/local/share/zsh
+chmod 755 /usr/local/share/zsh/site-functions
+```
+
+Install macvim and
 ```
 alias vim='mvim -v'
 ```
+
+Trash Tool
+```
+brew install trash
+```
+
+```
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+```
+
+
+To install Tmux Plugins in settings use
+```
+prefix + I (ctrl B + capital i)
+```
+
+Set up tmux italics
+```
+https://alexpearce.me/2014/05/italics-in-iterm2-vim-tmux/
+```
+
+There is a xterm-256-color-italic.terminfo
+run
+```
+tic xterm-256-color-italic.terminfo
+```
+
 
 Do brew install
 
@@ -30,8 +83,12 @@ Do brew install
 brew install reattach-to-user-namespace
 ```
 
+Install fonts for vim-devicons from
+```
+https://github.com/ryanoasis/nerd-fonts
+```
 
-## External link 
+## External link
 https://stackoverflow.com/questions/1031396/how-to-share-one-vimrc-file-among-multiple-clients
 
 ## Basic Ranger shortcuts
@@ -93,8 +150,8 @@ module.exports = {
 
 
 
-## Favorite Fonts
-1. Recursive Mono
+## Favorite Fonts Main Fonts (use ligatures in iterm2)
+1. Recursive Mono / Rec Mono Casual
 2. Comic Mono
 3. Operator Mono Lig
 4. MonoLisa
@@ -107,6 +164,10 @@ module.exports = {
 11. JetBrains Mono
 12. SpaceMono
 
+For fonts icons to display in tmux, use a secondary Non-ASCII font such as
+1. Hack Nerd Front Mono
+
 
 ## Window Manager
 [Rectangle](https://github.com/rxhanson/Rectangle)
+

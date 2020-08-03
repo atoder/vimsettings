@@ -40,7 +40,6 @@ ZSH_THEME="awesomepanda"
 plugins=(git zsh-completions zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
-#source $ZSH/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 alias rm="echo Use 'trash' app to move files into trash. If you really need rm, use the full path i.e. '/bin/rm'"
 
