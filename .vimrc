@@ -13,9 +13,11 @@ command! -nargs=0 Prettier :CocCommand prettier.formatFile
 nmap <leader>p :Prettier<CR>
 "open errors
 nmap <leader>e :lopen<CR>
+"go to definition
 nmap <leader>gd <Plug>(coc-definition)
+"list all references
 nmap <leader>gr <Plug>(coc-references)
-nnoremap <C-p> :GFiles<CR>
+nnoremap <C-p> :Files<CR>
 
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() }}
