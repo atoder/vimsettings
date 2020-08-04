@@ -6,6 +6,9 @@ export ZSH=$HOME/.oh-my-zsh
 export SDKROOT="/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk"
 setopt CORRECT
 
+# uses a different term when shing since remote machine won't have term-256color-italic
+alias ssh='TERM=xterm-256color ssh'
+
 
 # make sure that if a program wants you to edit
 # # text, that Vim is going to be there for you

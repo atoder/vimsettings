@@ -13,9 +13,11 @@ command! -nargs=0 Prettier :CocCommand prettier.formatFile
 nmap <leader>p :Prettier<CR>
 "open errors
 nmap <leader>e :lopen<CR>
+"go to definition
 nmap <leader>gd <Plug>(coc-definition)
+"list all references
 nmap <leader>gr <Plug>(coc-references)
-nnoremap <C-p> :GFiles<CR>
+nnoremap <C-p> :Files<CR>
 
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() }}
@@ -151,6 +153,7 @@ let g:vim_jsx_pretty_colorful_config = 1 " default 0
 " Use Ag instead of grep (more advanced)
 " TODO: FIX THIS WITH fzf
 "nnoremap KK :Ag! "\b<C-R><C-W>\b"<CR>:cw<CR>
+nnoremap KK :Ag <C-R><C-W><CR>
 
 "Colorschemes
 "vim-auora
