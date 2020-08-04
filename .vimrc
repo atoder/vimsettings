@@ -221,9 +221,9 @@ Plug 'sickill/vim-monokai'
 " neon colorscheme - cyberpunk type of theme with neon lights
 Plug 'yuratomo/neon.vim'
 
-"RainGlow - Bunch of good themes
+" RainGlow Package
+" 320+ color themes
 Plug 'rainglow/vim'
-
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
@@ -330,7 +330,9 @@ au BufNewFile,BufRead *.handlebars set filetype=html
 au BufNewFile,BufRead *.eco set filetype=html
 
 
-colorscheme meta5
+colorscheme purify
+"colorscheme snazzy
+"colorscheme meta5
 "colorscheme patriot-contrast
 "colorscheme solarflare-contrast
 "colorscheme peacocks-in-space-contrast
