@@ -334,8 +334,12 @@ au BufNewFile,BufRead *.eco set filetype=html
 
 
 colorscheme purify
+"colorscheme stark-contrast
 "colorscheme snazzy
 "colorscheme meta5
+"colorscheme neon2
+"colorscheme neon
+"colorscheme frontier-contrast
 "colorscheme patriot-contrast
 "colorscheme solarflare-contrast
 "colorscheme peacocks-in-space-contrast
@@ -344,8 +348,6 @@ colorscheme purify
 "colorscheme freshcut-contrast
 "colorscheme hub-contrast
 "colorscheme juicy-contrast
-"colorscheme neon2
-"colorscheme neon
 
 " Switch to last active buffer
 noremap <leader>b :buffer #<CR>

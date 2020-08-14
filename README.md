@@ -76,6 +76,20 @@ run
 tic xterm-256-color-italic.terminfo
 ```
 
+VIM uses coc.nvim plugin for auto completition. To have custom error and warning signs
+type in :CocConfig and paste the settings below
+
+```
+{
+ "javascript.suggestionActions.enabled": true,
+ "diagnostic.errorSign": "❌",
+ "diagnostic.warningSign": "⚠️" ,
+ "diagnostic.infoSign": "ℹ️",
+ "diagnostic.hintSign": "•"
+}
+```
+
+
 
 Do brew install
 
