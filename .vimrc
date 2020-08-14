@@ -20,6 +20,17 @@ nmap <leader>gr <Plug>(coc-references)
 nnoremap <C-p> :Files<CR>
 
 
+"View and search LSP symbols, tags in Vim/NeoVim.
+"https://github.com/liuchengxu/vista.vim
+" Opens a window with all the variables and functions
+Plug 'liuchengxu/vista.vim'
+"sets coc.nvim as default Vista
+let g:vista_default_executive = 'coc'
+"shortcut to toggle Vista
+nmap <leader>vv :Vista!!<CR>
+
+
+
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() }}
 Plug 'junegunn/fzf.vim'
 Plug 'christoomey/vim-tmux-navigator'
