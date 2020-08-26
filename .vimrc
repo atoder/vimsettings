@@ -295,6 +295,7 @@ set statusline=%f
 "Auto indent
 set autoindent
 
+
 " does the right thing (mostly) in programs
 set smartindent
 
@@ -327,6 +328,7 @@ set mouse=a
 
 "Allow mouse to resize splits when vim is inside tmux
 if has("mouse_sgr")
+
   set ttymouse=sgr
 else
   set ttymouse=xterm2
@@ -350,7 +352,10 @@ colorscheme purify
 "colorscheme meta5
 "colorscheme neon2
 "colorscheme neon
+"colorscheme hawaii-contrast
+"colorscheme codecourse
 "colorscheme frontier-contrast
+"colorscheme storm-contrast
 "colorscheme patriot-contrast
 "colorscheme solarflare-contrast
 "colorscheme peacocks-in-space-contrast
