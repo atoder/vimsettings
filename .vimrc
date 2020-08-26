@@ -1,5 +1,4 @@
-" map leader is a space in this case
-" can now hit space ss to save session for example
+" map leader is a space in thiscase
 let mapleader = " "
 
 " Plugins will be downloaded under the specified directory.
@@ -607,3 +606,6 @@ hi clear Special
 "clear sign column and line background
 hi clear SignColumn
 hi clear LineNr
+
+"get rid of ^M linebreaks from windows in a file by doing command below
+":e ++ff=dos
