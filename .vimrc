@@ -5,7 +5,7 @@ let mapleader = " "
 call plug#begin('~/.vim/plugged')
 
 Plug 'neoclide/coc.nvim', {'branch' : 'release'}
-"use :leopen to see list of errors
+"use :lopen to see list of errors
 "and :CocConfig to see config options
 "Prettier by default will run on auto save but can also be manually triggered by:
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
@@ -27,8 +27,6 @@ Plug 'liuchengxu/vista.vim'
 let g:vista_default_executive = 'coc'
 "shortcut to toggle Vista
 nmap <leader>vv :Vista!!<CR>
-
-
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() }}
 Plug 'junegunn/fzf.vim'
@@ -161,8 +159,6 @@ let g:vim_jsx_pretty_colorful_config = 1 " default 0
 
 " bind shift KK to grep word under cursor
 " Use Ag instead of grep (more advanced)
-" TODO: FIX THIS WITH fzf
-"nnoremap KK :Ag! "\b<C-R><C-W>\b"<CR>:cw<CR>
 nnoremap KK :Ag <C-R><C-W><CR>
 
 "Colorschemes
@@ -351,8 +347,11 @@ colorscheme purify
 "colorscheme meta5
 "colorscheme neon2
 "colorscheme neon
-"colorscheme hawaii-contrast
+"colorscheme badwolf
+"colorscheme juicy
+"colorscheme mintchoc-contrast
 "colorscheme codecourse
+"colorscheme hawaii-contrast
 "colorscheme frontier-contrast
 "colorscheme storm-contrast
 "colorscheme patriot-contrast
@@ -362,7 +361,6 @@ colorscheme purify
 "colorscheme vision-colorblind
 "colorscheme freshcut-contrast
 "colorscheme hub-contrast
-"colorscheme juicy-contrast
 
 " Switch to last active buffer
 noremap <leader>b :buffer #<CR>
