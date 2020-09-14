@@ -224,6 +224,7 @@ Plug 'joshdick/onedark.vim'
 Plug 'tomasr/molokai'
 Plug 'fmoralesc/molokayo'
 let g:molokayo#high_contrast#comments = 1
+
 "Monokai
 Plug 'sickill/vim-monokai'
 
@@ -240,7 +241,7 @@ call plug#end()
 " enter the current millenium
 set nocompatible
 
-" enable syntax and plugins (for netrw)
+" enable syntax and plugins
 syntax enable
 filetype plugin on
 
