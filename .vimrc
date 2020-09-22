@@ -366,6 +366,15 @@ colorscheme purify
 " Switch to last active buffer
 noremap <leader>b :buffer #<CR>
 
+"show full path of current dir
+noremap <leader><leader>d :echo expand('%:p')<CR>
+
+" put full path of current dir into vim file
+noremap <leader><leader>dw :r! echo %:p<CR>
+
+"format to get rid o
+noremap <leader><leader>f :e ++ff=dos<CR>
+
 
 " Easier buffer switching
 nmap <leader>1 <Plug>AirlineSelectTab1
