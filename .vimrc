@@ -5,7 +5,7 @@ let mapleader = " "
 call plug#begin('~/.vim/plugged')
 
 Plug 'neoclide/coc.nvim', {'branch' : 'release'}
-"use :leopen to see list of errors
+"use :lopen to see list of errors
 "and :CocConfig to see config options
 "Prettier by default will run on auto save but can also be manually triggered by:
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
@@ -27,8 +27,6 @@ Plug 'liuchengxu/vista.vim'
 let g:vista_default_executive = 'coc'
 "shortcut to toggle Vista
 nmap <leader>vv :Vista!!<CR>
-
-
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() }}
 Plug 'junegunn/fzf.vim'
@@ -161,8 +159,6 @@ let g:vim_jsx_pretty_colorful_config = 1 " default 0
 
 " bind shift KK to grep word under cursor
 " Use Ag instead of grep (more advanced)
-" TODO: FIX THIS WITH fzf
-"nnoremap KK :Ag! "\b<C-R><C-W>\b"<CR>:cw<CR>
 nnoremap KK :Ag <C-R><C-W><CR>
 
 "Colorschemes
@@ -228,6 +224,7 @@ Plug 'joshdick/onedark.vim'
 Plug 'tomasr/molokai'
 Plug 'fmoralesc/molokayo'
 let g:molokayo#high_contrast#comments = 1
+
 "Monokai
 Plug 'sickill/vim-monokai'
 
@@ -244,7 +241,7 @@ call plug#end()
 " enter the current millenium
 set nocompatible
 
-" enable syntax and plugins (for netrw)
+" enable syntax and plugins
 syntax enable
 filetype plugin on
 
@@ -353,18 +350,30 @@ colorscheme purify
 "colorscheme horizon-contrast
 "colorscheme tweed-contrast
 "colorscheme hawaii-contrast
-"colorscheme patriot-contrast
+"colorscheme badwolf
+"colorscheme juicy
+"colorscheme mintchoc-contrast
 "colorscheme codecourse
+"colorscheme frontier-contrast
+"colorscheme storm-contrast
+"colorscheme patriot-contrast
 "colorscheme solarflare-contrast
 "colorscheme peacocks-in-space-contrast
 "colorscheme mud-contrast
 "colorscheme vision-colorblind
 "colorscheme hub-contrast
-"colorscheme juicy-contrast
-"colorscheme mintchoc-contrast
 
 " Switch to last active buffer
 noremap <leader>b :buffer #<CR>
+
+"show full path of current dir
+noremap <leader><leader>d :echo expand('%:p')<CR>
+
+" put full path of current dir into vim file
+noremap <leader><leader>dw :r! echo %:p<CR>
+
+"format to get rid o
+noremap <leader><leader>f :e ++ff=dos<CR>
 
 
 " Easier buffer switching
