@@ -366,6 +366,10 @@ colorscheme purify
 " Switch to last active buffer
 noremap <leader>b :buffer #<CR>
 
+
+"If all that is wanted is to display the name of the current file,
+"type Ctrl-G (or press 1 then Ctrl-G for the full path).
+
 "show full path of current dir
 noremap <leader><leader>d :echo expand('%:p')<CR>
 
