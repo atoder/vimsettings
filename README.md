@@ -170,13 +170,14 @@ module.exports = {
 3. Operator Mono Lig
 4. MonoLisa
 5. Gintronic
-6. NovaMoto
-7. Cascadia Code
-8. Hermit
-9. Fantasque
-10. Inconsolata
-11. JetBrains Mono
-12. SpaceMono
+6. Firicico
+7. NovaMoto
+8. Cascadia Code
+9. Hermit
+10. Fantasque
+11. Inconsolata
+12. JetBrains Mono
+13. SpaceMono
 
 For fonts icons to display in tmux, use a secondary Non-ASCII font such as
 1. Hack Nerd Front Mono
