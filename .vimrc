@@ -39,7 +39,7 @@ let g:airline_theme='onedark'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_idx_mode = 1
-#show folder and file name in smarter tab line (top buffers)
+" show folder and file name in smarter tab line (top buffers)
 let g:airline#extensions#tabline#formatter = 'short_path'
 
 Plug 'plasticboy/vim-markdown'
