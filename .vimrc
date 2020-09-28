@@ -38,8 +38,9 @@ Plug 'vim-airline/vim-airline-themes'
 let g:airline_theme='onedark'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#enabled                      = 1
-let g:airline#extensions#tabline#buffer_idx_mode              = 1
+let g:airline#extensions#tabline#buffer_idx_mode = 1
+#show folder and file name in smarter tab line (top buffers)
+let g:airline#extensions#tabline#formatter = 'short_path'
 
 Plug 'plasticboy/vim-markdown'
 "run npm install below
@@ -347,6 +348,8 @@ colorscheme purify
 "colorscheme meta5
 "colorscheme neon2
 "colorscheme neon
+"colorscheme darkside
+"colorscheme mud-contrast
 "colorscheme horizon-contrast
 "colorscheme tweed-contrast
 "colorscheme hawaii-contrast
@@ -359,7 +362,6 @@ colorscheme purify
 "colorscheme patriot-contrast
 "colorscheme solarflare-contrast
 "colorscheme peacocks-in-space-contrast
-"colorscheme mud-contrast
 "colorscheme vision-colorblind
 "colorscheme hub-contrast
 
@@ -369,10 +371,6 @@ noremap <leader>b :buffer #<CR>
 
 "If all that is wanted is to display the name of the current file,
 "type Ctrl-G (or press 1 then Ctrl-G for the full path).
-
-"show full path of current dir
-noremap <leader><leader>d :echo expand('%:p')<CR>
-
 " put full path of current dir into vim file
 noremap <leader><leader>dw :r! echo %:p<CR>
 
