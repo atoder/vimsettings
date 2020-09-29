@@ -365,13 +365,14 @@ colorscheme purify
 "colorscheme juicy
 "colorscheme mintchoc-contrast
 "colorscheme codecourse
-"colorscheme frontier-contrast
-"colorscheme storm-contrast
-"colorscheme patriot-contrast
-"colorscheme solarflare-contrast
+""colorscheme solarflare-contrast
 "colorscheme peacocks-in-space-contrast
 "colorscheme vision-colorblind
 "colorscheme hub-contrast
+"colorscheme frontier-contrast
+"colorscheme storm-contrast
+"colorscheme patriot-contrast
+
 
 " Switch to last active buffer
 noremap <leader>b :buffer #<CR>
