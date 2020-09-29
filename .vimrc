@@ -377,6 +377,8 @@ noremap <leader><leader>dw :r! echo %:p<CR>
 "format to get rid o
 noremap <leader><leader>f :e ++ff=dos<CR>
 
+"" toggle line numbers
+noremap <leader><leader>ln :set rnu!<CR>
 
 " Easier buffer switching
 nmap <leader>1 <Plug>AirlineSelectTab1
