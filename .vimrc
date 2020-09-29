@@ -35,6 +35,8 @@ Plug 'junegunn/fzf.vim'
 " You can turn this off (see below) and use the :Rooter command to invoke Rooter manually.
 " When Rooter changes the working directory it emits the autocmd user event RooterChDir.
 Plug 'airblade/vim-rooter'
+"To make Rooter start in manual mode:
+let g:rooter_manual_only = 1
 
 
 Plug 'christoomey/vim-tmux-navigator'
