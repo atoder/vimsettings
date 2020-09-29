@@ -348,8 +348,8 @@ colorscheme purify
 "colorscheme meta5
 "colorscheme neon2
 "colorscheme neon
-"colorscheme darkside
 "colorscheme mud-contrast
+"colorscheme darkside
 "colorscheme horizon-contrast
 "colorscheme tweed-contrast
 "colorscheme hawaii-contrast
