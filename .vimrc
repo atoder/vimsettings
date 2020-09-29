@@ -30,6 +30,13 @@ nmap <leader>vv :Vista!!<CR>
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() }}
 Plug 'junegunn/fzf.vim'
+
+"Rooter changes the working directory to the project root when you open a file or directory.
+" You can turn this off (see below) and use the :Rooter command to invoke Rooter manually.
+" When Rooter changes the working directory it emits the autocmd user event RooterChDir.
+Plug 'airblade/vim-rooter'
+
+
 Plug 'christoomey/vim-tmux-navigator'
 "Easy switching between buffers - vim-airline will show buffer at the top
 "unless multiple tabs are open
@@ -111,6 +118,7 @@ Plug 'Raimondi/delimitMate'
 "Just hit control C and it will move the closing bracket down
 imap <C-c> <CR><Esc>O
 "<C-g>g mapping. CTRL+g g will put you after the matching bracket
+
 " :GitLog
 Plug 'kablamo/vim-git-log'
 
@@ -315,7 +323,7 @@ set background=dark
 "Sometimes it is helpful if your working directory
 "is always the same as the file you are editing.
 "To achieve this, put the following in your vimrc:
-set autochdir
+"set autochdir
 
 " yy will not just use internal vim buffer but will also copy
 " into OS's clipboard
@@ -368,6 +376,13 @@ colorscheme purify
 " Switch to last active buffer
 noremap <leader>b :buffer #<CR>
 
+" Switch working directory to current opened file
+" Explaination:
+"":cd change directory Vim command
+" % - full path to current file
+" %:h - full path to current file without filename itself.
+" setting autochdir performs this automatically
+noremap <leader><leader>cd :cd %:h<CR>
 
 "If all that is wanted is to display the name of the current file,
 "type Ctrl-G (or press 1 then Ctrl-G for the full path).
