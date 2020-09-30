@@ -82,6 +82,15 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 nnoremap <C-n> :NERDTreeToggle<CR>
 
 ""A fancy start screen for Vim.
+" Also can save sessions
+" :h SSave to see help screen
+" sessions get stored into:
+" Vim (Unix):    `$HOME/.vim/session`
+" :SLoad       load a session
+" :SSave[!]    save a session
+" :SDelete[!]  delete a session
+" :SClose      close a session
+" If ! is given, you won't get prompted.
 Plug 'mhinz/vim-startify'
 
 
