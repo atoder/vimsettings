@@ -362,13 +362,13 @@ au BufNewFile,BufRead *.handlebars set filetype=html
 au BufNewFile,BufRead *.eco set filetype=html
 
 
-colorscheme purify
+colorscheme darkside
+"colorscheme purify
 "colorscheme snazzy
 "colorscheme meta5
 "colorscheme neon2
 "colorscheme neon
 "colorscheme mud-contrast
-"colorscheme darkside
 "colorscheme horizon-contrast
 "colorscheme tweed-contrast
 "colorscheme hawaii-contrast
@@ -376,7 +376,7 @@ colorscheme purify
 "colorscheme juicy
 "colorscheme mintchoc-contrast
 "colorscheme codecourse
-""colorscheme solarflare-contrast
+"colorscheme solarflare-contrast
 "colorscheme peacocks-in-space-contrast
 "colorscheme vision-colorblind
 "colorscheme hub-contrast
