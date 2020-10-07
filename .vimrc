@@ -5,13 +5,13 @@ let mapleader = " "
 call plug#begin('~/.vim/plugged')
 
 Plug 'neoclide/coc.nvim', {'branch' : 'release'}
-"use :lopen to see list of errors
+"use :CocDiagnostics to see list of errors
 "and :CocConfig to see config options
 "Prettier by default will run on auto save but can also be manually triggered by:
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 nmap <leader>p :Prettier<CR>
 "open errors
-nmap <leader>e :lopen<CR>
+nmap <leader>e :CocDiagnostics<CR>
 "go to definition
 nmap <leader>gd <Plug>(coc-definition)
 "list all references
