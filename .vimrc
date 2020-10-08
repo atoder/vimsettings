@@ -504,7 +504,7 @@ function ClearSignColumn()
   ":hi clear CursorLine
 
 endfunction
-map <leader>cs :exec ClearSignColumn()<cr>
+map <leader><leader>cs :exec ClearSignColumn()<cr>
 
 "turns on my own highlight colors for comments only
 function CommentsGreen()
