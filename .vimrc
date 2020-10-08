@@ -364,10 +364,9 @@ au BufNewFile,BufRead *.handlebars set filetype=html
 au BufNewFile,BufRead *.eco set filetype=html
 
 
-colorscheme artesanal
+colorscheme purify
 "colorscheme darkside
-"colorscheme purify
-"colorscheme snazzy
+"colorscheme artesanal
 "colorscheme meta5
 "colorscheme neon2
 "colorscheme neon
