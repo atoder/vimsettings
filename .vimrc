@@ -507,7 +507,7 @@ endfunction
 map <leader><leader>cs :exec ClearSignColumn()<cr>
 
 "turns on my own highlight colors for comments only
-function CommentsGreen()
+function GreenComments()
   " comments
   :hi JavaScriptLineComment guifg=#7ea869 cterm=italic gui=italic
   :hi JavaScriptComment guifg=#7ea869 cterm=italic gui=italic
@@ -515,10 +515,10 @@ function CommentsGreen()
   :hi cComment guifg=#7ea869 cterm=italic gui=italic
   :hi cCommentL guifg=#7ea869 cterm=italic gui=italic
 endfunction
-map <Leader>cg :exec CommentsGreen()<CR>
+map <Leader>gc :exec GreenComments()<CR>
 
 "turns on my own highlight colors for comments only
-function CommentsBlue()
+function BlueComments()
   " comments
   :hi JavaScriptLineComment guifg=#80a0ff cterm=italic gui=italic
   :hi JavaScriptComment guifg=#80a0ff cterm=italic gui=italic
@@ -526,7 +526,7 @@ function CommentsBlue()
   :hi cComment guifg=#80a0ff cterm=italic gui=italic
   :hi cCommentL guifg=#80a0ff cterm=italic gui=italic
 endfunction
-map <Leader>cb :exec CommentsBlue()<CR>
+map <Leader>bc :exec BlueComments()<CR>
 " This function will show what groups are being applied.
 " Add to your ~/.vimrc, place your cursor over the item in question, and press <leader>sp to output the groups.
 " https://jordanelver.co.uk/blog/2015/05/27/working-with-vim-colorschemes/
