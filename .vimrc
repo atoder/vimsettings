@@ -146,14 +146,16 @@ map <Leader><Leader>r :VimuxRunLastCommand<CR>
 "GitGutterToggle
 Plug 'airblade/vim-gitgutter'
 "For commenting and uncommenting blocks of line
-Plug 'tpope/vim-commentary'
-" gcc to comment current line (c count)
-" gc to comment out the target of motion
-" gcap comment out a paragram
-" gc in visual mode to comment out the seleciton
-" gc in operator pending mode to target a comment
-"You can also use it as a command, either with a range like :7,17Commentary,
-"or as part of a :global invocation like with :g/TODO/Commentary. That's
+
+" https://github.com/preservim/nerdcommenter
+Plug 'preservim/nerdcommenter'
+" [count]<leader>cc |NERDCommenterComment|
+" Comment out the current line or text selected in visual mode.
+" [count]<leader>cu |NERDCommenterUncomment|
+" Uncomments the selected line(s).
+" [count]<leader>cs |NERDCommenterSexy|
+" Comments out the selected lines with a pretty block formatted layout.
+
 
 "The default shortcut for opening Ranger is <leader>f (\f by default)
 "To disable the default key mapping, add this line in your .vimrc or init.vim: let g:ranger_map_keys = 0
