@@ -183,6 +183,9 @@ let g:vim_jsx_pretty_colorful_config = 1 " default 0
 " Use Ag instead of grep (more advanced)
 nnoremap KK :Ag <C-R><C-W><CR>
 
+" Debugger
+Plug 'vim-vdebug/vdebug'
+
 "Colorschemes
 "vim-auora
 Plug 'rafalbromirski/vim-aurora'
