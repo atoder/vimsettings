@@ -368,26 +368,20 @@ au BufNewFile,BufRead *.eco set filetype=html
 
 
 colorscheme purify
+"colorscheme monzo-contrast
 "colorscheme darkside
-"colorscheme artesanal
+"colorscheme userscape-contrast
+"colorscheme overflow-contrast
+"colorscheme patriot-contrast
+"colorscheme srcery
 "colorscheme meta5
 "colorscheme neon2
 "colorscheme neon
-"colorscheme mud-contrast
-"colorscheme horizon-contrast
-"colorscheme tweed-contrast
-"colorscheme hawaii-contrast
+"colorscheme codecourse
+"colorscheme artesanal
 "colorscheme badwolf
 "colorscheme juicy
 "colorscheme mintchoc-contrast
-"colorscheme codecourse
-"colorscheme solarflare-contrast
-"colorscheme peacocks-in-space-contrast
-"colorscheme vision-colorblind
-"colorscheme hub-contrast
-"colorscheme frontier-contrast
-"colorscheme storm-contrast
-"colorscheme patriot-contrast
 
 
 " Switch to last active buffer
@@ -489,6 +483,10 @@ function TurnOnCustomSettings()
   :hi clear CursorLineNr
   :hi clear CursorLine
 
+  :hi clear GitGutterAdd
+  :hi clear GitGutterChange
+  :hi clear GitGutterDelete
+
   " make javascript braces bold
   :hi javaScriptBraces cterm=bold gui=bold guifg=#f2f3f4
   :set formatoptions-=r "don't auto insert comment leader on enter in insert
@@ -502,10 +500,13 @@ function ClearSignColumn()
   "clear line
   :hi clear SignColumn
   :hi clear LineNr
+  :hi clear GitGutterAdd
+  :hi clear GitGutterChange
+  :hi clear GitGutterDelete
   ":hi clear CursorLineNr
   ":hi clear CursorLine
-
 endfunction
+
 map <leader><leader>cs :exec ClearSignColumn()<cr>
 
 "turns on my own highlight colors for comments only
