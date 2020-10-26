@@ -171,9 +171,9 @@ module.exports = {
 4. Firicico
 5. Comic Mono
 6. DM Mono
-7. Operator Mono Lig
-8. NovaMoto
-9. Cascadia Code
+7. Cascadia Code
+8. Operator Mono Lig
+9. NovaMoto
 10. Hermit
 11. Fantasque
 12. Inconsolata

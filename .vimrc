@@ -250,9 +250,6 @@ Plug 'tomasr/molokai'
 Plug 'fmoralesc/molokayo'
 let g:molokayo#high_contrast#comments = 1
 
-"Monokai
-Plug 'sickill/vim-monokai'
-
 " neon colorscheme - cyberpunk type of theme with neon lights
 Plug 'yuratomo/neon.vim'
 
@@ -368,19 +365,21 @@ au BufNewFile,BufRead *.eco set filetype=html
 
 
 colorscheme purify
-"colorscheme monzo-contrast
-"colorscheme darkside
-"colorscheme userscape-contrast
-"colorscheme overflow-contrast
-"colorscheme patriot-contrast
-"colorscheme srcery
-"colorscheme meta5
+"colorscheme horizon
+"colorscheme molokayo
 "colorscheme neon2
 "colorscheme neon
+"colorscheme monzo-contrast
+"colorscheme darkside
+"colorscheme srcery
+"colorscheme juicy
+"colorscheme userscape-contrast
 "colorscheme codecourse
 "colorscheme artesanal
+"colorscheme meta5
 "colorscheme badwolf
-"colorscheme juicy
+"colorscheme overflow-contrast
+"colorscheme patriot-contrast
 "colorscheme mintchoc-contrast
 
 
