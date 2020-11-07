@@ -76,10 +76,18 @@ Plug 'jaxbot/semantic-highlight.vim'
 nnoremap <Leader>s :SemanticHighlightToggle<cr>
 
 "Nerd Tree
-Plug 'scrooloose/nerdtree'
-"shows git marks in nerd tree
-Plug 'Xuyuanp/nerdtree-git-plugin'
-nnoremap <C-n> :NERDTreeToggle<CR>
+"Plug 'scrooloose/nerdtree'
+""shows git marks in nerd tree
+"Plug 'Xuyuanp/nerdtree-git-plugin'
+"nnoremap <C-n> :NERDTreeToggle<CR>
+"^nerd tree replaced by coc-explorer
+"
+":CocInstall coc-explorer
+" Explorer
+nmap <C-n> :CocCommand explorer<CR>
+"close the coc-explorer tree if buffers are open
+autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
+"use tab to open different options for the tree
 
 ""A fancy start screen for Vim.
 " Also can save sessions

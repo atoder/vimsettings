@@ -77,7 +77,7 @@ tic xterm-256-color-italic.terminfo
 ```
 
 VIM uses coc.nvim plugin for auto completition. To have custom error and warning signs
-type in :CocConfig and paste the settings below
+type in :CocConfig and paste the settings below (also includes coc-explorer tree setting)
 
 ```
 {
@@ -85,8 +85,18 @@ type in :CocConfig and paste the settings below
  "diagnostic.errorSign": "❌",
  "diagnostic.warningSign": "⚠️" ,
  "diagnostic.infoSign": "ℹ️",
- "diagnostic.hintSign": "•"
+ "diagnostic.hintSign": "•",
+
+ "explorer.width": 30,
+ "explorer.icon.enableNerdfont": true,
+ "explorer.previewAction.onHover": false,
+ "explorer.keyMappings.global": {
+   "<cr>": ["expandable?", "expand", "open"],
+   "v": "open:vsplit"
+ }
 }
+
+
 ```
 
 
