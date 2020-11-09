@@ -96,8 +96,9 @@ type in :CocConfig and paste the settings below (also includes coc-explorer tree
  }
 }
 
-
 ```
+
+and also run ```:CocInstall coc-explorer```
 
 
 
