@@ -209,5 +209,6 @@ Find the lynx config
 Change these settings
 ```
 ACCEPT_ALL_COOKIES:TRUE
+VI_KEYS_ALWAYS_ON:TRUE
 ```
 
