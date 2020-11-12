@@ -1,4 +1,4 @@
-" map leader is a space in thiscase
+" map leader is a space in this case
 let mapleader = " "
 
 " Plugins will be downloaded under the specified directory.
@@ -260,6 +260,9 @@ let g:molokayo#high_contrast#comments = 1
 
 " neon colorscheme - cyberpunk type of theme with neon lights
 Plug 'yuratomo/neon.vim'
+
+"Xcode colorscheme
+Plug 'arzg/vim-colors-xcode'
 
 " RainGlow Package
 " 320+ color themes
@@ -632,6 +635,7 @@ let g:one_allow_italics = 1 " I love italic for comments
 let g:enable_italic_font = 1
 let g:oceanic_next_terminal_bold = 1
 let g:oceanic_next_terminal_italic = 1
+
 " Overwrite colors and font style
 "green comments
 hi Comment guifg=#7ea869 ctermfg=green cterm=italic gui=italic
@@ -662,3 +666,17 @@ hi clear LineNr
 
 "get rid of ^M linebreaks from windows in a file by doing command below
 ":e ++ff=dos
+
+" predefined quotes + extra
+let g:startify_custom_header_quotes =
+      \ startify#fortune#predefined_quotes()
+      \ + [['Hard Choices, Easy Life. Easy Choices, Hard Life - Jerzy Gregory',
+      \ 'Everybody comes to a point in their life when they want to quit, but it is what you do at that moment that determines who you are. - David Goggin',
+      \ 'Your real resume is just the cataloguing of all your suffering - Naval Ravikant',
+      \ 'Manage your body and it will manage your mind - Scott Adams',
+      \ 'Shortcuts are for suckers. That’s my motto. So many benefits from the hard way - Kevin Hart',
+      \ 'You do not rise to the levels of your goals, you fall to the level of your systems',
+      \ 'Discipline is doing something you hate, like you love it - Mike Tyson',
+      \ 'Wherever focus goes, energy flows - Tony Robbins',
+      \ 'Hard work will beat talent when talent is not working. - 50 cent',
+      \ 'I do not stop when I am tired, I stop when I am done - David Goggins']]

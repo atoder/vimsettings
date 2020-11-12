@@ -201,3 +201,17 @@ For fonts icons to display in tmux, use a secondary Non-ASCII font such as
 
 ## Tmuxinator
 https://github.com/tmuxinator/tmuxinator
+=======
+
+## Lynx Browser
+
+Find the lynx config
+`/usr/local/etc/lynx.cfg`
+
+
+Change these settings
+```
+ACCEPT_ALL_COOKIES:TRUE
+VI_KEYS_ALWAYS_ON:TRUE
+```
+
