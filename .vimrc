@@ -325,7 +325,7 @@ set autoindent
 " does the right thing (mostly) in programs
 set smartindent
 
-" Buffer screen updates instead of updating all the time
+" Don’t update screen during macro and script execution.
 set lazyredraw
 
 "showcmd show input of incomplete command.
@@ -389,9 +389,11 @@ colorscheme purify
 "colorscheme overflow-contrast
 "colorscheme patriot-contrast
 "colorscheme mintchoc-contrast
+"colorscheme darkblue
+"colorscheme default
 
 
-" Switch to last active buffer
+" Switch to buffer
 noremap <leader>b :buffer #<CR>
 
 " Switch working directory to current opened file
@@ -451,6 +453,8 @@ map bd :bd<cr>
 " which moves to previous buffer and closes the buffer we just moved from
 " this way you can close a buffer and still have a vsplit for example
 nnoremap <C-c> :bp\|bd #<CR>
+" close all buffers
+nnoremap <C-a> :bufdo bd<CR>
 
 "space space y will copy all the text
 map <Leader><Leader>y :%y+<CR>
@@ -575,9 +579,6 @@ set foldlevel=2         "this is just what i use
 " zi is the normal mode command that toggles 'foldenable',
 " just like :set foldenable!.
 " Mnemonic: "fold invert". See :h zi.
-
-
-
 
 "put away .swp files into home dir instead of cluttering up in your projects
 " Don't forget to create this directory

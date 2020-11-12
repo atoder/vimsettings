@@ -198,3 +198,6 @@ For fonts icons to display in tmux, use a secondary Non-ASCII font such as
 ## Window Manager
 [Rectangle](https://github.com/rxhanson/Rectangle)
 
+
+## Tmuxinator
+https://github.com/tmuxinator/tmuxinator
