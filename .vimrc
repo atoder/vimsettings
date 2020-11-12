@@ -375,6 +375,7 @@ au BufNewFile,BufRead *.handlebars set filetype=html
 au BufNewFile,BufRead *.eco set filetype=html
 
 
+"colorscheme darkblue
 colorscheme purify
 "colorscheme horizon
 "colorscheme molokayo
@@ -392,7 +393,6 @@ colorscheme purify
 "colorscheme overflow-contrast
 "colorscheme patriot-contrast
 "colorscheme mintchoc-contrast
-"colorscheme darkblue
 "colorscheme default
 
 
