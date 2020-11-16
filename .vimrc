@@ -264,6 +264,27 @@ Plug 'yuratomo/neon.vim'
 "Xcode colorscheme
 Plug 'arzg/vim-colors-xcode'
 
+"vim-wtf theme
+Plug 'sstallion/vim-wtf'
+
+"Dark colorscheme
+Plug 'Lokaltog/vim-distinguished'
+
+"JellyBeans
+Plug 'nanotech/jellybeans.vim'
+
+"Tender colorscheme
+Plug 'jacoborus/tender.vim'
+
+"Sonokai colorscheme
+Plug 'sainnhe/sonokai'
+
+"Tokyonight theme
+Plug 'ghifarit53/tokyonight-vim'
+
+"Gruvbox
+Plug 'lifepillar/vim-gruvbox8'
+
 " RainGlow Package
 " 320+ color themes
 Plug 'rainglow/vim'
