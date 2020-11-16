@@ -264,8 +264,7 @@ Plug 'yuratomo/neon.vim'
 "Xcode colorscheme
 Plug 'arzg/vim-colors-xcode'
 
-" RainGlow Package
-" 320+ color themes
+" RainGlow Package 320+ color themes
 Plug 'rainglow/vim'
 
 " List ends here. Plugins become visible to Vim after this call.
@@ -382,6 +381,7 @@ colorscheme purify
 "colorscheme neon2
 "colorscheme neon
 "colorscheme monzo-contrast
+"colorscheme frontier-contrast
 "colorscheme darkside
 "colorscheme srcery
 "colorscheme juicy
