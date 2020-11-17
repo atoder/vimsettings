@@ -399,6 +399,7 @@ au BufNewFile,BufRead *.eco set filetype=html
 "colorscheme darkblue
 colorscheme purify
 "colorscheme shrek
+"colorscheme seti
 "colorscheme horizon
 "colorscheme molokayo
 "colorscheme neon2
