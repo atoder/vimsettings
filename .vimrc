@@ -398,8 +398,10 @@ au BufNewFile,BufRead *.eco set filetype=html
 
 "colorscheme darkblue
 colorscheme purify
-"colorscheme shrek
+"colorscheme gloom-constrast
 "colorscheme seti
+"colorscheme shrek
+"colorscheme synthwave84
 "colorscheme horizon
 "colorscheme molokayo
 "colorscheme neon2
@@ -424,7 +426,7 @@ colorscheme purify
 noremap <leader>b :buffer #<CR>
 
 " Switch working directory to current opened file
-" Explaination:
+" Explanation:
 "":cd change directory Vim command
 " % - full path to current file
 " %:h - full path to current file without filename itself.
