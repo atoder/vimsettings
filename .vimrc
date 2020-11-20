@@ -38,7 +38,6 @@ Plug 'airblade/vim-rooter'
 "To make Rooter start in manual mode:
 let g:rooter_manual_only = 1
 
-
 Plug 'christoomey/vim-tmux-navigator'
 "Easy switching between buffers - vim-airline will show buffer at the top
 "unless multiple tabs are open
@@ -51,23 +50,6 @@ let g:airline#extensions#tabline#buffer_idx_mode = 1
 " show folder and file name in smarter tab line (top buffers)
 let g:airline#extensions#tabline#formatter = 'short_path'
 
-Plug 'plasticboy/vim-markdown'
-"run npm install below
-"npm install -g livedown
-Plug 'shime/vim-livedown'
-" launch the Livedown server and preview your markdown file
-"":LivedownPreview
-" stop the Livedown server
-"":LivedownKill
-" launch/kill the Livedown server
-"":LivedownToggle
-" should markdown preview get shown automatically upon opening markdown buffer
-let g:livedown_autorun = 0
-" should the browser window pop-up upon previewing
-let g:livedown_open = 1
-nmap <leader>ld :LivedownToggle<CR>
-
-
 "https://github.com/jaxbot/semantic-highlight.vim"
 "Where every variable is a different color, an idea popularized by Evan Brooks
 "blog post.
@@ -75,13 +57,6 @@ nmap <leader>ld :LivedownToggle<CR>
 Plug 'jaxbot/semantic-highlight.vim'
 nnoremap <Leader>s :SemanticHighlightToggle<cr>
 
-"Nerd Tree
-"Plug 'scrooloose/nerdtree'
-""shows git marks in nerd tree
-"Plug 'Xuyuanp/nerdtree-git-plugin'
-"nnoremap <C-n> :NERDTreeToggle<CR>
-"^nerd tree replaced by coc-explorer
-"
 ":CocInstall coc-explorer
 " Explorer
 nmap <C-n> :CocCommand explorer<CR>
@@ -100,7 +75,6 @@ autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | end
 " :SClose      close a session
 " If ! is given, you won't get prompted.
 Plug 'mhinz/vim-startify'
-
 
 "" git in vim
 "" :GStatus
@@ -345,7 +319,6 @@ set statusline=%f
 "Auto indent
 set autoindent
 
-
 " does the right thing (mostly) in programs
 set smartindent
 
@@ -397,11 +370,12 @@ au BufNewFile,BufRead *.eco set filetype=html
 
 
 "colorscheme darkblue
-colorscheme purify
-"colorscheme gloom-constrast
+colorscheme hawaii-contrast
 "colorscheme seti
 "colorscheme shrek
+"colorscheme gloom-contrast
 "colorscheme synthwave84
+"colorscheme purify
 "colorscheme horizon
 "colorscheme molokayo
 "colorscheme neon2
@@ -689,20 +663,3 @@ hi clear Special
 "clear sign column and line background
 hi clear SignColumn
 hi clear LineNr
-
-"get rid of ^M linebreaks from windows in a file by doing command below
-":e ++ff=dos
-
-" predefined quotes + extra
-let g:startify_custom_header_quotes =
-      \ startify#fortune#predefined_quotes()
-      \ + [['Hard Choices, Easy Life. Easy Choices, Hard Life - Jerzy Gregory',
-      \ 'Everybody comes to a point in their life when they want to quit, but it is what you do at that moment that determines who you are. - David Goggin',
-      \ 'Your real resume is just the cataloguing of all your suffering - Naval Ravikant',
-      \ 'Manage your body and it will manage your mind - Scott Adams',
-      \ 'Shortcuts are for suckers. That’s my motto. So many benefits from the hard way - Kevin Hart',
-      \ 'You do not rise to the levels of your goals, you fall to the level of your systems',
-      \ 'Discipline is doing something you hate, like you love it - Mike Tyson',
-      \ 'Wherever focus goes, energy flows - Tony Robbins',
-      \ 'Hard work will beat talent when talent is not working. - 50 cent',
-      \ 'I do not stop when I am tired, I stop when I am done - David Goggins']]
