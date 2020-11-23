@@ -190,6 +190,8 @@ module.exports = {
 12. SpaceMono
 13. JetBrains Mono
 14. Inconsolata
+15. Anonymous Pro
+
 
 For fonts icons to display in tmux, use a secondary Non-ASCII font such as
 1. Hack Nerd Front Mono
