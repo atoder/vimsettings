@@ -533,6 +533,12 @@ endfunction
 
 map <leader><leader>cs :exec ClearSignColumn()<cr>
 
+"make comments Italic
+function MakeItalic()
+  :hi Comment cterm=italic gui=italic
+endfunction
+map <Leader>mi :exec MakeItalic()<CR>
+
 "turns on my own highlight colors for comments only
 function GreenComments()
   " comments
