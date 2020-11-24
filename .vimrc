@@ -370,7 +370,8 @@ au BufNewFile,BufRead *.eco set filetype=html
 
 
 "colorscheme darkblue
-colorscheme solarflare
+colorscheme meta5
+"colorscheme solarflare
 "colorscheme hawaii-contrast
 "colorscheme seti
 "colorscheme shrek
