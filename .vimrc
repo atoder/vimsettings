@@ -77,10 +77,18 @@ autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | end
 Plug 'mhinz/vim-startify'
 
 "" git in vim
+Plug 'tpope/vim-fugitive'
+" https://advancedweb.hu/how-to-compare-file-revisions-with-fugitive-vim/
 "" :GStatus
 "" :Gwrite
 "" :Gcommit
-Plug 'tpope/vim-fugitive'
+"" :Glog
+"The revisions are presented in a read-only buffer. You can return to the
+"working copy of the file with the Gedit command.  Glog is a wrapper around
+"git log <current file>. Upon execution it shows all
+" commits that affect the opened file, then it loads the latest revision into
+" the buffer. It also populates the quickfix list with the latest revisions of
+" the file.
 
 ""Vim Better Whitespace Plug
 "":ToggleWhitespace
