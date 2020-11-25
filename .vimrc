@@ -267,9 +267,13 @@ Plug 'ghifarit53/tokyonight-vim'
 "Gruvbox
 Plug 'lifepillar/vim-gruvbox8'
 
+"Dracula
+Plug 'dracula/vim', { 'as': 'dracula' }
+
 " RainGlow Package
 " 320+ color themes
 Plug 'rainglow/vim'
+
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
