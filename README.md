@@ -78,6 +78,7 @@ tic xterm-256-color-italic.terminfo
 
 VIM uses coc.nvim plugin for auto completition. To have custom error and warning signs
 type in :CocConfig and paste the settings below (also includes coc-explorer tree setting)
+(javascript and c++ setting below)
 
 ```
 {
@@ -86,16 +87,37 @@ type in :CocConfig and paste the settings below (also includes coc-explorer tree
  "diagnostic.warningSign": "⚠️" ,
  "diagnostic.infoSign": "ℹ️",
  "diagnostic.hintSign": "•",
-
  "explorer.width": 30,
  "explorer.icon.enableNerdfont": true,
  "explorer.previewAction.onHover": false,
  "explorer.keyMappings.global": {
    "<cr>": ["expandable?", "expand", "open"],
    "v": "open:vsplit"
+ },
+ "languageserver": {
+   "ccls": {
+     "command": "ccls",
+     "filetypes": [
+       "c",
+       "cpp",
+       "objc",
+       "objcpp"
+     ],
+     "rootPatterns": [
+       ".ccls",
+       "compile_commands.json",
+       ".vim/",
+       ".git/",
+       ".hg/"
+     ],
+     "initializationOptions": {
+       "cache": {
+         "directory": "/tmp/ccls"
+       }
+     }
+   }
  }
 }
-
 ```
 
 and also run ```:CocInstall coc-explorer```
@@ -218,7 +240,38 @@ VI_KEYS_ALWAYS_ON:TRUE
 ```
 
 
-## C++ library
+## C++ setup + library
+Very good article https://ianding.io/2019/07/29/configure-coc-nvim-for-c-c++-development/
+
+Create .ccls in project root directy
+
+'If you are using macOS, then chances are ccls cannot find system headers and as a result reports a bunch of errors.'
+
+```
+Run g++ -E -x c++ - -v < /dev/null in your terminal and you’ll see a list of include paths that the compiler searches. They are between #include <...> search starts here: and End of search list.. Now put them into your .ccls file as -isystem options (unlike -I, the errors and warnings in the header files found in -isystem paths are ignored by the syntax checker).
+
+After manually adding these system header paths, the .ccls file might look like this:
+```
+
+'.ccls'
+
+```
+-isystem
+/usr/local/include
+-isystem
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1
+-isystem
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include
+-isystem
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include
+-isystem
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include
+-isystem
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)
+```
+
+
+
 For competitive coding, people use `# include <bits/stdc++.h>` library
 On Mac OS X, you should create bits folder with file stdc++.h in `/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1` directory
 
