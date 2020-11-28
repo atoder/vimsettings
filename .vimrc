@@ -383,6 +383,7 @@ au BufNewFile,BufRead *.eco set filetype=html
 
 "colorscheme darkblue
 colorscheme meta5
+"colorscheme badwolf
 "colorscheme solarflare
 "colorscheme hawaii-contrast
 "colorscheme seti
@@ -401,9 +402,6 @@ colorscheme meta5
 "colorscheme juicy
 "colorscheme userscape-contrast
 "colorscheme codecourse
-"colorscheme artesanal
-"colorscheme meta5
-"colorscheme badwolf
 "colorscheme overflow-contrast
 "colorscheme patriot-contrast
 "colorscheme mintchoc-contrast
