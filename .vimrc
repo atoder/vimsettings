@@ -383,6 +383,7 @@ au BufNewFile,BufRead *.eco set filetype=html
 
 "colorscheme darkblue
 colorscheme badwolf
+"colorscheme purify
 "colorscheme candycode
 "colorscheme srcery
 "colorscheme meta5
@@ -395,7 +396,6 @@ colorscheme badwolf
 "colorscheme molokayo
 "colorscheme neon2
 "colorscheme neon
-"colorscheme purify
 "colorscheme horizon
 "colorscheme monzo-contrast
 "colorscheme frontier-contrast
