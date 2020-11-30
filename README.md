@@ -113,11 +113,22 @@ type in :CocConfig and paste the settings below (also includes coc-explorer tree
      "initializationOptions": {
        "cache": {
          "directory": "/tmp/ccls"
+       },
+       "clang": {
+         // make sure you have installed commandLineTools
+         "resourceDir": "/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3",
+         "extraArgs": [
+           "-isystem",
+           "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1",
+           "-I",
+           "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/"
+         ]
        }
      }
    }
  }
 }
+
 ```
 
 and also run ```:CocInstall coc-explorer```
@@ -206,13 +217,14 @@ module.exports = {
 6. Cascadia Code
 7. Firicico
 8. Operator Mono Lig
+8 . SpaceMono
 9. NovaMoto
 10. Hermit
 11. Fantasque
-12. SpaceMono
 13. JetBrains Mono
 14. Inconsolata
-15. Anonymous Pro
+15. Source Code Pro
+16. Anonymous Pro
 
 
 For fonts icons to display in tmux, use a secondary Non-ASCII font such as
@@ -242,34 +254,6 @@ VI_KEYS_ALWAYS_ON:TRUE
 
 ## C++ setup + library
 Very good article https://ianding.io/2019/07/29/configure-coc-nvim-for-c-c++-development/
-
-Create .ccls in project root directy
-
-'If you are using macOS, then chances are ccls cannot find system headers and as a result reports a bunch of errors.'
-
-```
-Run g++ -E -x c++ - -v < /dev/null in your terminal and you’ll see a list of include paths that the compiler searches. They are between #include <...> search starts here: and End of search list.. Now put them into your .ccls file as -isystem options (unlike -I, the errors and warnings in the header files found in -isystem paths are ignored by the syntax checker).
-
-After manually adding these system header paths, the .ccls file might look like this:
-```
-
-'.ccls'
-
-```
--isystem
-/usr/local/include
--isystem
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1
--isystem
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include
--isystem
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include
--isystem
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include
--isystem
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)
-```
-
 
 
 For competitive coding, people use `# include <bits/stdc++.h>` library

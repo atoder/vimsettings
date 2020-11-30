@@ -383,7 +383,11 @@ au BufNewFile,BufRead *.eco set filetype=html
 
 "colorscheme darkblue
 colorscheme badwolf
+"colorscheme candycode
+"colorscheme srcery
 "colorscheme meta5
+"colorscheme srcery
+"colorscheme moonfly
 "colorscheme solarflare
 "colorscheme seti
 "colorscheme shrek
@@ -398,7 +402,6 @@ colorscheme badwolf
 "colorscheme hawaii-contrast
 "colorscheme gloom-contrast
 "colorscheme darkside
-"colorscheme srcery
 "colorscheme juicy
 "colorscheme userscape-contrast
 "colorscheme codecourse
@@ -579,8 +582,8 @@ map <Leader>rc :RandomColorScheme<CR>
 "compiling and running c++ files
 "autocmd filetype cpp nnoremap <F4> :w <bar> !g++ -std=c++14 % -o %:r -Wl,--stack,268435456<CR>
 "autocmd filetype cpp nnoremap <F5> :!%:r<CR>
-autocmd filetype cpp nnoremap <leader><leader>4 :w <bar> !g++ -Wall -Wno-unused-result -std=c++11 -O2 % -o %:r && ./%:r <CR>
-autocmd filetype cpp nnoremap <leader><leader>5 :w <bar> !g++ -Wall -Wno-unused-result -std=c++11 -O2 % -o %:r && ./%:r < ./input.txt<CR>
+autocmd filetype cpp nnoremap <leader><leader>4 :w <bar> !clear && g++ -Wall -Wno-unused-result -std=c++11 -O2 % -o %:r && ./%:r <CR>
+autocmd filetype cpp nnoremap <leader><leader>5 :w <bar> !clear && g++ -Wall -Wno-unused-result -std=c++11 -O2 % -o %:r && ./%:r < ./input.txt<CR>
 
 " FOLDING:
 "set foldmethod=syntax
