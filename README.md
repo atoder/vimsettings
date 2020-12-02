@@ -217,14 +217,15 @@ module.exports = {
 6. Cascadia Code
 7. Firicico
 8. Operator Mono Lig
-8 . SpaceMono
-9. NovaMoto
-10. Hermit
-11. Fantasque
+9. SpaceMono
+10. NovaMoto
+11. Hermit
+12. Fantasque
 13. JetBrains Mono
-14. Inconsolata
-15. Source Code Pro
-16. Anonymous Pro
+14. SF Mono Regular
+15. Inconsolata
+16. Source Code Pro
+17. Anonymous Pro
 
 
 For fonts icons to display in tmux, use a secondary Non-ASCII font such as

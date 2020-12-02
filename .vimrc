@@ -396,6 +396,7 @@ colorscheme badwolf
 "colorscheme molokayo
 "colorscheme neon2
 "colorscheme neon
+"colorscheme overflow-contrast
 "colorscheme horizon
 "colorscheme monzo-contrast
 "colorscheme frontier-contrast
@@ -582,8 +583,8 @@ map <Leader>rc :RandomColorScheme<CR>
 "compiling and running c++ files
 "autocmd filetype cpp nnoremap <F4> :w <bar> !g++ -std=c++14 % -o %:r -Wl,--stack,268435456<CR>
 "autocmd filetype cpp nnoremap <F5> :!%:r<CR>
-autocmd filetype cpp nnoremap <leader><leader>4 :w <bar> !clear && g++ -Wall -Wno-unused-result -std=c++11 -O2 % -o %:r && ./%:r <CR>
-autocmd filetype cpp nnoremap <leader><leader>5 :w <bar> !clear && g++ -Wall -Wno-unused-result -std=c++11 -O2 % -o %:r && ./%:r < ./input.txt<CR>
+autocmd filetype cpp nnoremap <leader><leader>4 :w <bar> !clear && g++ -Wall -Wno-unused-result -std=c++14 -O2 % -o %:r && ./%:r <CR>
+autocmd filetype cpp nnoremap <leader><leader>5 :w <bar> !clear && g++ -Wall -Wno-unused-result -std=c++14 -O2 % -o %:r && ./%:r < ./input.txt<CR>
 
 " FOLDING:
 "set foldmethod=syntax
