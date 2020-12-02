@@ -384,8 +384,9 @@ au BufNewFile,BufRead *.handlebars set filetype=html
 au BufNewFile,BufRead *.eco set filetype=html
 
 
-"colorscheme badwolf
+"humanoid with Iosevka font
 colorscheme humanoid
+"colorscheme badwolf
 "colorscheme candycode
 "colorscheme purify
 "colorscheme srcery
