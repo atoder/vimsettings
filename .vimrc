@@ -278,9 +278,6 @@ Plug 'humanoid-colors/vim-humanoid-colorscheme'
 " 320+ color themes
 Plug 'rainglow/vim'
 
-
-
-
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
@@ -389,6 +386,7 @@ au BufNewFile,BufRead *.eco set filetype=html
 
 "colorscheme darkblue
 colorscheme badwolf
+"colorscheme humanoid
 "colorscheme purify
 "colorscheme candycode
 "colorscheme srcery
