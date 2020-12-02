@@ -384,9 +384,8 @@ au BufNewFile,BufRead *.handlebars set filetype=html
 au BufNewFile,BufRead *.eco set filetype=html
 
 
-"colorscheme darkblue
-colorscheme badwolf
-"colorscheme humanoid
+"colorscheme badwolf
+colorscheme humanoid
 "colorscheme purify
 "colorscheme candycode
 "colorscheme srcery
@@ -413,6 +412,7 @@ colorscheme badwolf
 "colorscheme overflow-contrast
 "colorscheme patriot-contrast
 "colorscheme mintchoc-contrast
+"colorscheme darkblue
 "colorscheme default
 
 
