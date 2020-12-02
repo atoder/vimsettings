@@ -387,11 +387,10 @@ au BufNewFile,BufRead *.eco set filetype=html
 "humanoid with Iosevka font
 colorscheme humanoid
 "colorscheme badwolf
+"colorscheme srcery
 "colorscheme candycode
-"colorscheme purify
-"colorscheme srcery
 "colorscheme meta5
-"colorscheme srcery
+"colorscheme purify
 "colorscheme moonfly
 "colorscheme solarflare
 "colorscheme seti
