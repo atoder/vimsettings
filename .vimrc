@@ -270,9 +270,15 @@ Plug 'lifepillar/vim-gruvbox8'
 "Dracula
 Plug 'dracula/vim', { 'as': 'dracula' }
 
+
+"https://github.com/humanoid-colors/vim-humanoid-colorscheme
+Plug 'humanoid-colors/vim-humanoid-colorscheme'
+
 " RainGlow Package
 " 320+ color themes
 Plug 'rainglow/vim'
+
+
 
 
 " List ends here. Plugins become visible to Vim after this call.
