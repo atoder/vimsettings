@@ -386,8 +386,8 @@ au BufNewFile,BufRead *.eco set filetype=html
 
 "colorscheme badwolf
 colorscheme humanoid
-"colorscheme purify
 "colorscheme candycode
+"colorscheme purify
 "colorscheme srcery
 "colorscheme meta5
 "colorscheme srcery
