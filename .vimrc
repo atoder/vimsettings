@@ -384,35 +384,23 @@ au BufNewFile,BufRead *.handlebars set filetype=html
 au BufNewFile,BufRead *.eco set filetype=html
 
 
-"humanoid with Iosevka font
+"current default humanoid with Iosevka font
 colorscheme humanoid
+
 "colorscheme badwolf
 "colorscheme srcery
 "colorscheme candycode
 "colorscheme meta5
 "colorscheme purify
 "colorscheme moonfly
-"colorscheme solarflare
-"colorscheme seti
-"colorscheme shrek
 "colorscheme synthwave84
 "colorscheme molokayo
 "colorscheme neon2
 "colorscheme neon
-"colorscheme overflow-contrast
-"colorscheme horizon
-"colorscheme monzo-contrast
-"colorscheme frontier-contrast
-"colorscheme hawaii-contrast
-"colorscheme gloom-contrast
 "colorscheme darkside
-"colorscheme juicy
-"colorscheme userscape-contrast
-"colorscheme codecourse
-"colorscheme overflow-contrast
-"colorscheme patriot-contrast
-"colorscheme mintchoc-contrast
-"colorscheme darkblue
+"colorscheme seti
+"colorscheme shrek
+"colorscheme horizon
 "colorscheme default
 
 
