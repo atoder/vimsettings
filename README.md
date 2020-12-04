@@ -209,9 +209,9 @@ module.exports = {
 
 
 ## Favorite Fonts Main Fonts (use ligatures in iterm2)
-1. Recursive Mono / Rec Mono Casual
-2. DM Mono
-3. Iosevka
+1. DM Mono
+2. Iosevka
+3. Recursive Mono / Rec Mono Casual
 4. MonoLisa
 5. Gintronic
 6. Cascadia Code
