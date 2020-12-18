@@ -184,6 +184,7 @@ Vim window that shows files on the left side
 Run ```:CocInstall coc-explorer```
 
 
+## other
 Do brew install
 
 ```
