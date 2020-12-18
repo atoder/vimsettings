@@ -128,3 +128,4 @@ export PATH="$PATH:$HOME/.rvm/bin"
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 export TERM=xterm-256color-italic
+export PATH="/usr/local/opt/llvm/bin:$PATH"
