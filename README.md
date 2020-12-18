@@ -128,6 +128,7 @@ type in :CocConfig and paste the settings below (also includes coc-explorer tree
    }
  }
 }
+```
 
 For debugging in vimspector, you need to have the following file in your directory
 ```.vimspector.json```
