@@ -177,10 +177,11 @@ Make sure to run ```:VimspectorInstall``` and install appropriate debuggers
 }
 ```
 
-```
 
-and also run ```:CocInstall coc-explorer```
+## coc-explorer 
+Vim window that shows files on the left side
 
+Run ```:CocInstall coc-explorer```
 
 
 Do brew install
