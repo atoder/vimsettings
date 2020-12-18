@@ -129,6 +129,53 @@ type in :CocConfig and paste the settings below (also includes coc-explorer tree
  }
 }
 
+For debugging in vimspector, you need to have the following file in your directory
+```.vimspector.json```
+
+Debugging c++
+where main is the compiled c++ file 
+
+Debugging node js
+and simple.js is node js file
+
+Make sure to run ```:VimspectorInstall``` and install appropriate debuggers
+
+```
+{
+  "configurations": {
+    "run node" : {
+      "adapter": "vscode-node",
+      "configuration": {
+        "request":"launch",
+        "protocol": "auto",
+        "stopOnEntry":true,
+        "console":"integratedTerminal",
+        "program": "${workspaceFolder}/simple.js",
+        "cwd": "${workspaceFolder}/"
+      }
+    },
+    "run g++" : {
+      "adapter": "vscode-cpptools",
+      "configuration": {
+        "request":"launch",
+        "protocol": "auto",
+        "stopOnEntry":true,
+        "console":"integratedTerminal",
+        "program": "${workspaceFolder}/main",
+        "cwd": "${workspaceFolder}/",
+        "breakpoints": {
+           "exception": {
+             "cpp_throw": "Y",
+             "cpp_catch": "Y"
+           }
+         },
+         "MImode": "lldb"
+      }
+    }
+  }
+}
+```
+
 ```
 
 and also run ```:CocInstall coc-explorer```
@@ -206,8 +253,6 @@ module.exports = {
 ```
 
 
-
-
 ## Favorite Fonts Main Fonts (use ligatures in iterm2)
 1. DM Mono
 2. Iosevka
@@ -260,7 +305,8 @@ Very good article https://ianding.io/2019/07/29/configure-coc-nvim-for-c-c++-dev
 For competitive coding, people use `# include <bits/stdc++.h>` library
 On Mac OS X, you should create bits folder with file stdc++.h in `/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1` directory
 
-stdc++.h file contents
+```stdc++.h``` file contents
+
 ```
 // C++ includes used for precompiling -*- C++ -*-
 
