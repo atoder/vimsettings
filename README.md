@@ -141,6 +141,7 @@ and simple.js is node js file
 
 Make sure to run ```:VimspectorInstall``` and install appropriate debuggers
 
+
 ```
 {
   "configurations": {
@@ -175,6 +176,19 @@ Make sure to run ```:VimspectorInstall``` and install appropriate debuggers
     }
   }
 }
+```
+
+Also make sure that when you compile C++ files you use the flags -g
+```
+-g 
+`` `
+
+```
+-g -O0
+```
+example
+```
+g++ -g -O2 main.cpp -o main
 ```
 
 
