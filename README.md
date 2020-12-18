@@ -76,6 +76,8 @@ run
 tic xterm-256-color-italic.terminfo
 ```
 
+## CocConfig
+
 VIM uses coc.nvim plugin for auto completition. To have custom error and warning signs
 type in :CocConfig and paste the settings below (also includes coc-explorer tree setting)
 (javascript and c++ setting below)
@@ -130,6 +132,8 @@ type in :CocConfig and paste the settings below (also includes coc-explorer tree
 }
 ```
 
+
+## .vimspector.json
 For debugging in vimspector, you need to have the following file in your directory
 ```.vimspector.json```
 
@@ -142,6 +146,7 @@ and simple.js is node js file
 Make sure to run ```:VimspectorInstall``` and install appropriate debuggers
 
 
+```.vimspector.json```
 ```
 {
   "configurations": {
