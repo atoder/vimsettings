@@ -402,6 +402,7 @@ colorscheme humanoid
 "colorscheme seti
 "colorscheme shrek
 "colorscheme horizon
+"colorscheme distinguished
 "colorscheme default
 
 
