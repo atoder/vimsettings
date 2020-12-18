@@ -175,6 +175,19 @@ nnoremap KK :Ag <C-R><C-W><CR>
 " Debugger
 "https://github.com/puremourning/vimspector
 Plug 'puremourning/vimspector'
+"Configure vimspector in your .vimrc, for example to enable the standard mapings:
+let g:vimspector_enable_mappings = 'HUMAN'
+
+"vimspector shortcuts
+nmap <leader><leader>1 :call vimspector#Launch()<CR>
+nmap <leader><leader>2 :VimspectorReset
+nmap <leader><leader>3 :VimspectorEval
+nmap <leader><leader>4 :VimspectorWatch
+nmap <leader><leader>5 <Plug>VimspectorToggleBreakpoint
+nmap <leader><leader>6 <Plug>VimspectorContinue
+nmap <leader><leader>7 <Plug>VimspectorStepOver
+nmap <leader><leader>8 <Plug>VimspectorStepInto
+nmap <leader><leader>9 <Plug>VimspectorStepOut
 
 "Colorschemes
 "vim-auora
@@ -269,7 +282,6 @@ Plug 'lifepillar/vim-gruvbox8'
 
 "Dracula
 Plug 'dracula/vim', { 'as': 'dracula' }
-
 
 "https://github.com/humanoid-colors/vim-humanoid-colorscheme
 Plug 'humanoid-colors/vim-humanoid-colorscheme'
@@ -393,6 +405,7 @@ colorscheme humanoid
 "colorscheme candycode
 "colorscheme meta5
 "colorscheme purify
+"colorscheme snazzy
 "colorscheme moonfly
 "colorscheme synthwave84
 "colorscheme molokayo
@@ -402,7 +415,7 @@ colorscheme humanoid
 "colorscheme seti
 "colorscheme shrek
 "colorscheme horizon
-"colorscheme distinguished
+"colorscheme downpour
 "colorscheme default
 
 
@@ -575,10 +588,16 @@ nmap <leader>sp :call <SID>SynStack()<CR>
 map <Leader>rc :RandomColorScheme<CR>
 
 "compiling and running c++ files
-"autocmd filetype cpp nnoremap <F4> :w <bar> !g++ -std=c++14 % -o %:r -Wl,--stack,268435456<CR>
-"autocmd filetype cpp nnoremap <F5> :!%:r<CR>
-autocmd filetype cpp nnoremap <leader><leader>4 :w <bar> !clear && g++ -Wall -Wno-unused-result -std=c++11 -O2 % -o %:r && ./%:r <CR>
-autocmd filetype cpp nnoremap <leader><leader>5 :w <bar> !clear && g++ -Wall -Wno-unused-result -std=c++11 -O2 % -o %:r && ./%:r < ./input.txt<CR>
+"autocmd filetype cpp nnoremap <leader><leader>4 :w <bar> !clear && g++ -Wall -Wno-unused-result -std=c++11 -O2 % -o %:r && ./%:r <CR>
+"autocmd filetype cpp nnoremap <leader><leader>5 :w <bar> !clear && g++ -Wall -Wno-unused-result -std=c++11 -O2 % -o %:r && ./%:r < ./input.txt<CR>
+"c++2a - working draft for ISO C++ 2020 standard
+"
+"-g is debug mode
+"-O0 optimization for compilation time (default)
+"-O2 optimization more for code size and execution time
+autocmd filetype cpp nnoremap <leader><leader>0 :w <bar> !clear && g++ -Wall -Wno-unused-result -std=c++2a -g -O2 % -o %:r && ./%:r <CR>
+autocmd filetype cpp nnoremap <leader><leader>00 :w <bar> !clear && g++ -Wall -Wno-unused-result -std=c++2a -g -O2 % -o %:r && ./%:r < ./input.txt<CR>
+
 
 " FOLDING:
 "set foldmethod=syntax
