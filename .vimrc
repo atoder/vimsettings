@@ -191,6 +191,8 @@ nmap <leader><leader>9 <Plug>VimspectorStepOut
 
 
 "vim-signature is a plugin to place, toggle and display marks.
+"  m/ - Open location list and display marks from current buffer
+"  https://github.com/kshenoy/vim-signature
 Plug 'kshenoy/vim-signature'
 
 "Vim minimap
