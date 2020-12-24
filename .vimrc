@@ -189,6 +189,24 @@ nmap <leader><leader>7 <Plug>VimspectorStepOver
 nmap <leader><leader>8 <Plug>VimspectorStepInto
 nmap <leader><leader>9 <Plug>VimspectorStepOut
 
+"Vim minimap
+" Default mappings: <Leader>mm to display the minimap, <Leader>mc to close it.
+"To overwrite the default keybindings, using following settings in ``.vimrc'':
+"let g:minimap_show='<leader>ms'
+"let g:minimap_update='<leader>mu'
+"let g:minimap_close='<leader>gc'
+"let g:minimap_toggle='<leader>gt'
+Plug 'severin-lemaignan/vim-minimap'
+
+
+" This plugin completes keywords in Vim Cmdline mode (a.k.a. Command-line mode).
+" Complete command line commands such as when doing %s/text/replace/gc
+"When editing the command-line, press <C-j> or <C-k> to complete the word
+"before the cursor with the matched keywords found in the current buffer a
+Plug 'j5shi/CommandlineComplete.vim'
+
+
+
 "Colorschemes
 "vim-auora
 Plug 'rafalbromirski/vim-aurora'
@@ -399,7 +417,7 @@ au BufNewFile,BufRead *.eco set filetype=html
 "current default humanoid with Iosevka font
 colorscheme humanoid
 
-"colorscheme banner
+"colorscheme dracula
 "colorscheme badwolf
 "colorscheme srcery
 "colorscheme candycode
@@ -410,11 +428,11 @@ colorscheme humanoid
 "colorscheme synthwave84
 "colorscheme molokayo
 "colorscheme neon2
-"colorscheme neon
 "colorscheme darkside
 "colorscheme seti
 "colorscheme shrek
 "colorscheme horizon
+"colorscheme banner
 "colorscheme downpour
 "colorscheme default
 
