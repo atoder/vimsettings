@@ -54,7 +54,7 @@ let g:airline#extensions#tabline#formatter = 'short_path'
 "blog post.
 "https://medium.com/@evnbr/coding-in-color-3a6db2743a1e
 Plug 'jaxbot/semantic-highlight.vim'
-nnoremap <Leader>s :SemanticHighlightToggle<cr>
+nnoremap <leader>s :SemanticHighlightToggle<cr>
 
 ":CocInstall coc-explorer
 " Explorer
@@ -128,9 +128,9 @@ Plug 'ryanoasis/vim-devicons'
 " Easily interact with tmux from vim
 Plug 'benmills/vimux'
 " Prompt for a command to run in another pane
-map <Leader><Leader>p  :VimuxPromptCommand<CR>
+map <leader><leader>p  :VimuxPromptCommand<CR>
 " rerun previous command
-map <Leader><Leader>r :VimuxRunLastCommand<CR>
+map <leader><leader>r :VimuxRunLastCommand<CR>
 "Show which line changed since your last commit.
 "GitGutterToggle
 Plug 'airblade/vim-gitgutter'
@@ -158,7 +158,6 @@ Plug 'xolox/vim-misc'
 "the plug-in will skip color schemes with a different ['background'] bg.
 "By default this is set to 0 (false).
 let g:colorscheme_switcher_keep_background=1
-
 
 Plug 'MaxMEllon/vim-jsx-pretty'
 let g:jsx_ext_required = 1 " Allow JSX in normal JS files
@@ -204,14 +203,11 @@ Plug 'kshenoy/vim-signature'
 "let g:minimap_toggle='<leader>gt'
 Plug 'severin-lemaignan/vim-minimap'
 
-
 " This plugin completes keywords in Vim Cmdline mode (a.k.a. Command-line mode).
 " Complete command line commands such as when doing %s/text/replace/gc
 "When editing the command-line, press <C-j> or <C-k> to complete the word
 "before the cursor with the matched keywords found in the current buffer a
 Plug 'j5shi/CommandlineComplete.vim'
-
-
 
 "Colorschemes
 "vim-auora
@@ -424,15 +420,16 @@ au BufNewFile,BufRead *.eco set filetype=html
 colorscheme humanoid
 
 "colorscheme dracula
+"colorscheme distinguished
 "colorscheme badwolf
 "colorscheme srcery
-"colorscheme candycode
-"colorscheme meta5
 "colorscheme purify
+"colorscheme molokayo
+"colorscheme meta5
+"colorscheme candycode
 "colorscheme snazzy
 "colorscheme moonfly
 "colorscheme synthwave84
-"colorscheme molokayo
 "colorscheme neon2
 "colorscheme darkside
 "colorscheme seti
@@ -489,8 +486,6 @@ set hlsearch
 " While typing a search command, show where the pattern,
 " as it was typed so far, matches.
 set incsearch
-
-
 
 "---------- CUSTOM MAPPING -----
 "mapping buffer switching and closing to shortcuts
@@ -665,6 +660,9 @@ set wildmenu
 " --------------------
 autocmd VimEnter * RandomColorScheme
 
+" Display the minimap, <Leader>mc to close it.
+autocmd VimEnter * Minimap
+
 "automatically clearn signcolumn
 autocmd VimEnter * hi clear SignColumn
 
@@ -675,7 +673,8 @@ autocmd VimEnter * hi clear Special
 autocmd VimEnter * hi clear LineNr
 
 "make background of any theme black
-map <Leader>mb :hi Normal guibg=black guifg=white<CR>
+map <leader>mb :hi Normal guibg=black guifg=white<CR>
+
 "make background clear
 map <leader>mc :hi clear Normal<CR>
 
