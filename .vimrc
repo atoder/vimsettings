@@ -189,6 +189,10 @@ nmap <leader><leader>7 <Plug>VimspectorStepOver
 nmap <leader><leader>8 <Plug>VimspectorStepInto
 nmap <leader><leader>9 <Plug>VimspectorStepOut
 
+
+"vim-signature is a plugin to place, toggle and display marks.
+Plug 'kshenoy/vim-signature'
+
 "Vim minimap
 " Default mappings: <Leader>mm to display the minimap, <Leader>mc to close it.
 "To overwrite the default keybindings, using following settings in ``.vimrc'':
