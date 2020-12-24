@@ -191,6 +191,9 @@ nmap <leader><leader>9 <Plug>VimspectorStepOut
 
 "vim-signature is a plugin to place, toggle and display marks.
 "  m/ - Open location list and display marks from current buffer
+" dmx          Remove mark 'x' where x is a-zA-Z
+"  m,           Place the next available mark
+"  m<Space>     Delete all marks from the current buffer 
 "  https://github.com/kshenoy/vim-signature
 Plug 'kshenoy/vim-signature'
 
@@ -661,7 +664,7 @@ set wildmenu
 autocmd VimEnter * RandomColorScheme
 
 " Display the minimap, <Leader>mc to close it.
-autocmd VimEnter * Minimap
+"autocmd VimEnter * Minimap
 
 "automatically clearn signcolumn
 autocmd VimEnter * hi clear SignColumn
