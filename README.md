@@ -65,7 +65,7 @@ To install Tmux Plugins in settings use
 prefix + I (ctrl B + capital i)
 ```
 
-Set up tmux italics
+Set up tmux italics (might not need this anymore)
 ```
 https://alexpearce.me/2014/05/italics-in-iterm2-vim-tmux/
 ```
@@ -75,6 +75,13 @@ run
 ```
 tic xterm-256-color-italic.terminfo
 ```
+
+
+## Setup ripgrep (faster search in vim)
+`brew install ripgrep` 
+You can use this with fzf by hitting :Rg
+
+
 
 ## CocConfig
 

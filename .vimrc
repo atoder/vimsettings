@@ -27,8 +27,28 @@ let g:vista_default_executive = 'coc'
 "shortcut to toggle Vista
 nmap <leader>vv :Vista!!<CR>
 
+"brew install ripgrep to use :Rg with fzf
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() }}
 Plug 'junegunn/fzf.vim'
+"^ is a prefix exact match. To search for phrase starting with "welcome", we do ^welcome.
+"$ is a suffix exact match. To search for phrase ending with "my friends", we do friends$.
+"' is an exact match. To search for phrase "welcome my friends", we do 'welcome my friends.
+"| is an "or" match. To search for either "friends" or "foes", we can use friends | foes.
+"! is an inverse match. To search for phrase containing "welcome" and not "friends", we can use welcome !friends
+
+" PLUGIN: FZF - other things you can do below
+"nnoremap <silent> <Leader>b :Buffers<CR>
+"nnoremap <silent> <C-f> :Files<CR>
+"nnoremap <silent> <Leader>f :Rg<CR>
+"nnoremap <silent> <Leader>/ :BLines<CR>
+"nnoremap <silent> <Leader>' :Marks<CR>
+"nnoremap <silent> <Leader>g :Commits<CR>
+"nnoremap <silent> <Leader>H :Helptags<CR>
+"nnoremap <silent> <Leader>hh :History<CR>
+"nnoremap <silent> <Leader>h: :History:<CR>
+"nnoremap <silent> <Leader>h/ :History/<CR>
+
+
 
 "Rooter changes the working directory to the project root when you open a file or directory.
 " You can turn this off (see below) and use the :Rooter command to invoke Rooter manually.
@@ -168,8 +188,8 @@ let g:vim_jsx_pretty_colorful_config = 1 " default 0
 "Plug 'rking/ag.vim'
 
 " bind shift KK to grep word under cursor
-" Use Ag instead of grep (more advanced)
-nnoremap KK :Ag <C-R><C-W><CR>
+" Use Rg instead of grep (more advanced)
+nnoremap KK :Rg <C-R><C-W><CR>
 
 " Debugger
 "https://github.com/puremourning/vimspector
@@ -193,7 +213,7 @@ nmap <leader><leader>9 <Plug>VimspectorStepOut
 "  m/ - Open location list and display marks from current buffer
 " dmx          Remove mark 'x' where x is a-zA-Z
 "  m,           Place the next available mark
-"  m<Space>     Delete all marks from the current buffer 
+"  m<Space>     Delete all marks from the current buffer
 "  https://github.com/kshenoy/vim-signature
 Plug 'kshenoy/vim-signature'
 
@@ -305,6 +325,10 @@ Plug 'lifepillar/vim-gruvbox8'
 
 "Dracula
 Plug 'dracula/vim', { 'as': 'dracula' }
+
+"Simple Dark theme used by
+"https://www.twitch.tv/tek256 (c game engine programmer)
+Plug 'tek256/simple-dark'
 
 "https://github.com/humanoid-colors/vim-humanoid-colorscheme
 Plug 'humanoid-colors/vim-humanoid-colorscheme'
@@ -428,6 +452,8 @@ colorscheme humanoid
 "colorscheme srcery
 "colorscheme purify
 "colorscheme molokayo
+"colorscheme horizon
+"colorscheme seti
 "colorscheme meta5
 "colorscheme candycode
 "colorscheme snazzy
@@ -435,11 +461,8 @@ colorscheme humanoid
 "colorscheme synthwave84
 "colorscheme neon2
 "colorscheme darkside
-"colorscheme seti
 "colorscheme shrek
-"colorscheme horizon
 "colorscheme banner
-"colorscheme downpour
 "colorscheme default
 
 
