@@ -282,9 +282,6 @@ Plug 'bluz71/vim-moonfly-colors'
 "badwolf
 Plug 'leafgarland/badwolf'
 
-"seti colorscheme"
-Plug 'trusktr/seti.vim'
-
 "oceanic-next
 Plug 'mhartington/oceanic-next'
 
@@ -447,13 +444,13 @@ au BufNewFile,BufRead *.eco set filetype=html
 colorscheme humanoid
 
 "colorscheme dracula
+"colorscheme molokayo
 "colorscheme distinguished
 "colorscheme badwolf
 "colorscheme srcery
 "colorscheme purify
-"colorscheme molokayo
+"colorscheme gruvbox8
 "colorscheme horizon
-"colorscheme seti
 "colorscheme meta5
 "colorscheme candycode
 "colorscheme snazzy
