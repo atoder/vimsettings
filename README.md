@@ -344,6 +344,8 @@ module.exports = {
 For fonts icons to display in tmux, use a secondary Non-ASCII font such as
 1. Hack Nerd Front Mono
 
+## Iterm colorscheme
+1. Snazzy
 
 ## Window Manager
 [Rectangle](https://github.com/rxhanson/Rectangle)

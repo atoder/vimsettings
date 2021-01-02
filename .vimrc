@@ -450,10 +450,10 @@ colorscheme humanoid
 "colorscheme srcery
 "colorscheme purify
 "colorscheme gruvbox8
-"colorscheme horizon
 "colorscheme meta5
-"colorscheme candycode
 "colorscheme snazzy
+"colorscheme horizon
+"colorscheme candycode
 "colorscheme moonfly
 "colorscheme synthwave84
 "colorscheme neon2
