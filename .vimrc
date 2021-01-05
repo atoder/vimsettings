@@ -448,6 +448,7 @@ colorscheme humanoid
 "colorscheme distinguished
 "colorscheme badwolf
 "colorscheme srcery
+"colorscheme tender
 "colorscheme purify
 "colorscheme gruvbox8
 "colorscheme meta5
