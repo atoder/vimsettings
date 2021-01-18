@@ -446,15 +446,15 @@ colorscheme humanoid
 "colorscheme sonokai
 "colorscheme molokayo
 "colorscheme dracula
+"colorscheme glance
 "colorscheme revelation
-"colorscheme yitzchok-contrast
 "colorscheme distinguished
 "colorscheme badwolf
 "colorscheme srcery
-"colorscheme tender
 "colorscheme purify
 "colorscheme gruvbox8
 "colorscheme meta5
+"colorscheme jellybeans
 "colorscheme snazzy
 "colorscheme horizon
 "colorscheme candycode
