@@ -443,11 +443,12 @@ au BufNewFile,BufRead *.eco set filetype=html
 "current default humanoid with Iosevka font
 colorscheme humanoid
 
-"colorscheme dracula
+"colorscheme sonokai
 "colorscheme molokayo
-"colorscheme distinguished
+"colorscheme dracula
 "colorscheme badwolf
 "colorscheme srcery
+"colorscheme distinguished
 "colorscheme tender
 "colorscheme purify
 "colorscheme gruvbox8
