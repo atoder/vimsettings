@@ -440,19 +440,21 @@ au BufNewFile,BufRead *.handlebars set filetype=html
 au BufNewFile,BufRead *.eco set filetype=html
 
 
-"current default humanoid with Iosevka font
+" current default humanoid with Iosevka font
 colorscheme humanoid
 
 "colorscheme sonokai
 "colorscheme molokayo
 "colorscheme dracula
+"colorscheme glance
+"colorscheme revelation
+"colorscheme distinguished
 "colorscheme badwolf
 "colorscheme srcery
-"colorscheme distinguished
-"colorscheme tender
 "colorscheme purify
 "colorscheme gruvbox8
 "colorscheme meta5
+"colorscheme jellybeans
 "colorscheme snazzy
 "colorscheme horizon
 "colorscheme candycode
@@ -632,15 +634,18 @@ nmap <leader>sp :call <SID>SynStack()<CR>
 map <Leader>rc :RandomColorScheme<CR>
 
 "compiling and running c++ files
-"autocmd filetype cpp nnoremap <leader><leader>4 :w <bar> !clear && g++ -Wall -Wno-unused-result -std=c++11 -O2 % -o %:r && ./%:r <CR>
-"autocmd filetype cpp nnoremap <leader><leader>5 :w <bar> !clear && g++ -Wall -Wno-unused-result -std=c++11 -O2 % -o %:r && ./%:r < ./input.txt<CR>
-"c++2a - working draft for ISO C++ 2020 standard
-"
-"-g is debug mode
+""-g is debug mode
 "-O0 optimization for compilation time (default)
 "-O2 optimization more for code size and execution time
-autocmd filetype cpp nnoremap <leader><leader>0 :w <bar> !clear && g++ -Wall -Wno-unused-result -std=c++2a -g -O2 % -o %:r && ./%:r <CR>
-autocmd filetype cpp nnoremap <leader><leader>00 :w <bar> !clear && g++ -Wall -Wno-unused-result -std=c++2a -g -O2 % -o %:r && ./%:r < ./input.txt<CR>
+"
+"Sample for debugging
+"g++ -Wall -std=c++2a -g main.cpp -o main
+"
+"autocmd filetype cpp nnoremap <leader><leader>0 :w <bar> !clear && g++ -Wall -Wno-unused-result -std=c++2a -g -O2 % -o %:r && ./%:r <CR>
+"autocmd filetype cpp nnoremap <leader><leader>00 :w <bar> !clear && g++ -Wall -Wno-unused-result -std=c++2a -g -O2 % -o %:r && ./%:r < ./input.txt<CR>
+"c++2a - working draft for ISO C++ 2020 standard
+autocmd filetype cpp nnoremap <leader><leader>0 :w <bar> !clear && g++ -Wall -Wno-unused-result -std=c++2a % -o %:r && ./%:r <CR>
+autocmd filetype cpp nnoremap <leader><leader>00 :w <bar> !clear && g++ -Wall -Wno-unused-result -std=c++2a % -o %:r && ./%:r < ./input.txt<CR>
 
 
 " FOLDING:
