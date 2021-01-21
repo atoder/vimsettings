@@ -638,6 +638,10 @@ map <Leader>rc :RandomColorScheme<CR>
 ""-g is debug mode
 "-O0 optimization for compilation time (default)
 "-O2 optimization more for code size and execution time
+"
+"Sample for debugging
+"g++ -Wall -std=c++2a -g main.cpp -o main
+"
 "autocmd filetype cpp nnoremap <leader><leader>0 :w <bar> !clear && g++ -Wall -Wno-unused-result -std=c++2a -g -O2 % -o %:r && ./%:r <CR>
 "autocmd filetype cpp nnoremap <leader><leader>00 :w <bar> !clear && g++ -Wall -Wno-unused-result -std=c++2a -g -O2 % -o %:r && ./%:r < ./input.txt<CR>
 "c++2a - working draft for ISO C++ 2020 standard
