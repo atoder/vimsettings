@@ -445,13 +445,14 @@ colorscheme humanoid
 "colorscheme koehler
 "colorscheme sonokai
 "colorscheme molokayo
-"colorscheme dracula
 "colorscheme glance
 "colorscheme revelation
 "colorscheme distinguished
 "colorscheme badwolf
 "colorscheme srcery
 "colorscheme purify
+"colorscheme monzo-contrast
+"colorscheme dracula
 "colorscheme gruvbox8
 "colorscheme meta5
 "colorscheme jellybeans

@@ -328,7 +328,7 @@ module.exports = {
 4. MonoLisa
 5. Gintronic
 6. Cascadia Code
-7. Firicico
+7. Firicico (with purify colorscheme)
 8. Operator Mono Lig
 9. SpaceMono
 10. Comic Mono
