@@ -442,7 +442,6 @@ au BufNewFile,BufRead *.eco set filetype=html
 
 " current default humanoid with Iosevka font
 colorscheme humanoid
-
 "colorscheme sonokai
 "colorscheme molokayo
 "colorscheme glance
@@ -455,6 +454,7 @@ colorscheme humanoid
 "colorscheme dracula
 "colorscheme gruvbox8
 "colorscheme meta5
+"colorscheme wtf
 "colorscheme jellybeans
 "colorscheme snazzy
 "colorscheme horizon
@@ -639,14 +639,15 @@ map <Leader>rc :RandomColorScheme<CR>
 "-O0 optimization for compilation time (default)
 "-O2 optimization more for code size and execution time
 "
-"Sample for debugging
-"g++ -Wall -std=c++2a -g main.cpp -o main
 "
-"autocmd filetype cpp nnoremap <leader><leader>0 :w <bar> !clear && g++ -Wall -Wno-unused-result -std=c++2a -g -O2 % -o %:r && ./%:r <CR>
-"autocmd filetype cpp nnoremap <leader><leader>00 :w <bar> !clear && g++ -Wall -Wno-unused-result -std=c++2a -g -O2 % -o %:r && ./%:r < ./input.txt<CR>
-"c++2a - working draft for ISO C++ 2020 standard
-autocmd filetype cpp nnoremap <leader><leader>0 :w <bar> !clear && g++ -Wall -Wno-unused-result -std=c++2a % -o %:r && ./%:r <CR>
-autocmd filetype cpp nnoremap <leader><leader>00 :w <bar> !clear && g++ -Wall -Wno-unused-result -std=c++2a % -o %:r && ./%:r < ./input.txt<CR>
+"Sample for debugging
+"g++ -Wall -std=c++17 -g main.cpp -o main
+"
+"autocmd filetype cpp nnoremap <leader><leader>0 :w <bar> !clear && g++ -Wall -Wno-unused-result -std=c++17 -g -O2 % -o %:r && ./%:r <CR>
+"autocmd filetype cpp nnoremap <leader><leader>00 :w <bar> !clear && g++ -Wall -Wno-unused-result -std=c++17 -g -O2 % -o %:r && ./%:r < ./input.txt<CR>
+"https://clang.llvm.org/cxx_status.html
+autocmd filetype cpp nnoremap <leader><leader>0 :w <bar> !clear && g++ -Wall -Wno-unused-result -std=c++17 % -o %:r && ./%:r <CR>
+autocmd filetype cpp nnoremap <leader><leader>00 :w <bar> !clear && g++ -Wall -Wno-unused-result -std=c++17 % -o %:r && ./%:r < ./input.txt<CR>
 
 
 " FOLDING:
