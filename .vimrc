@@ -228,7 +228,8 @@ Plug 'severin-lemaignan/vim-minimap'
 
 " This plugin completes keywords in Vim Cmdline mode (a.k.a. Command-line mode).
 " Complete command line commands such as when doing %s/text/replace/gc
-"When editing the command-line, press <C-j> or <C-k> to complete the word
+"When editing the command-line,
+"press <C-j> or <C-k> to complete the word
 "before the cursor with the matched keywords found in the current buffer a
 Plug 'j5shi/CommandlineComplete.vim'
 
@@ -444,9 +445,6 @@ au BufNewFile,BufRead *.eco set filetype=html
 colorscheme humanoid
 "colorscheme sonokai
 "colorscheme molokayo
-"colorscheme glance
-"colorscheme revelation
-"colorscheme distinguished
 "colorscheme badwolf
 "colorscheme srcery
 "colorscheme purify
@@ -454,9 +452,11 @@ colorscheme humanoid
 "colorscheme dracula
 "colorscheme gruvbox8
 "colorscheme meta5
-"colorscheme wtf
 "colorscheme jellybeans
 "colorscheme snazzy
+"colorscheme distinguished
+"colorscheme wtf
+"colorscheme glance
 "colorscheme horizon
 "colorscheme candycode
 "colorscheme moonfly
@@ -638,7 +638,6 @@ map <Leader>rc :RandomColorScheme<CR>
 ""-g is debug mode
 "-O0 optimization for compilation time (default)
 "-O2 optimization more for code size and execution time
-"
 "
 "Sample for debugging
 "g++ -Wall -std=c++17 -g main.cpp -o main
