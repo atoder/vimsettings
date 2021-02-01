@@ -452,13 +452,12 @@ colorscheme humanoid
 "colorscheme dracula
 "colorscheme gruvbox8
 "colorscheme meta5
-"colorscheme jellybeans
+"colorscheme candycode
 "colorscheme snazzy
+"colorscheme jellybeans
 "colorscheme distinguished
 "colorscheme wtf
-"colorscheme glance
 "colorscheme horizon
-"colorscheme candycode
 "colorscheme moonfly
 "colorscheme synthwave84
 "colorscheme neon2
@@ -466,7 +465,6 @@ colorscheme humanoid
 "colorscheme shrek
 "colorscheme banner
 "colorscheme default
-
 
 " Switch to buffer
 noremap <leader>b :buffer #<CR>
