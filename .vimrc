@@ -452,6 +452,8 @@ colorscheme humanoid
 "colorscheme dracula
 "colorscheme gruvbox8
 "colorscheme meta5
+"colorscheme azure
+"colorscheme banner
 "colorscheme candycode
 "colorscheme snazzy
 "colorscheme jellybeans
@@ -463,7 +465,6 @@ colorscheme humanoid
 "colorscheme neon2
 "colorscheme darkside
 "colorscheme shrek
-"colorscheme banner
 "colorscheme default
 
 " Switch to buffer
@@ -482,7 +483,7 @@ noremap <leader><leader>cd :cd %:h<CR>
 " put full path of current dir into vim file
 noremap <leader><leader>dw :r! echo %:p<CR>
 
-"format to get rid o
+"format to get rid of dos/windows carriage returns
 noremap <leader><leader>f :e ++ff=dos<CR>
 
 "" toggle line numbers

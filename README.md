@@ -139,6 +139,16 @@ type in :CocConfig and paste the settings below (also includes coc-explorer tree
 }
 ```
 
+## .ccls (put this file in root dir)
+```
+-I
+../include
+-I
+../vendor/include
+-std=c++14
+-stdlib=libc++
+-fPIC
+```
 
 ## .vimspector.json
 For debugging in vimspector, you need to have the following file in your directory
