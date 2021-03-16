@@ -403,8 +403,8 @@ set sc
 " show will briefly jump to the matching brace when you insert one
 set showmatch
 
-"enable cursor line
-"set cursorline
+"enable cursor line - underscore
+set cursorline
 
 "Switch between different backgrounds
 set background=dark
@@ -445,6 +445,7 @@ au BufNewFile,BufRead *.eco set filetype=html
 colorscheme humanoid
 "colorscheme sonokai
 "colorscheme molokayo
+"colorscheme horizon-contrast
 "colorscheme badwolf
 "colorscheme srcery
 "colorscheme purify
@@ -466,6 +467,9 @@ colorscheme humanoid
 "colorscheme darkside
 "colorscheme shrek
 "colorscheme default
+"
+"light
+"colorscheme delek
 
 " Switch to buffer
 noremap <leader>b :buffer #<CR>
