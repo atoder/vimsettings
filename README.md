@@ -125,7 +125,7 @@ type in :CocConfig and paste the settings below (also includes coc-explorer tree
        },
        "clang": {
          // make sure you have installed commandLineTools
-         "resourceDir": "/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3",
+         "resourceDir": "/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0",
          "extraArgs": [
            "-isystem",
            "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1",
@@ -138,6 +138,15 @@ type in :CocConfig and paste the settings below (also includes coc-explorer tree
  }
 }
 ```
+
+## From above CocConfig setting 
+## Make sure that below setting matches proper folder  (it might be a differnt version)
+```
+"resourceDir": "/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0",
+```
+
+
+
 
 ## .ccls (put this file in root dir)
 ```
