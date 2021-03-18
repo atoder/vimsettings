@@ -125,6 +125,7 @@ type in :CocConfig and paste the settings below (also includes coc-explorer tree
        },
        "clang": {
          // make sure you have installed commandLineTools
+         // and below resourceDir setting matches proper folder  (it might be a different version)
          "resourceDir": "/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0",
          "extraArgs": [
            "-isystem",
@@ -139,8 +140,7 @@ type in :CocConfig and paste the settings below (also includes coc-explorer tree
 }
 ```
 
-## From above CocConfig setting 
-## Make sure that below setting matches proper folder  (it might be a differnt version)
+## From above CocConfig setting - make sure that below setting matches proper folder  (it might be a different version)
 ```
 "resourceDir": "/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0",
 ```
