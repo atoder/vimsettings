@@ -444,16 +444,17 @@ au BufNewFile,BufRead *.eco set filetype=html
 " current default humanoid with Iosevka font
 colorscheme humanoid
 "colorscheme sonokai
+"colorscheme meta5
 "colorscheme molokayo
-"colorscheme horizon-contrast
 "colorscheme badwolf
 "colorscheme srcery
 "colorscheme purify
+"colorscheme artesanal
+"colorscheme moonfly
 "colorscheme monzo-contrast
+"colorscheme horizon-contrast
 "colorscheme dracula
 "colorscheme gruvbox8
-"colorscheme meta5
-"colorscheme azure
 "colorscheme banner
 "colorscheme candycode
 "colorscheme snazzy
@@ -461,7 +462,6 @@ colorscheme humanoid
 "colorscheme distinguished
 "colorscheme wtf
 "colorscheme horizon
-"colorscheme moonfly
 "colorscheme synthwave84
 "colorscheme neon2
 "colorscheme darkside
