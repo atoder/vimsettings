@@ -450,18 +450,20 @@ colorscheme humanoid
 "colorscheme srcery
 "colorscheme purify
 "colorscheme artesanal
+"colorscheme candycode
 "colorscheme moonfly
 "colorscheme monzo-contrast
+"colorscheme horizon
 "colorscheme horizon-contrast
 "colorscheme dracula
 "colorscheme gruvbox8
 "colorscheme banner
-"colorscheme candycode
 "colorscheme snazzy
 "colorscheme jellybeans
 "colorscheme distinguished
 "colorscheme wtf
-"colorscheme horizon
+"colorscheme pleasure-contrast
+"colorscheme aurora
 "colorscheme synthwave84
 "colorscheme neon2
 "colorscheme darkside
@@ -586,7 +588,7 @@ map <leader>ts :exec TurnOnCustomSettings()<cr>
 function ClearSignColumn()
   "clear line
   :hi clear SignColumn
-  :hi clear LineNr
+  "":hi clear LineNr
   :hi clear GitGutterAdd
   :hi clear GitGutterChange
   :hi clear GitGutterDelete
