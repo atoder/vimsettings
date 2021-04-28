@@ -450,26 +450,26 @@ colorscheme humanoid
 "colorscheme srcery
 "colorscheme purify
 "colorscheme artesanal
-"colorscheme candycode
-"colorscheme moonfly
-"colorscheme monzo-contrast
-"colorscheme horizon
-"colorscheme horizon-contrast
 "colorscheme dracula
 "colorscheme gruvbox8
-"colorscheme banner
+"colorscheme candycode
 "colorscheme snazzy
 "colorscheme jellybeans
 "colorscheme distinguished
 "colorscheme wtf
 "colorscheme pleasure-contrast
 "colorscheme aurora
+"colorscheme moonfly
+"colorscheme monzo-contrast
+"colorscheme horizon-contrast
+"colorscheme banner
+"colorscheme horizon
 "colorscheme synthwave84
 "colorscheme neon2
 "colorscheme darkside
 "colorscheme shrek
 "colorscheme default
-"
+
 "light
 "colorscheme delek
 
