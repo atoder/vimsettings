@@ -405,6 +405,7 @@ set showmatch
 
 "enable cursor line - underscore
 set cursorline
+"set nocursorline
 
 "Switch between different backgrounds
 set background=dark
@@ -447,6 +448,7 @@ colorscheme humanoid
 "colorscheme sonokai
 "colorscheme meta5
 "colorscheme molokayo
+"colorscheme xcodewwdc
 "colorscheme badwolf
 "colorscheme srcery
 "colorscheme purify
