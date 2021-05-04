@@ -448,6 +448,7 @@ colorscheme humanoid
 "colorscheme meta5
 "colorscheme molokayo
 "colorscheme xcodewwdc
+"colorscheme desert
 "colorscheme badwolf
 "colorscheme srcery
 "colorscheme purify
