@@ -48,7 +48,8 @@ Plug 'junegunn/fzf.vim'
 "nnoremap <silent> <Leader>h: :History:<CR>
 "nnoremap <silent> <Leader>h/ :History/<CR>
 
-
+"C++ extra highlight
+Plug 'octol/vim-cpp-enhanced-highlight'
 
 "Rooter changes the working directory to the project root when you open a file or directory.
 " You can turn this off (see below) and use the :Rooter command to invoke Rooter manually.
@@ -455,13 +456,13 @@ colorscheme humanoid
 "colorscheme purify
 "colorscheme artesanal
 "colorscheme blue
+"colorscheme jellybeans
 "colorscheme glance
 "colorscheme patriot-contrast
 "colorscheme dracula
 "colorscheme gruvbox8
 "colorscheme candycode
 "colorscheme snazzy
-"colorscheme jellybeans
 "colorscheme distinguished
 "colorscheme wtf
 "colorscheme pleasure-contrast
