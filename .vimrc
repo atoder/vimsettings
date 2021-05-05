@@ -27,6 +27,11 @@ let g:vista_default_executive = 'coc'
 "shortcut to toggle Vista
 nmap <leader>vv :Vista!!<CR>
 
+"https://github.com/mbbill/undotree
+"undo visualizer
+":UndotreeToggle
+Plug 'mbbill/undotree'
+
 "brew install ripgrep to use :Rg with fzf
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() }}
 Plug 'junegunn/fzf.vim'
