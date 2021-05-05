@@ -139,6 +139,10 @@ Plug 'kopischke/vim-stay'
 
 " indent lines
 Plug 'Yggdroot/indentLine'
+"each indent level has a distinct character.
+let g:indentLine_char_list = ['|', '¦', '┆', '┊']
+"indentLine will overwrite 'conceal' color with grey by default. If you want to
+"highlight conceal color with your colorscheme, disable by:
 
 "Automatic close for common block and scope identifiers such as brackets
 " parentheses, brace, squares
@@ -467,6 +471,8 @@ au BufNewFile,BufRead *.eco set filetype=html
 colorscheme humanoid
 "colorscheme tender
 "colorscheme koehler
+"colorscheme darkblue
+"colorscheme tokyonight
 "colorscheme sonokai
 "colorscheme meta5
 "colorscheme molokayo
