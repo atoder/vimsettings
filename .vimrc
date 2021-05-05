@@ -328,6 +328,10 @@ Plug 'dracula/vim', { 'as': 'dracula' }
 "https://www.twitch.tv/tek256 (c game engine programmer)
 Plug 'tek256/simple-dark'
 
+Plug 'junegunn/seoul256.vim'
+
+Plug 'marciomazza/vim-brogrammer-theme'
+
 "https://github.com/humanoid-colors/vim-humanoid-colorscheme
 Plug 'humanoid-colors/vim-humanoid-colorscheme'
 
@@ -459,6 +463,8 @@ colorscheme humanoid
 "colorscheme patriot-contrast
 "colorscheme dracula
 "colorscheme gruvbox8
+"colorscheme brogrammer
+"colorscheme seoul256
 "colorscheme candycode
 "colorscheme snazzy
 "colorscheme jellybeans
