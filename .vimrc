@@ -136,6 +136,10 @@ Plug 'Konfekt/FastFold'
 "a file buffer by :mkview and :loadview.
 Plug 'kopischke/vim-stay'
 
+
+" indent lines
+Plug 'Yggdroot/indentLine'
+
 "Automatic close for common block and scope identifiers such as brackets
 " parentheses, brace, squares
 "https://github.com/jiangmiao/auto-pairs
@@ -461,6 +465,7 @@ au BufNewFile,BufRead *.eco set filetype=html
 
 " current default humanoid with Iosevka font
 colorscheme humanoid
+"colorscheme tender
 "colorscheme koehler
 "colorscheme sonokai
 "colorscheme meta5
@@ -468,7 +473,6 @@ colorscheme humanoid
 ""colorscheme badwolf
 "colorscheme srcery
 "colorscheme purify
-"colorscheme tender
 "colorscheme artesanal
 "colorscheme xcodewwdc
 "colorscheme desert
