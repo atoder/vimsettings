@@ -358,6 +358,7 @@ module.exports = {
 15. SF Mono Regular
 16. Inconsolata
 17. Source Code Pro
+18. Envy Code R
 
 
 For fonts icons to display in tmux, use a secondary Non-ASCII font such as
