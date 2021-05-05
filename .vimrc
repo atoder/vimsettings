@@ -32,6 +32,11 @@ nmap <leader>vv :Vista!!<CR>
 ":UndotreeToggle
 Plug 'mbbill/undotree'
 
+
+"This plugin makes GVim-only colorschemes Just Work in terminal Vim, as long
+"as the terminal supports 88 or 256 colors - and most do these days.
+Plug 'godlygeek/csapprox'
+
 "brew install ripgrep to use :Rg with fzf
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() }}
 Plug 'junegunn/fzf.vim'
@@ -341,9 +346,11 @@ Plug 'marciomazza/vim-brogrammer-theme'
 "https://github.com/humanoid-colors/vim-humanoid-colorscheme
 Plug 'humanoid-colors/vim-humanoid-colorscheme'
 
+
 " RainGlow Package
 " 320+ color themes
 Plug 'rainglow/vim'
+
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
@@ -458,16 +465,15 @@ colorscheme humanoid
 "colorscheme sonokai
 "colorscheme meta5
 "colorscheme molokayo
-"colorscheme xcodewwdc
-"colorscheme desert
-"colorscheme badwolf
+""colorscheme badwolf
 "colorscheme srcery
 "colorscheme purify
+"colorscheme tender
 "colorscheme artesanal
+"colorscheme xcodewwdc
+"colorscheme desert
 "colorscheme blue
 "colorscheme jellybeans
-"colorscheme glance
-"colorscheme patriot-contrast
 "colorscheme dracula
 "colorscheme gruvbox8
 "colorscheme brogrammer
