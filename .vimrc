@@ -32,7 +32,6 @@ nmap <leader>vv :Vista!!<CR>
 ":UndotreeToggle
 Plug 'mbbill/undotree'
 
-
 "This plugin makes GVim-only colorschemes Just Work in terminal Vim, as long
 "as the terminal supports 88 or 256 colors - and most do these days.
 Plug 'godlygeek/csapprox'
@@ -140,9 +139,17 @@ Plug 'kopischke/vim-stay'
 " indent lines
 Plug 'Yggdroot/indentLine'
 "each indent level has a distinct character.
-let g:indentLine_char_list = ['|', '¦', '┆', '┊']
+"let g:indentLine_char_list = ['|', '¦', '┆', '┊']
+
 "indentLine will overwrite 'conceal' color with grey by default. If you want to
 "highlight conceal color with your colorscheme, disable by:
+
+"Tagbar
+":TagbarToggle
+Plug 'majutsushi/tagbar'
+
+nnoremap <leader><leader>3 :TagbarToggle<CR>
+nnoremap <leader><leader>4 :IndentLinesToggle<CR>
 
 "Automatic close for common block and scope identifiers such as brackets
 " parentheses, brace, squares
@@ -219,8 +226,8 @@ let g:vimspector_enable_mappings = 'HUMAN'
 "vimspector shortcuts
 nmap <leader><leader>1 :call vimspector#Launch()<CR>
 nmap <leader><leader>2 :VimspectorReset
-nmap <leader><leader>3 :VimspectorEval
-nmap <leader><leader>4 :VimspectorWatch
+"nmap <leader><leader>3 :VimspectorEval
+"nmap <leader><leader>4 :VimspectorWatch
 nmap <leader><leader>5 <Plug>VimspectorToggleBreakpoint
 nmap <leader><leader>6 <Plug>VimspectorContinue
 nmap <leader><leader>7 <Plug>VimspectorStepOver
@@ -354,7 +361,6 @@ Plug 'marciomazza/vim-brogrammer-theme'
 "https://github.com/humanoid-colors/vim-humanoid-colorscheme
 Plug 'humanoid-colors/vim-humanoid-colorscheme'
 
-
 " RainGlow Package
 " 320+ color themes
 Plug 'rainglow/vim'
@@ -484,10 +490,14 @@ colorscheme humanoid
 "colorscheme xcodewwdc
 "colorscheme desert
 "colorscheme jellybeans
-"colorscheme dracula
-"colorscheme gruvbox8
 "colorscheme brogrammer
 "colorscheme seoul256
+"
+"with recursive font
+"colorscheme darkside-contrast
+"
+"colorscheme dracula
+"colorscheme gruvbox8
 "colorscheme candycode
 "colorscheme snazzy
 "colorscheme distinguished
@@ -499,10 +509,10 @@ colorscheme humanoid
 "colorscheme horizon-contrast
 "colorscheme banner
 "colorscheme horizon
+"colorscheme shrek
+"
 "colorscheme synthwave84
 "colorscheme neon2
-"colorscheme darkside
-"colorscheme shrek
 "colorscheme default
 
 "light
