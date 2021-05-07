@@ -492,6 +492,7 @@ colorscheme humanoid
 "colorscheme jellybeans
 "colorscheme brogrammer
 "colorscheme seoul256
+"colorscheme frantic
 "
 "with recursive font
 "colorscheme darkside-contrast
