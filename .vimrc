@@ -150,6 +150,8 @@ Plug 'majutsushi/tagbar'
 
 nnoremap <leader><leader>3 :TagbarToggle<CR>
 nnoremap <leader><leader>4 :IndentLinesToggle<CR>
+nnoremap <leader><leader>5 :UndotreeToggle<CR>
+
 
 "Automatic close for common block and scope identifiers such as brackets
 " parentheses, brace, squares
@@ -228,11 +230,11 @@ nmap <leader><leader>1 :call vimspector#Launch()<CR>
 nmap <leader><leader>2 :VimspectorReset
 "nmap <leader><leader>3 :VimspectorEval
 "nmap <leader><leader>4 :VimspectorWatch
-nmap <leader><leader>5 <Plug>VimspectorToggleBreakpoint
-nmap <leader><leader>6 <Plug>VimspectorContinue
-nmap <leader><leader>7 <Plug>VimspectorStepOver
-nmap <leader><leader>8 <Plug>VimspectorStepInto
-nmap <leader><leader>9 <Plug>VimspectorStepOut
+nmap <leader><leader>6 <Plug>VimspectorToggleBreakpoint
+nmap <leader><leader>7 <Plug>VimspectorContinue
+nmap <leader><leader>8 <Plug>VimspectorStepOver
+nmap <leader><leader>9 <Plug>VimspectorStepInto
+nmap <leader><leader>99 <Plug>VimspectorStepOut
 
 
 "vim-signature is a plugin to place, toggle and display marks.
@@ -492,6 +494,7 @@ colorscheme humanoid
 "colorscheme jellybeans
 "colorscheme brogrammer
 "colorscheme seoul256
+"colorscheme juicy
 "
 "with recursive font
 "colorscheme darkside-contrast
