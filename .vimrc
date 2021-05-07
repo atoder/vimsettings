@@ -495,6 +495,7 @@ colorscheme humanoid
 "colorscheme brogrammer
 "colorscheme seoul256
 "colorscheme juicy
+"colorscheme frantic
 "
 "with recursive font
 "colorscheme darkside-contrast
