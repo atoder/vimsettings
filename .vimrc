@@ -477,6 +477,8 @@ au BufNewFile,BufRead *.eco set filetype=html
 
 " current default humanoid with Iosevka font
 colorscheme humanoid
+"colorscheme seoul256
+"colorscheme seoul256-light
 "colorscheme tender
 "colorscheme koehler
 "colorscheme darkblue
@@ -493,7 +495,6 @@ colorscheme humanoid
 "colorscheme desert
 "colorscheme jellybeans
 "colorscheme brogrammer
-"colorscheme seoul256
 "colorscheme juicy
 "colorscheme frantic
 "
@@ -520,6 +521,7 @@ colorscheme humanoid
 "colorscheme default
 
 "light
+"colorscheme seoul256-light
 "colorscheme delek
 
 " Switch to buffer
