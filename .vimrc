@@ -496,6 +496,7 @@ colorscheme humanoid
 "colorscheme jellybeans
 "colorscheme brogrammer
 "colorscheme zacks
+"colorscheme yule
 "colorscheme juicy
 "colorscheme frantic
 "
