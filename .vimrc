@@ -495,6 +495,7 @@ colorscheme humanoid
 "colorscheme desert
 "colorscheme jellybeans
 "colorscheme brogrammer
+"colorscheme zacks
 "colorscheme juicy
 "colorscheme frantic
 "
