@@ -492,6 +492,7 @@ colorscheme humanoid
 "colorscheme purify
 "colorscheme artesanal
 "colorscheme xcodewwdc
+"colorscheme xcodedark
 "colorscheme desert
 "colorscheme jellybeans
 "colorscheme brogrammer
