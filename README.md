@@ -1,14 +1,14 @@
 # My VIM settings
 
 
-Upload the ```.vimrc, .tmux.conf, .zshrc``` to an online code repository in a directory called vimsettings.
+Upload `.vimrc`, `.tmux.conf`, and `.zshrc` to an online code repository in a directory called `vimsettings`.
 On Mac OSX/Linux create symbolic links:
 
-$ ln -s  ~/Documents/vimsettings/.vimrc $HOME/.vimrc
-
-$ ln -s  ~/Documents/vimsettings/.tmux.conf $HOME/.tmux.conf
-
-$ ln -s  ~/Documents/vimsettings/.zshrc $HOME/.zshrc
+```
+ln -s  ~/Documents/vimsettings/.vimrc $HOME/.vimrc
+ln -s  ~/Documents/vimsettings/.tmux.conf $HOME/.tmux.conf
+ln -s  ~/Documents/vimsettings/.zshrc $HOME/.zshrc
+```
 
 For VIM tmp file settings make sure to create tmp file
 
@@ -16,36 +16,18 @@ For VIM tmp file settings make sure to create tmp file
 mkdir ~/tmp
 ```
 
-##
-For zsh shell stuff
+## zsh and [ohmyzh](https://ohmyz.sh/) config
 
 ```
 brew install zsh
-```
-
-```
-https://ohmyz.sh/
-```
-
-```
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-```
-
-
-```
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-```
-
-```
 git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
-```
-
-```
 chmod 755 /usr/local/share/zsh
 chmod 755 /usr/local/share/zsh/site-functions
 ```
 
-Install macvim and
+Install macvim and alias
 ```
 alias vim='mvim -v'
 ```
@@ -53,12 +35,10 @@ alias vim='mvim -v'
 Trash Tool
 ```
 brew install trash
-```
-
-```
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 
+## Tmux
 
 To install Tmux Plugins in settings use
 ```
