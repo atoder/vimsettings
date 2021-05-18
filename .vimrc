@@ -496,6 +496,10 @@ colorscheme humanoid
 "colorscheme desert
 "colorscheme jellybeans
 "colorscheme brogrammer
+"
+"with IBM Plex font
+"colorscheme OceanicNext
+
 "colorscheme zacks
 "colorscheme yule
 "colorscheme juicy
