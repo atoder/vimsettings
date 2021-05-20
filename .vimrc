@@ -486,14 +486,16 @@ colorscheme humanoid
 "colorscheme badwolf
 "colorscheme srcery
 "colorscheme purify
+"colorscheme vision-colorblind
+"colorscheme koehler
+"colorscheme desert
+"colorscheme juicy
 "colorscheme xcodewwdc
 "colorscheme xcodedark
 "colorscheme tender
-"colorscheme koehler
 "colorscheme darkblue
 "colorscheme blue
 "colorscheme tokyonight
-"colorscheme desert
 "colorscheme jellybeans
 "colorscheme brogrammer
 
@@ -503,7 +505,6 @@ colorscheme humanoid
 "colorscheme jewel
 "colorscheme zacks
 "colorscheme yule
-"colorscheme juicy
 "colorscheme frantic
 "
 "with recursive font
