@@ -486,6 +486,9 @@ colorscheme humanoid
 "colorscheme badwolf
 "colorscheme srcery
 "colorscheme purify
+"colorscheme candycode
+"colorscheme snazzy
+"colorscheme distinguished
 "colorscheme xcodewwdc
 "colorscheme xcodedark
 "colorscheme tender
@@ -505,15 +508,12 @@ colorscheme humanoid
 "colorscheme yule
 "colorscheme juicy
 "colorscheme frantic
-"
+
 "with recursive font
 "colorscheme darkside-contrast
-"
+
 "colorscheme dracula
 "colorscheme gruvbox8
-"colorscheme candycode
-"colorscheme snazzy
-"colorscheme distinguished
 "colorscheme wtf
 "colorscheme pleasure-contrast
 "colorscheme aurora
