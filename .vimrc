@@ -486,13 +486,16 @@ colorscheme humanoid
 "colorscheme badwolf
 "colorscheme srcery
 "colorscheme purify
+
+"with lotion font
+"colorscheme juicy
+
 "colorscheme candycode
 "colorscheme snazzy
 "colorscheme distinguished
 "colorscheme vision-colorblind
 "colorscheme koehler
 "colorscheme desert
-"colorscheme juicy
 "colorscheme xcodewwdc
 "colorscheme xcodedark
 "colorscheme tender
