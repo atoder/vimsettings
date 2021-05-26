@@ -486,6 +486,7 @@ colorscheme humanoid
 "colorscheme badwolf
 "colorscheme srcery
 "colorscheme purify
+"colorscheme rainbow-contrast
 "colorscheme vision-colorblind
 "colorscheme koehler
 "colorscheme desert
