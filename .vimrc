@@ -486,11 +486,17 @@ colorscheme humanoid
 "colorscheme badwolf
 "colorscheme srcery
 "colorscheme purify
+
 "colorscheme rainbow-contrast
 "colorscheme vision-colorblind
+"
+"with lotion font
+"colorscheme juicy
+"colorscheme candycode
+"colorscheme snazzy
+"colorscheme distinguished
 "colorscheme koehler
 "colorscheme desert
-"colorscheme juicy
 "colorscheme xcodewwdc
 "colorscheme xcodedark
 "colorscheme tender
@@ -507,15 +513,12 @@ colorscheme humanoid
 "colorscheme zacks
 "colorscheme yule
 "colorscheme frantic
-"
+
 "with recursive font
 "colorscheme darkside-contrast
-"
+
 "colorscheme dracula
 "colorscheme gruvbox8
-"colorscheme candycode
-"colorscheme snazzy
-"colorscheme distinguished
 "colorscheme wtf
 "colorscheme pleasure-contrast
 "colorscheme aurora
