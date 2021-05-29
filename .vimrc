@@ -487,7 +487,7 @@ colorscheme humanoid
 "colorscheme srcery
 "colorscheme purify
 
-"with lotion font
+"with Lotion font
 "colorscheme juicy
 
 "colorscheme candycode
