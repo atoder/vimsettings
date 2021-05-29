@@ -488,12 +488,12 @@ colorscheme humanoid
 "colorscheme purify
 
 "with Lotion font
+"colorscheme rainbow-contrast
+"colorscheme vision-colorblind
 "colorscheme juicy
-
 "colorscheme candycode
 "colorscheme snazzy
 "colorscheme distinguished
-"colorscheme vision-colorblind
 "colorscheme koehler
 "colorscheme desert
 "colorscheme xcodewwdc
