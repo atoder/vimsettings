@@ -488,10 +488,9 @@ colorscheme humanoid
 "colorscheme badwolf
 "colorscheme goodwolf
 
+"with Lotion font
 "colorscheme rainbow-contrast
 "colorscheme vision-colorblind
-"
-"with lotion font
 "colorscheme juicy
 "colorscheme candycode
 "colorscheme snazzy
