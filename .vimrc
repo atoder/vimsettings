@@ -483,9 +483,10 @@ colorscheme humanoid
 "colorscheme meta5
 "colorscheme molokayo
 "colorscheme artesanal
-"colorscheme badwolf
 "colorscheme srcery
 "colorscheme purify
+"colorscheme badwolf
+"colorscheme goodwolf
 
 "colorscheme rainbow-contrast
 "colorscheme vision-colorblind
