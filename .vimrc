@@ -486,12 +486,14 @@ colorscheme humanoid
 "colorscheme meta5
 "colorscheme molokayo
 "colorscheme artesanal
-"colorscheme purify
 "colorscheme snazzy
+"colorscheme purify
 
 "with IBM Plex font
 "colorscheme OceanicNext
 
+"colorscheme badwolf
+"colorscheme goodwolf
 
 "with Lotion font
 "colorscheme rainbow-contrast
