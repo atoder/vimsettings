@@ -496,6 +496,7 @@ colorscheme humanoid
 "colorscheme goodwolf
 
 "with Lotion font
+"colorscheme sourlick
 "colorscheme rainbow-contrast
 "colorscheme vision-colorblind
 "colorscheme juicy
