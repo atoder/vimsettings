@@ -32,6 +32,12 @@ Install macvim and alias
 alias vim='mvim -v'
 ```
 
+or just
+
+```
+brew install vim
+```
+
 Trash Tool
 ```
 brew install trash

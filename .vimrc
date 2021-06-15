@@ -479,23 +479,27 @@ au BufNewFile,BufRead *.eco set filetype=html
 colorscheme humanoid
 "colorscheme seoul256
 "colorscheme seoul256-light
+"colorscheme desert
 "colorscheme sonokai
+"colorscheme badwolf
+"colorscheme srcery
 "colorscheme meta5
 "colorscheme molokayo
 "colorscheme artesanal
-"colorscheme badwolf
-"colorscheme srcery
 "colorscheme purify
+"colorscheme snazzy
+
+"with IBM Plex font
+"colorscheme OceanicNext
+
 
 "with Lotion font
 "colorscheme rainbow-contrast
 "colorscheme vision-colorblind
 "colorscheme juicy
 "colorscheme candycode
-"colorscheme snazzy
 "colorscheme distinguished
 "colorscheme koehler
-"colorscheme desert
 "colorscheme xcodewwdc
 "colorscheme xcodedark
 "colorscheme tender
@@ -504,9 +508,6 @@ colorscheme humanoid
 "colorscheme tokyonight
 "colorscheme jellybeans
 "colorscheme brogrammer
-
-"with IBM Plex font
-"colorscheme OceanicNext
 
 "colorscheme jewel
 "colorscheme zacks
