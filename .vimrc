@@ -494,22 +494,23 @@ colorscheme humanoid
 
 "colorscheme badwolf
 "colorscheme goodwolf
+"
+"colorscheme tokyonight
+"colorscheme jellybeans
+"colorscheme brogrammer
+"colorscheme xcodewwdc
+"colorscheme xcodedark
+"colorscheme distinguished
 
 "with Lotion font
 "colorscheme rainbow-contrast
 "colorscheme vision-colorblind
 "colorscheme juicy
 "colorscheme candycode
-"colorscheme distinguished
 "colorscheme koehler
-"colorscheme xcodewwdc
-"colorscheme xcodedark
 "colorscheme tender
 "colorscheme darkblue
 "colorscheme blue
-"colorscheme tokyonight
-"colorscheme jellybeans
-"colorscheme brogrammer
 
 "colorscheme jewel
 "colorscheme zacks
