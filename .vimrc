@@ -495,12 +495,14 @@ colorscheme humanoid
 "colorscheme badwolf
 "colorscheme goodwolf
 "
-"colorscheme tokyonight
+"colorscheme tender
 "colorscheme jellybeans
 "colorscheme brogrammer
 "colorscheme xcodewwdc
 "colorscheme xcodedark
 "colorscheme distinguished
+"colorscheme gruvbox8_hard
+"colorscheme tokyonight
 
 "with Lotion font
 "colorscheme sourlick
@@ -509,7 +511,6 @@ colorscheme humanoid
 "colorscheme juicy
 "colorscheme candycode
 "colorscheme koehler
-"colorscheme tender
 "colorscheme darkblue
 "colorscheme blue
 
