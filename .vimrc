@@ -467,7 +467,7 @@ end
 autocmd Filetype html setlocal ts=2 sts=2 sw=2 expandtab
 autocmd Filetype ruby setlocal ts=2 sts=2 sw=2 expandtab
 autocmd Filetype php setlocal ts=4 sts=4 sw=4 expandtab
-autocmd Filetype javascript setlocal ts=2 sts=2 sw=2 expandtab
+autocmd Filetype javascript setlocal ts=4 sts=4 sw=4 expandtab
 autocmd Filetype c setlocal ts=4 sts=4 sw=4 expandtab
 
 au BufNewFile,BufRead *.ejs set filetype=javascript
@@ -488,6 +488,7 @@ colorscheme humanoid
 "colorscheme artesanal
 "colorscheme snazzy
 "colorscheme purify
+"colorscheme yitzchok-contrast
 
 "with IBM Plex font
 "colorscheme OceanicNext
