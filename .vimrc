@@ -488,6 +488,7 @@ colorscheme humanoid
 "colorscheme artesanal
 "colorscheme snazzy
 "colorscheme purify
+"colorscheme legacy
 
 "with IBM Plex font
 "colorscheme OceanicNext
