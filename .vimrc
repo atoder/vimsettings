@@ -352,6 +352,9 @@ Plug 'lifepillar/vim-gruvbox8'
 "Dracula
 Plug 'dracula/vim', { 'as': 'dracula' }
 
+"Color scheme reproduction of the official JetBrains IDE Darcula theme
+Plug 'doums/darcula'
+
 "Simple Dark theme used by
 "https://www.twitch.tv/tek256 (c game engine programmer)
 Plug 'tek256/simple-dark'
@@ -488,6 +491,7 @@ colorscheme humanoid
 "colorscheme artesanal
 "colorscheme snazzy
 "colorscheme purify
+"colorscheme darcula
 "colorscheme legacy
 
 "with IBM Plex font
