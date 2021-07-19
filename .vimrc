@@ -360,6 +360,8 @@ Plug 'junegunn/seoul256.vim'
 
 Plug 'marciomazza/vim-brogrammer-theme'
 
+Plug 'doums/darcula'
+
 "https://github.com/humanoid-colors/vim-humanoid-colorscheme
 Plug 'humanoid-colors/vim-humanoid-colorscheme'
 
@@ -489,6 +491,7 @@ colorscheme humanoid
 "colorscheme snazzy
 "colorscheme purify
 "colorscheme yitzchok-contrast
+"colorscheme cobalt2
 
 "with IBM Plex font
 "colorscheme OceanicNext
