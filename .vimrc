@@ -352,6 +352,9 @@ Plug 'lifepillar/vim-gruvbox8'
 "Dracula
 Plug 'dracula/vim', { 'as': 'dracula' }
 
+"Color scheme reproduction of the official JetBrains IDE Darcula theme
+Plug 'doums/darcula'
+
 "Simple Dark theme used by
 "https://www.twitch.tv/tek256 (c game engine programmer)
 Plug 'tek256/simple-dark'
@@ -492,12 +495,23 @@ colorscheme humanoid
 "colorscheme purify
 "colorscheme yitzchok-contrast
 "colorscheme cobalt2
+"colorscheme darcula
+"colorscheme legacy
 
 "with IBM Plex font
 "colorscheme OceanicNext
 
 "colorscheme badwolf
 "colorscheme goodwolf
+"
+"colorscheme tender
+"colorscheme jellybeans
+"colorscheme brogrammer
+"colorscheme xcodewwdc
+"colorscheme xcodedark
+"colorscheme distinguished
+"colorscheme gruvbox8_hard
+"colorscheme tokyonight
 
 "with Lotion font
 "colorscheme sourlick
@@ -505,16 +519,9 @@ colorscheme humanoid
 "colorscheme vision-colorblind
 "colorscheme juicy
 "colorscheme candycode
-"colorscheme distinguished
 "colorscheme koehler
-"colorscheme xcodewwdc
-"colorscheme xcodedark
-"colorscheme tender
 "colorscheme darkblue
 "colorscheme blue
-"colorscheme tokyonight
-"colorscheme jellybeans
-"colorscheme brogrammer
 
 "colorscheme jewel
 "colorscheme zacks
