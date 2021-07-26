@@ -484,6 +484,8 @@ au BufNewFile,BufRead *.eco set filetype=html
 colorscheme humanoid
 "colorscheme seoul256
 "colorscheme seoul256-light
+"colorscheme koehler
+"colorscheme darkblue
 "colorscheme desert
 "colorscheme sonokai
 "colorscheme badwolf
@@ -519,8 +521,6 @@ colorscheme humanoid
 "colorscheme vision-colorblind
 "colorscheme juicy
 "colorscheme candycode
-"colorscheme koehler
-"colorscheme darkblue
 "colorscheme blue
 
 "colorscheme jewel
