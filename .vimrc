@@ -363,6 +363,8 @@ Plug 'junegunn/seoul256.vim'
 
 Plug 'marciomazza/vim-brogrammer-theme'
 
+Plug 'doums/darcula'
+
 "https://github.com/humanoid-colors/vim-humanoid-colorscheme
 Plug 'humanoid-colors/vim-humanoid-colorscheme'
 
@@ -470,7 +472,7 @@ end
 autocmd Filetype html setlocal ts=2 sts=2 sw=2 expandtab
 autocmd Filetype ruby setlocal ts=2 sts=2 sw=2 expandtab
 autocmd Filetype php setlocal ts=4 sts=4 sw=4 expandtab
-autocmd Filetype javascript setlocal ts=2 sts=2 sw=2 expandtab
+autocmd Filetype javascript setlocal ts=4 sts=4 sw=4 expandtab
 autocmd Filetype c setlocal ts=4 sts=4 sw=4 expandtab
 
 au BufNewFile,BufRead *.ejs set filetype=javascript
@@ -480,10 +482,12 @@ au BufNewFile,BufRead *.eco set filetype=html
 
 "current default humanoid with Iosevka font
 colorscheme humanoid
+"colorscheme koehler
 "colorscheme seoul256
 "colorscheme seoul256-light
-"colorscheme desert
 "colorscheme koehler
+"colorscheme darkblue
+"colorscheme desert
 "colorscheme sonokai
 "colorscheme badwolf
 "colorscheme srcery
@@ -492,6 +496,8 @@ colorscheme humanoid
 "colorscheme artesanal
 "colorscheme snazzy
 "colorscheme purify
+"colorscheme yitzchok-contrast
+"colorscheme cobalt2
 "colorscheme darcula
 "colorscheme legacy
 "colorscheme super-contrast
