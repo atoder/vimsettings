@@ -478,11 +478,12 @@ au BufNewFile,BufRead *.handlebars set filetype=html
 au BufNewFile,BufRead *.eco set filetype=html
 
 
-" current default humanoid with Iosevka font
+"current default humanoid with Iosevka font
 colorscheme humanoid
 "colorscheme seoul256
 "colorscheme seoul256-light
 "colorscheme desert
+"colorscheme koehler
 "colorscheme sonokai
 "colorscheme badwolf
 "colorscheme srcery
@@ -493,6 +494,8 @@ colorscheme humanoid
 "colorscheme purify
 "colorscheme darcula
 "colorscheme legacy
+"colorscheme super-contrast
+"colorscheme hawaii
 
 "with IBM Plex font
 "colorscheme OceanicNext
@@ -515,7 +518,6 @@ colorscheme humanoid
 "colorscheme vision-colorblind
 "colorscheme juicy
 "colorscheme candycode
-"colorscheme koehler
 "colorscheme darkblue
 "colorscheme blue
 
