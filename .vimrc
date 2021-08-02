@@ -482,6 +482,7 @@ au BufNewFile,BufRead *.eco set filetype=html
 
 " current default humanoid with Iosevka font
 colorscheme humanoid
+"colorscheme industry
 "colorscheme seoul256
 "colorscheme seoul256-light
 "colorscheme koehler
