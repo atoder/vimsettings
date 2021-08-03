@@ -380,8 +380,6 @@ Plug 'epmor/hotline-vim'
 "https://github.com/audibleblink/hackthebox.vim
 Plug 'audibleblink/hackthebox.vim'
 
-"https://github.com/blackbirdtheme/vim
-Plug 'blackbirdtheme/vim'
 
 " RainGlow Package
 " 320+ color themes
