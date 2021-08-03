@@ -368,10 +368,12 @@ Plug 'doums/darcula'
 "https://github.com/humanoid-colors/vim-humanoid-colorscheme
 Plug 'humanoid-colors/vim-humanoid-colorscheme'
 
+"https://github.com/ivan-cukic/vim-colors-penultimate
+Plug 'ivan-cukic/vim-colors-penultimate'
+
 " RainGlow Package
 " 320+ color themes
 Plug 'rainglow/vim'
-
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
@@ -482,9 +484,9 @@ au BufNewFile,BufRead *.eco set filetype=html
 
 "current default humanoid with Iosevka font
 colorscheme humanoid
-"colorscheme industry
-"colorscheme iceberg
+"colors penultimate
 "colorscheme koehler
+
 "colorscheme seoul256
 "colorscheme seoul256-light
 "colorscheme koehler
