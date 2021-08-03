@@ -380,6 +380,9 @@ Plug 'epmor/hotline-vim'
 "https://github.com/audibleblink/hackthebox.vim
 Plug 'audibleblink/hackthebox.vim'
 
+"https://github.com/blackbirdtheme/vim
+Plug 'blackbirdtheme/vim'
+
 " RainGlow Package
 " 320+ color themes
 Plug 'rainglow/vim'
@@ -493,8 +496,8 @@ au BufNewFile,BufRead *.eco set filetype=html
 
 "current default humanoid with Iosevka font
 colorscheme humanoid
-"colors hotline
-"colors hackthebox
+"colorscheme hotline
+"colorscheme hackthebox
 "colorscheme spaceduck
 "colorscheme koehler
 "colorscheme jellybeans
