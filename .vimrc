@@ -374,6 +374,12 @@ Plug 'ivan-cukic/vim-colors-penultimate'
 "https://github.com/pineapplegiant/spaceduck
 Plug 'pineapplegiant/spaceduck'
 
+"https://github.com/epmor/hotline-vim
+Plug 'epmor/hotline-vim'
+
+"https://github.com/audibleblink/hackthebox.vim
+Plug 'audibleblink/hackthebox.vim'
+
 " RainGlow Package
 " 320+ color themes
 Plug 'rainglow/vim'
@@ -487,11 +493,12 @@ au BufNewFile,BufRead *.eco set filetype=html
 
 "current default humanoid with Iosevka font
 colorscheme humanoid
-"colors penultimate
+"colorscheme spaceduck
+"colors hotline
+"colors hackthebox
 "colorscheme koehler
 "colorscheme jellybeans
 "colorscheme wtf
-"colorscheme spaceduck
 "colorscheme volatile-contrast
 
 "colorscheme seoul256
