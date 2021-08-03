@@ -486,10 +486,12 @@ au BufNewFile,BufRead *.eco set filetype=html
 colorscheme humanoid
 "colors penultimate
 "colorscheme koehler
+"colorscheme jellybeans
+"colorscheme earthsong-contrast
+"colorscheme volatile-contrast
 
 "colorscheme seoul256
 "colorscheme seoul256-light
-"colorscheme koehler
 "colorscheme desert
 "colorscheme distinguished
 "colorscheme darkblue
@@ -515,7 +517,6 @@ colorscheme humanoid
 "colorscheme goodwolf
 "
 "colorscheme tender
-"colorscheme jellybeans
 "colorscheme brogrammer
 "colorscheme xcodewwdc
 "colorscheme xcodedark
