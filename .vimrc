@@ -371,6 +371,9 @@ Plug 'humanoid-colors/vim-humanoid-colorscheme'
 "https://github.com/ivan-cukic/vim-colors-penultimate
 Plug 'ivan-cukic/vim-colors-penultimate'
 
+"https://github.com/pineapplegiant/spaceduck
+Plug 'pineapplegiant/spaceduck'
+
 " RainGlow Package
 " 320+ color themes
 Plug 'rainglow/vim'
@@ -487,7 +490,8 @@ colorscheme humanoid
 "colors penultimate
 "colorscheme koehler
 "colorscheme jellybeans
-"colorscheme earthsong-contrast
+"colorscheme wtf
+"colorscheme spaceduck
 "colorscheme volatile-contrast
 
 "colorscheme seoul256
@@ -542,7 +546,6 @@ colorscheme humanoid
 
 "colorscheme dracula
 "colorscheme gruvbox8
-"colorscheme wtf
 "colorscheme pleasure-contrast
 "colorscheme aurora
 "colorscheme moonfly
