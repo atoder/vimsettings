@@ -380,8 +380,8 @@ Plug 'epmor/hotline-vim'
 "https://github.com/audibleblink/hackthebox.vim
 Plug 'audibleblink/hackthebox.vim'
 
-"https://github.com/blackbirdtheme/vim
-Plug 'blackbirdtheme/vim'
+"dissonance
+Plug 'McAuleyPenney/vim-dissonance'
 
 " RainGlow Package
 " 320+ color themes
@@ -502,6 +502,7 @@ colorscheme humanoid
 "colorscheme koehler
 "colorscheme jellybeans
 "colorscheme wtf
+"colorscheme dissonance
 "colorscheme volatile-contrast
 
 "colorscheme seoul256
