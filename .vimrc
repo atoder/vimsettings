@@ -493,9 +493,9 @@ au BufNewFile,BufRead *.eco set filetype=html
 
 "current default humanoid with Iosevka font
 colorscheme humanoid
-"colorscheme spaceduck
 "colors hotline
 "colors hackthebox
+"colorscheme spaceduck
 "colorscheme koehler
 "colorscheme jellybeans
 "colorscheme wtf
