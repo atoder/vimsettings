@@ -5,18 +5,6 @@ let mapleader = " "
 call plug#begin('~/.vim/plugged')
 
 Plug 'neoclide/coc.nvim', {'branch' : 'release'}
-"use :CocDiagnostics to see list of errors
-"and :CocConfig to see config options
-"Prettier by default will run on auto save but can also be manually triggered by:
-command! -nargs=0 Prettier :CocCommand prettier.formatFile
-nmap <leader>p :Prettier<CR>
-"open errors
-nmap <leader>e :CocDiagnostics<CR>
-"go to definition
-nmap <leader>gd <Plug>(coc-definition)
-"list all references
-nmap <leader>gr <Plug>(coc-references)
-nnoremap <C-p> :Files<CR>
 
 "View and search LSP symbols, tags in Vim/NeoVim.
 "https://github.com/liuchengxu/vista.vim
@@ -492,9 +480,9 @@ au BufNewFile,BufRead *.eco set filetype=html
 
 
 "colorscheme default
+colorscheme hotline
 "current default humanoid with Iosevka font
-colorscheme humanoid
-"colorscheme hotline
+"colorscheme humanoid
 "colorscheme hackthebox
 "colorscheme spaceduck
 "colorscheme koehler
@@ -571,6 +559,8 @@ colorscheme humanoid
 "colorscheme seoul256-light
 "colorscheme delek
 
+"---------- CUSTOM MAPPING -----
+
 " Switch to buffer
 noremap <leader>b :buffer #<CR>
 
@@ -581,6 +571,10 @@ noremap <leader>b :buffer #<CR>
 " %:h - full path to current file without filename itself.
 " setting autochdir performs this automatically
 noremap <leader><leader>cd :cd %:h<CR>
+
+" Switch back to root directory
+noremap <leader><leader>bcd :RooterToggle<CR>
+
 
 "If all that is wanted is to display the name of the current file,
 "type Ctrl-G (or press 1 then Ctrl-G for the full path).
@@ -604,21 +598,7 @@ nmap <leader>7 <Plug>AirlineSelectTab7
 nmap <leader>8 <Plug>AirlineSelectTab8
 nmap <leader>9 <Plug>AirlineSelectTab9
 
-"disable weird bracket highlight error in c files
-autocmd BufEnter *.c :syntax clear cErrInParen
 
-"Encoding must be set to UTF-8 for the glyphs to show
-set encoding=utf8
-set fileencoding=utf8
-
-"Highlight all search pattern matches
-set hlsearch
-
-" While typing a search command, show where the pattern,
-" as it was typed so far, matches.
-set incsearch
-
-"---------- CUSTOM MAPPING -----
 "mapping buffer switching and closing to shortcuts
 map bn :bn<cr>
 map bp :bp<cr>
@@ -634,6 +614,34 @@ nnoremap <C-a> :bufdo bd<CR>
 
 "space space y will copy all the text
 map <Leader><Leader>y :%y+<CR>
+
+"use :CocDiagnostics to see list of errors
+"and :CocConfig to see config options
+"Prettier by default will run on auto save but can also be manually triggered by:
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
+nmap <leader>p :Prettier<CR>
+"open errors
+nmap <leader>e :CocDiagnostics<CR>
+"go to definition
+nmap <leader>gd <Plug>(coc-definition)
+"list all references
+nmap <leader>gr <Plug>(coc-references)
+nnoremap <C-p> :Files<CR>
+
+
+"disable weird bracket highlight error in c files
+autocmd BufEnter *.c :syntax clear cErrInParen
+
+"Encoding must be set to UTF-8 for the glyphs to show
+set encoding=utf8
+set fileencoding=utf8
+
+"Highlight all search pattern matches
+set hlsearch
+
+" While typing a search command, show where the pattern,
+" as it was typed so far, matches.
+set incsearch
 
 function TurnOnCustomSettings()
   " comments
@@ -712,6 +720,18 @@ function GreenComments()
   :hi cCommentL guifg=#7ea869 cterm=italic gui=italic
 endfunction
 map <Leader>gc :exec GreenComments()<CR>
+
+"turns on my own highlight colors for comments only
+function GreenComments2()
+  " comments
+  :hi JavaScriptLineComment guifg=#00ffaf term=bold ctermfg=49 cterm=italic gui=italic
+  :hi JavaScriptComment guifg=#00ffaf term=bold ctermfg=49 cterm=italic gui=italic
+  :hi Comment guifg=#00ffaf term=bold ctermfg=49 cterm=italic gui=italic
+  :hi cComment guifg=#00ffaf term=bold ctermfg=49 cterm=italic gui=italic
+  :hi cCommentL guifg=#00ffaf term=bold ctermfg=49 cterm=italic gui=italic
+  :hi Comment guifg=#00ffaf term=bold ctermfg=49 cterm=italic gui=italic
+endfunction
+map <Leader>2gc :exec GreenComments2()<CR>
 
 "turns on my own highlight colors for comments only
 function BlueComments()

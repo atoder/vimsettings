@@ -327,24 +327,26 @@ module.exports = {
 
 
 ## Favorite Fonts Main Fonts (use ligatures in iterm2)
-1. DM Mono
-2. Iosevka
-3. Recursive Mono / Rec Mono Casual
-4. MonoLisa
-5. Gintronic
-6. Cascadia Code
-7. Firicico (with purify colorscheme)
-8. Operator Mono Lig
-9. SpaceMono
-10. Comic Mono
-11. NovaMoto
-12. Hermit
-13. Fantasque
-14. JetBrains Mono
-15. SF Mono Regular
-16. Inconsolata
-17. Source Code Pro
-18. Envy Code R
+1. Iosevka
+2. Lotion
+3. DM Mono
+4. Recursive Mono / Rec Mono Casual
+5. MonoLisa
+6. Gintronic
+7. Cascadia Code
+8. Firicico (with purify colorscheme)
+9. Operator Mono Lig
+10. SpaceMono
+11. Comic Mono
+12. NovaMoto
+13. Hermit
+14. Fantasque
+15. JetBrains Mono
+16. Victor Mono
+17. SF Mono Regular
+18. Inconsolata
+19. Source Code Pro
+20. Envy Code R
 
 
 For fonts icons to display in tmux, use a secondary Non-ASCII font such as
