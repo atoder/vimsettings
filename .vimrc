@@ -211,7 +211,7 @@ Plug 'MaxMEllon/vim-jsx-pretty'
 let g:jsx_ext_required = 1 " Allow JSX in normal JS files
 let g:vim_jsx_pretty_colorful_config = 1 " default 0
 
-" silver surfer search text ack bundle
+"silver surfer search text ack bundle
 "Plug 'ggreer/the_silver_searcher'
 "Plug 'rking/ag.vim'
 
@@ -491,6 +491,7 @@ au BufNewFile,BufRead *.handlebars set filetype=html
 au BufNewFile,BufRead *.eco set filetype=html
 
 
+"colorscheme default
 "current default humanoid with Iosevka font
 colorscheme humanoid
 "colorscheme hotline
