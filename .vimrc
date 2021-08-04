@@ -365,6 +365,8 @@ Plug 'pineapplegiant/spaceduck'
 "https://github.com/epmor/hotline-vim
 Plug 'epmor/hotline-vim'
 
+Plug 'nightsense/carbonized'
+
 "https://github.com/audibleblink/hackthebox.vim
 Plug 'audibleblink/hackthebox.vim'
 
@@ -481,6 +483,7 @@ au BufNewFile,BufRead *.eco set filetype=html
 
 "colorscheme default
 colorscheme hotline
+
 "current default humanoid with Iosevka font
 "colorscheme humanoid
 "colorscheme hackthebox
@@ -489,6 +492,8 @@ colorscheme hotline
 "colorscheme jellybeans
 "colorscheme wtf
 "colorscheme distinguished
+"colorscheme carbonized-dark
+"colorscheme carbonized-light
 "colorscheme volatile-contrast
 
 "colorscheme seoul256
