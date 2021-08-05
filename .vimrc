@@ -368,6 +368,8 @@ Plug 'epmor/hotline-vim'
 "https://github.com/audibleblink/hackthebox.vim
 Plug 'audibleblink/hackthebox.vim'
 
+Plug 'nonetallt/vim-neon-dark'
+
 " RainGlow Package
 " 320+ color themes
 Plug 'rainglow/vim'
@@ -489,6 +491,7 @@ colorscheme hotline
 "colorscheme jellybeans
 "colorscheme wtf
 "colorscheme distinguished
+"colorscheme neon-dark
 "colorscheme volatile-contrast
 
 "colorscheme seoul256
