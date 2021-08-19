@@ -498,6 +498,8 @@ colorscheme hotline
 "colorscheme carbonized-dark
 "colorscheme carbonized-light
 "colorscheme volatile-contrast
+" Jetbrains font
+"colorscheme molokayo
 
 "colorscheme seoul256
 "colorscheme seoul256-light
