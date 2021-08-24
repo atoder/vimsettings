@@ -494,23 +494,26 @@ colorscheme hotline
 "colorscheme jellybeans
 "colorscheme wtf
 "colorscheme distinguished
-"colorscheme neon-dark
-"colorscheme carbonized-dark
-"colorscheme carbonized-light
-"colorscheme volatile-contrast
-
-"colorscheme seoul256
-"colorscheme seoul256-light
-"colorscheme desert
-"colorscheme darkblue
-"colorscheme sonokai
+""colorscheme sonokai
 "colorscheme badwolf
 "colorscheme srcery
-"colorscheme meta5
-"colorscheme molokayo
 "colorscheme artesanal
 "colorscheme snazzy
 "colorscheme purify
+"colorscheme meta5
+"colorscheme molokayo
+"colorscheme pablo
+"colorscheme desert
+"colorscheme neon-dark
+"colorscheme OceanicNext
+"colorscheme carbonized-dark
+"colorscheme carbonized-light
+"colorscheme volatile-contrast
+"colorscheme badwolf
+"colorscheme goodwolf
+"colorscheme seoul256
+"colorscheme seoul256-light
+
 "colorscheme yitzchok-contrast
 "colorscheme cobalt2
 "colorscheme darcula
@@ -518,12 +521,6 @@ colorscheme hotline
 "colorscheme super-contrast
 "colorscheme hawaii
 
-"with IBM Plex font
-"colorscheme OceanicNext
-
-"colorscheme badwolf
-"colorscheme goodwolf
-"
 "colorscheme tender
 "colorscheme brogrammer
 "colorscheme xcodewwdc
