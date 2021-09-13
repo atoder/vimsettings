@@ -494,7 +494,7 @@ colorscheme hotline
 "colorscheme jellybeans
 "colorscheme wtf
 "colorscheme distinguished
-""colorscheme sonokai
+"colorscheme sonokai
 "colorscheme badwolf
 "colorscheme srcery
 "colorscheme artesanal
@@ -502,6 +502,11 @@ colorscheme hotline
 "colorscheme purify
 "colorscheme meta5
 "colorscheme molokayo
+"
+"AnonymousPro
+"colorscheme newton
+"
+"
 "colorscheme pablo
 "colorscheme desert
 "colorscheme neon-dark
