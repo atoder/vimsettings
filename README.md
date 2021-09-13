@@ -347,6 +347,7 @@ module.exports = {
 18. Inconsolata
 19. Source Code Pro
 20. Envy Code R
+21. Anoynmous Pro
 
 
 For fonts icons to display in tmux, use a secondary Non-ASCII font such as
