@@ -331,24 +331,23 @@ module.exports = {
 2. Lotion
 3. DM Mono
 4. Recursive Mono / Rec Mono Casual
-5. MonoLisa
-6. Gintronic
-7. Cascadia Code
-8. Firicico (with purify colorscheme)
-9. Operator Mono Lig
-10. SpaceMono
-11. Comic Mono
-12. NovaMoto
-13. Hermit
-14. Fantasque
-15. JetBrains Mono
-16. Victor Mono
-17. SF Mono Regular
-18. Inconsolata
-19. Source Code Pro
-20. Envy Code R
-21. Anoynmous Pro
-
+5. Anoynmous Pro (BOLD) (with newton colorscheme)
+6. MonoLisa
+7. Gintronic
+8. Cascadia Code
+9. Firicico (with purify colorscheme)
+10. Operator Mono Lig
+11. SpaceMono
+12. Comic Mono
+13. NovaMoto
+14. Hermit
+15. Fantasque
+16. JetBrains Mono
+17. Victor Mono
+18. SF Mono Regular
+19. Inconsolata
+20. Source Code Pro
+21. Envy Code R
 
 For fonts icons to display in tmux, use a secondary Non-ASCII font such as
 1. Hack Nerd Front Mono
