@@ -327,6 +327,8 @@ module.exports = {
 
 
 ## Favorite Fonts Main Fonts (use ligatures in iterm2)
+Current Favorite: 5. Anoynmous Pro (BOLD) (with newton colorscheme)
+
 1. Iosevka
 2. Lotion
 3. DM Mono
