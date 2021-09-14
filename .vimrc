@@ -505,6 +505,11 @@ colorscheme hotline
 "colorscheme purify
 "colorscheme meta5
 "colorscheme molokayo
+"
+"AnonymousPro
+"colorscheme newton
+"
+"
 "colorscheme pablo
 "colorscheme desert
 "colorscheme neon-dark
