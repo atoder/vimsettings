@@ -484,17 +484,20 @@ au BufNewFile,BufRead *.eco set filetype=html
 
 
 "colorscheme default
-colorscheme hotline
 
-"current default humanoid with Iosevka font
 "colorscheme humanoid
+colorscheme hotline
+"colorscheme neon-dark-256
+"colorscheme koehler
+"colorscheme brogrammer
+"colorscheme candycode
+
 "colorscheme hackthebox
 "colorscheme spaceduck
-"colorscheme koehler
 "colorscheme jellybeans
 "colorscheme wtf
 "colorscheme distinguished
-""colorscheme sonokai
+"colorscheme sonokai
 "colorscheme badwolf
 "colorscheme srcery
 "colorscheme artesanal
@@ -523,7 +526,6 @@ colorscheme hotline
 "colorscheme hawaii
 
 "colorscheme tender
-"colorscheme brogrammer
 "colorscheme xcodewwdc
 "colorscheme xcodedark
 "colorscheme gruvbox8_hard
@@ -534,7 +536,6 @@ colorscheme hotline
 "colorscheme rainbow-contrast
 "colorscheme vision-colorblind
 "colorscheme juicy
-"colorscheme candycode
 "colorscheme darkblue
 "colorscheme blue
 
