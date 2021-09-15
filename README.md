@@ -327,7 +327,7 @@ module.exports = {
 
 
 ## Favorite Fonts Main Fonts (use ligatures in iterm2)
-Current Favorite: 5. Anoynmous Pro (BOLD) (with newton colorscheme)
+Current Favorite: 5. Anoynmous Pro (BOLD) (with newton colorscheme and xcodedark)
 
 1. Iosevka
 2. Lotion
