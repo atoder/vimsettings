@@ -492,19 +492,20 @@ colorscheme hotline
 "colorscheme brogrammer
 "colorscheme candycode
 
-"colorscheme hackthebox
-"colorscheme spaceduck
 "colorscheme jellybeans
+"colorscheme sonokai
 "colorscheme wtf
 "colorscheme distinguished
-"colorscheme sonokai
 "colorscheme badwolf
 "colorscheme srcery
 "colorscheme artesanal
 "colorscheme snazzy
 "colorscheme purify
+"colorscheme hackthebox
+"colorscheme spaceduck
 "colorscheme meta5
 "colorscheme molokayo
+"colorscheme tokyonight
 "
 "AnonymousPro
 "colorscheme newton
