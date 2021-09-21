@@ -494,18 +494,20 @@ colorscheme hotline
 
 "colorscheme jellybeans
 "colorscheme sonokai
+"colorscheme meta5
+"colorscheme artesanal
 "colorscheme wtf
 "colorscheme distinguished
 "colorscheme badwolf
 "colorscheme srcery
-"colorscheme artesanal
 "colorscheme snazzy
 "colorscheme purify
 "colorscheme hackthebox
 "colorscheme spaceduck
-"colorscheme meta5
 "colorscheme molokayo
 "colorscheme tokyonight
+"colorscheme dracula
+"colorscheme gruvbox8
 "
 "AnonymousPro
 "colorscheme newton
@@ -553,8 +555,6 @@ colorscheme hotline
 "with recursive font
 "colorscheme darkside-contrast
 
-"colorscheme dracula
-"colorscheme gruvbox8
 "colorscheme pleasure-contrast
 "colorscheme aurora
 "colorscheme moonfly
