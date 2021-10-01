@@ -487,6 +487,7 @@ au BufNewFile,BufRead *.eco set filetype=html
 
 "colorscheme humanoid
 colorscheme hotline
+"colorscheme neon2
 "colorscheme neon-dark-256
 "colorscheme koehler
 "colorscheme brogrammer
