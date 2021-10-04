@@ -493,22 +493,24 @@ colorscheme hotline
 "colorscheme brogrammer
 "colorscheme candycode
 
+"brighter background colors
+"colorscheme artesanal
+"colorscheme snazzy
+"colorscheme molokayo
+"colorscheme dracula
+"colorscheme gruvbox8
+
 "colorscheme jellybeans
 "colorscheme sonokai
 "colorscheme meta5
-"colorscheme artesanal
 "colorscheme wtf
 "colorscheme distinguished
 "colorscheme badwolf
 "colorscheme srcery
-"colorscheme snazzy
 "colorscheme purify
 "colorscheme hackthebox
 "colorscheme spaceduck
-"colorscheme molokayo
 "colorscheme tokyonight
-"colorscheme dracula
-"colorscheme gruvbox8
 "
 "AnonymousPro
 "colorscheme newton
@@ -522,7 +524,6 @@ colorscheme hotline
 "colorscheme carbonized-light
 "colorscheme volatile-contrast
 "colorscheme molokayo
-"colorscheme badwolf
 "colorscheme goodwolf
 "colorscheme seoul256
 "colorscheme seoul256-light
