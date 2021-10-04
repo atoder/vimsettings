@@ -370,8 +370,6 @@ Plug 'nightsense/carbonized'
 "https://github.com/audibleblink/hackthebox.vim
 Plug 'audibleblink/hackthebox.vim'
 
-Plug 'nonetallt/vim-neon-dark'
-
 " RainGlow Package
 " 320+ color themes
 Plug 'rainglow/vim'
@@ -487,25 +485,30 @@ au BufNewFile,BufRead *.eco set filetype=html
 
 "colorscheme humanoid
 colorscheme hotline
+"colorscheme neon2
 "colorscheme koehler
-"colorscheme neon-dark-256
 "colorscheme brogrammer
 "colorscheme candycode
+
+"brighter background colors
+"colorscheme artesanal
+"colorscheme snazzy
+"colorscheme molokayo
+"colorscheme dracula
+"colorscheme gruvbox8
 
 "colorscheme jellybeans
 "colorscheme sonokai
 "colorscheme molokai
+"
+"colorscheme meta5
 "colorscheme wtf
 "colorscheme distinguished
 "colorscheme badwolf
 "colorscheme srcery
-"colorscheme artesanal
-"colorscheme snazzy
 "colorscheme purify
 "colorscheme hackthebox
 "colorscheme spaceduck
-"colorscheme meta5
-"colorscheme molokayo
 "colorscheme tokyonight
 "colorscheme solarflare
 
@@ -515,13 +518,11 @@ colorscheme hotline
 "
 "colorscheme pablo
 "colorscheme desert
-"colorscheme neon-dark
 "colorscheme OceanicNext
 "colorscheme carbonized-dark
 "colorscheme carbonized-light
 "colorscheme volatile-contrast
 "colorscheme molokayo
-"colorscheme badwolf
 "colorscheme goodwolf
 "colorscheme seoul256
 "colorscheme seoul256-light
@@ -555,8 +556,6 @@ colorscheme hotline
 "with recursive font
 "colorscheme darkside-contrast
 
-"colorscheme dracula
-"colorscheme gruvbox8
 "colorscheme pleasure-contrast
 "colorscheme aurora
 "colorscheme moonfly
