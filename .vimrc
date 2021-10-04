@@ -487,13 +487,14 @@ au BufNewFile,BufRead *.eco set filetype=html
 
 "colorscheme humanoid
 colorscheme hotline
-"colorscheme neon-dark-256
 "colorscheme koehler
+"colorscheme neon-dark-256
 "colorscheme brogrammer
 "colorscheme candycode
 
 "colorscheme jellybeans
 "colorscheme sonokai
+"colorscheme molokai
 "colorscheme wtf
 "colorscheme distinguished
 "colorscheme badwolf
@@ -506,7 +507,8 @@ colorscheme hotline
 "colorscheme meta5
 "colorscheme molokayo
 "colorscheme tokyonight
-"
+"colorscheme solarflare
+
 "AnonymousPro
 "colorscheme newton
 "
