@@ -373,6 +373,10 @@ Plug 'audibleblink/hackthebox.vim'
 "https://github.com/sthendev/mariana.vim
 Plug 'sthendev/mariana.vim'
 
+"https://github.com/Brettm12345/moonlight.vim
+Plug 'Brettm12345/moonlight.vim'
+
+
 " RainGlow Package
 " 320+ color themes
 Plug 'rainglow/vim'
@@ -489,6 +493,7 @@ au BufNewFile,BufRead *.eco set filetype=html
 "colorscheme humanoid
 "colorscheme mariana
 colorscheme hotline
+"colorscheme moonlight
 "colorscheme neon2
 "colorscheme koehler
 "colorscheme brogrammer
