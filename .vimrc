@@ -370,6 +370,9 @@ Plug 'nightsense/carbonized'
 "https://github.com/audibleblink/hackthebox.vim
 Plug 'audibleblink/hackthebox.vim'
 
+"https://github.com/sthendev/mariana.vim
+Plug 'sthendev/mariana.vim'
+
 " RainGlow Package
 " 320+ color themes
 Plug 'rainglow/vim'
@@ -484,6 +487,7 @@ au BufNewFile,BufRead *.eco set filetype=html
 "colorscheme default
 
 "colorscheme humanoid
+"colorscheme mariana
 colorscheme hotline
 "colorscheme neon2
 "colorscheme koehler
