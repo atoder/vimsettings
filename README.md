@@ -331,25 +331,26 @@ Current Favorite: 5. Anoynmous Pro (BOLD) (with newton colorscheme and xcodedark
 
 1. Iosevka
 2. Lotion
-3. DM Mono
-4. Recursive Mono / Rec Mono Casual
-5. Anoynmous Pro (BOLD) (with newton colorscheme)
-6. MonoLisa
-7. Gintronic
-8. Cascadia Code
-9. Firicico (with purify colorscheme)
-10. Operator Mono Lig
-11. SpaceMono
-12. Comic Mono
-13. NovaMoto
-14. Hermit
-15. Fantasque
-16. JetBrains Mono
-17. Victor Mono
-18. SF Mono Regular
-19. Inconsolata
-20. Source Code Pro
-21. Envy Code R
+3. Terminus with OceanicNext colorscheme in vim
+4. DM Mono
+5. Recursive Mono / Rec Mono Casual
+6. Anoynmous Pro (BOLD) (with newton colorscheme)
+7. MonoLisa
+8. Gintronic
+9. Cascadia Code
+10. Firicico (with purify colorscheme)
+11. Operator Mono Lig
+12. SpaceMono
+13. Comic Mono
+14. NovaMoto
+15. Hermit
+16. Fantasque
+17. JetBrains Mono
+18. Victor Mono
+19. SF Mono Regular
+20. Inconsolata
+21. Source Code Pro
+22. Envy Code R
 
 For fonts icons to display in tmux, use a secondary Non-ASCII font such as
 1. Hack Nerd Front Mono
