@@ -499,6 +499,7 @@ colorscheme hotline
 "colorscheme neon2
 "colorscheme koehler
 "colorscheme ron
+"colorscheme joker
 "colorscheme brogrammer
 "colorscheme candycode
 "colorscheme patriot
