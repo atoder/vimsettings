@@ -499,6 +499,7 @@ colorscheme hotline
 "colorscheme neon2
 "colorscheme koehler
 "colorscheme ron
+"colorscheme tender
 "colorscheme joker
 "colorscheme brogrammer
 "colorscheme candycode
@@ -547,7 +548,6 @@ colorscheme hotline
 "colorscheme super-contrast
 "colorscheme hawaii
 
-"colorscheme tender
 "colorscheme xcodewwdc
 "colorscheme xcodedark
 "colorscheme gruvbox8_hard
