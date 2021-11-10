@@ -376,6 +376,8 @@ Plug 'sthendev/mariana.vim'
 "https://github.com/Brettm12345/moonlight.vim
 Plug 'Brettm12345/moonlight.vim'
 
+"janah colorscheme
+Plug 'mhinz/vim-janah'
 
 " RainGlow Package
 " 320+ color themes
@@ -496,8 +498,10 @@ colorscheme hotline
 "colorscheme moonlight
 "colorscheme neon2
 "colorscheme koehler
+"colorscheme ron
 "colorscheme brogrammer
 "colorscheme candycode
+"colorscheme patriot
 
 "brighter background colors
 "colorscheme artesanal
@@ -523,8 +527,7 @@ colorscheme hotline
 
 "AnonymousPro
 "colorscheme newton
-"
-"
+
 "colorscheme pablo
 "colorscheme desert
 "colorscheme OceanicNext
