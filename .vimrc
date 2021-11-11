@@ -499,17 +499,9 @@ colorscheme hotline
 "colorscheme brogrammer
 "colorscheme candycode
 
-"brighter background colors
-"colorscheme artesanal
-"colorscheme snazzy
-"colorscheme molokayo
-"colorscheme dracula
-"colorscheme gruvbox8
-
 "colorscheme jellybeans
 "colorscheme sonokai
 "colorscheme molokai
-"
 "colorscheme meta5
 "colorscheme wtf
 "colorscheme distinguished
@@ -520,6 +512,16 @@ colorscheme hotline
 "colorscheme spaceduck
 "colorscheme tokyonight
 "colorscheme solarflare
+
+""brighter background colors
+"colorscheme artesanal
+"colorscheme snazzy
+"colorscheme molokayo
+"colorscheme dracula
+"colorscheme gruvbox8
+
+
+"
 
 "AnonymousPro
 "colorscheme newton
