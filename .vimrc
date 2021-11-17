@@ -496,6 +496,7 @@ au BufNewFile,BufRead *.eco set filetype=html
 "colorscheme mariana
 colorscheme hotline
 "colorscheme moonlight
+"colorscheme moonfly
 "colorscheme neon2
 "colorscheme koehler
 "colorscheme ron
@@ -573,7 +574,6 @@ colorscheme hotline
 
 "colorscheme pleasure-contrast
 "colorscheme aurora
-"colorscheme moonfly
 "colorscheme monzo-contrast
 "colorscheme horizon-contrast
 "colorscheme banner
