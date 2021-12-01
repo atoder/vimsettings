@@ -504,6 +504,7 @@ colorscheme hotline
 "colorscheme joker
 "colorscheme brogrammer
 "colorscheme candycode
+"colorscheme aurora
 "colorscheme patriot
 
 "colorscheme jellybeans
@@ -526,9 +527,6 @@ colorscheme hotline
 "colorscheme molokayo
 "colorscheme dracula
 "colorscheme gruvbox8
-
-
-"
 
 "AnonymousPro
 "colorscheme newton
@@ -573,7 +571,6 @@ colorscheme hotline
 "colorscheme darkside-contrast
 
 "colorscheme pleasure-contrast
-"colorscheme aurora
 "colorscheme monzo-contrast
 "colorscheme horizon-contrast
 "colorscheme banner
