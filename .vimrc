@@ -508,6 +508,7 @@ colorscheme hotline
 "colorscheme candycode
 "colorscheme aurora
 "colorscheme patriot
+"colorscheme penultimate
 
 "colorscheme jellybeans
 "colorscheme sonokai
