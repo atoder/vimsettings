@@ -483,6 +483,9 @@ au BufNewFile,BufRead *.eco set filetype=html
 
 
 "colorscheme default
+"colorscheme snazzy
+"colorscheme koehler
+"colorscheme industry
 
 "colorscheme humanoid
 colorscheme hotline
@@ -496,6 +499,7 @@ colorscheme hotline
 "colorscheme brogrammer
 "colorscheme candycode
 "colorscheme patriot
+"colorscheme penultimate
 
 "colorscheme jellybeans
 "colorscheme sonokai
@@ -512,7 +516,6 @@ colorscheme hotline
 
 ""brighter background colors
 "colorscheme artesanal
-"colorscheme snazzy
 "colorscheme molokayo
 "colorscheme dracula
 "colorscheme gruvbox8
@@ -567,7 +570,6 @@ colorscheme hotline
 "
 "colorscheme synthwave84
 "colorscheme neon2
-"colorscheme default
 
 "light
 "colorscheme seoul256-light
