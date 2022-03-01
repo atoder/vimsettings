@@ -293,8 +293,6 @@ Plug 'wimstefan/vim-artesanal'
 "Purify colorscheme
 Plug 'kyoz/purify', { 'rtp': 'vim' }
 
-"moonfly
-Plug 'bluz71/vim-moonfly-colors'
 
 "badwolf
 Plug 'leafgarland/badwolf'
@@ -369,12 +367,6 @@ Plug 'nightsense/carbonized'
 
 "https://github.com/audibleblink/hackthebox.vim
 Plug 'audibleblink/hackthebox.vim'
-
-"https://github.com/sthendev/mariana.vim
-Plug 'sthendev/mariana.vim'
-
-"https://github.com/Brettm12345/moonlight.vim
-Plug 'Brettm12345/moonlight.vim'
 
 "janah colorscheme
 Plug 'mhinz/vim-janah'
@@ -493,18 +485,16 @@ au BufNewFile,BufRead *.eco set filetype=html
 "colorscheme default
 
 "colorscheme humanoid
-"colorscheme mariana
 colorscheme hotline
-"colorscheme moonlight
-"colorscheme moonfly
+"colorscheme tokyonight
 "colorscheme neon2
 "colorscheme koehler
+"colorscheme elflord
+"colorscheme aurora
 "colorscheme ron
 "colorscheme tender
-"colorscheme joker
 "colorscheme brogrammer
 "colorscheme candycode
-"colorscheme aurora
 "colorscheme patriot
 
 "colorscheme jellybeans
@@ -518,7 +508,6 @@ colorscheme hotline
 "colorscheme purify
 "colorscheme hackthebox
 "colorscheme spaceduck
-"colorscheme tokyonight
 "colorscheme solarflare
 
 ""brighter background colors
@@ -552,7 +541,6 @@ colorscheme hotline
 "colorscheme xcodewwdc
 "colorscheme xcodedark
 "colorscheme gruvbox8_hard
-"colorscheme tokyonight
 
 "with Lotion font
 "colorscheme sourlick
