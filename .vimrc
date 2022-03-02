@@ -483,12 +483,13 @@ au BufNewFile,BufRead *.eco set filetype=html
 
 
 "colorscheme default
+colorscheme xcodedark
 "colorscheme snazzy
 "colorscheme koehler
 "colorscheme industry
-
 "colorscheme humanoid
-colorscheme hotline
+
+"colorscheme hotline
 "colorscheme tokyonight
 "colorscheme neon2
 "colorscheme koehler
