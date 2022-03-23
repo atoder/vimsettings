@@ -110,7 +110,16 @@ return packer.startup(function(use)
     vim.api.nvim_set_keymap('n', "<C-\\>", ":lua require'nvim-tmux-navigation'.NvimTmuxNavigateLastActive()<cr>", { noremap = true, silent = true })
     vim.api.nvim_set_keymap('n', "<C-Space>", ":lua require'nvim-tmux-navigation'.NvimTmuxNavigateNext()<cr>", { noremap = true, silent = true })
   end
-  } 
+  }
+
+  -- A high performance plugin to change your working directory to the project
+  -- root when you open a file. Basically a minimal version of vim-rooter
+  -- written in lua.
+  -- Use :RooterToggle
+  use {
+    'jedi2610/nvim-rooter.lua',
+    config = function() require'nvim-rooter'.setup() end
+  }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

@@ -89,6 +89,9 @@ keymap("n", "<C-a>", ":bufdo bd<CR>", opts)
 -- "space space y will copy all the text
 keymap("n", "<Leader><Leader>y", ":%y+<CR>", opts)
 
+-- find Files
+keymap("n", "<C-p>", ":Telescope find_files<CR>", opts)
+
 
 -- "mapping buffer switching and closing to shortcuts
 keymap("n", "bn", ":bn<cr>", opts)
