@@ -63,8 +63,8 @@ keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 -- keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
 -- Telescope --
--- Search for the keyword under the cursor
-keymap("n", "<leader>S", ":lua require(\'telescope.builtin\').grep_string { search = vim.fn.expand(\"<cword>\") }<CR>", opts)
+-- Search for the keyword under the cursor using Control + s
+keymap("n", "<C-s>", ":lua require(\'telescope.builtin\').grep_string { search = vim.fn.expand(\"<cword>\") }<CR>", opts)
 
 -- Terminal --
 -- Better terminal navigation
