@@ -66,6 +66,35 @@ keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 -- Search for the keyword under the cursor using Control + s
 keymap("n", "<C-s>", ":lua require(\'telescope.builtin\').grep_string { search = vim.fn.expand(\"<cword>\") }<CR>", opts)
 
+-- If all that is wanted is to display the name of the current file,
+-- type Ctrl-G (or press 1 then Ctrl-G for the full path).
+--  put full path of current dir into vim file
+keymap("n", "<leader><leader>dw", ":r! echo %:p<CR>", opts)
+
+-- format to get rid of dos/windows carriage returns
+keymap("n", "<leader><leader>f", ":e ++ff=dos<CR>", opts)
+
+-- " toggle line numbers
+keymap("n", "<C-ln>", ":set rnu!<CR>", opts)
+
+
+-- " Control + C mapping to run :bp | bd #
+-- " which moves to previous buffer and closes the buffer we just moved from
+-- " this way you can close a buffer and still have a vsplit for example
+keymap("n", "<C-c>", ":bp|bd #<CR>", opts)
+
+-- " close all buffers
+keymap("n", "<C-a>", ":bufdo bd<CR>", opts)
+
+-- "space space y will copy all the text
+keymap("n", "<Leader><Leader>y", ":%y+<CR>", opts)
+
+
+-- "mapping buffer switching and closing to shortcuts
+keymap("n", "bn", ":bn<cr>", opts)
+keymap("n", "bp", ":bp<cr>", opts)
+keymap("n", "bd", ":bd<cr>", opts)
+
 -- Terminal --
 -- Better terminal navigation
 -- keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
