@@ -5,9 +5,25 @@ Upload `.vimrc`, `.tmux.conf`, and `.zshrc` to an online code repository in a di
 On Mac OSX/Linux create symbolic links:
 
 ```
-ln -s  ~/Documents/vimsettings/.vimrc $HOME/.vimrc
 ln -s  ~/Documents/vimsettings/.tmux.conf $HOME/.tmux.conf
 ln -s  ~/Documents/vimsettings/.zshrc $HOME/.zshrc
+```
+
+
+VIM setup
+```
+ln -s  ~/Documents/vimsettings/.vimrc $HOME/.vimrc
+```
+
+NVIM setup
+
+```
+ln -s  ~/Documents/vimsettings/nvim $HOME/.config/nvim
+```
+
+For fonts download one of the nerd ones from 
+```
+https://www.nerdfonts.com/font-downloads
 ```
 
 For VIM tmp file settings make sure to create tmp file
