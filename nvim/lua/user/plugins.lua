@@ -65,6 +65,7 @@ return packer.startup(function(use)
   use "arzg/vim-colors-xcode"
   use "sainnhe/everforest"
   use "nanotech/jellybeans.vim"
+  use "sainnhe/sonokai"
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
