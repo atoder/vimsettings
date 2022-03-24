@@ -11,8 +11,8 @@ alias ssh='TERM=xterm-256color ssh'
 
 
 # make sure that if a program wants you to edit
-# # text, that Vim is going to be there for you
-export EDITOR="vim"
+# text, that Vim is going to be there for you
+export EDITOR="nvim"
 export USE_EDITOR=$EDITOR
 export VISUAL=$EDITOR
 
@@ -24,8 +24,8 @@ export SW_CONFIG_NAME=dev
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 #ZSH_THEME="robbyrussell"
-ZSH_THEME="awesomepanda"
-#ZSH_THEME="random"
+#ZSH_THEME="awesomepanda"
+ZSH_THEME="random"
 #ZSH_THEME="kolo"
 #ZSH_THEME="cloud"
 #ZSH_THEME="sammy"
