@@ -77,6 +77,12 @@ return packer.startup(function(use)
   use "saadparwaiz1/cmp_luasnip" -- snippet completions
   use "hrsh7th/cmp-nvim-lsp"
 
+  -- View and search LSP symbols, tags in Vim/NeoVim.
+  -- Vista	Open/Close vista window for viewing tags or LSP symbols
+  -- Vista!	Close vista view window if already opened
+  -- Vista!!	Toggle vista view window
+  use "liuchengxu/vista.vim"
+
   -- snippets
   use "L3MON4D3/LuaSnip" --snippet engine
   use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
