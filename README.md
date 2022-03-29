@@ -10,16 +10,24 @@ ln -s  ~/Documents/vimsettings/.zshrc $HOME/.zshrc
 ```
 
 
-VIM setup
+### VIM setup
 ```
 ln -s  ~/Documents/vimsettings/.vimrc $HOME/.vimrc
 ```
 
-NVIM setup
+### NVIM setup
 
 ```
 ln -s  ~/Documents/vimsettings/nvim $HOME/.config/nvim
 ```
+
+### NVIM LSP Language config
+Code compleition - When nvim is open type in
+```
+:LspInstallInfo 
+```
+Select the language and click "I" to install
+
 
 For fonts download one of the nerd ones from 
 ```

@@ -77,7 +77,6 @@ keymap("n", "<leader><leader>f", ":e ++ff=dos<CR>", opts)
 -- " toggle line numbers
 keymap("n", "<C-ln>", ":set rnu!<CR>", opts)
 
-
 -- " Control + C mapping to run :bp | bd #
 -- " which moves to previous buffer and closes the buffer we just moved from
 -- " this way you can close a buffer and still have a vsplit for example
@@ -104,7 +103,6 @@ keymap("n", "bd", ":bd<cr>", opts)
 -- keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
 -- keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 -- keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
-
 
 
 -- Possible other shortcuts --
