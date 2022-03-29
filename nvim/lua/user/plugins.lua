@@ -102,6 +102,29 @@ return packer.startup(function(use)
   -- Git
   use "lewis6991/gitsigns.nvim"
 
+  -- another git tool
+  use 'tpope/vim-fugitive'
+
+  -- A fancy start screen for Vim.
+  -- Also can save sessions
+  -- :h SSave to see help screen
+  -- sessions get stored into:
+  -- Vim (Unix):    `$HOME/.vim/session`
+  -- :SLoad       load a session
+  -- :SSave[!]    save a session
+  -- :SDelete[!]  delete a session
+  -- :SClose      close a session
+  use 'mhinz/vim-startify'
+
+  -- Vim Better Whitespace Plug
+  -- :ToggleWhitespace
+  -- :StripWhitespace
+  -- use 'ntpeters/vim-better-whitespace'
+
+  -- FastFold integrates with the plug-in vim-stay that restores the folds of
+  -- a file buffer by :mkview and :loadview.
+  use 'kopischke/vim-stay'
+
   -- Easily interact with tmux from vim
   use { 'alexghergh/nvim-tmux-navigation', config = function()
     require'nvim-tmux-navigation'.setup {
