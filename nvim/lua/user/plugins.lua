@@ -69,6 +69,11 @@ return packer.startup(function(use)
   use "sainnhe/sonokai"
   use "ray-x/starry.nvim"
 
+  -- random colorscheme picker - picks automatically
+  use 'xolox/vim-colorscheme-switcher'
+  use 'xolox/vim-misc'
+  vim.api.nvim_set_keymap('n', "<leader>rc", ":RandomColorScheme<cr>", { noremap = true, silent = true })
+
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
   use "hrsh7th/cmp-buffer" -- buffer completions
@@ -77,11 +82,10 @@ return packer.startup(function(use)
   use "saadparwaiz1/cmp_luasnip" -- snippet completions
   use "hrsh7th/cmp-nvim-lsp"
 
-  -- View and search LSP symbols, tags in Vim/NeoVim.
-  -- Vista	Open/Close vista window for viewing tags or LSP symbols
-  -- Vista!	Close vista view window if already opened
-  -- Vista!!	Toggle vista view window
-  use "liuchengxu/vista.vim"
+  -- A tree like view for symbols in Neovim using the Language Server Protocol.
+  -- Supports all your favourite languages.
+  -- :SymbolsOutline
+  use "simrat39/symbols-outline.nvim"
 
   -- snippets
   use "L3MON4D3/LuaSnip" --snippet engine

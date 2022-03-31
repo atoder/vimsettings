@@ -6,3 +6,9 @@ catch /^Vim\%((\a\+)\)\=:E185/
   set background=dark
 endtry
 ]]
+
+-- Load a random colorscheme
+vim.cmd [[
+  autocmd VimEnter * RandomColorScheme
+]]
+
