@@ -68,6 +68,7 @@ return packer.startup(function(use)
   use { "metalelf0/jellybeans-nvim", requires = "rktjmp/lush.nvim" }
   use "sainnhe/sonokai"
   use "ray-x/starry.nvim"
+  use 'bluz71/vim-moonfly-colors'
 
   -- random colorscheme picker - picks automatically
   use 'xolox/vim-colorscheme-switcher'
