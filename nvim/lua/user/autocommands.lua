@@ -28,6 +28,15 @@ vim.cmd [[
     autocmd!
     autocmd User AlphaReady set showtabline=0 | autocmd BufUnload <buffer> set showtabline=2
   augroup end
+
+  augroup _filetypes
+    autocmd Filetype html setlocal ts=2 sts=2 sw=2 expandtab
+    autocmd Filetype ruby setlocal ts=2 sts=2 sw=2 expandtab
+    autocmd Filetype php setlocal ts=4 sts=4 sw=4 expandtab
+    autocmd Filetype javascript setlocal ts=4 sts=4 sw=4 expandtab
+    autocmd Filetype c setlocal ts=4 sts=4 sw=4 expandtab
+  augroup end
+
 ]]
 
 -- Autoformat
