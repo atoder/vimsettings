@@ -40,7 +40,7 @@ keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
 keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
 
 -- Insert --
--- Press jk fast to enter
+-- Press jk fast to enter normal mode
 keymap("i", "jk", "<ESC>", opts)
 
 -- Visual --
@@ -91,7 +91,6 @@ keymap("n", "<Leader><Leader>y", ":%y+<CR>", opts)
 -- find Files
 keymap("n", "<C-p>", ":Telescope find_files<CR>", opts)
 
-
 -- "mapping buffer switching and closing to shortcuts
 keymap("n", "bn", ":bn<cr>", opts)
 keymap("n", "bp", ":bp<cr>", opts)
@@ -117,7 +116,6 @@ keymap("n", "bd", ":bd<cr>", opts)
 -- nnoremap <silent> <Leader>hh :History<CR>
 -- nnoremap <silent> <Leader>h: :History:<CR>
 -- nnoremap <silent> <Leader>h/ :History/<CR>
-
 
 
 -- bind shift KK to grep word under cursor
