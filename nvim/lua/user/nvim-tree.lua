@@ -1,5 +1,6 @@
 -- following options are the default
 -- each of these are documented in `:help nvim-tree.OPTION_NAME`
+
 -- vim.g.nvim_tree_icons = {
 renderer = {
   default = "",
@@ -42,14 +43,9 @@ nvim_tree.setup {
     "dashboard",
     "alpha",
   },
-  -- auto_close = true,
   open_on_tab = false,
   hijack_cursor = false,
   update_cwd = true,
-  -- update_to_buf_dir = {
-  --   enable = true,
-  --   auto_open = true,
-  -- },
   diagnostics = {
     enable = true,
     icons = {
@@ -98,7 +94,6 @@ nvim_tree.setup {
     cmd = "trash",
     require_confirm = true,
   },
-  -- quit_on_open = 0,
   -- git_hl = 1,
   -- disable_window_picker = 0,
   -- root_folder_modifier = ":t",
@@ -109,4 +104,10 @@ nvim_tree.setup {
   --   folder_arrows = 1,
   --   tree_width = 30,
   -- },
+  actions = {
+    open_file = {
+      resize_window = true,
+      quit_on_open = false,
+    }
+  },
 }
