@@ -118,6 +118,7 @@ keymap("n", "bd", ":bd<cr>", opts)
 -- nnoremap <silent> <Leader>h/ :History/<CR>
 
 
+
 -- bind shift KK to grep word under cursor
 -- Use Rg instead of grep (more advanced)
 -- nnoremap KK :Rg <C-R><C-W><CR>
