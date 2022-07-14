@@ -77,6 +77,13 @@ keymap("n", "<leader><leader>f", ":e ++ff=dos<CR>", opts)
 -- " toggle line numbers
 keymap("n", "<leader><leader>ln", ":set rnu!<CR>", opts)
 
+-- shortcut random colorscheme
+keymap('n', "<leader>rc", ":RandomColorScheme<cr>", { noremap = true, silent = true })
+
+-- symbol outline
+keymap('n', "<leader><leader>s", ":SymbolsOutline<cr>", { noremap = true, silent = true })
+
+
 -- " Control + C mapping to run :bp | bd #
 -- " which moves to previous buffer and closes the buffer we just moved from
 -- " this way you can close a buffer and still have a vsplit for example

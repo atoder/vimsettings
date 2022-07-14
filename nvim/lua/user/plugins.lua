@@ -69,7 +69,6 @@ return packer.startup(function(use)
   use "lunarvim/darkplus.nvim"
   use "arzg/vim-colors-xcode"
   use "sainnhe/everforest"
-  -- use "nanotech/jellybeans.vim"
   use { "metalelf0/jellybeans-nvim", requires = "rktjmp/lush.nvim" }
   use "sainnhe/sonokai"
   use "ray-x/starry.nvim"
@@ -79,7 +78,6 @@ return packer.startup(function(use)
   -- random colorscheme picker - picks automatically
   use 'xolox/vim-colorscheme-switcher'
   use 'xolox/vim-misc'
-  vim.api.nvim_set_keymap('n', "<leader>rc", ":RandomColorScheme<cr>", { noremap = true, silent = true })
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
