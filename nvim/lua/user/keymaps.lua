@@ -75,7 +75,7 @@ keymap("n", "<leader><leader>dw", ":r! echo %:p<CR>", opts)
 keymap("n", "<leader><leader>f", ":e ++ff=dos<CR>", opts)
 
 -- " toggle line numbers
-keymap("n", "<C-ln>", ":set rnu!<CR>", opts)
+keymap("n", "<leader><leader>ln", ":set rnu!<CR>", opts)
 
 -- " Control + C mapping to run :bp | bd #
 -- " which moves to previous buffer and closes the buffer we just moved from
@@ -84,6 +84,9 @@ keymap("n", "<C-c>", ":bp|bd #<CR>", opts)
 
 -- " close all buffers
 keymap("n", "<C-a>", ":bufdo bd<CR>", opts)
+
+-- " close window but not buffer
+keymap("n", "<C-f>", ":close <CR>", opts)
 
 -- "space space y will copy all the text
 keymap("n", "<Leader><Leader>y", ":%y+<CR>", opts)
