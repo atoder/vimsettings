@@ -74,7 +74,8 @@ return packer.startup(function(use)
   use "ray-x/starry.nvim"
   use 'bluz71/vim-moonfly-colors'
   use "projekt0n/github-nvim-theme"
-  use "lunarvim/synthwave84.nvim"  -- looks cool with Comic Mono theme
+  -- use "lunarvim/synthwave84.nvim"  -- looks cool with Comic Mono theme
+  use "olimorris/onedarkpro.nvim"
 
   -- random colorscheme picker - picks automatically
   use 'xolox/vim-colorscheme-switcher'
