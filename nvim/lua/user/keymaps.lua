@@ -106,6 +106,12 @@ keymap("n", "bn", ":bn<cr>", opts)
 keymap("n", "bp", ":bp<cr>", opts)
 keymap("n", "bd", ":bd<cr>", opts)
 
+-- Toggle Trouble to show A pretty list for showing diagnostics, references,
+-- telescope results, quickfix and location lists to help you solve all the
+-- trouble your code is causing.
+keymap("n", "<C-t>", ":TroubleToggle<cr>", opts)
+
+
 -- Terminal --
 -- Better terminal navigation
 -- keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
