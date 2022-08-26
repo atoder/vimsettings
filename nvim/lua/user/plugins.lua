@@ -64,6 +64,7 @@ return packer.startup(function(use)
   use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
   use "folke/which-key.nvim"
 
+
   -- Colorschemes
   -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
   use "lunarvim/darkplus.nvim"
@@ -74,8 +75,12 @@ return packer.startup(function(use)
   use "ray-x/starry.nvim"
   use 'bluz71/vim-moonfly-colors'
   use "projekt0n/github-nvim-theme"
-  -- use "lunarvim/synthwave84.nvim"  -- looks cool with Comic Mono theme
+  use "lunarvim/synthwave84.nvim"  -- looks cool with Comic Mono theme
   use "olimorris/onedarkpro.nvim"
+  use "EdenEast/nightfox.nvim"
+  use "patstockwell/vim-monokai-tasty"
+  use "mcchrish/zenbones.nvim"
+  use "rafamadriz/neon"
 
   -- random colorscheme picker - picks automatically
   use 'xolox/vim-colorscheme-switcher'
