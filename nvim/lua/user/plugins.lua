@@ -81,6 +81,7 @@ return packer.startup(function(use)
   use "patstockwell/vim-monokai-tasty"
   use "mcchrish/zenbones.nvim"
   use "rafamadriz/neon"
+  use "luisiacc/gruvbox-baby"
 
   -- random colorscheme picker - picks automatically
   use 'xolox/vim-colorscheme-switcher'
