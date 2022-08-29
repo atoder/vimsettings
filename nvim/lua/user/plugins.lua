@@ -63,6 +63,7 @@ return packer.startup(function(use)
   use "goolord/alpha-nvim"
   use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
   use "folke/which-key.nvim"
+  use "ntpeters/vim-better-whitespace" -- white space tool
 
 
   -- Colorschemes
@@ -82,6 +83,10 @@ return packer.startup(function(use)
   use "mcchrish/zenbones.nvim"
   use "rafamadriz/neon"
   use "luisiacc/gruvbox-baby"
+  use 'hawier-dev/hollow.vim'
+  use 'Rigellute/shades-of-purple.vim'
+  use 'catppuccin/nvim'
+  use 'sainnhe/edge'
 
   -- random colorscheme picker - picks automatically
   use 'xolox/vim-colorscheme-switcher'
