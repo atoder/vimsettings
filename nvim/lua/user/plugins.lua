@@ -87,6 +87,14 @@ return packer.startup(function(use)
   use 'Rigellute/shades-of-purple.vim'
   use 'catppuccin/nvim'
   use 'sainnhe/edge'
+  use 'Shatur/neovim-ayu'
+  use 'leftbones/galaxian-vim'
+  use 'pacokwon/onedarkhc.vim'
+  use { "mangeshrex/everblush.vim" }
+  use { 'embark-theme/vim', as = 'embark' }
+  use 'liuchengxu/space-vim-theme'
+  use 'humanoid-colors/vim-humanoid-colorscheme'
+
 
   -- random colorscheme picker - picks automatically
   use 'xolox/vim-colorscheme-switcher'
