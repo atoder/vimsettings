@@ -161,14 +161,14 @@ return packer.startup(function(use)
   -- https://github.com/mfussenegger/nvim-dap
   use 'mfussenegger/nvim-dap'
 
-   -- UI debugger This is still early stage software. Bugs are expected and
-   -- there may be breaking changes!
-   use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
-   require("dapui").setup()
+  -- UI debugger This is still early stage software. Bugs are expected and
+  -- there may be breaking changes!
+  use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
+  require("dapui").setup()
 
-   -- https://github.com/theHamsta/nvim-dap-virtual-text
-   use 'theHamsta/nvim-dap-virtual-text'
-   require("nvim-dap-virtual-text").setup()
+  -- https://github.com/theHamsta/nvim-dap-virtual-text
+  use 'theHamsta/nvim-dap-virtual-text'
+  require("nvim-dap-virtual-text").setup()
 
   -- start dap and dapui
   local dap, dapui = require("dap"), require("dapui")
@@ -182,34 +182,32 @@ return packer.startup(function(use)
     dapui.close()
   end
 
-   -- INFO: To get debugger working
-   -- 1. execute ~/Downloads/vscode-extensions/codelldb/extension/adapter/codelldb --port 13000
-   -- OR loop such as ~/.vscode/extensions/vadimcn.vscode-lldb-1.7.4/adapter » while sleep 1; do ./codelldb --port 13000; done
-   -- 2. Make sure the .cpp is compiled with debugging flags such as g++ -Wall -std=c++17 -g -O0 file.cpp
-   -- 3. DevToolsSecurity --enable (if you don't want developer tools pop up each time)
-   dap.adapters.codelldb = {
-     type = 'server',
-     host = '127.0.0.1',
-     port = 13000
-   }
+  -- INFO: To get debugger working
+  -- 1. execute ~/Downloads/vscode-extensions/codelldb/extension/adapter/codelldb --port 13000
+  -- OR loop such as ~/.vscode/extensions/vadimcn.vscode-lldb-1.7.4/adapter » while sleep 1; do ./codelldb --port 13000; done
+  -- 2. Make sure the .cpp is compiled with debugging flags such as g++ -Wall -std=c++17 -g -O0 file.cpp
+  -- 3. DevToolsSecurity --enable (if you don't want developer tools pop up each time)
+  dap.adapters.codelldb = {
+    type = 'server',
+    host = '127.0.0.1',
+    port = 13000
+  }
 
-   dap.configurations.c = {
-     {
-       type = 'codelldb',
-       request = 'launch',
-       program = function()
-         return vim.fn.input('Path to executable: ', vim.fn.getcwd()..'/', 'file')
-       end,
-       --program = '${fileDirname}/${fileBasenameNoExtension}',
-       cwd = '${workspaceFolder}',
-       terminal = 'integrated'
-     }
-   }
+  dap.configurations.c = {
+    {
+      type = 'codelldb',
+      request = 'launch',
+      program = function()
+        return vim.fn.input('Path to executable: ', vim.fn.getcwd()..'/', 'file')
+      end,
+      --program = '${fileDirname}/${fileBasenameNoExtension}',
+      cwd = '${workspaceFolder}',
+      terminal = 'integrated'
+    }
+  }
 
   dap.configurations.cpp = dap.configurations.c
   dap.configurations.rust = dap.configurations.c
-
-
 
   -- A fancy start screen for Vim.
   -- Also can save sessions
