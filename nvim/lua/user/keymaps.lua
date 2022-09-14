@@ -127,6 +127,10 @@ keymap("n", "<leader>cb", ":lua require'dap'.clear_breakpoints()<cr>", opts);
 -- Stop
 keymap("n", "<leader>dt", ":lua require'dap'.terminate()<cr>", opts);
 
+-- Breakpoint condition. Sets a break point only if a certain condition is met
+keymap("n", "<leader>dc", ":lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<cr>", opts);
+
+
 
 -- The fancy behavior refers to how people will just hover their mouse over a variable to get its value and memory address and so on.
 --See :help dap.ui.variables.hover() and :help dap.repl.open()
