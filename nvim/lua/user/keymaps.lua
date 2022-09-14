@@ -111,6 +111,26 @@ keymap("n", "bd", ":bd<cr>", opts)
 -- trouble your code is causing.
 keymap("n", "<C-t>", ":TroubleToggle<cr>", opts)
 
+-- nvim-dap debugger
+-- Setting breakpoints
+keymap("n", "<leader>tb", ":lua require'dap'.toggle_breakpoint()<cr>", opts);
+-- Launching debug sessions and resuming execution
+keymap("n", "<leader>db", ":lua require'dap'.continue()<cr>", opts);
+-- Stepping through code step over
+keymap("n", "<leader>so", ":lua require'dap'.step_over()<cr>", opts);
+-- Stepping through code step into
+keymap("n", "<leader>si", ":lua require'dap'.step_into()<cr>", opts);
+-- Stepping out
+keymap("n", "<leader>st", ":lua require'dap'.step_out()<cr>", opts);
+-- Inspecting the state via the built-in REPL: or using the widget UI (:help dap-widgets)
+keymap("n", "<leader>cb", ":lua require'dap'.clear_breakpoints()<cr>", opts);
+-- Stop
+keymap("n", "<leader>dt", ":lua require'dap'.terminate()<cr>", opts);
+
+
+-- The fancy behavior refers to how people will just hover their mouse over a variable to get its value and memory address and so on.
+--See :help dap.ui.variables.hover() and :help dap.repl.open()
+
 
 -- Terminal --
 -- Better terminal navigation
@@ -141,7 +161,7 @@ keymap("n", "<C-t>", ":TroubleToggle<cr>", opts)
 
 -- " Switch to buffer
 -- noremap <leader>b :buffer #<CR>
--- 
+--
 -- " Switch working directory to current opened file
 -- " Explanation:
 -- "":cd change directory Vim command

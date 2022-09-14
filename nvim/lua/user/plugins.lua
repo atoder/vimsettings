@@ -53,6 +53,8 @@ return packer.startup(function(use)
     },
     tag = 'nightly' -- optional, updated every week. (see issue #1193)
   }
+
+  use 'JoosepAlviste/nvim-ts-context-commentstring'
   use "akinsho/bufferline.nvim"
   use "moll/vim-bbye"
   use "nvim-lualine/lualine.nvim"
@@ -79,7 +81,6 @@ return packer.startup(function(use)
   use "lunarvim/synthwave84.nvim"  -- looks cool with Comic Mono theme
   use "olimorris/onedarkpro.nvim"
   use "EdenEast/nightfox.nvim"
-  use "patstockwell/vim-monokai-tasty"
   use "mcchrish/zenbones.nvim"
   use "rafamadriz/neon"
   use "luisiacc/gruvbox-baby"
@@ -88,13 +89,7 @@ return packer.startup(function(use)
   use 'catppuccin/nvim'
   use 'sainnhe/edge'
   use 'Shatur/neovim-ayu'
-  use 'leftbones/galaxian-vim'
-  use 'pacokwon/onedarkhc.vim'
-  use { "mangeshrex/everblush.vim" }
-  use { 'embark-theme/vim', as = 'embark' }
-  use 'liuchengxu/space-vim-theme'
   use 'humanoid-colors/vim-humanoid-colorscheme'
-
 
   -- random colorscheme picker - picks automatically
   use 'xolox/vim-colorscheme-switcher'
@@ -133,7 +128,6 @@ return packer.startup(function(use)
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate",
   }
-  use "JoosepAlviste/nvim-ts-context-commentstring"
 
   -- Git
   use "lewis6991/gitsigns.nvim"
@@ -145,17 +139,75 @@ return packer.startup(function(use)
   -- A pretty list for showing diagnostics, references, telescope results,
   -- quickfix and location lists to help you solve all the trouble your code is
   -- causing.
-  use {
-    "folke/trouble.nvim",
-    requires = "kyazdani42/nvim-web-devicons",
-    config = function()
-      require("trouble").setup {
-        -- your configuration comes here
-        -- or leave it empty to use the default settings
-        -- refer to the configuration section below
-      }
-    end
-  }
+  -- use {
+  --   "folke/trouble.nvim",
+  --   requires = "kyazdani42/nvim-web-devicons",
+  --   config = function()
+  --     require("trouble").setup {
+  --       -- your configuration comes here
+  --       -- or leave it empty to use the default settings
+  --       -- refer to the configuration section below
+  --     }
+  --   end
+  -- }
+
+  -- Debugger
+  -- A typical debug flow consists of:
+  -- Setting breakpoints via :lua require'dap'.toggle_breakpoint().
+  -- Launching debug sessions and resuming execution via :lua require'dap'.continue().
+  -- Stepping through code via :lua require'dap'.step_over() and :lua require'dap'.step_into().
+  -- Inspecting the state via the built-in REPL: :lua require'dap'.repl.open() or using the widget UI (:help dap-widgets)
+  -- See :help dap.txt, :help dap-mapping and :help dap-api.
+  -- https://github.com/mfussenegger/nvim-dap
+  use 'mfussenegger/nvim-dap'
+
+   -- UI debugger This is still early stage software. Bugs are expected and
+   -- there may be breaking changes!
+   use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
+
+   -- https://github.com/theHamsta/nvim-dap-virtual-text
+   use 'theHamsta/nvim-dap-virtual-text'
+   require("nvim-dap-virtual-text").setup()
+
+
+  -- start dap and dapui
+  local dap, dapui = require("dap"), require("dapui")
+  dap.listeners.after.event_initialized["dapui_config"] = function()
+    dapui.open()
+  end
+  dap.listeners.before.event_terminated["dapui_config"] = function()
+    dapui.close()
+  end
+  dap.listeners.before.event_exited["dapui_config"] = function()
+    dapui.close()
+  end
+
+   -- INFO: execute ~/Downloads/vscode-extensions/codelldb/extension/adapter/codelldb --port 13000
+   -- OR loop such as ~/.vscode/extensions/vadimcn.vscode-lldb-1.7.4/adapter » while sleep 1; do ./codelldb --port 13000; done
+   -- also make sure the .cpp is compiled with debugging flags such as g++ -Wall -std=c++17 -g -O0 file.cpp
+   dap.adapters.codelldb = {
+     type = 'server',
+     host = '127.0.0.1',
+     port = 13000
+   }
+
+   dap.configurations.c = {
+     {
+       type = 'codelldb',
+       request = 'launch',
+       program = function()
+         return vim.fn.input('Path to executable: ', vim.fn.getcwd()..'/', 'file')
+       end,
+       --program = '${fileDirname}/${fileBasenameNoExtension}',
+       cwd = '${workspaceFolder}',
+       terminal = 'integrated'
+     }
+   }
+
+  dap.configurations.cpp = dap.configurations.c
+  dap.configurations.rust = dap.configurations.c
+
+
 
   -- A fancy start screen for Vim.
   -- Also can save sessions
