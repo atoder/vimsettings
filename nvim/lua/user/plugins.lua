@@ -164,6 +164,7 @@ return packer.startup(function(use)
    -- UI debugger This is still early stage software. Bugs are expected and
    -- there may be breaking changes!
    use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
+   require("dapui").setup()
 
    -- https://github.com/theHamsta/nvim-dap-virtual-text
    use 'theHamsta/nvim-dap-virtual-text'
@@ -182,9 +183,12 @@ return packer.startup(function(use)
     dapui.close()
   end
 
+  -- dapui.setup()
+
    -- INFO: execute ~/Downloads/vscode-extensions/codelldb/extension/adapter/codelldb --port 13000
    -- OR loop such as ~/.vscode/extensions/vadimcn.vscode-lldb-1.7.4/adapter » while sleep 1; do ./codelldb --port 13000; done
    -- also make sure the .cpp is compiled with debugging flags such as g++ -Wall -std=c++17 -g -O0 file.cpp
+   -- DevToolsSecurity --enable
    dap.adapters.codelldb = {
      type = 'server',
      host = '127.0.0.1',
