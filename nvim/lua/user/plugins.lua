@@ -139,17 +139,17 @@ return packer.startup(function(use)
   -- A pretty list for showing diagnostics, references, telescope results,
   -- quickfix and location lists to help you solve all the trouble your code is
   -- causing.
-  -- use {
-  --   "folke/trouble.nvim",
-  --   requires = "kyazdani42/nvim-web-devicons",
-  --   config = function()
-  --     require("trouble").setup {
-  --       -- your configuration comes here
-  --       -- or leave it empty to use the default settings
-  --       -- refer to the configuration section below
-  --     }
-  --   end
-  -- }
+  use {
+    "folke/trouble.nvim",
+    requires = "kyazdani42/nvim-web-devicons",
+    config = function()
+      require("trouble").setup {
+        -- your configuration comes here
+        -- or leave it empty to use the default settings
+        -- refer to the configuration section below
+      }
+    end
+  }
 
   -- Debugger
   -- A typical debug flow consists of:
@@ -170,7 +170,6 @@ return packer.startup(function(use)
    use 'theHamsta/nvim-dap-virtual-text'
    require("nvim-dap-virtual-text").setup()
 
-
   -- start dap and dapui
   local dap, dapui = require("dap"), require("dapui")
   dap.listeners.after.event_initialized["dapui_config"] = function()
@@ -183,12 +182,11 @@ return packer.startup(function(use)
     dapui.close()
   end
 
-  -- dapui.setup()
-
-   -- INFO: execute ~/Downloads/vscode-extensions/codelldb/extension/adapter/codelldb --port 13000
+   -- INFO: To get debugger working
+   -- 1. execute ~/Downloads/vscode-extensions/codelldb/extension/adapter/codelldb --port 13000
    -- OR loop such as ~/.vscode/extensions/vadimcn.vscode-lldb-1.7.4/adapter » while sleep 1; do ./codelldb --port 13000; done
-   -- also make sure the .cpp is compiled with debugging flags such as g++ -Wall -std=c++17 -g -O0 file.cpp
-   -- DevToolsSecurity --enable
+   -- 2. Make sure the .cpp is compiled with debugging flags such as g++ -Wall -std=c++17 -g -O0 file.cpp
+   -- 3. DevToolsSecurity --enable (if you don't want developer tools pop up each time)
    dap.adapters.codelldb = {
      type = 'server',
      host = '127.0.0.1',
