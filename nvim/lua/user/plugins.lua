@@ -90,6 +90,7 @@ return packer.startup(function(use)
   use 'sainnhe/edge'
   use 'Shatur/neovim-ayu'
   use 'humanoid-colors/vim-humanoid-colorscheme'
+  use 'lissatransborda/dalton-vim'
 
   -- random colorscheme picker - picks automatically
   use 'xolox/vim-colorscheme-switcher'
