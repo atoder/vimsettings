@@ -108,6 +108,7 @@ return packer.startup(function(use)
   -- Supports all your favourite languages.
   -- :SymbolsOutline
   use "simrat39/symbols-outline.nvim"
+  require("symbols-outline").setup()
 
   -- snippets
   use "L3MON4D3/LuaSnip" --snippet engine
