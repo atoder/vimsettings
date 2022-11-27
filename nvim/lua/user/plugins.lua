@@ -91,6 +91,10 @@ return packer.startup(function(use)
   use 'Shatur/neovim-ayu'
   use 'humanoid-colors/vim-humanoid-colorscheme'
   use 'lissatransborda/dalton-vim'
+  use { "ellisonleao/gruvbox.nvim" }
+  use {'aktersnurra/no-clown-fiesta.nvim'}
+  use "rebelot/kanagawa.nvim"
+  use 'wuelnerdotexe/vim-enfocado'
 
   -- random colorscheme picker - picks automatically
   use 'xolox/vim-colorscheme-switcher'
