@@ -24,7 +24,7 @@ export SW_CONFIG_NAME=dev
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 #ZSH_THEME="agnoster"
-#ZSH_THEME="random"
+ZSH_THEME="random"
 #ZSH_THEME="robbyrussell"
 #ZSH_THEME="awesomepanda"
 #ZSH_THEME="kolo"
@@ -34,7 +34,7 @@ export SW_CONFIG_NAME=dev
 #ZSH_THEME="fino"
 #ZSH_THEME="simple"
 #ZSH_THEME="wezm"
-ZSH_THEME="af-magic"
+#ZSH_THEME="af-magic"
 
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)

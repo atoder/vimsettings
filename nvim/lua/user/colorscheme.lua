@@ -5,7 +5,9 @@ try
   " colorscheme humanoid
   " colorscheme earlysummer
   " colorscheme github_dark
-  "colorscheme vimbones
+  " colorscheme vimbones
+  " colorscheme darker
+  " colorscheme enfocado
 catch /^Vim\%((\a\+)\)\=:E185/
   colorscheme default
   set background=dark
