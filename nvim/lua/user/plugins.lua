@@ -115,6 +115,7 @@ return packer.startup(function(use)
   -- Github Co Pilot
   -- :Copilot setup
   -- :Copilot enable
+  -- :help copilot
   use 'github/copilot.vim'
 
   -- random colorscheme picker - picks automatically
