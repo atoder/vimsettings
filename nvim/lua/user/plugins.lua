@@ -72,21 +72,16 @@ return packer.startup(function(use)
   -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
   use "lunarvim/darkplus.nvim"
   use "arzg/vim-colors-xcode"
-  use "sainnhe/everforest"
   use { "metalelf0/jellybeans-nvim", requires = "rktjmp/lush.nvim" }
   use "sainnhe/sonokai"
   use "ray-x/starry.nvim"
   use 'bluz71/vim-moonfly-colors'
-  use "projekt0n/github-nvim-theme"
   use "lunarvim/synthwave84.nvim"  -- looks cool with Comic Mono theme
   use "olimorris/onedarkpro.nvim"
   use "EdenEast/nightfox.nvim"
   use "mcchrish/zenbones.nvim"
-  use "rafamadriz/neon"
   use "luisiacc/gruvbox-baby"
-  use 'hawier-dev/hollow.vim'
   use 'Rigellute/shades-of-purple.vim'
-  use 'catppuccin/nvim'
   use 'sainnhe/edge'
   use 'Shatur/neovim-ayu'
   use 'humanoid-colors/vim-humanoid-colorscheme'
@@ -95,6 +90,32 @@ return packer.startup(function(use)
   use {'aktersnurra/no-clown-fiesta.nvim'}
   use "rebelot/kanagawa.nvim"
   use 'wuelnerdotexe/vim-enfocado'
+  use 'sainnhe/gruvbox-material'
+  use 'elsuizo/monosvkem'
+  use 'srcery-colors/srcery-vim'
+  use { 'embark-theme/vim', as = 'embark' }
+  use 'atelierbram/Base2Tone-nvim'
+  use 'sjl/badwolf'
+  use 'rafalbromirski/vim-aurora'
+  use 'vv9k/bogster'
+  use 'AlessandroYorba/Alduin'
+  use 'markhinch/vim-buddy'
+  use 'bignimbus/pop-punk.vim'
+  use 'elianiva/gruvy.nvim'
+  use 'NTBBloodbath/doom-one.nvim'
+  use 'fenetikm/falcon'
+  use 'ajmwagar/vim-deus'
+  use 'wimstefan/vim-artesanal'
+  use 'Rigellute/rigel'
+  use 'Softmotions/vim-dark-frost-theme'
+  use 'tanvirtin/monokai.nvim'
+  use 'cranberry-clockworks/mirror.nvim'
+  use 's-janjic/gruber-darker-nvim'
+
+  -- Github Co Pilot
+  -- :Copilot setup
+  -- :Copilot enable
+  use 'github/copilot.vim'
 
   -- random colorscheme picker - picks automatically
   use 'xolox/vim-colorscheme-switcher'
@@ -113,6 +134,9 @@ return packer.startup(function(use)
   -- :SymbolsOutline
   use "simrat39/symbols-outline.nvim"
   require("symbols-outline").setup()
+
+  -- Make nvim transparent
+  use "xiyaowong/nvim-transparent"
 
   -- snippets
   use "L3MON4D3/LuaSnip" --snippet engine

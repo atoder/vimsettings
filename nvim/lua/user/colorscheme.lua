@@ -2,10 +2,9 @@ vim.cmd [[
 try
   colorscheme darkplus
   " colorscheme carbonfox
+  " colorscheme nightfox
+  " colorscheme dayfox
   " colorscheme humanoid
-  " colorscheme earlysummer
-  " colorscheme github_dark
-  " colorscheme vimbones
   " colorscheme darker
   " colorscheme enfocado
 catch /^Vim\%((\a\+)\)\=:E185/
