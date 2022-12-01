@@ -133,3 +133,9 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 # export TERM=xterm-256color-italic
 export PATH="/usr/local/opt/llvm/bin:$PATH"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/atoder/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/atoder/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/atoder/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/atoder/google-cloud-sdk/completion.zsh.inc'; fi
