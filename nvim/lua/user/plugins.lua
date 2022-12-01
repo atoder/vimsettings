@@ -94,7 +94,6 @@ return packer.startup(function(use)
   use 'elsuizo/monosvkem'
   use 'srcery-colors/srcery-vim'
   use { 'embark-theme/vim', as = 'embark' }
-  use 'atelierbram/Base2Tone-nvim'
   use 'sjl/badwolf'
   use 'rafalbromirski/vim-aurora'
   use 'vv9k/bogster'
@@ -117,6 +116,7 @@ return packer.startup(function(use)
   -- :Copilot enable
   -- :help copilot
   use 'github/copilot.vim'
+  vim.g.copilot_assume_mapped = true
 
   -- random colorscheme picker - picks automatically
   use 'xolox/vim-colorscheme-switcher'
