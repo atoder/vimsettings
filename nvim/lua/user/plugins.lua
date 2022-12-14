@@ -256,6 +256,7 @@ return packer.startup(function(use)
   -- :StripWhitespace
   -- use 'ntpeters/vim-better-whitespace'
 
+
   -- FastFold integrates with the plug-in vim-stay that restores the folds of
   -- a file buffer by :mkview and :loadview.
   use 'kopischke/vim-stay'
@@ -283,6 +284,7 @@ return packer.startup(function(use)
     'jedi2610/nvim-rooter.lua',
     config = function() require'nvim-rooter'.setup() end
   }
+
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

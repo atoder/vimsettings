@@ -33,12 +33,23 @@ vim.cmd [[
     autocmd Filetype html setlocal ts=2 sts=2 sw=2 expandtab
     autocmd Filetype ruby setlocal ts=2 sts=2 sw=2 expandtab
     autocmd Filetype php setlocal ts=4 sts=4 sw=4 expandtab
-    autocmd Filetype javascript setlocal ts=4 sts=4 sw=4 expandtab
+    autocmd Filetype javascript setlocal ts=2 sts=2 sw=2 expandtab
     autocmd Filetype c setlocal ts=4 sts=4 sw=4 expandtab
     autocmd Filetype cpp setlocal ts=4 sts=4 sw=4 expandtab
   augroup end
 
 ]]
+-- Automatically run RooterToggle
+vim.cmd [[
+  autocmd VimEnter * RooterToggle
+]]
+
+  -- Automatically load a random colorscheme
+vim.cmd [[
+  autocmd VimEnter * RandomColorScheme
+]]
+
+
 
 -- Autoformat
 -- augroup _lsp
