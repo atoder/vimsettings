@@ -76,7 +76,9 @@ return packer.startup(function(use)
   use "sainnhe/sonokai"
   use "ray-x/starry.nvim"
   use 'bluz71/vim-moonfly-colors'
-  use "lunarvim/synthwave84.nvim"  -- looks cool with Comic Mono theme
+  --use "lunarvim/synthwave84.nvim"  -- looks cool with Comic Mono theme
+  use "artanikin/vim-synthwave84"
+  use "goolord/alpha-nvim"
   use "olimorris/onedarkpro.nvim"
   use "EdenEast/nightfox.nvim"
   use "mcchrish/zenbones.nvim"
@@ -110,6 +112,12 @@ return packer.startup(function(use)
   use 'tanvirtin/monokai.nvim'
   use 'cranberry-clockworks/mirror.nvim'
   use 's-janjic/gruber-darker-nvim'
+
+  -- Ranger and dependencies
+  use 'rbgrouleff/bclose.vim'
+  use 'francoiscabrol/ranger.vim'
+  -- disable default <leader>f mapping
+  vim.g.ranger_map_keys = 0
 
   -- Github Co Pilot
   -- :Copilot setup

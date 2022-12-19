@@ -80,6 +80,9 @@ keymap("n", "<leader><leader>ln", ":set rnu!<CR>", opts)
 -- shortcut random colorscheme
 keymap('n', "<leader>rc", ":RandomColorScheme<cr>", { noremap = true, silent = true })
 
+-- ranger
+keymap('n', "<leader>rg", ":Ranger<cr>", { noremap = true, silent = true })
+
 -- symbol outline
 keymap('n', "<leader><leader>s", ":SymbolsOutline<cr>", { noremap = true, silent = true })
 
@@ -129,8 +132,6 @@ keymap("n", "<leader>dt", ":lua require'dap'.terminate()<cr>", opts);
 
 -- Breakpoint condition. Sets a break point only if a certain condition is met
 keymap("n", "<leader>dc", ":lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<cr>", opts);
-
-
 
 -- The fancy behavior refers to how people will just hover their mouse over a variable to get its value and memory address and so on.
 --See :help dap.ui.variables.hover() and :help dap.repl.open()
