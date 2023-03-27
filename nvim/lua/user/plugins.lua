@@ -112,6 +112,7 @@ return packer.startup(function(use)
   use 'tanvirtin/monokai.nvim'
   use 'cranberry-clockworks/mirror.nvim'
   use 's-janjic/gruber-darker-nvim'
+  use 'Yazeed1s/oh-lucy.nvim'
 
   -- Ranger and dependencies
   use 'rbgrouleff/bclose.vim'

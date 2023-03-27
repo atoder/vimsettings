@@ -1,6 +1,8 @@
 vim.cmd [[
 try
   colorscheme darkplus
+  " colorscheme sonokai
+  " colorscheme kanagawa
   " colorscheme artesanal
   " colorscheme mirror
   " colorscheme rigel
@@ -8,6 +10,7 @@ try
   " colorscheme carbonfox
   " colorscheme embark
   " colorscheme nightfox
+  " colorscheme darkfrost
   " colorscheme duskfox
   " colorscheme humanoid
   " colorscheme darker
