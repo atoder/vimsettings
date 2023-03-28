@@ -1,6 +1,7 @@
 vim.cmd [[
 try
   colorscheme darkplus
+  " colorscheme dracula
   " colorscheme sonokai
   " colorscheme kanagawa
   " colorscheme artesanal
