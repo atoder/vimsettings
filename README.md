@@ -356,6 +356,7 @@ Current Favorite:
 Recursive Code iCursive Cg
 https://github.com/sainnhe/icursive-nerd-font
 
+0. Azeret_Mono
 1. Iosevka + Iosevka Custom (with carbonfox theme || 'Rigellute/shades-of-purple.vim')
 2. Lotion
 3. Terminus with OceanicNext colorscheme in vim
