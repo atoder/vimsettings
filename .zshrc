@@ -6,6 +6,8 @@ export ZSH=$HOME/.oh-my-zsh
 export SDKROOT="/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk"
 setopt CORRECT
 
+
+
 # uses a different term when shing since remote machine won't have term-256color-italic
 alias ssh='TERM=xterm-256color ssh'
 
@@ -133,6 +135,8 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 # export TERM=xterm-256color-italic
 export PATH="/usr/local/opt/llvm/bin:$PATH"
+
+export PATH="/opt/homebrew/bin:$PATH"
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/atoder/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/atoder/google-cloud-sdk/path.zsh.inc'; fi

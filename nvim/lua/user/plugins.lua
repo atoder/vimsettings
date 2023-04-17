@@ -66,19 +66,16 @@ return packer.startup(function(use)
   use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
   use "folke/which-key.nvim"
   use "ntpeters/vim-better-whitespace" -- white space tool
-
+  use "nvimdev/zephyr-nvim"
 
   -- Colorschemes
   -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
-  use "lunarvim/darkplus.nvim"
+  -- use 'LunarVim/darkplus.nvim'
   use "arzg/vim-colors-xcode"
   use { "metalelf0/jellybeans-nvim", requires = "rktjmp/lush.nvim" }
   use "sainnhe/sonokai"
-  use "ray-x/starry.nvim"
   use 'bluz71/vim-moonfly-colors'
-  --use "lunarvim/synthwave84.nvim"  -- looks cool with Comic Mono theme
-  use "artanikin/vim-synthwave84"
-  use "goolord/alpha-nvim"
+  use "lunarvim/synthwave84.nvim"  -- looks cool with Comic Mono theme
   use "olimorris/onedarkpro.nvim"
   use "EdenEast/nightfox.nvim"
   use "mcchrish/zenbones.nvim"
@@ -113,6 +110,9 @@ return packer.startup(function(use)
   use 'cranberry-clockworks/mirror.nvim'
   use 's-janjic/gruber-darker-nvim'
   use 'Yazeed1s/oh-lucy.nvim'
+  use { "catppuccin/nvim", as = "catppuccin" }
+  use 'Mofiqul/dracula.nvim'
+
 
   -- Ranger and dependencies
   use 'rbgrouleff/bclose.vim'
@@ -146,7 +146,7 @@ return packer.startup(function(use)
   require("symbols-outline").setup()
 
   -- Make nvim transparent
-  use "xiyaowong/nvim-transparent"
+  -- use "xiyaowong/nvim-transparent"
 
   -- snippets
   use "L3MON4D3/LuaSnip" --snippet engine

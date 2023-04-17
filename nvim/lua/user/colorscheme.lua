@@ -1,28 +1,34 @@
 vim.cmd [[
 try
   colorscheme darkplus
-  " colorscheme dracula
-  " colorscheme sonokai
+  " colorscheme pop-punk
+  " colorscheme carbonfox
+  " colorscheme srcery
+  " colorscheme badwolf
+  " colorscheme nightfox
   " colorscheme kanagawa
-  " colorscheme artesanal
+  " colorscheme dracula
+  " colorscheme synthwave84
+  " colorscheme enfocado
   " colorscheme mirror
+  " colorscheme lunaperche
+  " colorscheme monokai_ristretto
+  " colorscheme embark
+  " colorscheme sonokai
+  " colorscheme darkfrost
+  " colorscheme artesanal
   " colorscheme rigel
   " colorscheme nordfox
-  " colorscheme carbonfox
-  " colorscheme embark
-  " colorscheme nightfox
-  " colorscheme darkfrost
-  " colorscheme duskfox
   " colorscheme humanoid
-  " colorscheme darker
-  " colorscheme enfocado
+  "
   " light scheme
+  " colorscheme kanagawa-lotus
+  " colorscheme catppuccin-latte
   " colorscheme dayfox
-  " colorscheme duskfox
   " colorscheme forestbones
 catch /^Vim\%((\a\+)\)\=:E185/
-  colorscheme default
-  set background=dark
+colorscheme default
+set background=dark
 endtry
 ]]
 

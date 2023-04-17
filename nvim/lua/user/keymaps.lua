@@ -75,7 +75,7 @@ keymap("n", "<leader><leader>dw", ":r! echo %:p<CR>", opts)
 keymap("n", "<leader><leader>f", ":e ++ff=dos<CR>", opts)
 
 -- " toggle line numbers
-keymap("n", "<leader><leader>ln", ":set rnu!<CR>", opts)
+--[[ keymap("n", "<leader><leader>ln", ":set rnu!<CR>", opts) ]]
 
 -- shortcut random colorscheme
 keymap('n', "<leader>rc", ":RandomColorScheme<cr>", { noremap = true, silent = true })

@@ -44,7 +44,7 @@ vim.cmd [[
   autocmd VimEnter * RooterToggle
 ]]
 
-  -- Automatically load a random colorscheme
+ -- Automatically load a random colorscheme
 vim.cmd [[
   autocmd VimEnter * RandomColorScheme
 ]]
