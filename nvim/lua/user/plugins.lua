@@ -113,7 +113,6 @@ return packer.startup(function(use)
   use { "catppuccin/nvim", as = "catppuccin" }
   use 'Mofiqul/dracula.nvim'
 
-
   -- Ranger and dependencies
   use 'rbgrouleff/bclose.vim'
   use 'francoiscabrol/ranger.vim'
@@ -264,7 +263,6 @@ return packer.startup(function(use)
   -- :ToggleWhitespace
   -- :StripWhitespace
   -- use 'ntpeters/vim-better-whitespace'
-
 
   -- FastFold integrates with the plug-in vim-stay that restores the folds of
   -- a file buffer by :mkview and :loadview.
