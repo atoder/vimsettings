@@ -112,6 +112,10 @@ return packer.startup(function(use)
   use 'Yazeed1s/oh-lucy.nvim'
   use { "catppuccin/nvim", as = "catppuccin" }
   use 'Mofiqul/dracula.nvim'
+  use 'challenger-deep-theme/vim'
+  use 'LunarVim/horizon.nvim'
+  use 'noahfrederick/vim-noctu'
+  use 'rktjmp/lush.nvim'
 
   -- Ranger and dependencies
   use 'rbgrouleff/bclose.vim'

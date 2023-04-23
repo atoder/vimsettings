@@ -2,6 +2,8 @@ vim.cmd [[
 try
   colorscheme darkplus
   " colorscheme pop-punk
+  " colorscheme xcodedark
+  " colorscheme kanagawabones
   " colorscheme carbonfox
   " colorscheme srcery
   " colorscheme badwolf
