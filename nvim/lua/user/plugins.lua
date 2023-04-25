@@ -70,7 +70,7 @@ return packer.startup(function(use)
 
   -- Colorschemes
   -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
-  -- use 'LunarVim/darkplus.nvim'
+  use 'LunarVim/darkplus.nvim'
   use "arzg/vim-colors-xcode"
   use { "metalelf0/jellybeans-nvim", requires = "rktjmp/lush.nvim" }
   use "sainnhe/sonokai"
