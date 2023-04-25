@@ -1,6 +1,7 @@
 vim.cmd [[
 try
   colorscheme darkplus
+  " colorscheme artesanal
   " colorscheme pop-punk
   " colorscheme xcodedark
   " colorscheme kanagawabones
@@ -18,7 +19,6 @@ try
   " colorscheme embark
   " colorscheme sonokai
   " colorscheme darkfrost
-  " colorscheme artesanal
   " colorscheme rigel
   " colorscheme nordfox
   " colorscheme humanoid
