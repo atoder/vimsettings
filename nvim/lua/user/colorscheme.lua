@@ -2,8 +2,11 @@ vim.cmd [[
 try
   colorscheme darkplus
   " colorscheme artesanal
+  " colorscheme gruberdarker
+  " colorscheme edge
   " colorscheme pop-punk
   " colorscheme xcodedark
+  " colorscheme challenger_deep
   " colorscheme kanagawabones
   " colorscheme carbonfox
   " colorscheme srcery
@@ -25,8 +28,8 @@ try
   "
   " light scheme
   " colorscheme kanagawa-lotus
-  " colorscheme catppuccin-latte
   " colorscheme dayfox
+  " colorscheme catppuccin-latte
   " colorscheme forestbones
 catch /^Vim\%((\a\+)\)\=:E185/
 colorscheme default
