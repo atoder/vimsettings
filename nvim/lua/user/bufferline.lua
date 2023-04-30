@@ -84,11 +84,14 @@ bufferline.setup {
   highlights = {
     fill = {
       fg = { attribute = "fg", highlight = "#ff0000" },
-      bg = { attribute = "bg", highlight = "TabLine" },
+      -- bg = { attribute = "bg", highlight = "TabLine" },
+      bg = { attribute = "bg", highlight = "Pmenu" },
     },
     background = {
-      fg = { attribute = "fg", highlight = "TabLine" },
-      bg = { attribute = "bg", highlight = "TabLine" },
+      -- fg = { attribute = "fg", highlight = "TabLine" },
+      -- bg = { attribute = "bg", highlight = "TabLine" },
+      fg = { attribute = "fg", highlight = "Pmenu" },
+      bg = { attribute = "bg", highlight = "Pmenu" },
     },
 
     -- buffer_selected = {
@@ -97,17 +100,23 @@ bufferline.setup {
     -- },
 
     buffer_visible = {
-      fg = { attribute = "fg", highlight = "TabLine" },
-      bg = { attribute = "bg", highlight = "TabLine" },
+      -- fg = { attribute = "fg", highlight = "TabLine" },
+      -- bg = { attribute = "bg", highlight = "TabLine" },
+      fg = { attribute = "fg", highlight = "Pmenu" },
+      bg = { attribute = "bg", highlight = "Pmenu" },
     },
 
     close_button = {
-      fg = { attribute = "fg", highlight = "TabLine" },
-      bg = { attribute = "bg", highlight = "TabLine" },
+      -- fg = { attribute = "fg", highlight = "TabLine" },
+      -- bg = { attribute = "bg", highlight = "TabLine" },
+      fg = { attribute = "fg", highlight = "Pmenu" },
+      bg = { attribute = "bg", highlight = "Pmenu" },
     },
     close_button_visible = {
-      fg = { attribute = "fg", highlight = "TabLine" },
-      bg = { attribute = "bg", highlight = "TabLine" },
+      -- fg = { attribute = "fg", highlight = "TabLine" },
+      -- bg = { attribute = "bg", highlight = "TabLine" },
+      fg = { attribute = "fg", highlight = "Pmenu" },
+      bg = { attribute = "bg", highlight = "Pmenu" },
     },
     -- close_button_selected = {
     --   guifg = {attribute='fg',highlight='TabLineSel'},
@@ -119,8 +128,10 @@ bufferline.setup {
       bg = { attribute = "bg", highlight = "Normal" },
     },
     tab = {
-      fg = { attribute = "fg", highlight = "TabLine" },
-      bg = { attribute = "bg", highlight = "TabLine" },
+      -- fg = { attribute = "fg", highlight = "TabLine" },
+      -- bg = { attribute = "bg", highlight = "TabLine" },
+      fg = { attribute = "fg", highlight = "Pmenu" },
+      bg = { attribute = "bg", highlight = "Pmenu" },
     },
     tab_close = {
       -- fg = {attribute='fg',highlight='LspDiagnosticsDefaultError'},
@@ -134,13 +145,17 @@ bufferline.setup {
       underline = true,
     },
     duplicate_visible = {
-      fg = { attribute = "fg", highlight = "TabLine" },
-      bg = { attribute = "bg", highlight = "TabLine" },
+      -- fg = { attribute = "fg", highlight = "TabLine" },
+      -- bg = { attribute = "bg", highlight = "TabLine" },
+      fg = { attribute = "fg", highlight = "Pmenu" },
+      bg = { attribute = "bg", highlight = "Pmenu" },
       underline = true,
     },
     duplicate = {
-      fg = { attribute = "fg", highlight = "TabLine" },
-      bg = { attribute = "bg", highlight = "TabLine" },
+      -- fg = { attribute = "fg", highlight = "TabLine" },
+      -- bg = { attribute = "bg", highlight = "TabLine" },
+      fg = { attribute = "fg", highlight = "Pmenu" },
+      bg = { attribute = "bg", highlight = "Pmenu" },
       underline = true,
     },
 
@@ -157,8 +172,10 @@ bufferline.setup {
       bg = { attribute = "bg", highlight = "TabLine" },
     },
     separator = {
-      fg = { attribute = "bg", highlight = "TabLine" },
-      bg = { attribute = "bg", highlight = "TabLine" },
+      -- fg = { attribute = "bg", highlight = "TabLine" },
+      -- bg = { attribute = "bg", highlight = "TabLine" },
+      fg = { attribute = "bg", highlight = "Pmenu" },
+      bg = { attribute = "bg", highlight = "Pmenu" },
     },
     separator_selected = {
       fg = { attribute = "bg", highlight = "Normal" },
