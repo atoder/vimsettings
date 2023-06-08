@@ -1,8 +1,10 @@
 vim.cmd [[
 try
-  colorscheme darkplus
+  colorscheme artesanal
+  " colorscheme deus
   " colorscheme gruberdarker
-  " colorscheme artesanal
+  " colorscheme habamax
+  " colorscheme darkplus
   " colorscheme badwolf
   " colorscheme edge
   " colorscheme pop-punk
@@ -26,8 +28,9 @@ try
   " colorscheme nordfox
   " colorscheme humanoid
   "
-  " light scheme
+  " light schemes
   " colorscheme kanagawa-lotus
+  " colorscheme onelight
   " colorscheme dayfox
   " colorscheme catppuccin-latte
   " colorscheme forestbones
