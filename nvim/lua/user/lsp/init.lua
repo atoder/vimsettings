@@ -32,6 +32,7 @@ require("mason-lspconfig").setup_handlers {
 --require("user.lsp.handlers").setup()
 require "user.lsp.null-ls"
 
+
 local function setup_buffer_keymaps(bufnr)
   -- See `:help vim.lsp.*` for documentation on any of the below functions
   local opts = { noremap = true, silent = true }
@@ -65,22 +66,9 @@ vim.api.nvim_create_autocmd("LspAttach", {
   end,
 })
 
+-- VIRTUAL TEXT ---
 -- Disable virtual text by setting to false
 vim.diagnostic.config({
   virtual_text = true,
 })
 
-
-local show_diagnostics = true
-
-_G.toggle_diagnostics = function()
-    show_diagnostics = not show_diagnostics
-    vim.lsp.diagnostic.display(
-        vim.lsp.diagnostic.get(0, 1), -- Get all diagnostics for the current buffer
-        0, -- buffer number: 0 means current buffer
-        1, -- client id: 1 typically refers to the first LSP client, adjust if necessary
-        { virtual_text = show_diagnostics }
-    )
-end
--- Toggle virtaul text with space te
-vim.api.nvim_set_keymap('n', '<leader>te', ':lua _G.toggle_diagnostics()<CR>', {noremap = true, silent = true})
