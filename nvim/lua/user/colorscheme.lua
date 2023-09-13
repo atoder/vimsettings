@@ -1,6 +1,8 @@
 vim.cmd [[
 try
-  colorscheme artesanal
+  colorscheme aurora
+  " colorscheme kanagawa-wave
+  " colorscheme artesanal
   " colorscheme deus
   " colorscheme gruberdarker
   " colorscheme habamax
@@ -14,7 +16,6 @@ try
   " colorscheme carbonfox
   " colorscheme srcery
   " colorscheme nightfox
-  " colorscheme kanagawa
   " colorscheme dracula
   " colorscheme synthwave84
   " colorscheme enfocado
@@ -30,9 +31,9 @@ try
   "
   " light schemes
   " colorscheme kanagawa-lotus
+  " colorscheme catppuccin-latte
   " colorscheme onelight
   " colorscheme dayfox
-  " colorscheme catppuccin-latte
   " colorscheme forestbones
 catch /^Vim\%((\a\+)\)\=:E185/
 colorscheme default
