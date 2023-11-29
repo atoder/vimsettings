@@ -1,25 +1,28 @@
 vim.cmd [[
 try
-  colorscheme aurora
+  colorscheme dracula
+  "colorscheme darcula
   " colorscheme kanagawa-wave
+  " colorscheme badwolf
+  " colorscheme darkplus
+  " colorscheme goodwolf
+  " colorscheme mirror
+  " colorscheme slate
+  " colorscheme aurora
   " colorscheme artesanal
+  " colorscheme synthwave84
   " colorscheme deus
   " colorscheme gruberdarker
   " colorscheme habamax
-  " colorscheme darkplus
-  " colorscheme badwolf
+  " colorscheme carbonfox
   " colorscheme edge
   " colorscheme pop-punk
   " colorscheme xcodedark
   " colorscheme challenger_deep
   " colorscheme kanagawabones
-  " colorscheme carbonfox
   " colorscheme srcery
   " colorscheme nightfox
-  " colorscheme dracula
-  " colorscheme synthwave84
   " colorscheme enfocado
-  " colorscheme mirror
   " colorscheme lunaperche
   " colorscheme monokai_ristretto
   " colorscheme embark
