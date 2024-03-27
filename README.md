@@ -24,12 +24,12 @@ ln -s  ~/Documents/vimsettings/nvim $HOME/.config/nvim
 ### NVIM LSP Language config
 Code compleition - When nvim is open type in
 ```
-:LspInstallInfo 
+:LspInstallInfo
 ```
 Select the language and click "I" to install
 
 
-For fonts download one of the nerd ones from 
+For fonts download one of the nerd ones from
 ```
 https://www.nerdfonts.com/font-downloads
 ```
@@ -88,7 +88,7 @@ tic xterm-256-color-italic.terminfo
 
 
 ## Setup ripgrep (faster search in vim)
-`brew install ripgrep` 
+`brew install ripgrep`
 You can use this with fzf by hitting :Rg
 
 
@@ -174,7 +174,7 @@ For debugging in vimspector, you need to have the following file in your directo
 ```.vimspector.json```
 
 Debugging c++
-where main is the compiled c++ file 
+where main is the compiled c++ file
 
 Debugging node js
 and simple.js is node js file
@@ -245,7 +245,7 @@ Make sure to run ```:VimspectorInstall``` and install appropriate debuggers
 
 Also make sure that when you compile C++ files you use the flags -g
 ```
--g 
+-g
 ```
 
 ```
@@ -258,7 +258,7 @@ Example
 g++ -g -O2 main.cpp -o main
 ```
 
-## LLVM 
+## LLVM
 
 ```
 brew install llvm
@@ -272,7 +272,7 @@ For compilers to find llvm you may need to set:
   export CPPFLAGS="-I/usr/local/opt/llvm/include"
 ```
 
-## coc-explorer 
+## coc-explorer
 Vim window that shows files on the left side
 
 Run ```:CocInstall coc-explorer```
@@ -356,7 +356,7 @@ module.exports = {
 font_family Berkeley Mono Variable
 
 #symbol_map U+E0A0-U+E0A3,U+E0C0-U+E0C7 PowerlineSymbols
-symbol_map U+E5FA-U+E62B,U+E700-U+E7C5,U+F000-U+F2E0,U+E200-U+E2A9,U+F500-U+FD46,U+E300-U+E3EB,U+F400-U+F4A8,U+2665,U+26A1,U+F27C,U+E0A3,U+E0B4-U+E0C8,U+E0CA,U+E0CC-U+E0D2,U+E0D4,U+23FB-U+23FE,U+2B58,U+F300-U+F313,U+E000-U+E00D JetBrainsMono NF
+symbol_map U+E5FA-U+E62B,U+E700-U+E7C5,U+F000-U+F2E0,U+E200-U+E2A9,U+F500-U+FD46,U+E300-U+E3EB,U+F400-U+F4A8,U+2665,U+26A1,U+F27C,U+E0A3,U+E0B4-U+E0C8,U+E0CA,U+E0CC-U+E0D2,U+E0D4,U+23FB-U+23FE,U+2B58,U+F300-U+F313,U+E000-U+E00D BlexMono Nerd Font
 ```
 
 
