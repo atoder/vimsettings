@@ -117,6 +117,7 @@ return packer.startup(function(use)
   use 'noahfrederick/vim-noctu'
   use 'rktjmp/lush.nvim'
   use 'Hierosme/darcula.nvim'
+  use "tjdevries/colorbuddy.nvim"
 
   -- Ranger and dependencies
   use 'rbgrouleff/bclose.vim'
