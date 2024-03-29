@@ -182,6 +182,8 @@ return packer.startup(function(use)
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate",
   }
+  require('ts_context_commentstring').setup {}
+  vim.g.skip_ts_context_commentstring_module = true
 
   -- Git
   use "lewis6991/gitsigns.nvim"
@@ -213,6 +215,7 @@ return packer.startup(function(use)
   -- Inspecting the state via the built-in REPL: :lua require'dap'.repl.open() or using the widget UI (:help dap-widgets)
   -- See :help dap.txt, :help dap-mapping and :help dap-api.
   -- https://github.com/mfussenegger/nvim-dap
+  use { "nvim-neotest/nvim-nio" }
   use 'mfussenegger/nvim-dap'
 
   -- UI debugger This is still early stage software. Bugs are expected and
@@ -221,7 +224,11 @@ return packer.startup(function(use)
   require("dapui").setup()
 
   -- https://github.com/theHamsta/nvim-dap-virtual-text
-  use 'theHamsta/nvim-dap-virtual-text'
+  use {
+    'theHamsta/nvim-dap-virtual-text',
+    requires = {'mfussenegger/nvim-dap'}
+  }
+
   require("nvim-dap-virtual-text").setup()
 
   -- start dap and dapui
