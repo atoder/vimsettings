@@ -61,7 +61,7 @@ return packer.startup(function(use)
   use "akinsho/toggleterm.nvim"
   use "ahmedkhalf/project.nvim"
   use "lewis6991/impatient.nvim"
-  use { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} }
+  use "lukas-reineke/indent-blankline.nvim"
   use "goolord/alpha-nvim"
   use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
   use "folke/which-key.nvim"
@@ -129,8 +129,15 @@ return packer.startup(function(use)
   -- :Copilot setup
   -- :Copilot enable
   -- :help copilot
-  use 'github/copilot.vim'
-  vim.g.copilot_assume_mapped = true
+  -- use 'github/copilot.vim'
+  -- vim.g.copilot_assume_mapped = true
+
+  use 'Exafunction/codeium.vim'
+  vim.g.codeium_enabled = false
+  -- tab to insert suggestion
+  -- Command + ] or [ to cycle
+  -- Control + ] to clear suggestion
+  -- call codeium#Chat() call chat
 
   -- random colorscheme picker - picks automatically
   use 'xolox/vim-colorscheme-switcher'
@@ -149,6 +156,9 @@ return packer.startup(function(use)
   -- :SymbolsOutline
   use "simrat39/symbols-outline.nvim"
   require("symbols-outline").setup()
+
+
+  -- For "lukas-reineke/indent-blankline.nvim"
 
   -- Make nvim transparent
   -- use "xiyaowong/nvim-transparent"
