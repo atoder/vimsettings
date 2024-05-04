@@ -368,8 +368,11 @@ Recursive Code iCursive Cg
 https://github.com/sainnhe/icursive-nerd-font
 
 New favorite fonts:
+
 font_family Berkeley Mono
+
 font_family RandyGG
+
 font_family Maple Mono
 
 ---
