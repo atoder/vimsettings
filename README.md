@@ -91,6 +91,50 @@ tic xterm-256-color-italic.terminfo
 `brew install ripgrep`
 You can use this with fzf by hitting :Rg
 
+## Random fonts on load in kitty
+1.	Create a script in your home directory called `random-kitty-font.sh`
+
+```
+#!/bin/bash
+FONTS=(
+    "Berkeley Mono"
+    "RandyGG"
+    "Space Mono for Powerline"
+    "JetBrainsMono Nerd Font"
+    "Victor Mono"
+    "Recursive Mono"
+    "Fragment Mono"
+    "Iosevka Custom"
+    "IBM Plex Mono"
+    "Maple Mono"
+    "SF Mono"
+    "Roboto Mono for Powerline"
+    "RobotoMono Nerd Font"
+    "PragmataPro for Powerline"
+    "GeistMono"
+    "Superstudio LL"
+    # Add more fonts here
+)
+
+RANDOM_FONT=${FONTS[$RANDOM % ${#FONTS[@]}]}
+echo "font_family $RANDOM_FONT" > ~/.config/kitty/current_font.conf
+```
+
+2.	Modify your kitty.conf to include the generated config:
+
+```
+include current_font.conf
+```
+
+3.	Make the script executable:
+```
+chmod +x ~/random-kitty-font.sh
+```
+
+4. Add this to your shell’s rc file (.bashrc, .zshrc, etc.):
+```
+~/random-kitty-font.sh
+```
 
 
 ## CocConfig
