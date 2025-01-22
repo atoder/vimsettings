@@ -113,6 +113,8 @@ FONTS=(
     "Iosevka Custom"
     "IBM Plex Mono"
     "Maple Mono"
+    "ZedMono Nerd Font"
+    "DM Mono"
     "SF Mono"
     "Roboto Mono for Powerline"
     "RobotoMono Nerd Font"
