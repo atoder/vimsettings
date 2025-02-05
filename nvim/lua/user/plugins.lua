@@ -151,6 +151,9 @@ return packer.startup(function(use)
   use "saadparwaiz1/cmp_luasnip" -- snippet completions
   use "hrsh7th/cmp-nvim-lsp"
 
+
+  use 'wakatime/vim-wakatime'
+
   -- A tree like view for symbols in Neovim using the Language Server Protocol.
   -- Supports all your favourite languages.
   -- :SymbolsOutline
