@@ -7,6 +7,7 @@ On Mac OSX/Linux create symbolic links:
 ```
 ln -s  ~/Documents/vimsettings/.tmux.conf $HOME/.tmux.conf
 ln -s  ~/Documents/vimsettings/.zshrc $HOME/.zshrc
+ln -s  ~/Documents/vimsettings/random-kitty-font.sh $HOME/random-kitty-font.sh
 ```
 
 
@@ -108,6 +109,7 @@ FONTS=(
     "CommitMono"
     "Recursive Mono"
     "MonoLisa Nerd Font"
+    "Intel One Mono"
     "Monaspace Argon"
     "PragmataPro for Powerline"
     "Fragment Mono"
