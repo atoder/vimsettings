@@ -46,12 +46,19 @@ return packer.startup(function(use)
   use "nvim-lua/plenary.nvim" -- Useful lua functions used by lots of plugins
   use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
   use "numToStr/Comment.nvim" -- Easily comment stuff
+  -- use {
+  --   'kyazdani42/nvim-tree.lua',
+  --   requires = {
+  --     'kyazdani42/nvim-web-devicons', -- optional, for file icons
+  --   },
+  --   tag = 'nightly' -- optional, updated every week. (see issue #1193)
+  -- }
+
   use {
-    'kyazdani42/nvim-tree.lua',
+    'nvim-tree/nvim-tree.lua',
     requires = {
-      'kyazdani42/nvim-web-devicons', -- optional, for file icons
+      'nvim-tree/nvim-web-devicons', -- optional
     },
-    tag = 'nightly' -- optional, updated every week. (see issue #1193)
   }
 
   use 'JoosepAlviste/nvim-ts-context-commentstring'
@@ -179,6 +186,7 @@ return packer.startup(function(use)
     "williamboman/mason-lspconfig.nvim",
     "neovim/nvim-lspconfig",
   }
+
   -- Pynvim: Python client to Neovim
   use "neovim/pynvim"
 

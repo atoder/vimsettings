@@ -3,7 +3,40 @@ if not status_ok then
   return
 end
 
-require "user.lsp.lsp-installer"
+-- -- require "user.lsp.lsp-installer"
+-- require("mason").setup {
+--     ui = {
+--         icons = {
+--             package_installed = "✓"
+--         }
+--     }
+-- }
+-- require("mason-lspconfig").setup {
+--     --ensure_installed = { "sumneko_lua" },
+--
+-- }
+-- require("mason-lspconfig").setup_handlers {
+--     -- The first entry (without a key) will be the default handler
+--     -- and will be called for each installed server that doesn't have
+--     -- a dedicated handler.
+--     function (server_name) -- default handler (optional)
+--         require("lspconfig")[server_name].setup {}
+--     end,
+--     -- Next, you can provide a dedicated handler for specific servers.
+--     -- For example, a handler override for the `rust_analyzer`:
+--     -- ["rust_analyzer"] = function ()
+--     --     require("rust-tools").setup {}
+--     -- end
+-- }
+-- -- old lsp handlers setup
+-- --require("user.lsp.handlers").setup()
+-- require "user.lsp.null-ls"
+--
+local status_ok, _ = pcall(require, "lspconfig")
+if not status_ok then
+  return
+end
+
 require("mason").setup {
     ui = {
         icons = {
@@ -11,25 +44,22 @@ require("mason").setup {
         }
     }
 }
-require("mason-lspconfig").setup {
-    --ensure_installed = { "sumneko_lua" },
 
+require("mason-lspconfig").setup {
+    --ensure_installed = { "sumneko_lua" }, -- Uncomment if you want specific LSP servers installed
+    handlers = {
+        -- Default handler for all installed servers
+        function(server_name)
+            require("lspconfig")[server_name].setup {}
+        end,
+        -- Optional: Add specific handlers for certain servers
+        -- Example for rust_analyzer:
+        -- ["rust_analyzer"] = function()
+        --     require("rust-tools").setup {}
+        -- end
+    }
 }
-require("mason-lspconfig").setup_handlers {
-    -- The first entry (without a key) will be the default handler
-    -- and will be called for each installed server that doesn't have
-    -- a dedicated handler.
-    function (server_name) -- default handler (optional)
-        require("lspconfig")[server_name].setup {}
-    end,
-    -- Next, you can provide a dedicated handler for specific servers.
-    -- For example, a handler override for the `rust_analyzer`:
-    -- ["rust_analyzer"] = function ()
-    --     require("rust-tools").setup {}
-    -- end
-}
--- old lsp handlers setup
---require("user.lsp.handlers").setup()
+
 require "user.lsp.null-ls"
 
 
