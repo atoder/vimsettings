@@ -203,6 +203,33 @@ return packer.startup(function(use)
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate",
   }
+  require('nvim-treesitter.configs').setup {
+  ensure_installed = {
+    "javascript",
+    "typescript",
+    -- "jsx", -- REMOVED THIS LINE
+    "lua",
+    "vim",
+    "html",
+    "css",
+    "java",
+    "go",
+    "cpp",
+    "c",
+    "python",
+    "json",
+    "yaml",
+    "markdown",
+    "bash",
+    "rust"
+  },
+  sync_install = false,
+  auto_install = true,
+  highlight = {
+    enable = true,
+  },
+}
+
   require('ts_context_commentstring').setup {}
   vim.g.skip_ts_context_commentstring_module = true
 
