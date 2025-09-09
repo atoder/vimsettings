@@ -191,7 +191,8 @@ return packer.startup(function(use)
   use "neovim/pynvim"
 
   use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
-  use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
+  -- use "jose-elias-alvarez/null-ls.nvim" -- DEPRECATED: Comment out or remove this line
+  use "nvimtools/none-ls.nvim"             -- ADD THIS LINE: The replacement for null-ls
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"
@@ -207,7 +208,6 @@ return packer.startup(function(use)
   ensure_installed = {
     "javascript",
     "typescript",
-    -- "jsx", -- REMOVED THIS LINE
     "lua",
     "vim",
     "html",
