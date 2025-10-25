@@ -87,7 +87,7 @@ keymap('n', "<leader>rc", ":RandomColorScheme<cr>", { noremap = true, silent = t
 keymap('n', "<leader>rg", ":Ranger<cr>", { noremap = true, silent = true })
 
 -- symbol outline
-keymap('n', "<leader><leader>s", ":SymbolsOutline<cr>", { noremap = true, silent = true })
+keymap('n', "<leader><leader>s", ":AerialToggle<cr>", { noremap = true, silent = true })
 
 
 -- " Control + C mapping to run :bp | bd #
@@ -115,7 +115,7 @@ keymap("n", "bd", ":bd<cr>", opts)
 -- Toggle Trouble to show A pretty list for showing diagnostics, references,
 -- telescope results, quickfix and location lists to help you solve all the
 -- trouble your code is causing.
-keymap("n", "<C-t>", ":TroubleToggle<cr>", opts)
+keymap("n", "<C-t>", ":Trouble diagnostics toggle<cr>", opts)
 
 -- nvim-dap debugger
 -- Setting breakpoints

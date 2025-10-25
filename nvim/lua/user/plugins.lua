@@ -158,15 +158,22 @@ return packer.startup(function(use)
   use "saadparwaiz1/cmp_luasnip" -- snippet completions
   use "hrsh7th/cmp-nvim-lsp"
 
-
+  -- track coding time
   use 'wakatime/vim-wakatime'
 
-  -- A tree like view for symbols in Neovim using the Language Server Protocol.
-  -- Supports all your favourite languages.
-  -- :SymbolsOutline
-  use "simrat39/symbols-outline.nvim"
-  require("symbols-outline").setup()
-
+  -- A code outline viewer that uses Treesitter for accurate hierarchy
+  use {
+    "stevearc/aerial.nvim",
+    config = function()
+      require("aerial").setup({
+        -- This is optional, but it makes it behave like the old plugin
+        layout = {
+          default_direction = "right",
+          width = 30, -- or whatever width you like
+        }
+      })
+    end
+  }
 
   -- For "lukas-reineke/indent-blankline.nvim"
 
