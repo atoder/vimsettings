@@ -117,6 +117,9 @@ keymap("n", "bd", ":bd<cr>", opts)
 -- trouble your code is causing.
 keymap("n", "<C-t>", ":Trouble diagnostics toggle<cr>", opts)
 
+-- Toggle Markdown rendering
+keymap("n", "<leader>md", ":RenderMarkdown toggle<CR>", opts)
+
 -- nvim-dap debugger
 -- Setting breakpoints
 keymap("n", "<leader>tb", ":lua require'dap'.toggle_breakpoint()<cr>", opts);

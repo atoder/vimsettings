@@ -46,13 +46,6 @@ return packer.startup(function(use)
   use "nvim-lua/plenary.nvim" -- Useful lua functions used by lots of plugins
   use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
   use "numToStr/Comment.nvim" -- Easily comment stuff
-  -- use {
-  --   'kyazdani42/nvim-tree.lua',
-  --   requires = {
-  --     'kyazdani42/nvim-web-devicons', -- optional, for file icons
-  --   },
-  --   tag = 'nightly' -- optional, updated every week. (see issue #1193)
-  -- }
 
   use {
     'nvim-tree/nvim-tree.lua',
@@ -61,7 +54,15 @@ return packer.startup(function(use)
     },
   }
 
-  use 'JoosepAlviste/nvim-ts-context-commentstring'
+  -- **FIXED**: Moved setup into a config block to prevent crash
+  use {
+    'JoosepAlviste/nvim-ts-context-commentstring',
+    config = function()
+      require('ts_context_commentstring').setup {}
+      vim.g.skip_ts_context_commentstring_module = true
+    end
+  }
+
   use "akinsho/bufferline.nvim"
   use "moll/vim-bbye"
   use "nvim-lualine/lualine.nvim"
@@ -76,13 +77,12 @@ return packer.startup(function(use)
   use "nvimdev/zephyr-nvim"
 
   -- Colorschemes
-  -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
   use 'LunarVim/darkplus.nvim'
   use "arzg/vim-colors-xcode"
   use { "metalelf0/jellybeans-nvim", requires = "rktjmp/lush.nvim" }
   use "sainnhe/sonokai"
   use 'bluz71/vim-moonfly-colors'
-  use "lunarvim/synthwave84.nvim"  -- looks cool with Comic Mono theme
+  use "lunarvim/synthwave84.nvim"
   use "olimorris/onedarkpro.nvim"
   use "EdenEast/nightfox.nvim"
   use "mcchrish/zenbones.nvim"
@@ -129,65 +129,81 @@ return packer.startup(function(use)
   -- Ranger and dependencies
   use 'rbgrouleff/bclose.vim'
   use 'francoiscabrol/ranger.vim'
-  -- disable default <leader>f mapping
   vim.g.ranger_map_keys = 0
 
-  -- Github Co Pilot
-  -- :Copilot setup
-  -- :Copilot enable
-  -- :help copilot
-  -- use 'github/copilot.vim'
-  -- vim.g.copilot_assume_mapped = true
-
+  -- Codeium
   use 'Exafunction/codeium.vim'
   vim.g.codeium_enabled = false
-  -- tab to insert suggestion
-  -- Command + ] or [ to cycle
-  -- Control + ] to clear suggestion
-  -- call codeium#Chat() call chat
 
-  -- random colorscheme picker - picks automatically
+  -- random colorscheme picker
   use 'xolox/vim-colorscheme-switcher'
   use 'xolox/vim-misc'
 
   -- cmp plugins
-  use "hrsh7th/nvim-cmp" -- The completion plugin
-  use "hrsh7th/cmp-buffer" -- buffer completions
-  use "hrsh7th/cmp-path" -- path completions
-  use "hrsh7th/cmp-cmdline" -- cmdline completions
-  use "saadparwaiz1/cmp_luasnip" -- snippet completions
+  use "hrsh7th/nvim-cmp"
+  use "hrsh7th/cmp-buffer"
+  use "hrsh7th/cmp-path"
+  use "hrsh7th/cmp-cmdline"
+  use "saadparwaiz1/cmp_luasnip"
   use "hrsh7th/cmp-nvim-lsp"
 
   -- track coding time
   use 'wakatime/vim-wakatime'
 
-  -- A code outline viewer that uses Treesitter for accurate hierarchy
+  -- **FIXED**: Moved Treesitter *before* Markdown plugin
   use {
-    "stevearc/aerial.nvim",
+    "nvim-treesitter/nvim-treesitter",
+    run = ":TSUpdate",
     config = function()
-      require("aerial").setup({
-        -- This is optional, but it makes it behave like the old plugin
-        layout = {
-          default_direction = "right",
-          width = 30, -- or whatever width you like
+      require('nvim-treesitter.configs').setup {
+        ensure_installed = {
+          "javascript", "typescript", "lua", "vim", "html", "css", "java",
+          "go", "cpp", "c", "python", "json", "yaml", "markdown",
+          "markdown_inline", "latex", "bash", "rust"
+        },
+        sync_install = false,
+        auto_install = true,
+        highlight = {
+          enable = true,
+          -- **FIXED**: Removed conflicting lines
+        },
+      }
+    end
+  }
+
+  -- **NEW**: Replaced markview with render-markdown
+  use {
+    'MeanderingProgrammer/render-markdown.nvim',
+    requires = { 'nvim-treesitter/nvim-treesitter' },
+    config = function()
+      require('render-markdown').setup({
+        latex = {
+          enabled = true,
+          -- We'll try the default converter first (utftex)
+          -- If it still doesn't work, add: converter = { 'latex2text' }
         }
       })
     end
   }
 
-  -- For "lukas-reineke/indent-blankline.nvim"
-
-  -- Make nvim transparent
-  -- use "xiyaowong/nvim-transparent"
+  -- A code outline viewer
+  use {
+    "stevearc/aerial.nvim",
+    config = function()
+      require("aerial").setup({
+        layout = {
+          default_direction = "right",
+          width = 30,
+        }
+      })
+    end
+  }
 
   -- snippets
-  use "L3MON4D3/LuaSnip" --snippet engine
-  use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
+  use "L3MON4D3/LuaSnip"
+  use "rafamadriz/friendly-snippets"
 
   -- LSP
-  --[[ use "neovim/nvim-lspconfig" -- enable LSP ]]
-  -- lsp-installer is not longer mainted, mason.nvim is the next generation
-  --[[ use "williamboman/nvim-lsp-installer" -- simple to use language server installer ]]
   use {
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
@@ -197,93 +213,38 @@ return packer.startup(function(use)
   -- Pynvim: Python client to Neovim
   use "neovim/pynvim"
 
-  use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
-  -- use "jose-elias-alvarez/null-ls.nvim" -- DEPRECATED: Comment out or remove this line
-  use "nvimtools/none-ls.nvim"             -- ADD THIS LINE: The replacement for null-ls
+  use "tamago324/nlsp-settings.nvim"
+  use "nvimtools/none-ls.nvim"
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"
   use "nvim-telescope/telescope-fzy-native.nvim"
   use "BurntSushi/ripgrep"
 
-  -- Treesitter
-  use {
-    "nvim-treesitter/nvim-treesitter",
-    run = ":TSUpdate",
-  }
-  require('nvim-treesitter.configs').setup {
-  ensure_installed = {
-    "javascript",
-    "typescript",
-    "lua",
-    "vim",
-    "html",
-    "css",
-    "java",
-    "go",
-    "cpp",
-    "c",
-    "python",
-    "json",
-    "yaml",
-    "markdown",
-    "bash",
-    "rust"
-  },
-  sync_install = false,
-  auto_install = true,
-  highlight = {
-    enable = true,
-  },
-}
-
-  require('ts_context_commentstring').setup {}
-  vim.g.skip_ts_context_commentstring_module = true
-
   -- Git
   use "lewis6991/gitsigns.nvim"
-
-  -- another git tool
   use 'tpope/vim-fugitive'
 
-  -- https://github.com/folke/trouble.nvim
-  -- A pretty list for showing diagnostics, references, telescope results,
-  -- quickfix and location lists to help you solve all the trouble your code is
-  -- causing.
+  -- Trouble
   use {
     "folke/trouble.nvim",
     requires = "kyazdani42/nvim-web-devicons",
     config = function()
-      require("trouble").setup {
-        -- your configuration comes here
-        -- or leave it empty to use the default settings
-        -- refer to the configuration section below
-      }
+      require("trouble").setup {}
     end
   }
 
   -- Debugger
-  -- A typical debug flow consists of:
-  -- Setting breakpoints via :lua require'dap'.toggle_breakpoint().
-  -- Launching debug sessions and resuming execution via :lua require'dap'.continue().
-  -- Stepping through code via :lua require'dap'.step_over() and :lua require'dap'.step_into().
-  -- Inspecting the state via the built-in REPL: :lua require'dap'.repl.open() or using the widget UI (:help dap-widgets)
-  -- See :help dap.txt, :help dap-mapping and :help dap-api.
-  -- https://github.com/mfussenegger/nvim-dap
   use { "nvim-neotest/nvim-nio" }
   use 'mfussenegger/nvim-dap'
 
-  -- UI debugger This is still early stage software. Bugs are expected and
-  -- there may be breaking changes!
   use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
   require("dapui").setup()
 
-  -- https://github.com/theHamsta/nvim-dap-virtual-text
   use {
     'theHamsta/nvim-dap-virtual-text',
     requires = {'mfussenegger/nvim-dap'}
   }
-
   require("nvim-dap-virtual-text").setup()
 
   -- start dap and dapui
@@ -298,11 +259,6 @@ return packer.startup(function(use)
     dapui.close()
   end
 
-  -- INFO: To get debugger working
-  -- 1. execute ~/Downloads/vscode-extensions/codelldb/extension/adapter/codelldb --port 13000
-  -- OR loop such as ~/.vscode/extensions/vadimcn.vscode-lldb-1.7.4/adapter » while sleep 1; do ./codelldb --port 13000; done
-  -- 2. Make sure the .cpp is compiled with debugging flags such as g++ -Wall -std=c++17 -g -O0 file.cpp
-  -- 3. DevToolsSecurity --enable (if you don't want developer tools pop up each time)
   dap.adapters.codelldb = {
     type = 'server',
     host = '127.0.0.1',
@@ -316,7 +272,6 @@ return packer.startup(function(use)
       program = function()
         return vim.fn.input('Path to executable: ', vim.fn.getcwd()..'/', 'file')
       end,
-      --program = '${fileDirname}/${fileBasenameNoExtension}',
       cwd = '${workspaceFolder}',
       terminal = 'integrated'
     }
@@ -325,53 +280,34 @@ return packer.startup(function(use)
   dap.configurations.cpp = dap.configurations.c
   dap.configurations.rust = dap.configurations.c
 
-  -- A fancy start screen for Vim.
-  -- Also can save sessions
-  -- :h SSave to see help screen
-  -- sessions get stored into:
-  -- Vim (Unix):    `$HOME/.vim/session`
-  -- :SLoad       load a session
-  -- :SSave[!]    save a session
-  -- :SDelete[!]  delete a session
-  -- :SClose      close a session
+  -- Startify
   use 'mhinz/vim-startify'
 
-  -- Vim Better Whitespace Plug
-  -- :ToggleWhitespace
-  -- :StripWhitespace
-  -- use 'ntpeters/vim-better-whitespace'
-
-  -- FastFold integrates with the plug-in vim-stay that restores the folds of
-  -- a file buffer by :mkview and :loadview.
+  -- Stay
   use 'kopischke/vim-stay'
 
-  -- Easily interact with tmux from vim
+  -- Tmux navigation (Original, potentially problematic backslash is present)
   use { 'alexghergh/nvim-tmux-navigation', config = function()
     require'nvim-tmux-navigation'.setup {
-      disable_when_zoomed = true -- defaults to false
+      disable_when_zoomed = true
     }
 
     vim.api.nvim_set_keymap('n', "<C-h>", ":lua require'nvim-tmux-navigation'.NvimTmuxNavigateLeft()<cr>", { noremap = true, silent = true })
     vim.api.nvim_set_keymap('n', "<C-j>", ":lua require'nvim-tmux-navigation'.NvimTmuxNavigateDown()<cr>", { noremap = true, silent = true })
     vim.api.nvim_set_keymap('n', "<C-k>", ":lua require'nvim-tmux-navigation'.NvimTmuxNavigateUp()<cr>", { noremap = true, silent = true })
     vim.api.nvim_set_keymap('n', "<C-l>", ":lua require'nvim-tmux-navigation'.NvimTmuxNavigateRight()<cr>", { noremap = true, silent = true })
-    vim.api.nvim_set_keymap('n', "<C-\\>", ":lua require'nvim-tmux-navigation'.NvimTmuxNavigateLastActive()<cr>", { noremap = true, silent = true })
+    vim.api.nvim_set_keymap('n', "<C-\\>", ":lua require'nvim-tmux-navigation'.NvimTmuxNavigateLastActive()<cr>", { noremap = true, silent = true }) -- This might still cause issues on save
     vim.api.nvim_set_keymap('n', "<C-Space>", ":lua require'nvim-tmux-navigation'.NvimTmuxNavigateNext()<cr>", { noremap = true, silent = true })
   end
   }
 
-  -- A high performance plugin to change your working directory to the project
-  -- root when you open a file. Basically a minimal version of vim-rooter
-  -- written in lua.
-  -- Use :RooterToggle
+  -- Rooter
   use {
     'jedi2610/nvim-rooter.lua',
     config = function() require'nvim-rooter'.setup() end
   }
 
-
   -- Automatically set up your configuration after cloning packer.nvim
-  -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
     require("packer").sync()
   end
