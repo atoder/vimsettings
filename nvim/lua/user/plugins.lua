@@ -41,20 +41,38 @@ packer.init {
 -- Install your plugins here
 return packer.startup(function(use)
   -- My plugins here
-  use "wbthomason/packer.nvim" -- Have packer manage itself
-  use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
-  use "nvim-lua/plenary.nvim" -- Useful lua functions used by lots of plugins
-  use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
-  use "numToStr/Comment.nvim" -- Easily comment stuff
-
+  use "wbthomason/packer.nvim"
+  use "nvim-lua/popup.nvim"
+  use "nvim-lua/plenary.nvim"
+  use "windwp/nvim-autopairs"
+  use "numToStr/Comment.nvim"
   use {
     'nvim-tree/nvim-tree.lua',
     requires = {
-      'nvim-tree/nvim-web-devicons', -- optional
+      'nvim-tree/nvim-web-devicons',
     },
   }
+  use {
+    'stevearc/oil.nvim',
+    config = function()
+      require("oil").setup({
+        silence_scp_warning = true,  -- No more scp warnings!
 
-  -- **FIXED**: Moved setup into a config block to prevent crash
+        -- Better defaults for remote editing
+        view_options = {
+          show_hidden = true,
+        },
+
+        -- Float preview for remote files
+        float = {
+          padding = 2,
+          max_width = 120,
+          max_height = 30,
+        },
+      })
+    end,
+  }
+
   use {
     'JoosepAlviste/nvim-ts-context-commentstring',
     config = function()
@@ -62,7 +80,6 @@ return packer.startup(function(use)
       vim.g.skip_ts_context_commentstring_module = true
     end
   }
-
   use "akinsho/bufferline.nvim"
   use "moll/vim-bbye"
   use "nvim-lualine/lualine.nvim"
@@ -71,12 +88,10 @@ return packer.startup(function(use)
   use "lewis6991/impatient.nvim"
   use "lukas-reineke/indent-blankline.nvim"
   use "goolord/alpha-nvim"
-  use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
+  use "antoinemadec/FixCursorHold.nvim"
   use "folke/which-key.nvim"
-  use "ntpeters/vim-better-whitespace" -- white space tool
+  use "ntpeters/vim-better-whitespace"
   use "nvimdev/zephyr-nvim"
-
-  -- Colorschemes
   use 'LunarVim/darkplus.nvim'
   use "arzg/vim-colors-xcode"
   use { "metalelf0/jellybeans-nvim", requires = "rktjmp/lush.nvim" }
@@ -125,21 +140,11 @@ return packer.startup(function(use)
   use 'rktjmp/lush.nvim'
   use 'Hierosme/darcula.nvim'
   use "tjdevries/colorbuddy.nvim"
-
-  -- Ranger and dependencies
   use 'rbgrouleff/bclose.vim'
   use 'francoiscabrol/ranger.vim'
-  vim.g.ranger_map_keys = 0
-
-  -- Codeium
   use 'Exafunction/codeium.vim'
-  vim.g.codeium_enabled = false
-
-  -- random colorscheme picker
   use 'xolox/vim-colorscheme-switcher'
   use 'xolox/vim-misc'
-
-  -- cmp plugins
   use "hrsh7th/nvim-cmp"
   use "hrsh7th/cmp-buffer"
   use "hrsh7th/cmp-path"
@@ -148,30 +153,25 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-nvim-lsp"
 
   -- track coding time
-  use 'wakatime/vim-wakatime'
+  -- use 'wakatime/vim-wakatime'
 
-  -- **FIXED**: Moved Treesitter *before* Markdown plugin
+
+  vim.g.codeium_enabled = false
+  vim.g.ranger_map_keys = 0
+
   use {
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate",
+  }
+
+  use {
+    'chipsenkbeil/distant.nvim',
+    branch = 'v0.3',
     config = function()
-      require('nvim-treesitter.configs').setup {
-        ensure_installed = {
-          "javascript", "typescript", "lua", "vim", "html", "css", "java",
-          "go", "cpp", "c", "python", "json", "yaml", "markdown",
-          "markdown_inline", "latex", "bash", "rust"
-        },
-        sync_install = false,
-        auto_install = true,
-        highlight = {
-          enable = true,
-          -- **FIXED**: Removed conflicting lines
-        },
-      }
+      require('distant'):setup()
     end
   }
 
-  -- **NEW**: Replaced markview with render-markdown
   use {
     'MeanderingProgrammer/render-markdown.nvim',
     requires = { 'nvim-treesitter/nvim-treesitter' },
@@ -179,14 +179,10 @@ return packer.startup(function(use)
       require('render-markdown').setup({
         latex = {
           enabled = true,
-          -- We'll try the default converter first (utftex)
-          -- If it still doesn't work, add: converter = { 'latex2text' }
         }
       })
     end
   }
-
-  -- A code outline viewer
   use {
     "stevearc/aerial.nvim",
     config = function()
@@ -198,34 +194,21 @@ return packer.startup(function(use)
       })
     end
   }
-
-  -- snippets
   use "L3MON4D3/LuaSnip"
   use "rafamadriz/friendly-snippets"
-
-  -- LSP
   use {
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
     "neovim/nvim-lspconfig",
   }
-
-  -- Pynvim: Python client to Neovim
   use "neovim/pynvim"
-
   use "tamago324/nlsp-settings.nvim"
   use "nvimtools/none-ls.nvim"
-
-  -- Telescope
   use "nvim-telescope/telescope.nvim"
   use "nvim-telescope/telescope-fzy-native.nvim"
   use "BurntSushi/ripgrep"
-
-  -- Git
   use "lewis6991/gitsigns.nvim"
   use 'tpope/vim-fugitive'
-
-  -- Trouble
   use {
     "folke/trouble.nvim",
     requires = "kyazdani42/nvim-web-devicons",
@@ -233,81 +216,82 @@ return packer.startup(function(use)
       require("trouble").setup {}
     end
   }
-
-  -- Debugger
   use { "nvim-neotest/nvim-nio" }
   use 'mfussenegger/nvim-dap'
-
   use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
-  require("dapui").setup()
-
   use {
     'theHamsta/nvim-dap-virtual-text',
-    requires = {'mfussenegger/nvim-dap'}
-  }
-  require("nvim-dap-virtual-text").setup()
-
-  -- start dap and dapui
-  local dap, dapui = require("dap"), require("dapui")
-  dap.listeners.after.event_initialized["dapui_config"] = function()
-    dapui.open()
-  end
-  dap.listeners.before.event_terminated["dapui_config"] = function()
-    dapui.close()
-  end
-  dap.listeners.before.event_exited["dapui_config"] = function()
-    dapui.close()
-  end
-
-  dap.adapters.codelldb = {
-    type = 'server',
-    host = '127.0.0.1',
-    port = 13000
+    requires = {'mfussenegger/nvim-dap'},
+    config = function()
+      require("nvim-dap-virtual-text").setup()
+    end
   }
 
-  dap.configurations.c = {
-    {
-      type = 'codelldb',
-      request = 'launch',
-      program = function()
-        return vim.fn.input('Path to executable: ', vim.fn.getcwd()..'/', 'file')
-      end,
-      cwd = '${workspaceFolder}',
-      terminal = 'integrated'
+  -- Move all DAP setup to after plugins load
+  vim.defer_fn(function()
+    require("dapui").setup()
+
+    local dap, dapui = require("dap"), require("dapui")
+    dap.listeners.after.event_initialized["dapui_config"] = function()
+      dapui.open()
+    end
+    dap.listeners.before.event_terminated["dapui_config"] = function()
+      dapui.close()
+    end
+    dap.listeners.before.event_exited["dapui_config"] = function()
+      dapui.close()
+    end
+
+    dap.adapters.codelldb = {
+      type = 'server',
+      host = '127.0.0.1',
+      port = 13000
     }
-  }
 
-  dap.configurations.cpp = dap.configurations.c
-  dap.configurations.rust = dap.configurations.c
+    dap.configurations.c = {
+      {
+        type = 'codelldb',
+        request = 'launch',
+        program = function()
+          return vim.fn.input('Path to executable: ', vim.fn.getcwd()..'/', 'file')
+        end,
+        cwd = '${workspaceFolder}',
+        terminal = 'integrated'
+      }
+    }
 
-  -- Startify
+    dap.configurations.cpp = dap.configurations.c
+    dap.configurations.rust = dap.configurations.c
+  end, 100)
+
+
+
   use 'mhinz/vim-startify'
-
-  -- Stay
   use 'kopischke/vim-stay'
-
-  -- Tmux navigation (Original, potentially problematic backslash is present)
   use { 'alexghergh/nvim-tmux-navigation', config = function()
     require'nvim-tmux-navigation'.setup {
       disable_when_zoomed = true
     }
-
     vim.api.nvim_set_keymap('n', "<C-h>", ":lua require'nvim-tmux-navigation'.NvimTmuxNavigateLeft()<cr>", { noremap = true, silent = true })
     vim.api.nvim_set_keymap('n', "<C-j>", ":lua require'nvim-tmux-navigation'.NvimTmuxNavigateDown()<cr>", { noremap = true, silent = true })
     vim.api.nvim_set_keymap('n', "<C-k>", ":lua require'nvim-tmux-navigation'.NvimTmuxNavigateUp()<cr>", { noremap = true, silent = true })
     vim.api.nvim_set_keymap('n', "<C-l>", ":lua require'nvim-tmux-navigation'.NvimTmuxNavigateRight()<cr>", { noremap = true, silent = true })
-    vim.api.nvim_set_keymap('n', "<C-\\>", ":lua require'nvim-tmux-navigation'.NvimTmuxNavigateLastActive()<cr>", { noremap = true, silent = true }) -- This might still cause issues on save
+    vim.api.nvim_set_keymap('n', "<C-\\>", ":lua require'nvim-tmux-navigation'.NvimTmuxNavigateLastActive()<cr>", { noremap = true, silent = true })
     vim.api.nvim_set_keymap('n', "<C-Space>", ":lua require'nvim-tmux-navigation'.NvimTmuxNavigateNext()<cr>", { noremap = true, silent = true })
   end
   }
-
-  -- Rooter
+  -- Rooter: MINIMAL MODIFICATION
   use {
     'jedi2610/nvim-rooter.lua',
-    config = function() require'nvim-rooter'.setup() end
+    config = function()
+      require'nvim-rooter'.setup {
+        disable_on = function()
+          local bufname = vim.api.nvim_buf_get_name(0)
+          return bufname:match("^oil-ssh://") or bufname:match("^scp://") or bufname:match("^sftp://")
+        end
+      }
+    end
   }
-
-  -- Automatically set up your configuration after cloning packer.nvim
   if PACKER_BOOTSTRAP then
     require("packer").sync()
   end

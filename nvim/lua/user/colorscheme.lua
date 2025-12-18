@@ -2,6 +2,7 @@ vim.cmd [[
 try
   colorscheme dracula
   "colorscheme darcula
+  "colorscheme Monosvkem
   " colorscheme kanagawa-wave
   " colorscheme badwolf
   " colorscheme darkplus

@@ -19,3 +19,4 @@ require "user.project"
 require "user.impatient"
 require "user.indentline"
 require "user.autocommands"
+require("remote")
