@@ -4,6 +4,7 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 export SDKROOT="/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk"
+export PATH=$PATH:/usr/local/go/bin
 setopt CORRECT
 
 # uses a different term when shing since remote machine won't have term-256color-italic
